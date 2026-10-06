@@ -1,6 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import { Script } from 'node:vm';
 import assert from 'node:assert/strict';
+import { buildStats, readmeTemplates, renderReadme } from './stats.mjs';
+import { huggingFaceTarget } from './weights-audit.mjs';
 const root = new URL('../', import.meta.url);
 const data = JSON.parse(await readFile(new URL('data/releases.json', root), 'utf8'));
 const unique = (rows, label) => {
@@ -26,7 +28,6 @@ assert.equal(
   data.sources.length,
   'Duplicate source URLs: normalize sources once',
 );
-assert.equal(data.families.length, 18, 'Expected 18 model families');
 const families = new Map(data.families.map((f) => [f.id, f]));
 const sources = new Map(data.sources.map((s) => [s.id, s]));
 for (const f of data.families) {
@@ -49,7 +50,32 @@ for (const r of data.releases) {
   assert.ok(families.has(r.family), `Unknown family: ${r.id}`);
   assert.ok(sources.has(r.sourceId), `Missing source: ${r.id}`);
   if (r.dateSourceId) assert.ok(sources.has(r.dateSourceId), `Missing date source: ${r.id}`);
+  if (r.artificialAnalysisUrl)
+    assert.match(
+      r.artificialAnalysisUrl,
+      /^https:\/\/artificialanalysis\.ai\/models\/[a-z0-9.-]+$/,
+      `Invalid Artificial Analysis model URL: ${r.id}`,
+    );
   assert.ok(r.name && r.status, `Incomplete release: ${r.id}`);
+  assert.ok(
+    ['open', 'not-published', 'unverified'].includes(r.weightsStatus),
+    `Missing weights review: ${r.id}`,
+  );
+  date(r.weightsCheckedAt, `${r.id} weights check`);
+  assert.ok(
+    r.weightsCheckedAt <= data.updated && r.weightsCheckedAt >= r.date,
+    `Invalid weights check date: ${r.id}`,
+  );
+  assert.equal(new URL(r.weightsSourceUrl).protocol, 'https:', `Missing weights evidence: ${r.id}`);
+  if (r.huggingFaceUrl) {
+    huggingFaceTarget(r.huggingFaceUrl);
+    assert.equal(r.weightsStatus, 'open', `Weights link on non-open release: ${r.id}`);
+  }
+  assert.ok(
+    r.weightsStatus !== 'open' || r.huggingFaceUrl || r.weightsNote,
+    `Explain missing HF weights: ${r.id}`,
+  );
+  if (r.weightsStatus !== 'open') assert.ok(r.weightsNote, `Explain weights assessment: ${r.id}`);
   assert.ok(
     typeof r.version === 'string',
     `Version must preserve published display string: ${r.id}`,
@@ -117,30 +143,44 @@ for (const [name, day, status] of [
     'Use Anthropic’s own source for Haiku',
   );
 }
-const expected = {
-  gpt: 6.1,
-  claude: 5.5,
-  gemini: 4,
-  grok: 4.7,
-  llama: 4,
-  mistral: 4,
-  qwen: 3.8,
-  deepseek: 4.1,
-  kimi: 3,
-  glm: 5.3,
-};
-const ranked = data.families
-  .map((f) => ({
-    id: f.id,
-    score: Math.max(...data.releases.filter((r) => r.family === f.id).map((r) => r.score)),
-  }))
-  .sort((a, b) => b.score - a.score);
-for (const [id, score] of Object.entries(expected))
-  assert.equal(ranked.find((f) => f.id === id).score, score, `Latest target mismatch: ${id}`);
-assert.deepEqual(
-  ranked.slice(0, 3).map((f) => f.id),
-  ['gpt', 'claude', 'glm'],
+for (const id of ['pangu', 'mimo', 'granite', 'hermes'])
+  assert.ok(families.has(id), `Missing model family: ${id}`);
+const providerSources = JSON.parse(
+  await readFile(new URL('data/provider-sources.json', root), 'utf8'),
 );
+assert.equal(
+  new Set(providerSources.map((row) => row.family)).size,
+  providerSources.length,
+  'Duplicate provider discovery configuration',
+);
+for (const family of families.values())
+  assert.ok(
+    providerSources.some((row) => row.family === family.id && row.sources.length),
+    `Configure official discovery sources for ${family.id}`,
+  );
+for (const row of providerSources) {
+  assert.ok(families.has(row.family), `Unknown provider discovery family: ${row.family}`);
+  for (const source of row.sources) {
+    assert.ok(['page', 'huggingface'].includes(source.type), 'Unsupported provider source');
+    if (source.type === 'huggingface') assert.match(source.author, /^[a-z0-9-]+$/i);
+    else assert.equal(new URL(source.url).protocol, 'https:');
+    assert.ok(source.pattern, 'Missing model version pattern');
+    new RegExp(source.pattern, 'gi');
+    if (source.excludePattern) new RegExp(source.excludePattern, 'i');
+  }
+}
+const stats = buildStats(data);
+assert.deepEqual(
+  JSON.parse(await readFile(new URL('data/stats.json', root), 'utf8')),
+  stats,
+  'Regenerate statistics after editing release data',
+);
+for (const [template, target] of readmeTemplates)
+  assert.equal(
+    await readFile(new URL(target, root), 'utf8'),
+    renderReadme(await readFile(new URL(template, root), 'utf8'), stats, template),
+    `Regenerate ${target} after editing data or its template`,
+  );
 const js = await readFile(new URL('src/app.js', root), 'utf8');
 new Script(js);
 const html = await readFile(new URL('index.html', root), 'utf8');
@@ -190,5 +230,5 @@ assert.equal(directives.get('style-src'), "'unsafe-inline'");
 assert.equal(directives.get('img-src'), 'data:');
 
 console.log(
-  `PASS: ${data.families.length} families, ${data.releases.length} releases, ${data.sources.length} sources; exact dates, foreign keys, version mapping, leaderboard rankings, JavaScript syntax, standalone bundle, offline resource policy.`,
+  `PASS: ${data.families.length} families, ${data.releases.length} releases, ${data.sources.length} sources; exact dates, foreign keys, version mapping, generated statistics and READMEs, JavaScript syntax, standalone bundle, offline resource policy.`,
 );

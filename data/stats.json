@@ -1,0 +1,860 @@
+{
+  "snapshot": "2026-10-06",
+  "familyCount": 48,
+  "releaseCount": 551,
+  "sourceCount": 348,
+  "artificialAnalysisReleaseCount": 292,
+  "artificialAnalysisProfileCount": 275,
+  "huggingFaceReleaseCount": 273,
+  "huggingFaceLinkCount": 261,
+  "releasesByWeightsStatus": {
+    "not-published": 275,
+    "open": 273,
+    "unverified": 3
+  },
+  "firstEventDate": "2018-06-11",
+  "lastEventDate": "2026-10-06",
+  "releasesByYear": {
+    "2018": 1,
+    "2019": 3,
+    "2020": 1,
+    "2021": 3,
+    "2022": 3,
+    "2023": 56,
+    "2024": 117,
+    "2025": 188,
+    "2026": 179
+  },
+  "releasesByStatus": {
+    "Announced": 18,
+    "Beta": 7,
+    "Early access": 3,
+    "Experimental": 8,
+    "Limited access": 5,
+    "Limited preview": 6,
+    "Open weights": 94,
+    "Preview": 55,
+    "Public preview": 2,
+    "Released": 333,
+    "Research announcement": 7,
+    "Research": 13
+  },
+  "families": [
+    {
+      "id": "gpt",
+      "name": "GPT",
+      "releaseCount": 58,
+      "versionCount": 16,
+      "highestVersion": "6.1",
+      "highestScore": 6.1,
+      "firstReleaseAtHighestVersion": {
+        "id": "gpt-gpt-6-1-sol-2026-09-29",
+        "name": "GPT-6.1 Sol",
+        "date": "2026-09-29"
+      },
+      "firstEventDate": "2018-06-11",
+      "lastEventDate": "2026-09-29",
+      "artificialAnalysisReleaseCount": 33,
+      "huggingFaceReleaseCount": 2
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "releaseCount": 33,
+      "versionCount": 17,
+      "highestVersion": "5.5",
+      "highestScore": 5.5,
+      "firstReleaseAtHighestVersion": {
+        "id": "claude-claude-opus-5-5-2026-09-22",
+        "name": "Claude Opus 5.5",
+        "date": "2026-09-22"
+      },
+      "firstEventDate": "2023-03-14",
+      "lastEventDate": "2026-09-28",
+      "artificialAnalysisReleaseCount": 28,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "releaseCount": 52,
+      "versionCount": 11,
+      "highestVersion": "4",
+      "highestScore": 4,
+      "firstReleaseAtHighestVersion": {
+        "id": "gemini-gemini-4-argon-2026-09-30",
+        "name": "Gemini 4 Argon",
+        "date": "2026-09-30"
+      },
+      "firstEventDate": "2023-12-06",
+      "lastEventDate": "2026-09-30",
+      "artificialAnalysisReleaseCount": 36,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "releaseCount": 24,
+      "versionCount": 11,
+      "highestVersion": "4.7",
+      "highestScore": 4.7,
+      "firstReleaseAtHighestVersion": {
+        "id": "grok-grok-4-7-2026-09-21",
+        "name": "Grok 4.7",
+        "date": "2026-09-21"
+      },
+      "firstEventDate": "2023-11-03",
+      "lastEventDate": "2026-09-21",
+      "artificialAnalysisReleaseCount": 14,
+      "huggingFaceReleaseCount": 2
+    },
+    {
+      "id": "llama",
+      "name": "Llama",
+      "releaseCount": 9,
+      "versionCount": 7,
+      "highestVersion": "4",
+      "highestScore": 4,
+      "firstReleaseAtHighestVersion": {
+        "id": "llama-llama-4-maverick-2025-04-05",
+        "name": "Llama 4 Maverick",
+        "date": "2025-04-05"
+      },
+      "firstEventDate": "2023-02-24",
+      "lastEventDate": "2025-04-05",
+      "artificialAnalysisReleaseCount": 3,
+      "huggingFaceReleaseCount": 9
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral",
+      "releaseCount": 20,
+      "versionCount": 11,
+      "highestVersion": "4",
+      "highestScore": 4,
+      "firstReleaseAtHighestVersion": {
+        "id": "mistral-mistral-small-4-2026-03-16",
+        "name": "Mistral Small 4",
+        "date": "2026-03-16"
+      },
+      "firstEventDate": "2023-09-27",
+      "lastEventDate": "2026-10-06",
+      "artificialAnalysisReleaseCount": 16,
+      "huggingFaceReleaseCount": 16
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "releaseCount": 69,
+      "versionCount": 9,
+      "highestVersion": "3.8",
+      "highestScore": 3.8,
+      "firstReleaseAtHighestVersion": {
+        "id": "qwen-qwen3-8-max-initial-api-2026-08-02",
+        "name": "Qwen3.8-Max (initial API)",
+        "date": "2026-08-02"
+      },
+      "firstEventDate": "2023-08-03",
+      "lastEventDate": "2026-09-21",
+      "artificialAnalysisReleaseCount": 25,
+      "huggingFaceReleaseCount": 39
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "releaseCount": 29,
+      "versionCount": 8,
+      "highestVersion": "4.1",
+      "highestScore": 4.1,
+      "firstReleaseAtHighestVersion": {
+        "id": "deepseek-deepseek-v4-1-flash-2026-09-10",
+        "name": "DeepSeek-V4.1 Flash",
+        "date": "2026-09-10"
+      },
+      "firstEventDate": "2023-11-02",
+      "lastEventDate": "2026-09-10",
+      "artificialAnalysisReleaseCount": 21,
+      "huggingFaceReleaseCount": 27
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi",
+      "releaseCount": 20,
+      "versionCount": 9,
+      "highestVersion": "3",
+      "highestScore": 3,
+      "firstReleaseAtHighestVersion": {
+        "id": "kimi-kimi-k3-2026-07-16",
+        "name": "Kimi K3",
+        "date": "2026-07-16"
+      },
+      "firstEventDate": "2023-10-09",
+      "lastEventDate": "2026-09-11",
+      "artificialAnalysisReleaseCount": 7,
+      "huggingFaceReleaseCount": 7
+    },
+    {
+      "id": "glm",
+      "name": "GLM",
+      "releaseCount": 27,
+      "versionCount": 12,
+      "highestVersion": "5.3",
+      "highestScore": 5.3,
+      "firstReleaseAtHighestVersion": {
+        "id": "glm-glm-5-3-2026-08-14",
+        "name": "GLM-5.3",
+        "date": "2026-08-14"
+      },
+      "firstEventDate": "2021-03-18",
+      "lastEventDate": "2026-08-26",
+      "artificialAnalysisReleaseCount": 14,
+      "huggingFaceReleaseCount": 24
+    },
+    {
+      "id": "muse",
+      "name": "Muse",
+      "releaseCount": 4,
+      "versionCount": 4,
+      "highestVersion": "1.3",
+      "highestScore": 1.3,
+      "firstReleaseAtHighestVersion": {
+        "id": "muse-muse-spark-1-3-2026-09-02",
+        "name": "Muse Spark 1.3",
+        "date": "2026-09-02"
+      },
+      "firstEventDate": "2026-04-08",
+      "lastEventDate": "2026-09-02",
+      "artificialAnalysisReleaseCount": 4,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "gemma",
+      "name": "Gemma",
+      "releaseCount": 8,
+      "versionCount": 4,
+      "highestVersion": "4",
+      "highestScore": 4,
+      "firstReleaseAtHighestVersion": {
+        "id": "gemma-gemma-4-2026-04-02",
+        "name": "Gemma 4",
+        "date": "2026-03-31"
+      },
+      "firstEventDate": "2024-02-21",
+      "lastEventDate": "2026-06-03",
+      "artificialAnalysisReleaseCount": 1,
+      "huggingFaceReleaseCount": 8
+    },
+    {
+      "id": "phi",
+      "name": "Phi",
+      "releaseCount": 12,
+      "versionCount": 6,
+      "highestVersion": "4",
+      "highestScore": 4,
+      "firstReleaseAtHighestVersion": {
+        "id": "phi-phi-4-2024-12-12",
+        "name": "Phi-4",
+        "date": "2024-12-12"
+      },
+      "firstEventDate": "2023-06-20",
+      "lastEventDate": "2026-03-04",
+      "artificialAnalysisReleaseCount": 4,
+      "huggingFaceReleaseCount": 12
+    },
+    {
+      "id": "olmo",
+      "name": "OLMo",
+      "releaseCount": 5,
+      "versionCount": 4,
+      "highestVersion": "3.1",
+      "highestScore": 3.1,
+      "firstReleaseAtHighestVersion": {
+        "id": "olmo-olmo-3-1-instruct-2025-12-12",
+        "name": "OLMo 3.1 Instruct",
+        "date": "2025-12-12"
+      },
+      "firstEventDate": "2024-02-01",
+      "lastEventDate": "2025-12-12",
+      "artificialAnalysisReleaseCount": 2,
+      "huggingFaceReleaseCount": 5
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "releaseCount": 7,
+      "versionCount": 7,
+      "highestVersion": "3.1",
+      "highestScore": 3.1,
+      "firstReleaseAtHighestVersion": {
+        "id": "minimax-minimax-m3-1-flash-preview-code-2026-09-28",
+        "name": "MiniMax M3.1 Flash Preview (MiniMax Code release)",
+        "date": "2026-09-28"
+      },
+      "firstEventDate": "2025-06-16",
+      "lastEventDate": "2026-09-28",
+      "artificialAnalysisReleaseCount": 5,
+      "huggingFaceReleaseCount": 6
+    },
+    {
+      "id": "nova",
+      "name": "Amazon Nova",
+      "releaseCount": 9,
+      "versionCount": 2,
+      "highestVersion": "2",
+      "highestScore": 2,
+      "firstReleaseAtHighestVersion": {
+        "id": "nova-amazon-nova-2-lite-2025-12-02",
+        "name": "Amazon Nova 2 Lite",
+        "date": "2025-12-02"
+      },
+      "firstEventDate": "2024-12-03",
+      "lastEventDate": "2025-12-02",
+      "artificialAnalysisReleaseCount": 7,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "ernie",
+      "name": "ERNIE",
+      "releaseCount": 10,
+      "versionCount": 7,
+      "highestVersion": "5.1",
+      "highestScore": 5.1,
+      "firstReleaseAtHighestVersion": {
+        "id": "ernie-ernie-5-1-preview-arena-milestone-2026-04-30",
+        "name": "ERNIE-5.1-Preview (Arena milestone)",
+        "date": "2026-04-30"
+      },
+      "firstEventDate": "2019-04-19",
+      "lastEventDate": "2026-05-09",
+      "artificialAnalysisReleaseCount": 0,
+      "huggingFaceReleaseCount": 4
+    },
+    {
+      "id": "openai-o",
+      "name": "OpenAI o",
+      "releaseCount": 13,
+      "versionCount": 3,
+      "highestVersion": "4",
+      "highestScore": 4,
+      "firstReleaseAtHighestVersion": {
+        "id": "openai-o-o4-mini-2025-04-16",
+        "name": "o4-mini",
+        "date": "2025-04-16"
+      },
+      "firstEventDate": "2024-09-12",
+      "lastEventDate": "2025-06-26",
+      "artificialAnalysisReleaseCount": 10,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "pangu",
+      "name": "PanGu",
+      "releaseCount": 4,
+      "versionCount": 4,
+      "highestVersion": "5.5",
+      "highestScore": 5.5,
+      "firstReleaseAtHighestVersion": {
+        "id": "pangu-pangu-5-5-2025-06-20",
+        "name": "PanGu 5.5",
+        "date": "2025-06-20"
+      },
+      "firstEventDate": "2021-04-25",
+      "lastEventDate": "2025-06-20",
+      "artificialAnalysisReleaseCount": 0,
+      "huggingFaceReleaseCount": 1
+    },
+    {
+      "id": "mimo",
+      "name": "MiMo",
+      "releaseCount": 14,
+      "versionCount": 4,
+      "highestVersion": "2.6",
+      "highestScore": 2.6,
+      "firstReleaseAtHighestVersion": {
+        "id": "mimo-mimo-v2-6-flash-studio-release-2026-09-21",
+        "name": "MiMo-V2.6-Flash (Studio release)",
+        "date": "2026-09-21"
+      },
+      "firstEventDate": "2025-04-30",
+      "lastEventDate": "2026-09-22",
+      "artificialAnalysisReleaseCount": 9,
+      "huggingFaceReleaseCount": 9
+    },
+    {
+      "id": "granite",
+      "name": "Granite",
+      "releaseCount": 13,
+      "versionCount": 7,
+      "highestVersion": "4.2",
+      "highestScore": 4.2,
+      "firstReleaseAtHighestVersion": {
+        "id": "granite-granite-4-2-30b-2026-08-25",
+        "name": "Granite 4.2 30B",
+        "date": "2026-08-25"
+      },
+      "firstEventDate": "2024-10-21",
+      "lastEventDate": "2026-08-25",
+      "artificialAnalysisReleaseCount": 9,
+      "huggingFaceReleaseCount": 13
+    },
+    {
+      "id": "nemotron",
+      "name": "Nemotron",
+      "releaseCount": 7,
+      "versionCount": 3,
+      "highestVersion": "4",
+      "highestScore": 4,
+      "firstReleaseAtHighestVersion": {
+        "id": "nemotron-nemotron-4-15b-technical-report-2024-02-26",
+        "name": "Nemotron-4 15B (technical report)",
+        "date": "2024-02-26"
+      },
+      "firstEventDate": "2024-02-26",
+      "lastEventDate": "2026-08-11",
+      "artificialAnalysisReleaseCount": 3,
+      "huggingFaceReleaseCount": 6
+    },
+    {
+      "id": "seed",
+      "name": "Seed",
+      "releaseCount": 8,
+      "versionCount": 4,
+      "highestVersion": "2.1",
+      "highestScore": 2.1,
+      "firstReleaseAtHighestVersion": {
+        "id": "seed-seed-2-1-preview-2026-06-19",
+        "name": "Seed 2.1 Preview",
+        "date": "2026-06-19"
+      },
+      "firstEventDate": "2025-06-25",
+      "lastEventDate": "2026-06-23",
+      "artificialAnalysisReleaseCount": 0,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "palm",
+      "name": "PaLM",
+      "releaseCount": 2,
+      "versionCount": 2,
+      "highestVersion": "2",
+      "highestScore": 2,
+      "firstReleaseAtHighestVersion": {
+        "id": "palm-palm-2-2023-05-10",
+        "name": "PaLM 2",
+        "date": "2023-05-10"
+      },
+      "firstEventDate": "2022-04-04",
+      "lastEventDate": "2023-05-10",
+      "artificialAnalysisReleaseCount": 1,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "yi",
+      "name": "Yi",
+      "releaseCount": 4,
+      "versionCount": 2,
+      "highestVersion": "1.5",
+      "highestScore": 1.5,
+      "firstReleaseAtHighestVersion": {
+        "id": "yi-yi-1-5-2024-05-13",
+        "name": "Yi-1.5",
+        "date": "2024-05-13"
+      },
+      "firstEventDate": "2023-11-02",
+      "lastEventDate": "2024-05-13",
+      "artificialAnalysisReleaseCount": 0,
+      "huggingFaceReleaseCount": 4
+    },
+    {
+      "id": "internlm",
+      "name": "InternLM / InternVL",
+      "releaseCount": 12,
+      "versionCount": 8,
+      "highestVersion": "3.5",
+      "highestScore": 3.5,
+      "firstReleaseAtHighestVersion": {
+        "id": "internlm-internvl3-5-technical-report-2025-08-25",
+        "name": "InternVL3.5 (technical report)",
+        "date": "2025-08-25"
+      },
+      "firstEventDate": "2023-09-20",
+      "lastEventDate": "2025-08-26",
+      "artificialAnalysisReleaseCount": 0,
+      "huggingFaceReleaseCount": 12
+    },
+    {
+      "id": "exaone",
+      "name": "EXAONE",
+      "releaseCount": 5,
+      "versionCount": 4,
+      "highestVersion": "4.5",
+      "highestScore": 4.5,
+      "firstReleaseAtHighestVersion": {
+        "id": "exaone-exaone-4-5-33b-2026-04-09",
+        "name": "EXAONE 4.5 33B",
+        "date": "2026-04-09"
+      },
+      "firstEventDate": "2024-08-07",
+      "lastEventDate": "2026-04-09",
+      "artificialAnalysisReleaseCount": 3,
+      "huggingFaceReleaseCount": 5
+    },
+    {
+      "id": "minicpm",
+      "name": "MiniCPM",
+      "releaseCount": 6,
+      "versionCount": 5,
+      "highestVersion": "5",
+      "highestScore": 5,
+      "firstReleaseAtHighestVersion": {
+        "id": "minicpm-minicpm5-1b-2026-05-19",
+        "name": "MiniCPM5-1B",
+        "date": "2026-05-19"
+      },
+      "firstEventDate": "2024-02-01",
+      "lastEventDate": "2026-09-07",
+      "artificialAnalysisReleaseCount": 2,
+      "huggingFaceReleaseCount": 6
+    },
+    {
+      "id": "step",
+      "name": "Step",
+      "releaseCount": 4,
+      "versionCount": 4,
+      "highestVersion": "5",
+      "highestScore": 5,
+      "firstReleaseAtHighestVersion": {
+        "id": "step-step-5-preview-hosted-release-2026-09-20",
+        "name": "Step 5 Preview (hosted release)",
+        "date": "2026-09-20"
+      },
+      "firstEventDate": "2025-07-25",
+      "lastEventDate": "2026-09-20",
+      "artificialAnalysisReleaseCount": 3,
+      "huggingFaceReleaseCount": 3
+    },
+    {
+      "id": "ling",
+      "name": "Ling",
+      "releaseCount": 4,
+      "versionCount": 4,
+      "highestVersion": "3.1",
+      "highestScore": 3.1,
+      "firstReleaseAtHighestVersion": {
+        "id": "ling-ling-3-1-flash-vercel-ai-gateway-release-2026-09-30",
+        "name": "Ling 3.1 Flash (Vercel AI Gateway release)",
+        "date": "2026-09-30"
+      },
+      "firstEventDate": "2025-04-15",
+      "lastEventDate": "2026-09-30",
+      "artificialAnalysisReleaseCount": 2,
+      "huggingFaceReleaseCount": 3
+    },
+    {
+      "id": "falcon",
+      "name": "Falcon",
+      "releaseCount": 4,
+      "versionCount": 3,
+      "highestVersion": "3",
+      "highestScore": 3,
+      "firstReleaseAtHighestVersion": {
+        "id": "falcon-falcon-3-2024-12-17",
+        "name": "Falcon 3",
+        "date": "2024-12-17"
+      },
+      "firstEventDate": "2023-05-25",
+      "lastEventDate": "2024-12-17",
+      "artificialAnalysisReleaseCount": 0,
+      "huggingFaceReleaseCount": 4
+    },
+    {
+      "id": "jamba",
+      "name": "Jamba",
+      "releaseCount": 9,
+      "versionCount": 5,
+      "highestVersion": "2",
+      "highestScore": 2,
+      "firstReleaseAtHighestVersion": {
+        "id": "jamba-jamba2-3b-2026-01-08",
+        "name": "Jamba2 3B",
+        "date": "2026-01-08"
+      },
+      "firstEventDate": "2024-03-28",
+      "lastEventDate": "2026-01-08",
+      "artificialAnalysisReleaseCount": 6,
+      "huggingFaceReleaseCount": 9
+    },
+    {
+      "id": "inflection",
+      "name": "Inflection",
+      "releaseCount": 1,
+      "versionCount": 1,
+      "highestVersion": "3.0",
+      "highestScore": 3,
+      "firstReleaseAtHighestVersion": {
+        "id": "inflection-inflection-3-0-2024-10-07",
+        "name": "Inflection 3.0",
+        "date": "2024-10-07"
+      },
+      "firstEventDate": "2024-10-07",
+      "lastEventDate": "2024-10-07",
+      "artificialAnalysisReleaseCount": 0,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "lfm",
+      "name": "LFM",
+      "releaseCount": 6,
+      "versionCount": 2,
+      "highestVersion": "2.5",
+      "highestScore": 2.5,
+      "firstReleaseAtHighestVersion": {
+        "id": "lfm-lfm2-5-1-2b-instruct-2026-01-05",
+        "name": "LFM2.5-1.2B-Instruct",
+        "date": "2026-01-05"
+      },
+      "firstEventDate": "2025-07-10",
+      "lastEventDate": "2026-08-04",
+      "artificialAnalysisReleaseCount": 6,
+      "huggingFaceReleaseCount": 6
+    },
+    {
+      "id": "hermes",
+      "name": "Hermes",
+      "releaseCount": 6,
+      "versionCount": 3,
+      "highestVersion": "4.3",
+      "highestScore": 4.3,
+      "firstReleaseAtHighestVersion": {
+        "id": "hermes-hermes-4-3-seed-36b-2025-12-03",
+        "name": "Hermes 4.3 Seed 36B",
+        "date": "2025-12-03"
+      },
+      "firstEventDate": "2024-12-11",
+      "lastEventDate": "2025-12-03",
+      "artificialAnalysisReleaseCount": 3,
+      "huggingFaceReleaseCount": 6
+    },
+    {
+      "id": "openchat",
+      "name": "OpenChat",
+      "releaseCount": 9,
+      "versionCount": 6,
+      "highestVersion": "3.6",
+      "highestScore": 3.6,
+      "firstReleaseAtHighestVersion": {
+        "id": "openchat-openchat-3-6-20240522-2024-05-22",
+        "name": "OpenChat 3.6 20240522",
+        "date": "2024-05-22"
+      },
+      "firstEventDate": "2023-07-01",
+      "lastEventDate": "2024-05-22",
+      "artificialAnalysisReleaseCount": 1,
+      "huggingFaceReleaseCount": 9
+    },
+    {
+      "id": "hunyuan",
+      "name": "Hunyuan / Hy",
+      "releaseCount": 3,
+      "versionCount": 2,
+      "highestVersion": "4",
+      "highestScore": 4,
+      "firstReleaseAtHighestVersion": {
+        "id": "hunyuan-hy4-preview-2026-08-28",
+        "name": "Hy4 preview",
+        "date": "2026-08-28"
+      },
+      "firstEventDate": "2026-04-23",
+      "lastEventDate": "2026-08-28",
+      "artificialAnalysisReleaseCount": 2,
+      "huggingFaceReleaseCount": 3
+    },
+    {
+      "id": "longcat",
+      "name": "LongCat",
+      "releaseCount": 3,
+      "versionCount": 2,
+      "highestVersion": "2.5",
+      "highestScore": 2.5,
+      "firstReleaseAtHighestVersion": {
+        "id": "longcat-longcat-2-5-preview-2026-09-25",
+        "name": "LongCat-2.5-Preview",
+        "date": "2026-09-25"
+      },
+      "firstEventDate": "2026-04-20",
+      "lastEventDate": "2026-09-25",
+      "artificialAnalysisReleaseCount": 1,
+      "huggingFaceReleaseCount": 1
+    },
+    {
+      "id": "solar",
+      "name": "Solar",
+      "releaseCount": 3,
+      "versionCount": 2,
+      "highestVersion": "4",
+      "highestScore": 4,
+      "firstReleaseAtHighestVersion": {
+        "id": "solar-solar-pro-4-announcement-2026-08-11",
+        "name": "Solar Pro 4 (announcement)",
+        "date": "2026-08-11"
+      },
+      "firstEventDate": "2026-01-26",
+      "lastEventDate": "2026-08-11",
+      "artificialAnalysisReleaseCount": 1,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "releaseCount": 1,
+      "versionCount": 1,
+      "highestVersion": "2.5",
+      "highestScore": 2.5,
+      "firstReleaseAtHighestVersion": {
+        "id": "mercury-mercury-2-5-2026-09-08",
+        "name": "Mercury 2.5",
+        "date": "2026-09-08"
+      },
+      "firstEventDate": "2026-09-08",
+      "lastEventDate": "2026-09-08",
+      "artificialAnalysisReleaseCount": 1,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "motif",
+      "name": "Motif",
+      "releaseCount": 2,
+      "versionCount": 1,
+      "highestVersion": "3",
+      "highestScore": 3,
+      "firstReleaseAtHighestVersion": {
+        "id": "motif-motif-3-beta-2026-07-14",
+        "name": "Motif 3 Beta",
+        "date": "2026-07-14"
+      },
+      "firstEventDate": "2026-07-14",
+      "lastEventDate": "2026-08-13",
+      "artificialAnalysisReleaseCount": 2,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "intellect",
+      "name": "INTELLECT",
+      "releaseCount": 2,
+      "versionCount": 2,
+      "highestVersion": "3.1",
+      "highestScore": 3.1,
+      "firstReleaseAtHighestVersion": {
+        "id": "intellect-intellect-3-1-weights-publication-2026-02-18",
+        "name": "INTELLECT-3.1 (weights publication)",
+        "date": "2026-02-18"
+      },
+      "firstEventDate": "2025-11-26",
+      "lastEventDate": "2026-02-18",
+      "artificialAnalysisReleaseCount": 1,
+      "huggingFaceReleaseCount": 2
+    },
+    {
+      "id": "cogito",
+      "name": "Cogito",
+      "releaseCount": 1,
+      "versionCount": 1,
+      "highestVersion": "2.1",
+      "highestScore": 2.1,
+      "firstReleaseAtHighestVersion": {
+        "id": "cogito-cogito-v2-1-671b-2025-11-19",
+        "name": "Cogito v2.1 671B",
+        "date": "2025-11-19"
+      },
+      "firstEventDate": "2025-11-19",
+      "lastEventDate": "2025-11-19",
+      "artificialAnalysisReleaseCount": 1,
+      "huggingFaceReleaseCount": 1
+    },
+    {
+      "id": "reka",
+      "name": "Reka",
+      "releaseCount": 3,
+      "versionCount": 2,
+      "highestVersion": "3.1",
+      "highestScore": 3.1,
+      "firstReleaseAtHighestVersion": {
+        "id": "reka-reka-flash-3-1-2025-07-10",
+        "name": "Reka Flash 3.1",
+        "date": "2025-07-10"
+      },
+      "firstEventDate": "2025-03-10",
+      "lastEventDate": "2025-07-10",
+      "artificialAnalysisReleaseCount": 2,
+      "huggingFaceReleaseCount": 3
+    },
+    {
+      "id": "apriel",
+      "name": "Apriel",
+      "releaseCount": 1,
+      "versionCount": 1,
+      "highestVersion": "1.6",
+      "highestScore": 1.6,
+      "firstReleaseAtHighestVersion": {
+        "id": "apriel-apriel-1-6-15b-thinker-announcement-2025-12-09",
+        "name": "Apriel 1.6 15B Thinker (announcement)",
+        "date": "2025-12-09"
+      },
+      "firstEventDate": "2025-12-09",
+      "lastEventDate": "2025-12-09",
+      "artificialAnalysisReleaseCount": 1,
+      "huggingFaceReleaseCount": 1
+    },
+    {
+      "id": "nanbeige",
+      "name": "Nanbeige",
+      "releaseCount": 2,
+      "versionCount": 2,
+      "highestVersion": "4.2",
+      "highestScore": 4.2,
+      "firstReleaseAtHighestVersion": {
+        "id": "nanbeige-nanbeige4-2-3b-technical-report-2026-07-24",
+        "name": "Nanbeige4.2-3B (technical report)",
+        "date": "2026-07-24"
+      },
+      "firstEventDate": "2026-02-13",
+      "lastEventDate": "2026-07-24",
+      "artificialAnalysisReleaseCount": 1,
+      "huggingFaceReleaseCount": 2
+    },
+    {
+      "id": "ring",
+      "name": "Ring",
+      "releaseCount": 1,
+      "versionCount": 1,
+      "highestVersion": "2.6",
+      "highestScore": 2.6,
+      "firstReleaseAtHighestVersion": {
+        "id": "ring-ring-2-6-1t-technical-report-2026-06-13",
+        "name": "Ring-2.6-1T (technical report)",
+        "date": "2026-06-13"
+      },
+      "firstEventDate": "2026-06-13",
+      "lastEventDate": "2026-06-13",
+      "artificialAnalysisReleaseCount": 1,
+      "huggingFaceReleaseCount": 1
+    },
+    {
+      "id": "ax",
+      "name": "A.X",
+      "releaseCount": 2,
+      "versionCount": 1,
+      "highestVersion": "4.0",
+      "highestScore": 4,
+      "firstReleaseAtHighestVersion": {
+        "id": "ax-a-x-4-0-2025-07-03",
+        "name": "A.X 4.0",
+        "date": "2025-07-03"
+      },
+      "firstEventDate": "2025-07-03",
+      "lastEventDate": "2025-07-03",
+      "artificialAnalysisReleaseCount": 0,
+      "huggingFaceReleaseCount": 2
+    }
+  ]
+}

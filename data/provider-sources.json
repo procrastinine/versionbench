@@ -1,0 +1,548 @@
+[
+  {
+    "family": "gpt",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://developers.openai.com/api/docs/models",
+        "pattern": "\\bGPT[ -]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "claude",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+        "pattern": "\\bClaude[- ]+(?:(?:Opus|Sonnet|Haiku|Fable)[- ]+)?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "gemini",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://ai.google.dev/gemini-api/docs/models",
+        "pattern": "\\bGemini[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "grok",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://docs.x.ai/developers/models",
+        "pattern": "\\bGrok[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "llama",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "meta-llama",
+        "pattern": "/Llama[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "mistral",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "mistralai",
+        "pattern": "/(?:Mistral|Ministral)(?:[- ](?:Small|Medium|Large))?[- ]([0-9]{1,2}(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://docs.mistral.ai/getting-started/models",
+        "pattern": "\\bMistral[- ]+(?:Small|Medium|Large)[- ]+([0-9]{1,2}(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "qwen",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "Qwen",
+        "pattern": "/Qwen([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
+        "pattern": "\\bQwen[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "deepseek",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "deepseek-ai",
+        "pattern": "/DeepSeek[- ]V?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://api-docs.deepseek.com/updates/",
+        "pattern": "\\bDeepSeek[- ]V([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "kimi",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "moonshotai",
+        "pattern": "/Kimi[- ]K([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
+        "pattern": "\\bKimi[- ]K?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "glm",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "zai-org",
+        "pattern": "/GLM[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://docs.z.ai/release-notes/new-released",
+        "pattern": "\\bGLM[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "muse",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://research.meta.ai/",
+        "pattern": "\\bMuse[- ]Spark[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "gemma",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "google",
+        "pattern": "/Gemma[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "phi",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "microsoft",
+        "pattern": "/Phi[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "olmo",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "allenai",
+        "pattern": "/OLMo[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))",
+        "excludePattern": "tokenizer"
+      }
+    ]
+  },
+  {
+    "family": "minimax",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "MiniMaxAI",
+        "pattern": "/MiniMax[- ]M([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://agent.minimax.io/docs/changelog",
+        "pattern": "\\b(?:MiniMax[- ])?M([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "nova",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://docs.aws.amazon.com/nova/latest/nova2-userguide/what-is-nova-2.html",
+        "pattern": "\\b(?:Amazon )?Nova[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "ernie",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://ernie.baidu.com/blog/posts/",
+        "pattern": "\\bERNIE[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "openai-o",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://developers.openai.com/api/docs/models",
+        "pattern": "\\bo([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://developers.openai.com/api/docs/models/o4-mini",
+        "pattern": "\\bo([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "pangu",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://www.huaweicloud.com/product/pangu.html",
+        "pattern": "(?:Pangu|盘古)(?:大模型)?[- ]*([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://www.huaweicloud.com/eu/news/20250620192415143.html",
+        "pattern": "Pangu(?: Models)?[- ]+([0-9]+(?:\\.[0-9]+)?)(?![0-9.])"
+      }
+    ]
+  },
+  {
+    "family": "mimo",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://mimo.mi.com/docs/en-US/updates/model",
+        "pattern": "\\bMiMo[- ]V([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "granite",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "ibm-granite",
+        "pattern": "/Granite[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "nemotron",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "nvidia",
+        "pattern": "/(?:NVIDIA-)?Nemotron[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "seed",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://seed.bytedance.com/en/",
+        "pattern": "\\bSeed[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "palm",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://ai.google/discover/palm2/",
+        "pattern": "\\bPaLM[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "yi",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "01-ai",
+        "pattern": "/Yi[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "internlm",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "internlm",
+        "pattern": "/InternLM([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "huggingface",
+        "author": "OpenGVLab",
+        "pattern": "/InternVL([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "exaone",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "LGAI-EXAONE",
+        "pattern": "/(?:K-)?EXAONE[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "minicpm",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "openbmb",
+        "pattern": "/MiniCPM(?:[- ]?[Vo])?[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "step",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "stepfun-ai",
+        "pattern": "/Step[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://platform.stepfun.com/",
+        "pattern": "\\bStep[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "ling",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "inclusionAI",
+        "pattern": "/Ling[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://vercel.com/ai-gateway/models/ling-3.1-flash",
+        "pattern": "\\bLing[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "falcon",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "tiiuae",
+        "pattern": "/Falcon[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "jamba",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "ai21labs",
+        "pattern": "/(?:AI21-)?Jamba(?:(?:[- ](?:Mini|Large))?[- ])?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "inflection",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://inflection.ai/blog",
+        "pattern": "\\bInflection[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://inflection.ai/blog/enterprise",
+        "pattern": "\\bInflection[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "lfm",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "LiquidAI",
+        "pattern": "/LFM([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "hermes",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "NousResearch",
+        "pattern": "/Hermes[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "openchat",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "openchat",
+        "pattern": "/OpenChat[-_ ]v?([0-9]{1,2}(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "hunyuan",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "tencent",
+        "pattern": "/(?:Hy|Hunyuan[- ])([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "longcat",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://longcat.chat/platform/docs/ChangeLog.html",
+        "pattern": "\\bLongCat[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "solar",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://www.upstage.ai/news",
+        "pattern": "\\bSolar[- ](?:Pro[- ]|Open[- ])?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "mercury",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://www.inceptionlabs.ai/blog",
+        "pattern": "\\bMercury[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "motif",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://chat.motiftech.io/release",
+        "pattern": "\\bMotif[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "intellect",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "PrimeIntellect",
+        "pattern": "/INTELLECT[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "cogito",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "deepcogito",
+        "pattern": "/Cogito(?:-\\d+[bB])?[- ]v([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "reka",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "RekaAI",
+        "pattern": "/Reka[- ]Flash[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      },
+      {
+        "type": "page",
+        "url": "https://reka.ai/legal/latest-changes",
+        "pattern": "\\bReka[- ]Flash[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "apriel",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "ServiceNow-AI",
+        "pattern": "/Apriel[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "nanbeige",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "Nanbeige",
+        "pattern": "/Nanbeige[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "ring",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "inclusionAI",
+        "pattern": "/Ring[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  },
+  {
+    "family": "ax",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "skt",
+        "pattern": "/A\\.X[- ](?:K)?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+      }
+    ]
+  }
+]

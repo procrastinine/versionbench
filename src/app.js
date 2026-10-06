@@ -46,6 +46,9 @@
       familyInfo: familyMap.get(release.family),
       source: sourceMap.get(release.sourceId),
       dateSource: sourceMap.get(release.dateSourceId),
+      artificialAnalysisUrl: safeURL(release.artificialAnalysisUrl),
+      huggingFaceUrl: safeURL(release.huggingFaceUrl),
+      weightsSourceUrl: safeURL(release.weightsSourceUrl),
       time: parseDate(release.date),
       score:
         typeof release.score === 'number' && Number.isFinite(release.score) ? release.score : null,
@@ -68,7 +71,7 @@
           .sort(
             (a, b) =>
               b.score - a.score ||
-              (b.date || '').localeCompare(a.date || '') ||
+              (a.date || '9999-12-31').localeCompare(b.date || '9999-12-31') ||
               a.name.localeCompare(b.name),
           )[0],
     )
@@ -131,6 +134,28 @@
       : /* HTML */ `<span class="muted">Source pending</span>`;
   const sourceLink = (release, label = 'Release ↗', attributes = '') =>
     external(release.source?.url, label, attributes);
+  const analysisLink = (release, label = 'Artificial Analysis ↗') =>
+    release.artificialAnalysisUrl
+      ? external(
+          release.artificialAnalysisUrl,
+          label,
+          `data-analysis-link title="Artificial Analysis" aria-label="Artificial Analysis for ${esc(release.name)}"`,
+        )
+      : '';
+  const weightsLabel = (release) =>
+    ({
+      open: 'Open weights',
+      'not-published': 'No public weights found',
+      unverified: 'Weights unverified',
+    })[release.weightsStatus] || 'Weights unverified';
+  const weightsLink = (release, label = 'Hugging Face weights ↗') =>
+    release.huggingFaceUrl
+      ? external(
+          release.huggingFaceUrl,
+          label,
+          `data-weights-link title="${esc(release.weightsNote || 'Downloadable model weights on Hugging Face')}" aria-label="Hugging Face weights for ${esc(release.name)}"`,
+        )
+      : '';
   const familyStyle = (family) => `--family:${family.color}`;
   const mark = (family) =>
     /* HTML */ `<span class="family-mark" style="${familyStyle(family)}" aria-hidden="true"
@@ -166,10 +191,12 @@
         <h1>${title}</h1>
         <p>${description}</p>
       </div>
-      ${actions ||
-      /* HTML */ `<div class="snapshot">
-        CURATED SNAPSHOT<strong>${esc(dateLabel(latestDate))}</strong>
-      </div>`}
+      ${
+        actions ||
+        /* HTML */ `<div class="snapshot">
+          CURATED SNAPSHOT<strong>${esc(dateLabel(latestDate))}</strong>
+        </div>`
+      }
     </div>`;
   const note = () =>
     /* HTML */ `<p class="note">
@@ -237,6 +264,7 @@
                     <span>${esc(release.name)}</span><span aria-hidden="true">·</span>${sourceLink(
                       release,
                     )}
+                    ${analysisLink(release, 'AA ↗')} ${weightsLink(release, 'HF ↗')}
                   </div>
                 </article>`,
             )
@@ -301,6 +329,12 @@
                                   >${esc(statusLabel(release.status))}</span
                                 >
                               </div>
+                              <div
+                                class="table-sub"
+                                data-weights-status="${esc(release.weightsStatus)}"
+                              >
+                                ${weightsLabel(release)}
+                              </div>
                             </div>
                           </div>
                         </td>
@@ -312,6 +346,7 @@
                             '↗',
                             `aria-label="Open release source for ${esc(release.name)}"`,
                           )}
+                          ${analysisLink(release, 'AA ↗')} ${weightsLink(release, 'HF ↗')}
                         </td>
                       </tr>`;
                     })
@@ -1016,9 +1051,9 @@
             cx="${cx}"
             cy="${cy}"
             r="1.6"
-            fill="${group.length > 1
-              ? group[group.length - 1].familyInfo.color
-              : release.familyInfo.color}"
+            fill="${
+              group.length > 1 ? group[group.length - 1].familyInfo.color : release.familyInfo.color
+            }"
             pointer-events="none"
           /><title>${esc(group.map((item) => item.name).join(' / '))}</title></g
         >`;
@@ -1072,17 +1107,21 @@
       >
         Release date (UTC)
       </text>
-      ${!visible.length
-        ? /* HTML */ `<text
-            x="${pad.left + chartWidth / 2}"
-            y="${height / 2}"
-            text-anchor="middle"
-            style="font-family:inherit;font-size:14px"
-            >${familySet.size
-              ? 'No releases in this date range'
-              : 'Select a model family to explore releases'}</text
-          >`
-        : ''}
+      ${
+        !visible.length
+          ? /* HTML */ `<text
+              x="${pad.left + chartWidth / 2}"
+              y="${height / 2}"
+              text-anchor="middle"
+              style="font-family:inherit;font-size:14px"
+              >${
+                familySet.size
+                  ? 'No releases in this date range'
+                  : 'Select a model family to explore releases'
+              }</text
+            >`
+          : ''
+      }
     </svg>`;
     document.getElementById('timeline-table-summary').textContent =
       `Explore ${visible.length} plotted releases in a table`;
@@ -1153,17 +1192,22 @@
                 .map(
                   (item) =>
                     /* HTML */ `<div>
-                      <span class="swatch" style="${familyStyle(item.familyInfo)}"></span>${pinned
-                        ? sourceLink(item, `${esc(item.name)} ↗`)
-                        : /* HTML */ `<span>${esc(item.name)}</span>`}
+                      <span class="swatch" style="${familyStyle(item.familyInfo)}"></span>${
+                        pinned
+                          ? sourceLink(item, `${esc(item.name)} ↗`)
+                          : /* HTML */ `<span>${esc(item.name)}</span>`
+                      }
+                      ${pinned ? weightsLink(item, 'HF ↗') : ''}
                     </div>`,
                 )
                 .join('')}
             </div>
             <p>
-              ${pinned
-                ? 'Each link opens the original release source.'
-                : 'Click or press Enter to choose a release source.'}
+              ${
+                pinned
+                  ? 'Release links open announcements; HF links open model weights.'
+                  : 'Click or press Enter to choose a release source.'
+              }
             </p>`
         : /* HTML */ `<p>
               ${esc(release.familyInfo.provider)} · ${esc(statusLabel(release.status))}
@@ -1210,26 +1254,36 @@
             ${sourceLink(release, `${esc(release.source.title)} ↗`)}
           </div>
           <div class="table-sub">
-            ${esc(release.source.publisher || release.familyInfo.provider)}${release.source.date
-              ? ` · ${esc(release.source.date)}`
-              : ''}
+            ${esc(release.source.publisher || release.familyInfo.provider)}${
+              release.source.date ? ` · ${esc(release.source.date)}` : ''
+            }
           </div>`,
       );
     else items.push('<span class="table-sub">Source pending</span>');
-    if (release.note || release.mapping || release.dateSource)
+    if (release.artificialAnalysisUrl)
+      items.push(`<div class="analysis-link">${analysisLink(release)}</div>`);
+    items.push(
+      `<div class="weights-link" data-weights-status="${esc(release.weightsStatus)}" title="Weights checked ${esc(release.weightsCheckedAt)}">${weightsLink(release) || esc(weightsLabel(release))}</div>`,
+    );
+    if (release.note || release.mapping || release.dateSource || release.weightsNote)
       items.push(
         /* HTML */ `<details class="release-details">
           <summary>Source notes</summary>
-          ${release.note ? /* HTML */ `<p>${esc(release.note)}</p>` : ''}${release.mapping
-            ? /* HTML */ `<p><strong>Version mapping:</strong> ${esc(release.mapping)}</p>`
-            : ''}${release.dateSource
-            ? /* HTML */ `<p>
-                <strong>Date evidence:</strong> ${external(
-                  release.dateSource.url,
-                  `${esc(release.dateSource.title)} ↗`,
-                )}
-              </p>`
-            : ''}
+          ${release.weightsNote ? /* HTML */ `<p><strong>Weights:</strong> ${esc(release.weightsNote)} ${release.weightsSourceUrl ? external(release.weightsSourceUrl, 'Evidence ↗') : ''}</p>` : ''}
+          ${release.note ? /* HTML */ `<p>${esc(release.note)}</p>` : ''}${
+            release.mapping
+              ? /* HTML */ `<p><strong>Version mapping:</strong> ${esc(release.mapping)}</p>`
+              : ''
+          }${
+            release.dateSource
+              ? /* HTML */ `<p>
+                  <strong>Date evidence:</strong> ${external(
+                    release.dateSource.url,
+                    `${esc(release.dateSource.title)} ↗`,
+                  )}
+                </p>`
+              : ''
+          }
         </details>`,
       );
     return items.join('');
@@ -1243,11 +1297,9 @@
             data-index-sort="${key}"
             aria-pressed="${indexPrefs.sort === key}"
           >
-            ${title}${indexPrefs.sort === key
-              ? indexPrefs.direction === 'desc'
-                ? ' ↓'
-                : ' ↑'
-              : ''}
+            ${title}${
+              indexPrefs.sort === key ? (indexPrefs.direction === 'desc' ? ' ↓' : ' ↑') : ''
+            }
           </button>`
         : title;
     return /* HTML */ `<table class="release-table">
@@ -1265,35 +1317,39 @@
         </tr>
       </thead>
       <tbody>
-        ${list.length
-          ? list
-              .map(
-                (release) =>
-                  /* HTML */ `<tr>
-                    ${selectable
-                      ? /* HTML */ `<td class="select-cell">${selectionCheckbox(release)}</td>`
-                      : ''}
-                    <td class="release-name">
-                      ${sourceLink(release, esc(release.name))}
-                      <div class="table-sub">${esc(statusLabel(release.status))}</div>
-                    </td>
-                    <td>
-                      <span class="family-inline"
-                        ><span class="swatch" style="${familyStyle(release.familyInfo)}"></span
-                        >${esc(release.familyInfo.name)}</span
-                      >
-                    </td>
-                    <td class="score-cell">${score(release)}</td>
-                    <td class="date-cell">${esc(release.date || 'Undated')}</td>
-                    <td class="source-cell">${sourceDetails(release)}</td>
-                  </tr>`,
-              )
-              .join('')
-          : /* HTML */ `<tr>
-              <td colspan="${selectable ? 6 : 5}" class="empty">
-                No releases match these filters.
-              </td>
-            </tr>`}
+        ${
+          list.length
+            ? list
+                .map(
+                  (release) =>
+                    /* HTML */ `<tr>
+                      ${
+                        selectable
+                          ? /* HTML */ `<td class="select-cell">${selectionCheckbox(release)}</td>`
+                          : ''
+                      }
+                      <td class="release-name">
+                        ${sourceLink(release, esc(release.name))}
+                        <div class="table-sub">${esc(statusLabel(release.status))}</div>
+                      </td>
+                      <td>
+                        <span class="family-inline"
+                          ><span class="swatch" style="${familyStyle(release.familyInfo)}"></span
+                          >${esc(release.familyInfo.name)}</span
+                        >
+                      </td>
+                      <td class="score-cell">${score(release)}</td>
+                      <td class="date-cell">${esc(release.date || 'Undated')}</td>
+                      <td class="source-cell">${sourceDetails(release)}</td>
+                    </tr>`,
+                )
+                .join('')
+            : /* HTML */ `<tr>
+                <td colspan="${selectable ? 6 : 5}" class="empty">
+                  No releases match these filters.
+                </td>
+              </tr>`
+        }
       </tbody>
     </table>`;
   }
@@ -1326,22 +1382,24 @@
       /* HTML */ `<section class="panel">
           <div class="compare-controls">
             <div class="selected-chips">
-              ${selected.length
-                ? selected
-                    .map(
-                      (release) =>
-                        /* HTML */ `<span class="model-chip"
-                          ><span class="swatch" style="${familyStyle(release.familyInfo)}"></span
-                          >${esc(release.name)}<button
-                            data-remove-release="${esc(release.id)}"
-                            aria-label="Remove ${esc(release.name)}"
-                          >
-                            ×
-                          </button></span
-                        >`,
-                    )
-                    .join('')
-                : '<span class="chart-hint">No models selected</span>'}
+              ${
+                selected.length
+                  ? selected
+                      .map(
+                        (release) =>
+                          /* HTML */ `<span class="model-chip"
+                            ><span class="swatch" style="${familyStyle(release.familyInfo)}"></span
+                            >${esc(release.name)}<button
+                              data-remove-release="${esc(release.id)}"
+                              aria-label="Remove ${esc(release.name)}"
+                            >
+                              ×
+                            </button></span
+                          >`,
+                      )
+                      .join('')
+                  : '<span class="chart-hint">No models selected</span>'
+              }
             </div>
             <div class="head-actions">
               <button
@@ -1353,36 +1411,38 @@
               </button>
             </div>
           </div>
-          ${list.length
-            ? /* HTML */ `<div class="comparison-heading">
-                  <div>
-                    <h2>Benchmark score</h2>
-                    <p>Raw version numbers · Zero baseline</p>
+          ${
+            list.length
+              ? /* HTML */ `<div class="comparison-heading">
+                    <div>
+                      <h2>Benchmark score</h2>
+                      <p>Raw version numbers · Zero baseline</p>
+                    </div>
+                    <label class="compare-sort"
+                      ><span class="sr-only">Bar order</span
+                      ><select id="compare-order">
+                        <option value="score" ${compareOrder === 'score' ? 'selected' : ''}>
+                          Highest score first
+                        </option>
+                        <option value="selection" ${compareOrder === 'selection' ? 'selected' : ''}>
+                          Selection order
+                        </option>
+                      </select></label
+                    >
                   </div>
-                  <label class="compare-sort"
-                    ><span class="sr-only">Bar order</span
-                    ><select id="compare-order">
-                      <option value="score" ${compareOrder === 'score' ? 'selected' : ''}>
-                        Highest score first
-                      </option>
-                      <option value="selection" ${compareOrder === 'selection' ? 'selected' : ''}>
-                        Selection order
-                      </option>
-                    </select></label
-                  >
-                </div>
-                <div id="comparison-chart" class="compare-chart-scroll"></div>
-                <div class="panel-foot">
-                  <span
-                    >${selected.length} releases from
-                    ${new Set(selected.map((release) => release.family)).size} families</span
-                  ><button class="text-button" data-export-comparison>Export CSV ↓</button>
+                  <div id="comparison-chart" class="compare-chart-scroll"></div>
+                  <div class="panel-foot">
+                    <span
+                      >${selected.length} releases from
+                      ${new Set(selected.map((release) => release.family)).size} families</span
+                    ><button class="text-button" data-export-comparison>Export CSV ↓</button>
+                  </div>`
+              : /* HTML */ `<div class="empty">
+                  <h2>Choose models to compare</h2>
+                  <p>Select any releases across families, including earlier versions.</p>
+                  <button class="button primary" data-open-picker>Select models</button>
                 </div>`
-            : /* HTML */ `<div class="empty">
-                <h2>Choose models to compare</h2>
-                <p>Select any releases across families, including earlier versions.</p>
-                <button class="button primary" data-open-picker>Select models</button>
-              </div>`}
+          }
         </section>
         <div class="presets" aria-label="Comparison presets">
           <span class="preset-label">Quick selections</span
@@ -1657,7 +1717,7 @@
         <h2>One leaderboard entry per family</h2>
         <p>
           Each family is represented by its highest numeric version in this curated dataset. When
-          releases within a family share that version, the most recent release is shown; releases
+          releases within a family share that version, the first recorded release is shown; releases
           with the same version and date are resolved alphabetically. Families with equal scores
           share a competition rank. For example, two families tied at rank 5 are both ranked 5, and
           the next rank is 7.
@@ -1698,6 +1758,13 @@
           source.
         </p>
         <h2>Curated coverage</h2>
+        <p>
+          Hugging Face links lead to available model weights or release collections. Weight
+          availability is checked separately from the original event date and can include later
+          publications, gated access, or restricted licenses. Community conversions and checkpoint
+          differences are identified in source notes. “No public weights found” records the result
+          of the check; “Weights unverified” means an exact match remains unresolved.
+        </p>
         <p>
           This snapshot contains <strong>${releases.length} release records</strong> across
           <strong>${families.length} families</strong>, with
@@ -1839,6 +1906,12 @@
       'source_title',
       'source_url',
       'date_source_url',
+      'artificial_analysis_url',
+      'weights_status',
+      'weights_checked_at',
+      'hugging_face_url',
+      'weights_source_url',
+      'weights_note',
       'note',
       'mapping',
     ];
@@ -1857,6 +1930,12 @@
       release.source?.title,
       release.source?.url,
       release.dateSource?.url,
+      release.artificialAnalysisUrl,
+      release.weightsStatus,
+      release.weightsCheckedAt,
+      release.huggingFaceUrl,
+      release.weightsSourceUrl,
+      release.weightsNote,
       release.note,
       release.mapping,
     ]);

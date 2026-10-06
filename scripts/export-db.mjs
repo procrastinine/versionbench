@@ -10,7 +10,7 @@ db.exec(`PRAGMA foreign_keys=ON;
 CREATE TABLE metadata (key TEXT PRIMARY KEY,value TEXT NOT NULL);
 CREATE TABLE families (id TEXT PRIMARY KEY,name TEXT NOT NULL,provider TEXT NOT NULL,color TEXT NOT NULL,core INTEGER NOT NULL CHECK(core IN(0,1)));
 CREATE TABLE sources (id TEXT PRIMARY KEY,title TEXT NOT NULL,url TEXT NOT NULL,publisher TEXT NOT NULL,published_date TEXT,checked_at TEXT NOT NULL);
-CREATE TABLE releases (id TEXT PRIMARY KEY,family_id TEXT NOT NULL REFERENCES families(id),name TEXT NOT NULL,version TEXT NOT NULL,score REAL NOT NULL CHECK(score>=0),release_date TEXT NOT NULL,status TEXT NOT NULL,source_id TEXT NOT NULL REFERENCES sources(id),date_source_id TEXT REFERENCES sources(id),note TEXT,mapping TEXT);
+CREATE TABLE releases (id TEXT PRIMARY KEY,family_id TEXT NOT NULL REFERENCES families(id),name TEXT NOT NULL,version TEXT NOT NULL,score REAL NOT NULL CHECK(score>=0),release_date TEXT NOT NULL,status TEXT NOT NULL,source_id TEXT NOT NULL REFERENCES sources(id),date_source_id TEXT REFERENCES sources(id),artificial_analysis_url TEXT,weights_status TEXT NOT NULL CHECK(weights_status IN('open','not-published','unverified')),weights_checked_at TEXT NOT NULL,hugging_face_url TEXT,weights_source_url TEXT NOT NULL,weights_note TEXT,note TEXT,mapping TEXT);
 CREATE INDEX releases_family_date ON releases(family_id,release_date);
 CREATE VIEW release_sources AS SELECT r.*,s.title AS source_title,s.url AS source_url,s.publisher,ds.title AS date_source_title,ds.url AS date_source_url,ds.publisher AS date_source_publisher FROM releases r JOIN sources s ON r.source_id=s.id LEFT JOIN sources ds ON r.date_source_id=ds.id;
 BEGIN;`);
@@ -20,7 +20,7 @@ for (const f of data.families) family.run(f.id, f.name, f.provider, f.color, Num
 const source = db.prepare('INSERT INTO sources VALUES (?,?,?,?,?,?)');
 for (const s of data.sources)
   source.run(s.id, s.title, s.url, s.publisher, s.date ?? null, s.checkedAt);
-const release = db.prepare('INSERT INTO releases VALUES (?,?,?,?,?,?,?,?,?,?,?)');
+const release = db.prepare('INSERT INTO releases VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
 for (const r of data.releases)
   release.run(
     r.id,
@@ -32,6 +32,12 @@ for (const r of data.releases)
     r.status,
     r.sourceId,
     r.dateSourceId ?? null,
+    r.artificialAnalysisUrl ?? null,
+    r.weightsStatus,
+    r.weightsCheckedAt,
+    r.huggingFaceUrl ?? null,
+    r.weightsSourceUrl,
+    r.weightsNote ?? null,
     r.note ?? null,
     r.mapping ?? null,
   );
