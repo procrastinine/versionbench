@@ -2,10 +2,11 @@ import { fetchPage } from './source-data.mjs';
 
 // Only explicit model-name prefixes are scanned. The configured numeric capture
 // excludes parameter counts; repository timestamps are not used as release dates.
-export function observedVersions(text, pattern) {
+export function observedVersions(text, pattern, versionMap = {}) {
   const found = new Map();
   for (const match of text.matchAll(new RegExp(pattern, 'gi'))) {
-    const version = match[1]?.replace('_', '.');
+    const rawVersion = match[1]?.replace('_', '.');
+    const version = versionMap[rawVersion?.toUpperCase()] ?? rawVersion;
     const score = Number(version);
     if (!version || !Number.isFinite(score)) throw new Error('Missing numeric version capture');
     if (!found.has(score)) found.set(score, { version, score, evidence: match[0] });
@@ -94,7 +95,7 @@ export async function auditProviders(data, definitions) {
                   .filter((line) => !new RegExp(source.excludePattern, 'i').test(line))
                   .join('\n')
               : raw;
-            const versions = observedVersions(text, source.pattern);
+            const versions = observedVersions(text, source.pattern, source.versionMap);
             return {
               url,
               versions,

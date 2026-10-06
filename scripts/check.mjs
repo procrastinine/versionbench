@@ -32,6 +32,7 @@ const families = new Map(data.families.map((f) => [f.id, f]));
 const sources = new Map(data.sources.map((s) => [s.id, s]));
 for (const f of data.families) {
   assert.ok(f.name && f.provider, `Missing family metadata: ${f.id}`);
+  assert.ok(['model', 'software'].includes(f.kind), `Missing family kind: ${f.id}`);
   assert.match(f.color, /^#[\da-f]{6}$/i);
   assert.ok(
     data.releases.some((r) => r.family === f.id),
@@ -58,8 +59,13 @@ for (const r of data.releases) {
     );
   assert.ok(r.name && r.status, `Incomplete release: ${r.id}`);
   assert.ok(
-    ['open', 'not-published', 'unverified'].includes(r.weightsStatus),
+    ['open', 'not-published', 'unverified', 'not-applicable'].includes(r.weightsStatus),
     `Missing weights review: ${r.id}`,
+  );
+  assert.equal(
+    r.weightsStatus === 'not-applicable',
+    families.get(r.family).kind === 'software',
+    `Software weights classification: ${r.id}`,
   );
   date(r.weightsCheckedAt, `${r.id} weights check`);
   assert.ok(
@@ -189,13 +195,20 @@ assert.ok(
   html.includes(css) && html.includes(js),
   'Rebuild index.html after editing styles or scripts',
 );
-assert.ok(!html.includes('/* DATA */') && !html.includes('/* SCRIPT */'), 'Unfilled HTML template');
+assert.ok(
+  !['/* DATA */', '/* STATS */', '/* SCRIPT */'].some((slot) => html.includes(slot)),
+  'Unfilled HTML template',
+);
 assert.ok(!/<script[^>]+src\s*=/i.test(html), 'External script dependency');
 assert.ok(!/<link[^>]+rel=["']stylesheet/i.test(html), 'External stylesheet dependency');
 const embedded = JSON.parse(
   html.match(/<script id="release-data" type="application\/json">([\s\S]*?)<\/script>/)[1],
 );
 assert.deepEqual(embedded, data, 'Rebuild index.html after editing data');
+const embeddedStats = JSON.parse(
+  html.match(/<script id="stats-data" type="application\/json">([\s\S]*?)<\/script>/)[1],
+);
+assert.deepEqual(embeddedStats, stats, 'Rebuild index.html after changing statistics');
 assert.ok(
   !/\b(?:fetch|XMLHttpRequest|WebSocket|EventSource|sendBeacon|importScripts)\s*\(/.test(js),
   'Standalone HTML must not make background network requests',

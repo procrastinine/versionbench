@@ -64,3 +64,20 @@ test('URL slugs and script payloads cannot invent model versions', () => {
     [4.7],
   );
 });
+
+test('GTA control converts only an explicitly configured Roman numeral', () => {
+  const source = definitions.find((d) => d.family === 'gta').sources[0];
+  const releases = observedVersions(
+    'Grand Theft Auto V for PlayStation 5; GTA V Enhanced; GTA VI',
+    source.pattern,
+    source.versionMap,
+  );
+  assert.deepEqual(
+    releases.map((r) => r.score),
+    [5],
+  );
+  assert.throws(
+    () => observedVersions('Grand Theft Auto V', source.pattern),
+    /Missing numeric version/,
+  );
+});

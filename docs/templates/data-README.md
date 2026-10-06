@@ -6,7 +6,7 @@
 
 `releases.json` is the editable source of truth. From the repository root, run `node scripts/generate.mjs` to generate the CSV tables, `stats.json`, SQLite database, standalone page, and both READMEs.
 
-Statistics include counts, coverage dates, releases by year and availability, weight availability and link coverage, and each family's highest version and first recorded release at that version. They are derived entirely from the catalog. Edit the release data to change them, and edit `docs/templates/` to change README prose.
+Statistics include counts, coverage dates, releases by year and availability, weight availability and link coverage, and each family's highest version, first recorded release at that version, and historical ranking metrics. `family-stats.csv` contains the family summaries; SQLite includes a `family_stats` table. They are derived entirely from the catalog. Edit the release data to change them, and edit `docs/templates/` to change README prose.
 
 ## Schema
 
@@ -14,6 +14,7 @@ Statistics include counts, coverage dates, releases by year and availability, we
 | -------- | ----------------------------------- | -------------------------------------------------------------------- |
 | families | `id`, `name`, `provider`            | Family identity and originating organization.                        |
 | families | `color`, `core`                     | Chart color and membership in the default comparison group.          |
+| families | `kind`, `scope`                     | Model or software control, with optional coverage limits.            |
 | sources  | `id`, `title`, `url`, `publisher`   | Reusable source record and direct link.                              |
 | sources  | `date`, `checkedAt`                 | Optional publication date and snapshot verification date.            |
 | releases | `id`, `family`, `name`              | Event identity, family reference, and published model name.          |
@@ -32,6 +33,8 @@ SQLite and browser CSV exports use snake_case fields such as `artificial_analysi
 
 Every event has a weights assessment, separate from its historical release `status`. `open` means downloadable model weights were verified, including gated or restricted-license weights; it is not an open-source license claim. `not-published` means no public checkpoint was found for that release in the reviewed publisher material. `unverified` means the exact checkpoint match remains unresolved. The check date describes current availability, not when the weights first became available.
 
+Software controls use `not-applicable`. Open-source software is not classified as a model with open weights.
+
 Prefer the publisher's Hugging Face repository or a collection for a multi-model release. Community conversions, quantizations, base checkpoints, and partial coverage of a broader announcement are identified in `weightsNote`. Hosted variants do not inherit another checkpoint's weights merely because they share a version number. Promised future weights are not marked open.
 
 Run `node scripts/audit-weights.mjs` to write `output/weights-audit.json`. It checks repository metadata for checkpoint files and collections for at least one such model. It does not download weights, verify their contents, or establish that a checkpoint matches a release; that association requires reviewing the model card and publisher evidence. Failed links remain review items and cause a nonzero exit. Run `node --test scripts/weights-audit.test.mjs` to test invalid links, empty repositories, gated weights, and failed source requests.
@@ -40,9 +43,28 @@ Run `node scripts/audit-weights.mjs` to write `output/weights-audit.json`. It ch
 
 Use the calendar date stated by the publisher. Do not infer a release date from a model suffix, repository creation, search crawl date, or website copyright. Announcements, previews, API availability, technical reports, and open-weight releases can be separate labeled events. Keep publication dates distinct from event dates, and preserve source disagreements in the record's notes. Label any secondary date evidence explicitly.
 
-Scores are literal numeric versions, not semantic-version tuples or capability measurements. Parameter counts, context sizes, checkpoint dates, and software versions do not affect the score. An unnumbered initial model can map to generation 1 when a subsequent numbered lineage supports that interpretation; explain the mapping in its record.
+Scores are literal numeric versions, not semantic-version tuples or capability measurements. Parameter counts, context sizes, checkpoint dates, and dependency versions do not affect the score. An unnumbered initial model can map to generation 1 when a subsequent numbered lineage supports that interpretation; explain the mapping in its record.
 
 Each family uses its highest numeric version, represented by the earliest recorded event at that version. Same-day ties use alphabetical model names. Later releases with lower version numbers remain in the timeline without lowering the family's maximum.
+
+Python and PyTorch are software controls, with stable minor releases from Python 3.0 and PyTorch 1.0 onward. Patch releases and previews are excluded. Their `major.minor` strings are scored as decimals, so Python 3.10 scores 3.1 and loses to 3.9. The `version` string preserves the published label; `versionCount` counts distinct labels. GTA records GTA V's platform releases and rereleases, converting the Roman numeral V to 5 every time. The version has shown considerable discipline.
+
+Software controls occupy a separate category under “Expanded dataset”. They are excluded from the default timeline and its date range. They are also excluded from the model leaderboard, model counts, and all historical model statistics. `stats.json` reports them separately under `softwareControls`, `softwareControlCount`, and `softwareReleaseCount`; all other aggregate counts and the `families` summaries describe models only. `family-stats.csv` and SQLite's `family_stats` table contain only model families.
+
+The timeline can follow either the highest score to date or the latest release. For multiple releases on the same day, the latest-release line uses that day's highest score; points retain every event. Filters apply to the line's history as well as its points and table. Weight filters describe availability at the check date, not at the historical event date.
+
+## Family statistics
+
+Only model families compete in the historical rankings. On each UTC day, a family uses its highest score reached by that day. All events on the same day take effect together. Rank is 1 plus the number of active model families with a higher score; ties share a competition rank. A family enters on its first recorded event and remains active through the snapshot date, inclusive. Python, PyTorch, and GTA do not affect these calculations.
+
+- **Time at #1:** total days ranked first, including shared first place. Tied families each receive the full day.
+- **Average rank:** sum of rank × days at that rank, divided by tracked days. It is time-weighted, not averaged over release events.
+- **Number of releases:** all recorded events in the family, including separately documented variants and announcements.
+- **Average release rate:** recorded events / (tracked days / 365.2425), in releases per year. The denominator runs from the first recorded event through the snapshot, including quiet periods after the latest release.
+
+Family pages also show current rank, the first release at the highest score, the latest recorded event, and coverage dates. Page and timeline filters do not recalculate historical rankings. These statistics describe the catalog's coverage; the first recorded event need not be a family's first-ever release. Run `node --test scripts/stats.test.mjs` to check ties, elapsed time, new entrants, and decimal regressions.
+
+Each model's `rankHistory` records its initial rank and every date on which that rank changes. The family-page graph and accessible table use these generated values; #1 is at the top. The final rank continues through the snapshot date. SQLite's `family_rank_history` table contains the same series. Software controls have no rank history.
 
 The catalog covers named language-model generations, major variants, and release milestones. It is not exhaustive across sizes, quantizations, fine-tunes, deployments, or providers. The first recorded event is not necessarily a family's first-ever release. Artificial Analysis links identify matching profiles; their absence does not imply that a model is unavailable. Prices and capability benchmarks are not imported.
 

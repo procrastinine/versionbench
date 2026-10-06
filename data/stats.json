@@ -1,7 +1,10 @@
 {
   "snapshot": "2026-10-06",
+  "scope": "Model families only. Software controls are reported separately and excluded from all model statistics and ranks.",
   "familyCount": 48,
+  "softwareControlCount": 3,
   "releaseCount": 551,
+  "softwareReleaseCount": 49,
   "sourceCount": 348,
   "artificialAnalysisReleaseCount": 292,
   "artificialAnalysisProfileCount": 275,
@@ -43,6 +46,7 @@
     {
       "id": "gpt",
       "name": "GPT",
+      "kind": "model",
       "releaseCount": 58,
       "versionCount": 16,
       "highestVersion": "6.1",
@@ -52,14 +56,41 @@
         "name": "GPT-6.1 Sol",
         "date": "2026-09-29"
       },
+      "latestRelease": {
+        "id": "gpt-gpt-6-1-sol-2026-09-29",
+        "name": "GPT-6.1 Sol",
+        "version": "6.1",
+        "score": 6.1,
+        "date": "2026-09-29"
+      },
       "firstEventDate": "2018-06-11",
       "lastEventDate": "2026-09-29",
+      "trackedDays": 3040,
+      "daysAtNumberOne": 2369,
+      "rankHistory": [
+        {
+          "date": "2018-06-11",
+          "rank": 1
+        },
+        {
+          "date": "2024-06-21",
+          "rank": 2
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 1
+        }
+      ],
+      "currentRank": 1,
+      "averageRank": 1.2207236842105262,
+      "releaseRatePerYear": 6.968442434210526,
       "artificialAnalysisReleaseCount": 33,
       "huggingFaceReleaseCount": 2
     },
     {
       "id": "claude",
       "name": "Claude",
+      "kind": "model",
       "releaseCount": 33,
       "versionCount": 17,
       "highestVersion": "5.5",
@@ -69,14 +100,125 @@
         "name": "Claude Opus 5.5",
         "date": "2026-09-22"
       },
+      "latestRelease": {
+        "id": "claude-claude-sonnet-5-5-2026-09-28",
+        "name": "Claude Sonnet 5.5",
+        "version": "5.5",
+        "score": 5.5,
+        "date": "2026-09-28"
+      },
       "firstEventDate": "2023-03-14",
       "lastEventDate": "2026-09-28",
+      "trackedDays": 1303,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-03-14",
+          "rank": 3
+        },
+        {
+          "date": "2023-05-10",
+          "rank": 4
+        },
+        {
+          "date": "2023-06-25",
+          "rank": 5
+        },
+        {
+          "date": "2023-07-07",
+          "rank": 7
+        },
+        {
+          "date": "2023-07-11",
+          "rank": 4
+        },
+        {
+          "date": "2023-07-30",
+          "rank": 5
+        },
+        {
+          "date": "2023-10-27",
+          "rank": 6
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 7
+        },
+        {
+          "date": "2024-03-04",
+          "rank": 6
+        },
+        {
+          "date": "2024-06-21",
+          "rank": 7
+        },
+        {
+          "date": "2024-12-12",
+          "rank": 8
+        },
+        {
+          "date": "2025-02-24",
+          "rank": 7
+        },
+        {
+          "date": "2025-04-05",
+          "rank": 8
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 9
+        },
+        {
+          "date": "2025-05-02",
+          "rank": 10
+        },
+        {
+          "date": "2025-05-22",
+          "rank": 4
+        },
+        {
+          "date": "2025-07-02",
+          "rank": 5
+        },
+        {
+          "date": "2025-09-29",
+          "rank": 3
+        },
+        {
+          "date": "2025-09-30",
+          "rank": 4
+        },
+        {
+          "date": "2025-11-13",
+          "rank": 5
+        },
+        {
+          "date": "2026-05-19",
+          "rank": 6
+        },
+        {
+          "date": "2026-06-09",
+          "rank": 5
+        },
+        {
+          "date": "2026-09-01",
+          "rank": 4
+        },
+        {
+          "date": "2026-09-22",
+          "rank": 2
+        }
+      ],
+      "currentRank": 2,
+      "averageRank": 5.60552570990023,
+      "releaseRatePerYear": 9.250193783576362,
       "artificialAnalysisReleaseCount": 28,
       "huggingFaceReleaseCount": 0
     },
     {
       "id": "gemini",
       "name": "Gemini",
+      "kind": "model",
       "releaseCount": 52,
       "versionCount": 11,
       "highestVersion": "4",
@@ -86,14 +228,197 @@
         "name": "Gemini 4 Argon",
         "date": "2026-09-30"
       },
+      "latestRelease": {
+        "id": "gemini-gemini-4-argon-2026-09-30",
+        "name": "Gemini 4 Argon",
+        "version": "4",
+        "score": 4,
+        "date": "2026-09-30"
+      },
       "firstEventDate": "2023-12-06",
       "lastEventDate": "2026-09-30",
+      "trackedDays": 1036,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-12-06",
+          "rank": 10
+        },
+        {
+          "date": "2024-01-17",
+          "rank": 11
+        },
+        {
+          "date": "2024-02-04",
+          "rank": 12
+        },
+        {
+          "date": "2024-02-15",
+          "rank": 11
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 12
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 13
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 14
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 15
+        },
+        {
+          "date": "2024-06-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 17
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 18
+        },
+        {
+          "date": "2024-08-13",
+          "rank": 19
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 20
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 21
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 22
+        },
+        {
+          "date": "2024-11-26",
+          "rank": 23
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 19
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 20
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 21
+        },
+        {
+          "date": "2025-02-19",
+          "rank": 22
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 24
+        },
+        {
+          "date": "2025-03-25",
+          "rank": 23
+        },
+        {
+          "date": "2025-04-29",
+          "rank": 24
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 25
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 26
+        },
+        {
+          "date": "2025-11-18",
+          "rank": 21
+        },
+        {
+          "date": "2025-12-12",
+          "rank": 22
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 23
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 24
+        },
+        {
+          "date": "2026-02-15",
+          "rank": 25
+        },
+        {
+          "date": "2026-02-18",
+          "rank": 26
+        },
+        {
+          "date": "2026-02-19",
+          "rank": 23
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 24
+        },
+        {
+          "date": "2026-05-19",
+          "rank": 22
+        },
+        {
+          "date": "2026-05-29",
+          "rank": 23
+        },
+        {
+          "date": "2026-07-21",
+          "rank": 22
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 23
+        },
+        {
+          "date": "2026-08-13",
+          "rank": 22
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 23
+        },
+        {
+          "date": "2026-09-02",
+          "rank": 22
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 23
+        },
+        {
+          "date": "2026-09-30",
+          "rank": 14
+        }
+      ],
+      "currentRank": 14,
+      "averageRank": 20.47200772200772,
+      "releaseRatePerYear": 18.332635135135135,
       "artificialAnalysisReleaseCount": 36,
       "huggingFaceReleaseCount": 0
     },
     {
       "id": "grok",
       "name": "Grok",
+      "kind": "model",
       "releaseCount": 24,
       "versionCount": 11,
       "highestVersion": "4.7",
@@ -103,14 +428,173 @@
         "name": "Grok 4.7",
         "date": "2026-09-21"
       },
+      "latestRelease": {
+        "id": "grok-grok-4-7-2026-09-21",
+        "name": "Grok 4.7",
+        "version": "4.7",
+        "score": 4.7,
+        "date": "2026-09-21"
+      },
       "firstEventDate": "2023-11-03",
       "lastEventDate": "2026-09-21",
+      "trackedDays": 1069,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-11-03",
+          "rank": 10
+        },
+        {
+          "date": "2024-01-17",
+          "rank": 11
+        },
+        {
+          "date": "2024-02-04",
+          "rank": 12
+        },
+        {
+          "date": "2024-02-15",
+          "rank": 13
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 14
+        },
+        {
+          "date": "2024-03-28",
+          "rank": 12
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 13
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 14
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 15
+        },
+        {
+          "date": "2024-06-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 17
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 18
+        },
+        {
+          "date": "2024-08-13",
+          "rank": 12
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 14
+        },
+        {
+          "date": "2024-09-19",
+          "rank": 15
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 16
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 17
+        },
+        {
+          "date": "2024-11-18",
+          "rank": 18
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 19
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 20
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 21
+        },
+        {
+          "date": "2025-02-19",
+          "rank": 12
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 13
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 14
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 15
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 16
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 5
+        },
+        {
+          "date": "2025-08-05",
+          "rank": 6
+        },
+        {
+          "date": "2025-09-05",
+          "rank": 7
+        },
+        {
+          "date": "2025-11-17",
+          "rank": 6
+        },
+        {
+          "date": "2025-12-03",
+          "rank": 7
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 8
+        },
+        {
+          "date": "2026-05-15",
+          "rank": 7
+        },
+        {
+          "date": "2026-05-19",
+          "rank": 8
+        },
+        {
+          "date": "2026-07-08",
+          "rank": 7
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 8
+        }
+      ],
+      "currentRank": 8,
+      "averageRank": 11.322731524789523,
+      "releaseRatePerYear": 8.200018709073902,
       "artificialAnalysisReleaseCount": 14,
       "huggingFaceReleaseCount": 2
     },
     {
       "id": "llama",
       "name": "Llama",
+      "kind": "model",
       "releaseCount": 9,
       "versionCount": 7,
       "highestVersion": "4",
@@ -120,14 +604,133 @@
         "name": "Llama 4 Maverick",
         "date": "2025-04-05"
       },
+      "latestRelease": {
+        "id": "llama-llama-4-maverick-2025-04-05",
+        "name": "Llama 4 Maverick",
+        "version": "4",
+        "score": 4,
+        "date": "2025-04-05"
+      },
       "firstEventDate": "2023-02-24",
       "lastEventDate": "2025-04-05",
+      "trackedDays": 1321,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-02-24",
+          "rank": 3
+        },
+        {
+          "date": "2023-04-18",
+          "rank": 4
+        },
+        {
+          "date": "2023-05-10",
+          "rank": 5
+        },
+        {
+          "date": "2023-06-25",
+          "rank": 6
+        },
+        {
+          "date": "2023-07-07",
+          "rank": 8
+        },
+        {
+          "date": "2023-07-18",
+          "rank": 4
+        },
+        {
+          "date": "2023-07-30",
+          "rank": 5
+        },
+        {
+          "date": "2023-10-27",
+          "rank": 6
+        },
+        {
+          "date": "2023-11-21",
+          "rank": 7
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 8
+        },
+        {
+          "date": "2024-04-18",
+          "rank": 6
+        },
+        {
+          "date": "2024-06-20",
+          "rank": 7
+        },
+        {
+          "date": "2024-06-21",
+          "rank": 8
+        },
+        {
+          "date": "2024-08-20",
+          "rank": 9
+        },
+        {
+          "date": "2024-12-09",
+          "rank": 10
+        },
+        {
+          "date": "2025-04-05",
+          "rank": 4
+        },
+        {
+          "date": "2025-07-02",
+          "rank": 5
+        },
+        {
+          "date": "2025-08-05",
+          "rank": 6
+        },
+        {
+          "date": "2025-09-05",
+          "rank": 7
+        },
+        {
+          "date": "2025-11-17",
+          "rank": 8
+        },
+        {
+          "date": "2025-12-03",
+          "rank": 9
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 10
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 11
+        },
+        {
+          "date": "2026-04-29",
+          "rank": 12
+        },
+        {
+          "date": "2026-09-10",
+          "rank": 13
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 14
+        }
+      ],
+      "currentRank": 14,
+      "averageRank": 7.683573050719152,
+      "releaseRatePerYear": 2.488404617713853,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 9
     },
     {
       "id": "mistral",
       "name": "Mistral",
+      "kind": "model",
       "releaseCount": 20,
       "versionCount": 11,
       "highestVersion": "4",
@@ -137,14 +740,173 @@
         "name": "Mistral Small 4",
         "date": "2026-03-16"
       },
+      "latestRelease": {
+        "id": "mistral-mistral-large-4-2026-10-06",
+        "name": "Mistral Large 4",
+        "version": "4",
+        "score": 4,
+        "date": "2026-10-06"
+      },
       "firstEventDate": "2023-09-27",
       "lastEventDate": "2026-10-06",
+      "trackedDays": 1106,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-09-27",
+          "rank": 13
+        },
+        {
+          "date": "2023-10-09",
+          "rank": 14
+        },
+        {
+          "date": "2023-11-02",
+          "rank": 16
+        },
+        {
+          "date": "2023-11-03",
+          "rank": 17
+        },
+        {
+          "date": "2023-12-06",
+          "rank": 18
+        },
+        {
+          "date": "2024-02-01",
+          "rank": 20
+        },
+        {
+          "date": "2024-02-21",
+          "rank": 21
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 14
+        },
+        {
+          "date": "2024-03-28",
+          "rank": 15
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 18
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 19
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 11
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 12
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 14
+        },
+        {
+          "date": "2024-09-19",
+          "rank": 15
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 16
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 17
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 18
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 19
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 20
+        },
+        {
+          "date": "2025-01-30",
+          "rank": 12
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 13
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 14
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 15
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 16
+        },
+        {
+          "date": "2025-08-25",
+          "rank": 17
+        },
+        {
+          "date": "2025-08-26",
+          "rank": 18
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 19
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 20
+        },
+        {
+          "date": "2026-02-15",
+          "rank": 21
+        },
+        {
+          "date": "2026-03-16",
+          "rank": 10
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 11
+        },
+        {
+          "date": "2026-04-29",
+          "rank": 12
+        },
+        {
+          "date": "2026-09-10",
+          "rank": 13
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 14
+        }
+      ],
+      "currentRank": 14,
+      "averageRank": 15.486437613019891,
+      "releaseRatePerYear": 6.604746835443038,
       "artificialAnalysisReleaseCount": 16,
       "huggingFaceReleaseCount": 16
     },
     {
       "id": "qwen",
       "name": "Qwen",
+      "kind": "model",
       "releaseCount": 69,
       "versionCount": 9,
       "highestVersion": "3.8",
@@ -154,14 +916,197 @@
         "name": "Qwen3.8-Max (initial API)",
         "date": "2026-08-02"
       },
+      "latestRelease": {
+        "id": "qwen-qwen3-8-omni-flash-realtime-2026-09-21",
+        "name": "Qwen3.8-Omni-Flash Realtime",
+        "version": "3.8",
+        "score": 3.8,
+        "date": "2026-09-21"
+      },
       "firstEventDate": "2023-08-03",
       "lastEventDate": "2026-09-21",
+      "trackedDays": 1161,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-08-03",
+          "rank": 9
+        },
+        {
+          "date": "2023-09-11",
+          "rank": 10
+        },
+        {
+          "date": "2024-01-17",
+          "rank": 11
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 12
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 13
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 14
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 15
+        },
+        {
+          "date": "2024-06-06",
+          "rank": 10
+        },
+        {
+          "date": "2024-07-03",
+          "rank": 11
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 12
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 14
+        },
+        {
+          "date": "2024-09-19",
+          "rank": 12
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 13
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 14
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 15
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 16
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 17
+        },
+        {
+          "date": "2024-12-26",
+          "rank": 18
+        },
+        {
+          "date": "2025-01-15",
+          "rank": 19
+        },
+        {
+          "date": "2025-01-30",
+          "rank": 20
+        },
+        {
+          "date": "2025-02-19",
+          "rank": 21
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 23
+        },
+        {
+          "date": "2025-04-29",
+          "rank": 14
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 15
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 16
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 17
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 18
+        },
+        {
+          "date": "2025-08-21",
+          "rank": 19
+        },
+        {
+          "date": "2025-08-25",
+          "rank": 20
+        },
+        {
+          "date": "2025-08-26",
+          "rank": 21
+        },
+        {
+          "date": "2025-12-12",
+          "rank": 22
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 23
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 24
+        },
+        {
+          "date": "2026-02-15",
+          "rank": 18
+        },
+        {
+          "date": "2026-03-16",
+          "rank": 19
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 20
+        },
+        {
+          "date": "2026-04-01",
+          "rank": 19
+        },
+        {
+          "date": "2026-04-24",
+          "rank": 20
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 21
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 22
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 23
+        },
+        {
+          "date": "2026-09-30",
+          "rank": 24
+        }
+      ],
+      "currentRank": 24,
+      "averageRank": 16.215331610680447,
+      "releaseRatePerYear": 21.70691860465116,
       "artificialAnalysisReleaseCount": 25,
       "huggingFaceReleaseCount": 39
     },
     {
       "id": "deepseek",
       "name": "DeepSeek",
+      "kind": "model",
       "releaseCount": 29,
       "versionCount": 8,
       "highestVersion": "4.1",
@@ -171,14 +1116,161 @@
         "name": "DeepSeek-V4.1 Flash",
         "date": "2026-09-10"
       },
+      "latestRelease": {
+        "id": "deepseek-deepseek-v4-1-flash-2026-09-10",
+        "name": "DeepSeek-V4.1 Flash",
+        "version": "4.1",
+        "score": 4.1,
+        "date": "2026-09-10"
+      },
       "firstEventDate": "2023-11-02",
       "lastEventDate": "2026-09-10",
+      "trackedDays": 1070,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-11-02",
+          "rank": 10
+        },
+        {
+          "date": "2024-01-17",
+          "rank": 11
+        },
+        {
+          "date": "2024-02-04",
+          "rank": 12
+        },
+        {
+          "date": "2024-02-15",
+          "rank": 13
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 14
+        },
+        {
+          "date": "2024-03-28",
+          "rank": 15
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 10
+        },
+        {
+          "date": "2024-07-03",
+          "rank": 11
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 12
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 13
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 14
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 15
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 16
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 17
+        },
+        {
+          "date": "2024-12-26",
+          "rank": 12
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 13
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 14
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 15
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 16
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 17
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 18
+        },
+        {
+          "date": "2025-08-21",
+          "rank": 17
+        },
+        {
+          "date": "2025-08-25",
+          "rank": 18
+        },
+        {
+          "date": "2025-08-26",
+          "rank": 19
+        },
+        {
+          "date": "2025-09-29",
+          "rank": 18
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 19
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 20
+        },
+        {
+          "date": "2026-02-15",
+          "rank": 21
+        },
+        {
+          "date": "2026-03-16",
+          "rank": 22
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 23
+        },
+        {
+          "date": "2026-04-24",
+          "rank": 11
+        },
+        {
+          "date": "2026-04-29",
+          "rank": 12
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 13
+        }
+      ],
+      "currentRank": 13,
+      "averageRank": 14.185981308411215,
+      "releaseRatePerYear": 9.899095794392524,
       "artificialAnalysisReleaseCount": 21,
       "huggingFaceReleaseCount": 27
     },
     {
       "id": "kimi",
       "name": "Kimi",
+      "kind": "model",
       "releaseCount": 20,
       "versionCount": 9,
       "highestVersion": "3",
@@ -188,14 +1280,197 @@
         "name": "Kimi K3",
         "date": "2026-07-16"
       },
+      "latestRelease": {
+        "id": "kimi-kimi-k2-8-preview-2026-09-11",
+        "name": "Kimi K2.8 Preview",
+        "version": "2.8",
+        "score": 2.8,
+        "date": "2026-09-11"
+      },
       "firstEventDate": "2023-10-09",
       "lastEventDate": "2026-09-11",
+      "trackedDays": 1094,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-10-09",
+          "rank": 10
+        },
+        {
+          "date": "2024-01-17",
+          "rank": 11
+        },
+        {
+          "date": "2024-02-04",
+          "rank": 12
+        },
+        {
+          "date": "2024-02-15",
+          "rank": 13
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 14
+        },
+        {
+          "date": "2024-03-28",
+          "rank": 15
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 18
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 19
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 20
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 21
+        },
+        {
+          "date": "2024-08-22",
+          "rank": 22
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 23
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 24
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 25
+        },
+        {
+          "date": "2024-11-26",
+          "rank": 26
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 27
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 28
+        },
+        {
+          "date": "2025-01-20",
+          "rank": 26
+        },
+        {
+          "date": "2025-03-06",
+          "rank": 27
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 28
+        },
+        {
+          "date": "2025-06-25",
+          "rank": 29
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 30
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 31
+        },
+        {
+          "date": "2025-07-11",
+          "rank": 26
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 27
+        },
+        {
+          "date": "2025-11-19",
+          "rank": 28
+        },
+        {
+          "date": "2025-11-20",
+          "rank": 29
+        },
+        {
+          "date": "2025-11-26",
+          "rank": 30
+        },
+        {
+          "date": "2025-12-23",
+          "rank": 31
+        },
+        {
+          "date": "2026-01-05",
+          "rank": 32
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 33
+        },
+        {
+          "date": "2026-01-27",
+          "rank": 30
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 31
+        },
+        {
+          "date": "2026-03-18",
+          "rank": 32
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 33
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 34
+        },
+        {
+          "date": "2026-07-16",
+          "rank": 28
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 29
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 30
+        },
+        {
+          "date": "2026-09-28",
+          "rank": 31
+        },
+        {
+          "date": "2026-09-30",
+          "rank": 32
+        }
+      ],
+      "currentRank": 32,
+      "averageRank": 24.344606946983546,
+      "releaseRatePerYear": 6.67719378427788,
       "artificialAnalysisReleaseCount": 7,
       "huggingFaceReleaseCount": 7
     },
     {
       "id": "glm",
       "name": "GLM",
+      "kind": "model",
       "releaseCount": 27,
       "versionCount": 12,
       "highestVersion": "5.3",
@@ -205,14 +1480,93 @@
         "name": "GLM-5.3",
         "date": "2026-08-14"
       },
+      "latestRelease": {
+        "id": "glm-glm-5-3-flash-2026-08-26",
+        "name": "GLM-5.3 Flash",
+        "version": "5.3",
+        "score": 5.3,
+        "date": "2026-08-26"
+      },
       "firstEventDate": "2021-03-18",
       "lastEventDate": "2026-08-26",
+      "trackedDays": 2029,
+      "daysAtNumberOne": 157,
+      "rankHistory": [
+        {
+          "date": "2021-03-18",
+          "rank": 3
+        },
+        {
+          "date": "2023-04-18",
+          "rank": 4
+        },
+        {
+          "date": "2023-05-10",
+          "rank": 5
+        },
+        {
+          "date": "2023-06-25",
+          "rank": 3
+        },
+        {
+          "date": "2023-07-07",
+          "rank": 4
+        },
+        {
+          "date": "2023-07-30",
+          "rank": 5
+        },
+        {
+          "date": "2023-10-27",
+          "rank": 4
+        },
+        {
+          "date": "2024-01-16",
+          "rank": 1
+        },
+        {
+          "date": "2024-06-21",
+          "rank": 2
+        },
+        {
+          "date": "2025-02-27",
+          "rank": 3
+        },
+        {
+          "date": "2025-03-16",
+          "rank": 4
+        },
+        {
+          "date": "2025-07-28",
+          "rank": 2
+        },
+        {
+          "date": "2025-08-07",
+          "rank": 3
+        },
+        {
+          "date": "2025-11-13",
+          "rank": 4
+        },
+        {
+          "date": "2026-02-11",
+          "rank": 3
+        },
+        {
+          "date": "2026-09-22",
+          "rank": 4
+        }
+      ],
+      "currentRank": 4,
+      "averageRank": 3.0295712173484475,
+      "releaseRatePerYear": 4.860299408575653,
       "artificialAnalysisReleaseCount": 14,
       "huggingFaceReleaseCount": 24
     },
     {
       "id": "muse",
       "name": "Muse",
+      "kind": "model",
       "releaseCount": 4,
       "versionCount": 4,
       "highestVersion": "1.3",
@@ -222,14 +1576,53 @@
         "name": "Muse Spark 1.3",
         "date": "2026-09-02"
       },
+      "latestRelease": {
+        "id": "muse-muse-spark-1-3-2026-09-02",
+        "name": "Muse Spark 1.3",
+        "version": "1.3",
+        "score": 1.3,
+        "date": "2026-09-02"
+      },
       "firstEventDate": "2026-04-08",
       "lastEventDate": "2026-09-02",
+      "trackedDays": 182,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2026-04-08",
+          "rank": 43
+        },
+        {
+          "date": "2026-04-20",
+          "rank": 44
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 45
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 46
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 47
+        },
+        {
+          "date": "2026-09-08",
+          "rank": 48
+        }
+      ],
+      "currentRank": 48,
+      "averageRank": 46.11538461538461,
+      "releaseRatePerYear": 8.027307692307692,
       "artificialAnalysisReleaseCount": 4,
       "huggingFaceReleaseCount": 0
     },
     {
       "id": "gemma",
       "name": "Gemma",
+      "kind": "model",
       "releaseCount": 8,
       "versionCount": 4,
       "highestVersion": "4",
@@ -239,14 +1632,181 @@
         "name": "Gemma 4",
         "date": "2026-03-31"
       },
+      "latestRelease": {
+        "id": "gemma-gemma-4-12b-2026-06-03",
+        "name": "Gemma 4 12B",
+        "version": "4",
+        "score": 4,
+        "date": "2026-06-03"
+      },
       "firstEventDate": "2024-02-21",
       "lastEventDate": "2026-06-03",
+      "trackedDays": 959,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2024-02-21",
+          "rank": 13
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 14
+        },
+        {
+          "date": "2024-03-28",
+          "rank": 15
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 18
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 10
+        },
+        {
+          "date": "2024-07-03",
+          "rank": 11
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 12
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 14
+        },
+        {
+          "date": "2024-09-19",
+          "rank": 15
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 16
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 17
+        },
+        {
+          "date": "2024-11-18",
+          "rank": 18
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 19
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 20
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 21
+        },
+        {
+          "date": "2025-02-19",
+          "rank": 22
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 12
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 13
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 14
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 15
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 16
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 17
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 18
+        },
+        {
+          "date": "2025-08-21",
+          "rank": 19
+        },
+        {
+          "date": "2025-08-25",
+          "rank": 20
+        },
+        {
+          "date": "2025-08-26",
+          "rank": 21
+        },
+        {
+          "date": "2025-12-12",
+          "rank": 22
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 23
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 24
+        },
+        {
+          "date": "2026-02-15",
+          "rank": 25
+        },
+        {
+          "date": "2026-02-18",
+          "rank": 26
+        },
+        {
+          "date": "2026-02-19",
+          "rank": 27
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 10
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 11
+        },
+        {
+          "date": "2026-04-29",
+          "rank": 12
+        },
+        {
+          "date": "2026-09-10",
+          "rank": 13
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 14
+        }
+      ],
+      "currentRank": 14,
+      "averageRank": 16.306569343065693,
+      "releaseRatePerYear": 3.046861313868613,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 8
     },
     {
       "id": "phi",
       "name": "Phi",
+      "kind": "model",
       "releaseCount": 12,
       "versionCount": 6,
       "highestVersion": "4",
@@ -256,14 +1816,129 @@
         "name": "Phi-4",
         "date": "2024-12-12"
       },
+      "latestRelease": {
+        "id": "phi-phi-4-reasoning-vision-15b-2026-03-04",
+        "name": "Phi-4-Reasoning-Vision-15B",
+        "version": "4",
+        "score": 4,
+        "date": "2026-03-04"
+      },
       "firstEventDate": "2023-06-20",
       "lastEventDate": "2026-03-04",
+      "trackedDays": 1205,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-06-20",
+          "rank": 5
+        },
+        {
+          "date": "2023-06-25",
+          "rank": 6
+        },
+        {
+          "date": "2023-07-07",
+          "rank": 8
+        },
+        {
+          "date": "2023-07-18",
+          "rank": 9
+        },
+        {
+          "date": "2023-12-12",
+          "rank": 7
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 8
+        },
+        {
+          "date": "2024-04-18",
+          "rank": 9
+        },
+        {
+          "date": "2024-04-23",
+          "rank": 6
+        },
+        {
+          "date": "2024-06-20",
+          "rank": 7
+        },
+        {
+          "date": "2024-06-21",
+          "rank": 8
+        },
+        {
+          "date": "2024-07-23",
+          "rank": 9
+        },
+        {
+          "date": "2024-08-20",
+          "rank": 7
+        },
+        {
+          "date": "2024-12-12",
+          "rank": 2
+        },
+        {
+          "date": "2025-02-27",
+          "rank": 3
+        },
+        {
+          "date": "2025-03-16",
+          "rank": 4
+        },
+        {
+          "date": "2025-07-02",
+          "rank": 5
+        },
+        {
+          "date": "2025-08-05",
+          "rank": 6
+        },
+        {
+          "date": "2025-09-05",
+          "rank": 7
+        },
+        {
+          "date": "2025-11-17",
+          "rank": 8
+        },
+        {
+          "date": "2025-12-03",
+          "rank": 9
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 10
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 11
+        },
+        {
+          "date": "2026-04-29",
+          "rank": 12
+        },
+        {
+          "date": "2026-09-10",
+          "rank": 13
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 14
+        }
+      ],
+      "currentRank": 14,
+      "averageRank": 7.6248962655601655,
+      "releaseRatePerYear": 3.6372697095435687,
       "artificialAnalysisReleaseCount": 4,
       "huggingFaceReleaseCount": 12
     },
     {
       "id": "olmo",
       "name": "OLMo",
+      "kind": "model",
       "releaseCount": 5,
       "versionCount": 4,
       "highestVersion": "3.1",
@@ -273,14 +1948,161 @@
         "name": "OLMo 3.1 Instruct",
         "date": "2025-12-12"
       },
+      "latestRelease": {
+        "id": "olmo-olmo-3-1-instruct-2025-12-12",
+        "name": "OLMo 3.1 Instruct",
+        "version": "3.1",
+        "score": 3.1,
+        "date": "2025-12-12"
+      },
       "firstEventDate": "2024-02-01",
       "lastEventDate": "2025-12-12",
+      "trackedDays": 979,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2024-02-01",
+          "rank": 11
+        },
+        {
+          "date": "2024-02-04",
+          "rank": 12
+        },
+        {
+          "date": "2024-02-15",
+          "rank": 13
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 14
+        },
+        {
+          "date": "2024-03-28",
+          "rank": 15
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 18
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 19
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 20
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 21
+        },
+        {
+          "date": "2024-08-22",
+          "rank": 22
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 23
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 24
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 25
+        },
+        {
+          "date": "2024-11-26",
+          "rank": 18
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 19
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 20
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 21
+        },
+        {
+          "date": "2025-02-19",
+          "rank": 22
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 24
+        },
+        {
+          "date": "2025-03-25",
+          "rank": 25
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 26
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 27
+        },
+        {
+          "date": "2025-11-19",
+          "rank": 28
+        },
+        {
+          "date": "2025-11-20",
+          "rank": 21
+        },
+        {
+          "date": "2025-12-12",
+          "rank": 20
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 21
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 22
+        },
+        {
+          "date": "2026-02-15",
+          "rank": 23
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 24
+        },
+        {
+          "date": "2026-05-19",
+          "rank": 25
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 26
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 27
+        }
+      ],
+      "currentRank": 27,
+      "averageRank": 22.502553626149133,
+      "releaseRatePerYear": 1.865385597548519,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 5
     },
     {
       "id": "minimax",
       "name": "MiniMax",
+      "kind": "model",
       "releaseCount": 7,
       "versionCount": 7,
       "highestVersion": "3.1",
@@ -290,14 +2112,109 @@
         "name": "MiniMax M3.1 Flash Preview (MiniMax Code release)",
         "date": "2026-09-28"
       },
+      "latestRelease": {
+        "id": "minimax-minimax-m3-1-flash-preview-code-2026-09-28",
+        "name": "MiniMax M3.1 Flash Preview (MiniMax Code release)",
+        "version": "3.1",
+        "score": 3.1,
+        "date": "2026-09-28"
+      },
       "firstEventDate": "2025-06-16",
       "lastEventDate": "2026-09-28",
+      "trackedDays": 478,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2025-06-16",
+          "rank": 31
+        },
+        {
+          "date": "2025-06-25",
+          "rank": 32
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 33
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 34
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 35
+        },
+        {
+          "date": "2025-10-27",
+          "rank": 27
+        },
+        {
+          "date": "2025-11-19",
+          "rank": 28
+        },
+        {
+          "date": "2025-11-20",
+          "rank": 29
+        },
+        {
+          "date": "2025-11-26",
+          "rank": 30
+        },
+        {
+          "date": "2025-12-23",
+          "rank": 29
+        },
+        {
+          "date": "2026-01-05",
+          "rank": 30
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 31
+        },
+        {
+          "date": "2026-01-27",
+          "rank": 32
+        },
+        {
+          "date": "2026-02-12",
+          "rank": 30
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 31
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 32
+        },
+        {
+          "date": "2026-06-01",
+          "rank": 28
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 29
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 30
+        },
+        {
+          "date": "2026-09-28",
+          "rank": 27
+        }
+      ],
+      "currentRank": 27,
+      "averageRank": 31.00418410041841,
+      "releaseRatePerYear": 5.348739539748954,
       "artificialAnalysisReleaseCount": 5,
       "huggingFaceReleaseCount": 6
     },
     {
       "id": "nova",
       "name": "Amazon Nova",
+      "kind": "model",
       "releaseCount": 9,
       "versionCount": 2,
       "highestVersion": "2",
@@ -307,14 +2224,129 @@
         "name": "Amazon Nova 2 Lite",
         "date": "2025-12-02"
       },
+      "latestRelease": {
+        "id": "nova-amazon-nova-2-lite-2025-12-02",
+        "name": "Amazon Nova 2 Lite",
+        "version": "2",
+        "score": 2,
+        "date": "2025-12-02"
+      },
       "firstEventDate": "2024-12-03",
       "lastEventDate": "2025-12-02",
+      "trackedDays": 673,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2024-12-03",
+          "rank": 26
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 27
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 28
+        },
+        {
+          "date": "2025-01-20",
+          "rank": 29
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 30
+        },
+        {
+          "date": "2025-05-10",
+          "rank": 31
+        },
+        {
+          "date": "2025-06-25",
+          "rank": 32
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 33
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 34
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 35
+        },
+        {
+          "date": "2025-10-27",
+          "rank": 36
+        },
+        {
+          "date": "2025-11-19",
+          "rank": 37
+        },
+        {
+          "date": "2025-11-26",
+          "rank": 38
+        },
+        {
+          "date": "2025-12-02",
+          "rank": 30
+        },
+        {
+          "date": "2025-12-23",
+          "rank": 31
+        },
+        {
+          "date": "2026-01-05",
+          "rank": 32
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 33
+        },
+        {
+          "date": "2026-01-27",
+          "rank": 34
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 35
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 37
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 39
+        },
+        {
+          "date": "2026-06-19",
+          "rank": 40
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 41
+        },
+        {
+          "date": "2026-09-08",
+          "rank": 42
+        },
+        {
+          "date": "2026-09-25",
+          "rank": 43
+        }
+      ],
+      "currentRank": 43,
+      "averageRank": 34.13967310549777,
+      "releaseRatePerYear": 4.8843722139673105,
       "artificialAnalysisReleaseCount": 7,
       "huggingFaceReleaseCount": 0
     },
     {
       "id": "ernie",
       "name": "ERNIE",
+      "kind": "model",
       "releaseCount": 10,
       "versionCount": 7,
       "highestVersion": "5.1",
@@ -324,14 +2356,97 @@
         "name": "ERNIE-5.1-Preview (Arena milestone)",
         "date": "2026-04-30"
       },
+      "latestRelease": {
+        "id": "ernie-ernie-5-1-2026-05-09",
+        "name": "ERNIE 5.1",
+        "version": "5.1",
+        "score": 5.1,
+        "date": "2026-05-09"
+      },
       "firstEventDate": "2019-04-19",
       "lastEventDate": "2026-05-09",
+      "trackedDays": 2728,
+      "daysAtNumberOne": 1065,
+      "rankHistory": [
+        {
+          "date": "2019-04-19",
+          "rank": 2
+        },
+        {
+          "date": "2019-07-29",
+          "rank": 1
+        },
+        {
+          "date": "2020-05-28",
+          "rank": 2
+        },
+        {
+          "date": "2021-07-05",
+          "rank": 1
+        },
+        {
+          "date": "2022-11-30",
+          "rank": 2
+        },
+        {
+          "date": "2023-08-04",
+          "rank": 3
+        },
+        {
+          "date": "2023-10-17",
+          "rank": 1
+        },
+        {
+          "date": "2024-06-21",
+          "rank": 2
+        },
+        {
+          "date": "2025-02-27",
+          "rank": 3
+        },
+        {
+          "date": "2025-03-16",
+          "rank": 2
+        },
+        {
+          "date": "2025-08-07",
+          "rank": 3
+        },
+        {
+          "date": "2025-09-30",
+          "rank": 4
+        },
+        {
+          "date": "2025-11-13",
+          "rank": 3
+        },
+        {
+          "date": "2026-04-07",
+          "rank": 4
+        },
+        {
+          "date": "2026-04-30",
+          "rank": 3
+        },
+        {
+          "date": "2026-06-16",
+          "rank": 4
+        },
+        {
+          "date": "2026-09-22",
+          "rank": 5
+        }
+      ],
+      "currentRank": 5,
+      "averageRank": 1.8706011730205279,
+      "releaseRatePerYear": 1.3388654692082111,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 4
     },
     {
       "id": "openai-o",
       "name": "OpenAI o",
+      "kind": "model",
       "releaseCount": 13,
       "versionCount": 3,
       "highestVersion": "4",
@@ -341,14 +2456,101 @@
         "name": "o4-mini",
         "date": "2025-04-16"
       },
+      "latestRelease": {
+        "id": "openai-o-o4-mini-deep-research-2025-06-26",
+        "name": "o4-mini-deep-research",
+        "version": "4",
+        "score": 4,
+        "date": "2025-06-26"
+      },
       "firstEventDate": "2024-09-12",
       "lastEventDate": "2025-06-26",
+      "trackedDays": 755,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2024-09-12",
+          "rank": 23
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 24
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 25
+        },
+        {
+          "date": "2024-11-26",
+          "rank": 26
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 27
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 12
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 13
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 4
+        },
+        {
+          "date": "2025-07-02",
+          "rank": 5
+        },
+        {
+          "date": "2025-08-05",
+          "rank": 6
+        },
+        {
+          "date": "2025-09-05",
+          "rank": 7
+        },
+        {
+          "date": "2025-11-17",
+          "rank": 8
+        },
+        {
+          "date": "2025-12-03",
+          "rank": 9
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 10
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 11
+        },
+        {
+          "date": "2026-04-29",
+          "rank": 12
+        },
+        {
+          "date": "2026-09-10",
+          "rank": 13
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 14
+        }
+      ],
+      "currentRank": 14,
+      "averageRank": 11.357615894039736,
+      "releaseRatePerYear": 6.288943708609271,
       "artificialAnalysisReleaseCount": 10,
       "huggingFaceReleaseCount": 0
     },
     {
       "id": "pangu",
       "name": "PanGu",
+      "kind": "model",
       "releaseCount": 4,
       "versionCount": 4,
       "highestVersion": "5.5",
@@ -358,14 +2560,77 @@
         "name": "PanGu 5.5",
         "date": "2025-06-20"
       },
+      "latestRelease": {
+        "id": "pangu-pangu-5-5-2025-06-20",
+        "name": "PanGu 5.5",
+        "version": "5.5",
+        "score": 5.5,
+        "date": "2025-06-20"
+      },
       "firstEventDate": "2021-04-25",
       "lastEventDate": "2025-06-20",
+      "trackedDays": 1991,
+      "daysAtNumberOne": 735,
+      "rankHistory": [
+        {
+          "date": "2021-04-25",
+          "rank": 3
+        },
+        {
+          "date": "2023-04-18",
+          "rank": 4
+        },
+        {
+          "date": "2023-05-10",
+          "rank": 5
+        },
+        {
+          "date": "2023-06-25",
+          "rank": 6
+        },
+        {
+          "date": "2023-07-07",
+          "rank": 2
+        },
+        {
+          "date": "2023-08-04",
+          "rank": 3
+        },
+        {
+          "date": "2023-10-17",
+          "rank": 4
+        },
+        {
+          "date": "2024-01-16",
+          "rank": 5
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 6
+        },
+        {
+          "date": "2024-06-20",
+          "rank": 7
+        },
+        {
+          "date": "2024-06-21",
+          "rank": 1
+        },
+        {
+          "date": "2026-06-26",
+          "rank": 2
+        }
+      ],
+      "currentRank": 2,
+      "averageRank": 2.5334003013561026,
+      "releaseRatePerYear": 0.7337870416875942,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 1
     },
     {
       "id": "mimo",
       "name": "MiMo",
+      "kind": "model",
       "releaseCount": 14,
       "versionCount": 4,
       "highestVersion": "2.6",
@@ -375,14 +2640,117 @@
         "name": "MiMo-V2.6-Flash (Studio release)",
         "date": "2026-09-21"
       },
+      "latestRelease": {
+        "id": "mimo-mimo-v2-6-flash-2026-09-22",
+        "name": "MiMo-V2.6-Flash",
+        "version": "2.6",
+        "score": 2.6,
+        "date": "2026-09-22"
+      },
       "firstEventDate": "2025-04-30",
       "lastEventDate": "2026-09-22",
+      "trackedDays": 525,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2025-04-30",
+          "rank": 30
+        },
+        {
+          "date": "2025-05-10",
+          "rank": 31
+        },
+        {
+          "date": "2025-06-25",
+          "rank": 32
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 33
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 34
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 35
+        },
+        {
+          "date": "2025-10-27",
+          "rank": 36
+        },
+        {
+          "date": "2025-11-19",
+          "rank": 37
+        },
+        {
+          "date": "2025-11-26",
+          "rank": 38
+        },
+        {
+          "date": "2025-12-02",
+          "rank": 39
+        },
+        {
+          "date": "2025-12-09",
+          "rank": 40
+        },
+        {
+          "date": "2025-12-16",
+          "rank": 30
+        },
+        {
+          "date": "2025-12-23",
+          "rank": 31
+        },
+        {
+          "date": "2026-01-05",
+          "rank": 32
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 33
+        },
+        {
+          "date": "2026-01-27",
+          "rank": 34
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 35
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 34
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 36
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 37
+        },
+        {
+          "date": "2026-09-21",
+          "rank": 35
+        },
+        {
+          "date": "2026-09-30",
+          "rank": 36
+        }
+      ],
+      "currentRank": 36,
+      "averageRank": 34.59428571428571,
+      "releaseRatePerYear": 9.7398,
       "artificialAnalysisReleaseCount": 9,
       "huggingFaceReleaseCount": 9
     },
     {
       "id": "granite",
       "name": "Granite",
+      "kind": "model",
       "releaseCount": 13,
       "versionCount": 7,
       "highestVersion": "4.2",
@@ -392,14 +2760,93 @@
         "name": "Granite 4.2 30B",
         "date": "2026-08-25"
       },
+      "latestRelease": {
+        "id": "granite-granite-4-2-30b-2026-08-25",
+        "name": "Granite 4.2 30B",
+        "version": "4.2",
+        "score": 4.2,
+        "date": "2026-08-25"
+      },
       "firstEventDate": "2024-10-21",
       "lastEventDate": "2026-08-25",
+      "trackedDays": 716,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2024-10-21",
+          "rank": 10
+        },
+        {
+          "date": "2024-12-09",
+          "rank": 11
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 12
+        },
+        {
+          "date": "2025-05-02",
+          "rank": 4
+        },
+        {
+          "date": "2025-07-02",
+          "rank": 5
+        },
+        {
+          "date": "2025-08-05",
+          "rank": 6
+        },
+        {
+          "date": "2025-09-05",
+          "rank": 7
+        },
+        {
+          "date": "2025-11-17",
+          "rank": 8
+        },
+        {
+          "date": "2025-12-03",
+          "rank": 9
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 10
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 11
+        },
+        {
+          "date": "2026-04-29",
+          "rank": 9
+        },
+        {
+          "date": "2026-05-19",
+          "rank": 10
+        },
+        {
+          "date": "2026-07-24",
+          "rank": 11
+        },
+        {
+          "date": "2026-08-25",
+          "rank": 10
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 11
+        }
+      ],
+      "currentRank": 11,
+      "averageRank": 8.918994413407821,
+      "releaseRatePerYear": 6.631497905027933,
       "artificialAnalysisReleaseCount": 9,
       "huggingFaceReleaseCount": 13
     },
     {
       "id": "nemotron",
       "name": "Nemotron",
+      "kind": "model",
       "releaseCount": 7,
       "versionCount": 3,
       "highestVersion": "4",
@@ -409,14 +2856,85 @@
         "name": "Nemotron-4 15B (technical report)",
         "date": "2024-02-26"
       },
+      "latestRelease": {
+        "id": "nemotron-nemotron-3-5-lightning-2026-08-11",
+        "name": "Nemotron 3.5 Lightning",
+        "version": "3.5",
+        "score": 3.5,
+        "date": "2026-08-11"
+      },
       "firstEventDate": "2024-02-26",
       "lastEventDate": "2026-08-11",
+      "trackedDays": 954,
+      "daysAtNumberOne": 116,
+      "rankHistory": [
+        {
+          "date": "2024-02-26",
+          "rank": 1
+        },
+        {
+          "date": "2024-06-21",
+          "rank": 2
+        },
+        {
+          "date": "2025-02-27",
+          "rank": 3
+        },
+        {
+          "date": "2025-03-16",
+          "rank": 4
+        },
+        {
+          "date": "2025-07-02",
+          "rank": 5
+        },
+        {
+          "date": "2025-08-05",
+          "rank": 6
+        },
+        {
+          "date": "2025-09-05",
+          "rank": 7
+        },
+        {
+          "date": "2025-11-17",
+          "rank": 8
+        },
+        {
+          "date": "2025-12-03",
+          "rank": 9
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 10
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 11
+        },
+        {
+          "date": "2026-04-29",
+          "rank": 12
+        },
+        {
+          "date": "2026-09-10",
+          "rank": 13
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 14
+        }
+      ],
+      "currentRank": 14,
+      "averageRank": 5.754716981132075,
+      "releaseRatePerYear": 2.6799764150943393,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 6
     },
     {
       "id": "seed",
       "name": "Seed",
+      "kind": "model",
       "releaseCount": 8,
       "versionCount": 4,
       "highestVersion": "2.1",
@@ -426,14 +2944,113 @@
         "name": "Seed 2.1 Preview",
         "date": "2026-06-19"
       },
+      "latestRelease": {
+        "id": "seed-seed-2-1-2026-06-23",
+        "name": "Seed 2.1",
+        "version": "2.1",
+        "score": 2.1,
+        "date": "2026-06-23"
+      },
       "firstEventDate": "2025-06-25",
       "lastEventDate": "2026-06-23",
+      "trackedDays": 469,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2025-06-25",
+          "rank": 27
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 29
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 30
+        },
+        {
+          "date": "2025-07-11",
+          "rank": 31
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 32
+        },
+        {
+          "date": "2025-10-27",
+          "rank": 33
+        },
+        {
+          "date": "2025-11-19",
+          "rank": 34
+        },
+        {
+          "date": "2025-11-26",
+          "rank": 35
+        },
+        {
+          "date": "2025-12-02",
+          "rank": 36
+        },
+        {
+          "date": "2025-12-16",
+          "rank": 37
+        },
+        {
+          "date": "2025-12-18",
+          "rank": 36
+        },
+        {
+          "date": "2026-01-08",
+          "rank": 37
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 38
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 39
+        },
+        {
+          "date": "2026-02-14",
+          "rank": 35
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 37
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 39
+        },
+        {
+          "date": "2026-06-19",
+          "rank": 38
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 39
+        },
+        {
+          "date": "2026-09-08",
+          "rank": 40
+        },
+        {
+          "date": "2026-09-25",
+          "rank": 41
+        }
+      ],
+      "currentRank": 41,
+      "averageRank": 35.45415778251599,
+      "releaseRatePerYear": 6.230149253731344,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0
     },
     {
       "id": "palm",
       "name": "PaLM",
+      "kind": "model",
       "releaseCount": 2,
       "versionCount": 2,
       "highestVersion": "2",
@@ -443,14 +3060,185 @@
         "name": "PaLM 2",
         "date": "2023-05-10"
       },
+      "latestRelease": {
+        "id": "palm-palm-2-2023-05-10",
+        "name": "PaLM 2",
+        "version": "2",
+        "score": 2,
+        "date": "2023-05-10"
+      },
       "firstEventDate": "2022-04-04",
       "lastEventDate": "2023-05-10",
+      "trackedDays": 1647,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2022-04-04",
+          "rank": 3
+        },
+        {
+          "date": "2023-04-18",
+          "rank": 4
+        },
+        {
+          "date": "2023-05-10",
+          "rank": 3
+        },
+        {
+          "date": "2023-07-07",
+          "rank": 4
+        },
+        {
+          "date": "2023-07-30",
+          "rank": 5
+        },
+        {
+          "date": "2023-10-27",
+          "rank": 6
+        },
+        {
+          "date": "2023-11-21",
+          "rank": 7
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 8
+        },
+        {
+          "date": "2024-04-18",
+          "rank": 9
+        },
+        {
+          "date": "2024-04-23",
+          "rank": 10
+        },
+        {
+          "date": "2024-07-03",
+          "rank": 11
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 12
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 14
+        },
+        {
+          "date": "2024-09-19",
+          "rank": 15
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 16
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 17
+        },
+        {
+          "date": "2024-11-18",
+          "rank": 18
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 19
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 20
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 21
+        },
+        {
+          "date": "2025-02-19",
+          "rank": 22
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 24
+        },
+        {
+          "date": "2025-03-25",
+          "rank": 25
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 26
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 27
+        },
+        {
+          "date": "2025-11-19",
+          "rank": 28
+        },
+        {
+          "date": "2025-11-20",
+          "rank": 29
+        },
+        {
+          "date": "2025-11-26",
+          "rank": 30
+        },
+        {
+          "date": "2025-12-23",
+          "rank": 31
+        },
+        {
+          "date": "2026-01-05",
+          "rank": 32
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 33
+        },
+        {
+          "date": "2026-01-27",
+          "rank": 34
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 35
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 37
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 39
+        },
+        {
+          "date": "2026-06-19",
+          "rank": 40
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 41
+        },
+        {
+          "date": "2026-09-08",
+          "rank": 42
+        },
+        {
+          "date": "2026-09-25",
+          "rank": 43
+        }
+      ],
+      "currentRank": 43,
+      "averageRank": 16.073466909532485,
+      "releaseRatePerYear": 0.4435245901639344,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 0
     },
     {
       "id": "yi",
       "name": "Yi",
+      "kind": "model",
       "releaseCount": 4,
       "versionCount": 2,
       "highestVersion": "1.5",
@@ -460,14 +3248,185 @@
         "name": "Yi-1.5",
         "date": "2024-05-13"
       },
+      "latestRelease": {
+        "id": "yi-yi-1-5-2024-05-13",
+        "name": "Yi-1.5",
+        "version": "1.5",
+        "score": 1.5,
+        "date": "2024-05-13"
+      },
       "firstEventDate": "2023-11-02",
       "lastEventDate": "2024-05-13",
+      "trackedDays": 1070,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-11-02",
+          "rank": 10
+        },
+        {
+          "date": "2024-01-17",
+          "rank": 11
+        },
+        {
+          "date": "2024-02-04",
+          "rank": 12
+        },
+        {
+          "date": "2024-02-15",
+          "rank": 13
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 14
+        },
+        {
+          "date": "2024-03-28",
+          "rank": 15
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 14
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 15
+        },
+        {
+          "date": "2024-06-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 17
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 18
+        },
+        {
+          "date": "2024-08-13",
+          "rank": 19
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 20
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 21
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 22
+        },
+        {
+          "date": "2024-11-26",
+          "rank": 23
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 25
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 26
+        },
+        {
+          "date": "2025-03-06",
+          "rank": 27
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 28
+        },
+        {
+          "date": "2025-06-25",
+          "rank": 29
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 30
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 31
+        },
+        {
+          "date": "2025-07-11",
+          "rank": 32
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 33
+        },
+        {
+          "date": "2025-10-27",
+          "rank": 34
+        },
+        {
+          "date": "2025-11-19",
+          "rank": 35
+        },
+        {
+          "date": "2025-11-26",
+          "rank": 36
+        },
+        {
+          "date": "2025-12-02",
+          "rank": 37
+        },
+        {
+          "date": "2025-12-09",
+          "rank": 38
+        },
+        {
+          "date": "2025-12-16",
+          "rank": 39
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 40
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 41
+        },
+        {
+          "date": "2026-04-20",
+          "rank": 42
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 43
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 45
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 46
+        },
+        {
+          "date": "2026-09-08",
+          "rank": 47
+        }
+      ],
+      "currentRank": 47,
+      "averageRank": 28.148598130841123,
+      "releaseRatePerYear": 1.3653925233644861,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 4
     },
     {
       "id": "internlm",
       "name": "InternLM / InternVL",
+      "kind": "model",
       "releaseCount": 12,
       "versionCount": 8,
       "highestVersion": "3.5",
@@ -477,14 +3436,157 @@
         "name": "InternVL3.5 (technical report)",
         "date": "2025-08-25"
       },
+      "latestRelease": {
+        "id": "internlm-internvl3-5-open-model-announcement-2025-08-26",
+        "name": "InternVL3.5 (open-model announcement)",
+        "version": "3.5",
+        "score": 3.5,
+        "date": "2025-08-26"
+      },
       "firstEventDate": "2023-09-20",
       "lastEventDate": "2025-08-26",
+      "trackedDays": 1113,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-09-20",
+          "rank": 10
+        },
+        {
+          "date": "2024-01-17",
+          "rank": 7
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 8
+        },
+        {
+          "date": "2024-04-18",
+          "rank": 9
+        },
+        {
+          "date": "2024-04-23",
+          "rank": 10
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 11
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 12
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 13
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 14
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 15
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 16
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 17
+        },
+        {
+          "date": "2024-12-26",
+          "rank": 18
+        },
+        {
+          "date": "2025-01-15",
+          "rank": 12
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 13
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 14
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 15
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 16
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 17
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 18
+        },
+        {
+          "date": "2025-08-21",
+          "rank": 19
+        },
+        {
+          "date": "2025-08-25",
+          "rank": 16
+        },
+        {
+          "date": "2025-08-26",
+          "rank": 17
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 18
+        },
+        {
+          "date": "2026-03-16",
+          "rank": 19
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 20
+        },
+        {
+          "date": "2026-04-01",
+          "rank": 21
+        },
+        {
+          "date": "2026-04-24",
+          "rank": 22
+        },
+        {
+          "date": "2026-05-29",
+          "rank": 23
+        },
+        {
+          "date": "2026-07-21",
+          "rank": 24
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 25
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 26
+        }
+      ],
+      "currentRank": 26,
+      "averageRank": 14.917340521114106,
+      "releaseRatePerYear": 3.937924528301887,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 12
     },
     {
       "id": "exaone",
       "name": "EXAONE",
+      "kind": "model",
       "releaseCount": 5,
       "versionCount": 4,
       "highestVersion": "4.5",
@@ -494,14 +3596,113 @@
         "name": "EXAONE 4.5 33B",
         "date": "2026-04-09"
       },
+      "latestRelease": {
+        "id": "exaone-exaone-4-5-33b-2026-04-09",
+        "name": "EXAONE 4.5 33B",
+        "version": "4.5",
+        "score": 4.5,
+        "date": "2026-04-09"
+      },
       "firstEventDate": "2024-08-07",
       "lastEventDate": "2026-04-09",
+      "trackedDays": 791,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2024-08-07",
+          "rank": 9
+        },
+        {
+          "date": "2024-08-20",
+          "rank": 10
+        },
+        {
+          "date": "2024-12-09",
+          "rank": 7
+        },
+        {
+          "date": "2024-12-12",
+          "rank": 8
+        },
+        {
+          "date": "2025-02-24",
+          "rank": 9
+        },
+        {
+          "date": "2025-04-05",
+          "rank": 10
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 11
+        },
+        {
+          "date": "2025-05-02",
+          "rank": 12
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 13
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 14
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 15
+        },
+        {
+          "date": "2025-07-15",
+          "rank": 5
+        },
+        {
+          "date": "2025-08-05",
+          "rank": 6
+        },
+        {
+          "date": "2025-09-05",
+          "rank": 7
+        },
+        {
+          "date": "2025-11-17",
+          "rank": 8
+        },
+        {
+          "date": "2025-12-03",
+          "rank": 9
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 10
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 6
+        },
+        {
+          "date": "2026-05-19",
+          "rank": 7
+        },
+        {
+          "date": "2026-08-12",
+          "rank": 8
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 9
+        }
+      ],
+      "currentRank": 9,
+      "averageRank": 8.671302149178256,
+      "releaseRatePerYear": 2.3087389380530974,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 5
     },
     {
       "id": "minicpm",
       "name": "MiniCPM",
+      "kind": "model",
       "releaseCount": 6,
       "versionCount": 5,
       "highestVersion": "5",
@@ -511,14 +3712,133 @@
         "name": "MiniCPM5-1B",
         "date": "2026-05-19"
       },
+      "latestRelease": {
+        "id": "minicpm-minicpm5-2b-2026-09-07",
+        "name": "MiniCPM5-2B",
+        "version": "5",
+        "score": 5,
+        "date": "2026-09-07"
+      },
       "firstEventDate": "2024-02-01",
       "lastEventDate": "2026-09-07",
+      "trackedDays": 979,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2024-02-01",
+          "rank": 11
+        },
+        {
+          "date": "2024-02-04",
+          "rank": 12
+        },
+        {
+          "date": "2024-02-15",
+          "rank": 13
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 14
+        },
+        {
+          "date": "2024-03-28",
+          "rank": 15
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 18
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 19
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 20
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 21
+        },
+        {
+          "date": "2024-08-22",
+          "rank": 22
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 10
+        },
+        {
+          "date": "2024-12-09",
+          "rank": 11
+        },
+        {
+          "date": "2024-12-18",
+          "rank": 12
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 13
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 14
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 4
+        },
+        {
+          "date": "2025-07-02",
+          "rank": 5
+        },
+        {
+          "date": "2025-08-05",
+          "rank": 6
+        },
+        {
+          "date": "2025-09-05",
+          "rank": 5
+        },
+        {
+          "date": "2025-09-29",
+          "rank": 6
+        },
+        {
+          "date": "2025-12-03",
+          "rank": 7
+        },
+        {
+          "date": "2026-03-10",
+          "rank": 8
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 9
+        },
+        {
+          "date": "2026-05-19",
+          "rank": 5
+        },
+        {
+          "date": "2026-09-01",
+          "rank": 6
+        }
+      ],
+      "currentRank": 6,
+      "averageRank": 10.132788559754852,
+      "releaseRatePerYear": 2.2384627170582228,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 6
     },
     {
       "id": "step",
       "name": "Step",
+      "kind": "model",
       "releaseCount": 4,
       "versionCount": 4,
       "highestVersion": "5",
@@ -528,14 +3848,97 @@
         "name": "Step 5 Preview (hosted release)",
         "date": "2026-09-20"
       },
+      "latestRelease": {
+        "id": "step-step-5-preview-hosted-release-2026-09-20",
+        "name": "Step 5 Preview (hosted release)",
+        "version": "5",
+        "score": 5,
+        "date": "2026-09-20"
+      },
       "firstEventDate": "2025-07-25",
       "lastEventDate": "2026-09-20",
+      "trackedDays": 439,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2025-07-25",
+          "rank": 18
+        },
+        {
+          "date": "2025-08-21",
+          "rank": 19
+        },
+        {
+          "date": "2025-08-25",
+          "rank": 20
+        },
+        {
+          "date": "2025-08-26",
+          "rank": 21
+        },
+        {
+          "date": "2025-12-12",
+          "rank": 22
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 17
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 18
+        },
+        {
+          "date": "2026-03-16",
+          "rank": 19
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 20
+        },
+        {
+          "date": "2026-04-01",
+          "rank": 21
+        },
+        {
+          "date": "2026-04-24",
+          "rank": 22
+        },
+        {
+          "date": "2026-05-29",
+          "rank": 20
+        },
+        {
+          "date": "2026-08-02",
+          "rank": 21
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 22
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 23
+        },
+        {
+          "date": "2026-09-02",
+          "rank": 24
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 6
+        }
+      ],
+      "currentRank": 6,
+      "averageRank": 20.06605922551253,
+      "releaseRatePerYear": 3.3279498861047836,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 3
     },
     {
       "id": "ling",
       "name": "Ling",
+      "kind": "model",
       "releaseCount": 4,
       "versionCount": 4,
       "highestVersion": "3.1",
@@ -545,14 +3948,109 @@
         "name": "Ling 3.1 Flash (Vercel AI Gateway release)",
         "date": "2026-09-30"
       },
+      "latestRelease": {
+        "id": "ling-ling-3-1-flash-vercel-ai-gateway-release-2026-09-30",
+        "name": "Ling 3.1 Flash (Vercel AI Gateway release)",
+        "version": "3.1",
+        "score": 3.1,
+        "date": "2026-09-30"
+      },
       "firstEventDate": "2025-04-15",
       "lastEventDate": "2026-09-30",
+      "trackedDays": 540,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2025-04-15",
+          "rank": 30
+        },
+        {
+          "date": "2025-05-10",
+          "rank": 28
+        },
+        {
+          "date": "2025-06-25",
+          "rank": 29
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 30
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 31
+        },
+        {
+          "date": "2025-07-11",
+          "rank": 32
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 33
+        },
+        {
+          "date": "2025-10-27",
+          "rank": 34
+        },
+        {
+          "date": "2025-11-19",
+          "rank": 35
+        },
+        {
+          "date": "2025-11-26",
+          "rank": 36
+        },
+        {
+          "date": "2025-12-02",
+          "rank": 37
+        },
+        {
+          "date": "2025-12-09",
+          "rank": 38
+        },
+        {
+          "date": "2025-12-16",
+          "rank": 39
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 40
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 41
+        },
+        {
+          "date": "2026-04-20",
+          "rank": 42
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 43
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 34
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 35
+        },
+        {
+          "date": "2026-09-30",
+          "rank": 27
+        }
+      ],
+      "currentRank": 27,
+      "averageRank": 35.455555555555556,
+      "releaseRatePerYear": 2.7055,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 3
     },
     {
       "id": "falcon",
       "name": "Falcon",
+      "kind": "model",
       "releaseCount": 4,
       "versionCount": 3,
       "highestVersion": "3",
@@ -562,14 +4060,197 @@
         "name": "Falcon 3",
         "date": "2024-12-17"
       },
+      "latestRelease": {
+        "id": "falcon-falcon-3-2024-12-17",
+        "name": "Falcon 3",
+        "version": "3",
+        "score": 3,
+        "date": "2024-12-17"
+      },
       "firstEventDate": "2023-05-25",
       "lastEventDate": "2024-12-17",
+      "trackedDays": 1231,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-05-25",
+          "rank": 5
+        },
+        {
+          "date": "2023-06-25",
+          "rank": 6
+        },
+        {
+          "date": "2023-07-07",
+          "rank": 8
+        },
+        {
+          "date": "2023-07-18",
+          "rank": 9
+        },
+        {
+          "date": "2023-09-11",
+          "rank": 10
+        },
+        {
+          "date": "2024-01-17",
+          "rank": 11
+        },
+        {
+          "date": "2024-02-04",
+          "rank": 12
+        },
+        {
+          "date": "2024-02-15",
+          "rank": 13
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 14
+        },
+        {
+          "date": "2024-03-28",
+          "rank": 15
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 10
+        },
+        {
+          "date": "2024-07-03",
+          "rank": 11
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 12
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 14
+        },
+        {
+          "date": "2024-09-19",
+          "rank": 15
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 16
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 17
+        },
+        {
+          "date": "2024-11-18",
+          "rank": 18
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 19
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 11
+        },
+        {
+          "date": "2024-12-18",
+          "rank": 12
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 13
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 14
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 15
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 16
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 17
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 18
+        },
+        {
+          "date": "2025-08-21",
+          "rank": 19
+        },
+        {
+          "date": "2025-08-25",
+          "rank": 20
+        },
+        {
+          "date": "2025-08-26",
+          "rank": 21
+        },
+        {
+          "date": "2025-12-12",
+          "rank": 22
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 23
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 24
+        },
+        {
+          "date": "2026-02-15",
+          "rank": 25
+        },
+        {
+          "date": "2026-02-18",
+          "rank": 26
+        },
+        {
+          "date": "2026-02-19",
+          "rank": 27
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 28
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 29
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 30
+        },
+        {
+          "date": "2026-09-28",
+          "rank": 31
+        },
+        {
+          "date": "2026-09-30",
+          "rank": 32
+        }
+      ],
+      "currentRank": 32,
+      "averageRank": 16.662063363119415,
+      "releaseRatePerYear": 1.1868155970755483,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 4
     },
     {
       "id": "jamba",
       "name": "Jamba",
+      "kind": "model",
       "releaseCount": 9,
       "versionCount": 5,
       "highestVersion": "2",
@@ -579,14 +4260,165 @@
         "name": "Jamba2 3B",
         "date": "2026-01-08"
       },
+      "latestRelease": {
+        "id": "jamba-jamba2-3b-2026-01-08",
+        "name": "Jamba2 3B",
+        "version": "2",
+        "score": 2,
+        "date": "2026-01-08"
+      },
       "firstEventDate": "2024-03-28",
       "lastEventDate": "2026-01-08",
+      "trackedDays": 923,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2024-03-28",
+          "rank": 15
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 18
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 19
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 20
+        },
+        {
+          "date": "2024-08-07",
+          "rank": 21
+        },
+        {
+          "date": "2024-08-22",
+          "rank": 19
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 20
+        },
+        {
+          "date": "2024-10-07",
+          "rank": 21
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 22
+        },
+        {
+          "date": "2024-11-26",
+          "rank": 23
+        },
+        {
+          "date": "2024-12-11",
+          "rank": 25
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 26
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 27
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 28
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 29
+        },
+        {
+          "date": "2025-07-11",
+          "rank": 30
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 31
+        },
+        {
+          "date": "2025-10-27",
+          "rank": 32
+        },
+        {
+          "date": "2025-11-19",
+          "rank": 33
+        },
+        {
+          "date": "2025-11-26",
+          "rank": 34
+        },
+        {
+          "date": "2025-12-02",
+          "rank": 35
+        },
+        {
+          "date": "2025-12-16",
+          "rank": 36
+        },
+        {
+          "date": "2025-12-18",
+          "rank": 37
+        },
+        {
+          "date": "2026-01-08",
+          "rank": 32
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 33
+        },
+        {
+          "date": "2026-01-27",
+          "rank": 34
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 35
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 37
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 39
+        },
+        {
+          "date": "2026-06-19",
+          "rank": 40
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 41
+        },
+        {
+          "date": "2026-09-08",
+          "rank": 42
+        },
+        {
+          "date": "2026-09-25",
+          "rank": 43
+        }
+      ],
+      "currentRank": 43,
+      "averageRank": 28.9534127843987,
+      "releaseRatePerYear": 3.5614111592632716,
       "artificialAnalysisReleaseCount": 6,
       "huggingFaceReleaseCount": 9
     },
     {
       "id": "inflection",
       "name": "Inflection",
+      "kind": "model",
       "releaseCount": 1,
       "versionCount": 1,
       "highestVersion": "3.0",
@@ -596,14 +4428,121 @@
         "name": "Inflection 3.0",
         "date": "2024-10-07"
       },
+      "latestRelease": {
+        "id": "inflection-inflection-3-0-2024-10-07",
+        "name": "Inflection 3.0",
+        "version": "3.0",
+        "score": 3,
+        "date": "2024-10-07"
+      },
       "firstEventDate": "2024-10-07",
       "lastEventDate": "2024-10-07",
+      "trackedDays": 730,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2024-10-07",
+          "rank": 10
+        },
+        {
+          "date": "2024-12-09",
+          "rank": 11
+        },
+        {
+          "date": "2024-12-18",
+          "rank": 12
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 13
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 14
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 15
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 16
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 17
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 18
+        },
+        {
+          "date": "2025-08-21",
+          "rank": 19
+        },
+        {
+          "date": "2025-08-25",
+          "rank": 20
+        },
+        {
+          "date": "2025-08-26",
+          "rank": 21
+        },
+        {
+          "date": "2025-12-12",
+          "rank": 22
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 23
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 24
+        },
+        {
+          "date": "2026-02-15",
+          "rank": 25
+        },
+        {
+          "date": "2026-02-18",
+          "rank": 26
+        },
+        {
+          "date": "2026-02-19",
+          "rank": 27
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 28
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 29
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 30
+        },
+        {
+          "date": "2026-09-28",
+          "rank": 31
+        },
+        {
+          "date": "2026-09-30",
+          "rank": 32
+        }
+      ],
+      "currentRank": 32,
+      "averageRank": 19.997260273972604,
+      "releaseRatePerYear": 0.5003321917808219,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0
     },
     {
       "id": "lfm",
       "name": "LFM",
+      "kind": "model",
       "releaseCount": 6,
       "versionCount": 2,
       "highestVersion": "2.5",
@@ -613,14 +4552,89 @@
         "name": "LFM2.5-1.2B-Instruct",
         "date": "2026-01-05"
       },
+      "latestRelease": {
+        "id": "lfm-lfm2-5-2-6b-2026-08-04",
+        "name": "LFM2.5-2.6B",
+        "version": "2.5",
+        "score": 2.5,
+        "date": "2026-08-04"
+      },
       "firstEventDate": "2025-07-10",
       "lastEventDate": "2026-08-04",
+      "trackedDays": 454,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2025-07-10",
+          "rank": 26
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 27
+        },
+        {
+          "date": "2025-11-19",
+          "rank": 28
+        },
+        {
+          "date": "2025-11-20",
+          "rank": 29
+        },
+        {
+          "date": "2025-11-26",
+          "rank": 30
+        },
+        {
+          "date": "2025-12-23",
+          "rank": 31
+        },
+        {
+          "date": "2026-01-05",
+          "rank": 29
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 30
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 31
+        },
+        {
+          "date": "2026-03-18",
+          "rank": 32
+        },
+        {
+          "date": "2026-04-20",
+          "rank": 33
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 34
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 36
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 37
+        },
+        {
+          "date": "2026-09-21",
+          "rank": 38
+        }
+      ],
+      "currentRank": 38,
+      "averageRank": 31.502202643171806,
+      "releaseRatePerYear": 4.826993392070484,
       "artificialAnalysisReleaseCount": 6,
       "huggingFaceReleaseCount": 6
     },
     {
       "id": "hermes",
       "name": "Hermes",
+      "kind": "model",
       "releaseCount": 6,
       "versionCount": 3,
       "highestVersion": "4.3",
@@ -630,14 +4644,101 @@
         "name": "Hermes 4.3 Seed 36B",
         "date": "2025-12-03"
       },
+      "latestRelease": {
+        "id": "hermes-hermes-4-3-seed-36b-2025-12-03",
+        "name": "Hermes 4.3 Seed 36B",
+        "version": "4.3",
+        "score": 4.3,
+        "date": "2025-12-03"
+      },
       "firstEventDate": "2024-12-11",
       "lastEventDate": "2025-12-03",
+      "trackedDays": 665,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2024-12-11",
+          "rank": 11
+        },
+        {
+          "date": "2024-12-18",
+          "rank": 12
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 13
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 14
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 15
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 16
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 17
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 18
+        },
+        {
+          "date": "2025-08-21",
+          "rank": 19
+        },
+        {
+          "date": "2025-08-25",
+          "rank": 20
+        },
+        {
+          "date": "2025-08-26",
+          "rank": 6
+        },
+        {
+          "date": "2025-09-05",
+          "rank": 7
+        },
+        {
+          "date": "2025-11-17",
+          "rank": 8
+        },
+        {
+          "date": "2025-12-03",
+          "rank": 6
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 7
+        },
+        {
+          "date": "2026-05-19",
+          "rank": 8
+        },
+        {
+          "date": "2026-07-08",
+          "rank": 9
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 10
+        }
+      ],
+      "currentRank": 10,
+      "averageRank": 9.918796992481203,
+      "releaseRatePerYear": 3.295421052631579,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 6
     },
     {
       "id": "openchat",
       "name": "OpenChat",
+      "kind": "model",
       "releaseCount": 9,
       "versionCount": 6,
       "highestVersion": "3.6",
@@ -647,14 +4748,133 @@
         "name": "OpenChat 3.6 20240522",
         "date": "2024-05-22"
       },
+      "latestRelease": {
+        "id": "openchat-openchat-3-6-20240522-2024-05-22",
+        "name": "OpenChat 3.6 20240522",
+        "version": "3.6",
+        "score": 3.6,
+        "date": "2024-05-22"
+      },
       "firstEventDate": "2023-07-01",
       "lastEventDate": "2024-05-22",
+      "trackedDays": 1194,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2023-07-01",
+          "rank": 6
+        },
+        {
+          "date": "2023-07-07",
+          "rank": 4
+        },
+        {
+          "date": "2023-07-30",
+          "rank": 2
+        },
+        {
+          "date": "2023-10-17",
+          "rank": 3
+        },
+        {
+          "date": "2024-01-16",
+          "rank": 4
+        },
+        {
+          "date": "2024-02-26",
+          "rank": 5
+        },
+        {
+          "date": "2024-06-21",
+          "rank": 6
+        },
+        {
+          "date": "2024-12-12",
+          "rank": 7
+        },
+        {
+          "date": "2025-02-24",
+          "rank": 8
+        },
+        {
+          "date": "2025-04-05",
+          "rank": 9
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 10
+        },
+        {
+          "date": "2025-05-02",
+          "rank": 11
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 12
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 13
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 14
+        },
+        {
+          "date": "2025-07-15",
+          "rank": 15
+        },
+        {
+          "date": "2025-08-26",
+          "rank": 16
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 17
+        },
+        {
+          "date": "2026-03-16",
+          "rank": 18
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 19
+        },
+        {
+          "date": "2026-04-24",
+          "rank": 20
+        },
+        {
+          "date": "2026-05-20",
+          "rank": 21
+        },
+        {
+          "date": "2026-05-29",
+          "rank": 22
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 23
+        },
+        {
+          "date": "2026-08-13",
+          "rank": 24
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 25
+        }
+      ],
+      "currentRank": 25,
+      "averageRank": 10.617252931323284,
+      "releaseRatePerYear": 2.7530841708542715,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 9
     },
     {
       "id": "hunyuan",
       "name": "Hunyuan / Hy",
+      "kind": "model",
       "releaseCount": 3,
       "versionCount": 2,
       "highestVersion": "4",
@@ -664,14 +4884,49 @@
         "name": "Hy4 preview",
         "date": "2026-08-28"
       },
+      "latestRelease": {
+        "id": "hunyuan-hy4-preview-2026-08-28",
+        "name": "Hy4 preview",
+        "version": "4",
+        "score": 4,
+        "date": "2026-08-28"
+      },
       "firstEventDate": "2026-04-23",
       "lastEventDate": "2026-08-28",
+      "trackedDays": 167,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2026-04-23",
+          "rank": 28
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 29
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 12
+        },
+        {
+          "date": "2026-09-10",
+          "rank": 13
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 14
+        }
+      ],
+      "currentRank": 14,
+      "averageRank": 24.53293413173653,
+      "releaseRatePerYear": 6.5612425149700595,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 3
     },
     {
       "id": "longcat",
       "name": "LongCat",
+      "kind": "model",
       "releaseCount": 3,
       "versionCount": 2,
       "highestVersion": "2.5",
@@ -681,14 +4936,57 @@
         "name": "LongCat-2.5-Preview",
         "date": "2026-09-25"
       },
+      "latestRelease": {
+        "id": "longcat-longcat-2-5-preview-2026-09-25",
+        "name": "LongCat-2.5-Preview",
+        "version": "2.5",
+        "score": 2.5,
+        "date": "2026-09-25"
+      },
       "firstEventDate": "2026-04-20",
       "lastEventDate": "2026-09-25",
+      "trackedDays": 170,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2026-04-20",
+          "rank": 35
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 37
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 39
+        },
+        {
+          "date": "2026-06-19",
+          "rank": 40
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 41
+        },
+        {
+          "date": "2026-09-08",
+          "rank": 42
+        },
+        {
+          "date": "2026-09-25",
+          "rank": 38
+        }
+      ],
+      "currentRank": 38,
+      "averageRank": 39.36470588235294,
+      "releaseRatePerYear": 6.445455882352941,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 1
     },
     {
       "id": "solar",
       "name": "Solar",
+      "kind": "model",
       "releaseCount": 3,
       "versionCount": 2,
       "highestVersion": "4",
@@ -698,14 +4996,69 @@
         "name": "Solar Pro 4 (announcement)",
         "date": "2026-08-11"
       },
+      "latestRelease": {
+        "id": "solar-solar-pro-4-announcement-2026-08-11",
+        "name": "Solar Pro 4 (announcement)",
+        "version": "4",
+        "score": 4,
+        "date": "2026-08-11"
+      },
       "firstEventDate": "2026-01-26",
       "lastEventDate": "2026-08-11",
+      "trackedDays": 254,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2026-01-26",
+          "rank": 22
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 23
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 24
+        },
+        {
+          "date": "2026-02-15",
+          "rank": 25
+        },
+        {
+          "date": "2026-02-18",
+          "rank": 26
+        },
+        {
+          "date": "2026-02-19",
+          "rank": 27
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 28
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 12
+        },
+        {
+          "date": "2026-09-10",
+          "rank": 13
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 14
+        }
+      ],
+      "currentRank": 14,
+      "averageRank": 23.968503937007874,
+      "releaseRatePerYear": 4.3138877952755905,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 0
     },
     {
       "id": "mercury",
       "name": "Mercury",
+      "kind": "model",
       "releaseCount": 1,
       "versionCount": 1,
       "highestVersion": "2.5",
@@ -715,14 +5068,37 @@
         "name": "Mercury 2.5",
         "date": "2026-09-08"
       },
+      "latestRelease": {
+        "id": "mercury-mercury-2-5-2026-09-08",
+        "name": "Mercury 2.5",
+        "version": "2.5",
+        "score": 2.5,
+        "date": "2026-09-08"
+      },
       "firstEventDate": "2026-09-08",
       "lastEventDate": "2026-09-08",
+      "trackedDays": 29,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2026-09-08",
+          "rank": 37
+        },
+        {
+          "date": "2026-09-21",
+          "rank": 38
+        }
+      ],
+      "currentRank": 38,
+      "averageRank": 37.55172413793103,
+      "releaseRatePerYear": 12.594568965517242,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 0
     },
     {
       "id": "motif",
       "name": "Motif",
+      "kind": "model",
       "releaseCount": 2,
       "versionCount": 1,
       "highestVersion": "3",
@@ -732,14 +5108,49 @@
         "name": "Motif 3 Beta",
         "date": "2026-07-14"
       },
+      "latestRelease": {
+        "id": "motif-motif-3-2026-08-13",
+        "name": "Motif 3",
+        "version": "3",
+        "score": 3,
+        "date": "2026-08-13"
+      },
       "firstEventDate": "2026-07-14",
       "lastEventDate": "2026-08-13",
+      "trackedDays": 85,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2026-07-14",
+          "rank": 28
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 29
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 30
+        },
+        {
+          "date": "2026-09-28",
+          "rank": 31
+        },
+        {
+          "date": "2026-09-30",
+          "rank": 32
+        }
+      ],
+      "currentRank": 32,
+      "averageRank": 29.32941176470588,
+      "releaseRatePerYear": 8.593941176470588,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 0
     },
     {
       "id": "intellect",
       "name": "INTELLECT",
+      "kind": "model",
       "releaseCount": 2,
       "versionCount": 2,
       "highestVersion": "3.1",
@@ -749,14 +5160,69 @@
         "name": "INTELLECT-3.1 (weights publication)",
         "date": "2026-02-18"
       },
+      "latestRelease": {
+        "id": "intellect-intellect-3-1-weights-publication-2026-02-18",
+        "name": "INTELLECT-3.1 (weights publication)",
+        "version": "3.1",
+        "score": 3.1,
+        "date": "2026-02-18"
+      },
       "firstEventDate": "2025-11-26",
       "lastEventDate": "2026-02-18",
+      "trackedDays": 315,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2025-11-26",
+          "rank": 21
+        },
+        {
+          "date": "2025-12-12",
+          "rank": 22
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 23
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 24
+        },
+        {
+          "date": "2026-02-15",
+          "rank": 25
+        },
+        {
+          "date": "2026-02-18",
+          "rank": 23
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 24
+        },
+        {
+          "date": "2026-05-19",
+          "rank": 25
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 26
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 27
+        }
+      ],
+      "currentRank": 27,
+      "averageRank": 24.117460317460317,
+      "releaseRatePerYear": 2.319,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 2
     },
     {
       "id": "cogito",
       "name": "Cogito",
+      "kind": "model",
       "releaseCount": 1,
       "versionCount": 1,
       "highestVersion": "2.1",
@@ -766,14 +5232,81 @@
         "name": "Cogito v2.1 671B",
         "date": "2025-11-19"
       },
+      "latestRelease": {
+        "id": "cogito-cogito-v2-1-671b-2025-11-19",
+        "name": "Cogito v2.1 671B",
+        "version": "2.1",
+        "score": 2.1,
+        "date": "2025-11-19"
+      },
       "firstEventDate": "2025-11-19",
       "lastEventDate": "2025-11-19",
+      "trackedDays": 322,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2025-11-19",
+          "rank": 27
+        },
+        {
+          "date": "2025-11-20",
+          "rank": 28
+        },
+        {
+          "date": "2025-11-26",
+          "rank": 29
+        },
+        {
+          "date": "2026-01-05",
+          "rank": 30
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 31
+        },
+        {
+          "date": "2026-01-27",
+          "rank": 32
+        },
+        {
+          "date": "2026-02-12",
+          "rank": 33
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 34
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 36
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 38
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 39
+        },
+        {
+          "date": "2026-09-08",
+          "rank": 40
+        },
+        {
+          "date": "2026-09-25",
+          "rank": 41
+        }
+      ],
+      "currentRank": 41,
+      "averageRank": 35.02173913043478,
+      "releaseRatePerYear": 1.1342934782608696,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 1
     },
     {
       "id": "reka",
       "name": "Reka",
+      "kind": "model",
       "releaseCount": 3,
       "versionCount": 2,
       "highestVersion": "3.1",
@@ -783,14 +5316,93 @@
         "name": "Reka Flash 3.1",
         "date": "2025-07-10"
       },
+      "latestRelease": {
+        "id": "reka-reka-flash-3-1-2025-07-10",
+        "name": "Reka Flash 3.1",
+        "version": "3.1",
+        "score": 3.1,
+        "date": "2025-07-10"
+      },
       "firstEventDate": "2025-03-10",
       "lastEventDate": "2025-07-10",
+      "trackedDays": 576,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2025-03-10",
+          "rank": 12
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 13
+        },
+        {
+          "date": "2025-04-16",
+          "rank": 14
+        },
+        {
+          "date": "2025-06-06",
+          "rank": 15
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 16
+        },
+        {
+          "date": "2025-07-09",
+          "rank": 17
+        },
+        {
+          "date": "2025-08-25",
+          "rank": 18
+        },
+        {
+          "date": "2025-08-26",
+          "rank": 19
+        },
+        {
+          "date": "2025-09-29",
+          "rank": 20
+        },
+        {
+          "date": "2026-02-02",
+          "rank": 21
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 22
+        },
+        {
+          "date": "2026-02-15",
+          "rank": 23
+        },
+        {
+          "date": "2026-03-31",
+          "rank": 24
+        },
+        {
+          "date": "2026-05-19",
+          "rank": 25
+        },
+        {
+          "date": "2026-08-11",
+          "rank": 26
+        },
+        {
+          "date": "2026-08-28",
+          "rank": 27
+        }
+      ],
+      "currentRank": 27,
+      "averageRank": 20.411458333333332,
+      "releaseRatePerYear": 1.9023046875,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 3
     },
     {
       "id": "apriel",
       "name": "Apriel",
+      "kind": "model",
       "releaseCount": 1,
       "versionCount": 1,
       "highestVersion": "1.6",
@@ -800,14 +5412,69 @@
         "name": "Apriel 1.6 15B Thinker (announcement)",
         "date": "2025-12-09"
       },
+      "latestRelease": {
+        "id": "apriel-apriel-1-6-15b-thinker-announcement-2025-12-09",
+        "name": "Apriel 1.6 15B Thinker (announcement)",
+        "version": "1.6",
+        "score": 1.6,
+        "date": "2025-12-09"
+      },
       "firstEventDate": "2025-12-09",
       "lastEventDate": "2025-12-09",
+      "trackedDays": 302,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2025-12-09",
+          "rank": 36
+        },
+        {
+          "date": "2025-12-16",
+          "rank": 37
+        },
+        {
+          "date": "2025-12-18",
+          "rank": 38
+        },
+        {
+          "date": "2026-01-26",
+          "rank": 39
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 40
+        },
+        {
+          "date": "2026-04-20",
+          "rank": 41
+        },
+        {
+          "date": "2026-04-23",
+          "rank": 42
+        },
+        {
+          "date": "2026-06-13",
+          "rank": 44
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 45
+        },
+        {
+          "date": "2026-09-08",
+          "rank": 46
+        }
+      ],
+      "currentRank": 46,
+      "averageRank": 41.83112582781457,
+      "releaseRatePerYear": 1.2094122516556292,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 1
     },
     {
       "id": "nanbeige",
       "name": "Nanbeige",
+      "kind": "model",
       "releaseCount": 2,
       "versionCount": 2,
       "highestVersion": "4.2",
@@ -817,14 +5484,49 @@
         "name": "Nanbeige4.2-3B (technical report)",
         "date": "2026-07-24"
       },
+      "latestRelease": {
+        "id": "nanbeige-nanbeige4-2-3b-technical-report-2026-07-24",
+        "name": "Nanbeige4.2-3B (technical report)",
+        "version": "4.2",
+        "score": 4.2,
+        "date": "2026-07-24"
+      },
       "firstEventDate": "2026-02-13",
       "lastEventDate": "2026-07-24",
+      "trackedDays": 236,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2026-02-13",
+          "rank": 7
+        },
+        {
+          "date": "2026-03-10",
+          "rank": 8
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 9
+        },
+        {
+          "date": "2026-05-19",
+          "rank": 10
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 11
+        }
+      ],
+      "currentRank": 11,
+      "averageRank": 9.330508474576272,
+      "releaseRatePerYear": 3.095275423728814,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 2
     },
     {
       "id": "ring",
       "name": "Ring",
+      "kind": "model",
       "releaseCount": 1,
       "versionCount": 1,
       "highestVersion": "2.6",
@@ -834,14 +5536,41 @@
         "name": "Ring-2.6-1T (technical report)",
         "date": "2026-06-13"
       },
+      "latestRelease": {
+        "id": "ring-ring-2-6-1t-technical-report-2026-06-13",
+        "name": "Ring-2.6-1T (technical report)",
+        "version": "2.6",
+        "score": 2.6,
+        "date": "2026-06-13"
+      },
       "firstEventDate": "2026-06-13",
       "lastEventDate": "2026-06-13",
+      "trackedDays": 116,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2026-06-13",
+          "rank": 34
+        },
+        {
+          "date": "2026-07-14",
+          "rank": 35
+        },
+        {
+          "date": "2026-09-30",
+          "rank": 36
+        }
+      ],
+      "currentRank": 36,
+      "averageRank": 34.793103448275865,
+      "releaseRatePerYear": 3.1486422413793105,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 1
     },
     {
       "id": "ax",
       "name": "A.X",
+      "kind": "model",
       "releaseCount": 2,
       "versionCount": 1,
       "highestVersion": "4.0",
@@ -851,10 +5580,141 @@
         "name": "A.X 4.0",
         "date": "2025-07-03"
       },
+      "latestRelease": {
+        "id": "ax-a-x-4-0-2025-07-03",
+        "name": "A.X 4.0",
+        "version": "4.0",
+        "score": 4,
+        "date": "2025-07-03"
+      },
       "firstEventDate": "2025-07-03",
       "lastEventDate": "2025-07-03",
+      "trackedDays": 461,
+      "daysAtNumberOne": 0,
+      "rankHistory": [
+        {
+          "date": "2025-07-03",
+          "rank": 5
+        },
+        {
+          "date": "2025-08-05",
+          "rank": 6
+        },
+        {
+          "date": "2025-09-05",
+          "rank": 7
+        },
+        {
+          "date": "2025-11-17",
+          "rank": 8
+        },
+        {
+          "date": "2025-12-03",
+          "rank": 9
+        },
+        {
+          "date": "2026-02-13",
+          "rank": 10
+        },
+        {
+          "date": "2026-04-09",
+          "rank": 11
+        },
+        {
+          "date": "2026-04-29",
+          "rank": 12
+        },
+        {
+          "date": "2026-09-10",
+          "rank": 13
+        },
+        {
+          "date": "2026-09-20",
+          "rank": 14
+        }
+      ],
+      "currentRank": 14,
+      "averageRank": 9.509761388286334,
+      "releaseRatePerYear": 1.5845661605206076,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 2
+    }
+  ],
+  "softwareControls": [
+    {
+      "id": "python",
+      "name": "Python",
+      "kind": "software",
+      "releaseCount": 15,
+      "versionCount": 15,
+      "highestVersion": "3.9",
+      "highestScore": 3.9,
+      "firstReleaseAtHighestVersion": {
+        "id": "python-3-9",
+        "name": "Python 3.9",
+        "date": "2020-10-05"
+      },
+      "latestRelease": {
+        "id": "python-3-14",
+        "name": "Python 3.14",
+        "version": "3.14",
+        "score": 3.14,
+        "date": "2025-10-07"
+      },
+      "firstEventDate": "2008-12-03",
+      "lastEventDate": "2025-10-07",
+      "artificialAnalysisReleaseCount": 0,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "pytorch",
+      "name": "PyTorch",
+      "kind": "software",
+      "releaseCount": 29,
+      "versionCount": 29,
+      "highestVersion": "2.9",
+      "highestScore": 2.9,
+      "firstReleaseAtHighestVersion": {
+        "id": "pytorch-2-9",
+        "name": "PyTorch 2.9",
+        "date": "2025-10-15"
+      },
+      "latestRelease": {
+        "id": "pytorch-2-14",
+        "name": "PyTorch 2.14",
+        "version": "2.14",
+        "score": 2.14,
+        "date": "2026-09-02"
+      },
+      "firstEventDate": "2018-12-07",
+      "lastEventDate": "2026-09-02",
+      "artificialAnalysisReleaseCount": 0,
+      "huggingFaceReleaseCount": 0
+    },
+    {
+      "id": "gta",
+      "name": "GTA",
+      "kind": "software",
+      "releaseCount": 5,
+      "versionCount": 1,
+      "highestVersion": "5",
+      "highestScore": 5,
+      "firstReleaseAtHighestVersion": {
+        "id": "gta-v-ps3-xbox360",
+        "name": "GTA V (PlayStation 3 / Xbox 360)",
+        "date": "2013-09-17"
+      },
+      "latestRelease": {
+        "id": "gta-v-pc-enhanced",
+        "name": "GTA V Enhanced (PC)",
+        "version": "5",
+        "score": 5,
+        "date": "2025-03-04"
+      },
+      "firstEventDate": "2013-09-17",
+      "lastEventDate": "2025-03-04",
+      "artificialAnalysisReleaseCount": 0,
+      "huggingFaceReleaseCount": 0
     }
   ]
 }

@@ -1,6 +1,10 @@
 (() => {
   'use strict';
   const data = JSON.parse(document.getElementById('release-data').textContent);
+  const stats = JSON.parse(document.getElementById('stats-data').textContent);
+  const familyStats = new Map(
+    [...stats.families, ...stats.softwareControls].map((family) => [family.id, family]),
+  );
   const esc = (value) =>
     String(value ?? '').replace(
       /[&<>"']/g,
@@ -62,8 +66,12 @@
     parseDate(latestDate),
     ...datedReleases.map((release) => release.time),
   );
-  const earliestTime = Math.min(...datedReleases.map((release) => release.time));
-  const ranked = families
+  const modelStartTime = Math.min(
+    ...datedReleases
+      .filter((release) => release.familyInfo.kind !== 'software')
+      .map((release) => release.time),
+  );
+  const familyPeaks = families
     .map(
       (family) =>
         numericReleases
@@ -77,13 +85,14 @@
     )
     .filter(Boolean)
     .sort((a, b) => b.score - a.score || a.familyInfo.name.localeCompare(b.familyInfo.name));
+  const ranked = familyPeaks.filter((release) => release.familyInfo.kind !== 'software');
   const rankMap = new Map(
     ranked.map((release, index) => [
       release.family,
       ranked.findIndex((other) => other.score === release.score) + 1,
     ]),
   );
-  const highestMap = new Map(ranked.map((release) => [release.family, release]));
+  const highestMap = new Map(familyPeaks.map((release) => [release.family, release]));
   const coreIds = families.filter((family) => family.core).map((family) => family.id);
   const main = document.getElementById('main');
   const tooltip = document.getElementById('tooltip');
@@ -95,11 +104,23 @@
   let currentRoute = null;
   let timelinePrefs = {
     familyIds: [...coreIds],
-    from: isoDate(earliestTime),
+    from: isoDate(modelStartTime),
     to: isoDate(latestTime),
     range: 'all',
+    mode: 'highest',
+    weights: 'all',
+    kind: 'all',
+    status: 'all',
   };
-  let indexPrefs = { query: '', family: 'all', sort: 'date', direction: 'desc' };
+  let indexPrefs = {
+    query: '',
+    family: 'all',
+    sort: 'date',
+    direction: 'desc',
+    weights: 'all',
+    status: 'all',
+    kind: 'model',
+  };
   let leaderboardScope = 'all';
   let pinnedPoint = null;
   let suppressPointFocus = false;
@@ -109,7 +130,50 @@
   let timelineDrag = null;
   let timelineGestureTimer;
   let timelineDrawFrame;
-  const minimumTimelineSpan = Math.min(2 * day, latestTime - earliestTime);
+  const minimumTimelineSpan = 2 * day;
+  const weightsOptions = [
+    ['all', 'All weight statuses'],
+    ['open', 'Open weights'],
+    ['not-published', 'No public weights found'],
+    ['unverified', 'Weights unverified'],
+    ['not-applicable', 'Not applicable (software)'],
+  ];
+  const statusOptions = [
+    ['all', 'All release statuses'],
+    ...[...new Set(releases.map((release) => release.status))]
+      .sort()
+      .map((status) => [status, status]),
+  ];
+  const kindOptions = [
+    ['all', 'Models & software'],
+    ['model', 'Models only'],
+    ['software', 'Software controls only'],
+  ];
+  const modeOptions = [
+    ['highest', 'Highest to date'],
+    ['latest', 'Latest release'],
+  ];
+  const optionValue = (options, value, fallback = 'all') =>
+    options.some(([key]) => key === value) ? value : fallback;
+  const filterControl = (id, label, options, value) =>
+    `<label class="filter-control" for="${id}"><span>${label}</span><select id="${id}">${options.map(([key, title]) => `<option value="${esc(key)}" ${key === value ? 'selected' : ''}>${esc(title)}</option>`).join('')}</select></label>`;
+  const matchesFilters = (release, prefs) =>
+    (prefs.weights === 'all' || release.weightsStatus === prefs.weights) &&
+    (prefs.status === 'all' || release.status === prefs.status) &&
+    (!prefs.kind || prefs.kind === 'all' || release.familyInfo.kind === prefs.kind);
+  const timelineReleases = () =>
+    datedReleases.filter(
+      (release) =>
+        timelinePrefs.familyIds.includes(release.family) && matchesFilters(release, timelinePrefs),
+    );
+  // Unselected software must not stretch a model-only view back to 2008.
+  const timelineStartTime = () => {
+    const selected = timelineReleases();
+    return Math.min(
+      latestTime - minimumTimelineSpan,
+      ...(selected.length ? selected.map((release) => release.time) : [modelStartTime]),
+    );
+  };
 
   const statusLabel = (value) =>
     ({
@@ -147,6 +211,7 @@
       open: 'Open weights',
       'not-published': 'No public weights found',
       unverified: 'Weights unverified',
+      'not-applicable': 'Software control · Weights not applicable',
     })[release.weightsStatus] || 'Weights unverified';
   const weightsLink = (release, label = 'Hugging Face weights ↗') =>
     release.huggingFaceUrl
@@ -172,12 +237,19 @@
   };
   const compareHref = (ids = compareIds, order = compareOrder) =>
     routeHref('compare', { models: ids.join(','), order });
+  const familyHref = (id) => routeHref('family', { id });
+  const familyLink = (family, className = '') =>
+    `<a class="${className}" href="${familyHref(family.id)}">${esc(family.name)}</a>`;
   const timelineHref = (prefs) =>
     routeHref('timeline', {
       families: prefs.familyIds.join(','),
       from: prefs.from,
       to: prefs.to,
       range: prefs.range,
+      mode: prefs.mode,
+      weights: prefs.weights,
+      kind: prefs.kind,
+      status: prefs.status,
     });
   const uniqueValidIds = (ids) => [...new Set(ids)].filter((id) => releaseMap.has(id));
   const navigate = (hash) => {
@@ -200,8 +272,8 @@
     </div>`;
   const note = () =>
     /* HTML */ `<p class="note">
-      <strong>About this metric.</strong> Scores are the numeric versions assigned to model
-      releases. They do not measure intelligence, quality, speed, or capability.
+      <strong>Number responsibly.</strong> VersionBench obeys mathematics, not semantic versioning.
+      Thus 3.9 &gt; 3.10. A larger number is a larger number.
       <a href="#methodology">Read the methodology ↗</a>
     </p>`;
   const toast = (message) => {
@@ -241,7 +313,7 @@
       head(
         'VERSIONBENCH / LEADERBOARD',
         'Version Benchmark Leaderboard',
-        '100% accurate and unbiased cross-model LLM benchmark<span class="benchmark-definition">Benchmark score = numeric release version.</span>',
+        'No training-data contamination, no judge bias, no prompt sensitivity, no sampling variance, no benchmark saturation, no data leakage, 100% reproducible.<span class="benchmark-definition">Benchmark score = numeric release version.</span>',
       ) +
       /* HTML */ `<div class="stats">
           ${ranked
@@ -255,7 +327,7 @@
                   </div>
                   <div class="stat-main">
                     <div>
-                      <div class="stat-name">${esc(release.familyInfo.name)}</div>
+                      <div class="stat-name">${familyLink(release.familyInfo)}</div>
                       <div class="stat-provider">${esc(release.familyInfo.provider)}</div>
                     </div>
                     <div class="stat-score">${score(release)}</div>
@@ -302,7 +374,7 @@
                   <tr>
                     <th><span class="sr-only">Compare</span></th>
                     <th>Rank</th>
-                    <th>Model family</th>
+                    <th>Family</th>
                     <th>Score</th>
                     <th class="date-col">Date</th>
                     <th>Source</th>
@@ -322,7 +394,7 @@
                           <div class="family-cell">
                             ${mark(release.familyInfo)}
                             <div>
-                              <div class="family-name">${esc(release.familyInfo.name)}</div>
+                              <div class="family-name">${familyLink(release.familyInfo)}</div>
                               <div class="table-sub">
                                 ${esc(release.name)}
                                 <span class="availability-label"
@@ -377,8 +449,8 @@
                       /* HTML */ `<div class="bar-row" style="${familyStyle(release.familyInfo)}">
                         <a
                           class="bar-name"
-                          href="${compareHref([release.id])}"
-                          title="Compare ${esc(release.name)}"
+                          href="${familyHref(release.family)}"
+                          title="${esc(release.familyInfo.name)} release history and statistics"
                           >${esc(release.familyInfo.name)}</a
                         >
                         <div class="bar-track">
@@ -424,10 +496,23 @@
             </section>
             ${note()}
             <div class="metric-counts">
-              <span><strong>${families.length}</strong> model families</span
-              ><span><strong>${releases.length}</strong> curated releases</span
-              ><span><strong>${sourceMap.size}</strong> sources</span>
+              <span><strong>${stats.familyCount}</strong> model families</span
+              ><span><strong>${stats.releaseCount}</strong> model releases</span
+              ><span><strong>${stats.sourceCount}</strong> model sources</span>
             </div>
+            <p class="note">
+              ${stats.softwareControlCount} software controls are available in the
+              <a
+                href="${routeHref('timeline', {
+                  families: families
+                    .filter((family) => family.kind === 'software')
+                    .map((family) => family.id)
+                    .join(','),
+                  mode: 'latest',
+                })}"
+                >expanded dataset</a
+              >. They have no vote in these rankings.
+            </p>
           </div>
         </div>`;
   }
@@ -436,44 +521,63 @@
     const familyIds = params.has('families')
       ? [...new Set(params.get('families').split(','))].filter((id) => familyMap.has(id))
       : timelinePrefs.familyIds;
-    const from = Number.isFinite(parseDate(params.get('from')))
-      ? params.get('from')
-      : timelinePrefs.from;
-    const to = Number.isFinite(parseDate(params.get('to'))) ? params.get('to') : timelinePrefs.to;
+    const explicit = params.size > 0;
+    const fallback = (key, value) => (explicit ? value : timelinePrefs[key]);
+    timelinePrefs = {
+      ...timelinePrefs,
+      familyIds,
+      range: ['all', '3y', '1y', 'ytd', 'custom'].includes(params.get('range'))
+        ? params.get('range')
+        : params.has('from') || params.has('to')
+          ? 'custom'
+          : fallback('range', 'all'),
+      mode: optionValue(modeOptions, params.get('mode'), fallback('mode', 'highest')),
+      weights: optionValue(weightsOptions, params.get('weights'), fallback('weights', 'all')),
+      status: optionValue(statusOptions, params.get('status'), fallback('status', 'all')),
+      kind: optionValue(kindOptions, params.get('kind'), fallback('kind', 'all')),
+    };
+    const earliest = timelineStartTime();
+    const from =
+      timelinePrefs.range === 'all'
+        ? earliest
+        : Number.isFinite(parseDate(params.get('from')))
+          ? parseDate(params.get('from'))
+          : parseDate(timelinePrefs.from);
+    const to =
+      timelinePrefs.range === 'all'
+        ? latestTime
+        : Number.isFinite(parseDate(params.get('to')))
+          ? parseDate(params.get('to'))
+          : parseDate(timelinePrefs.to);
     const bounds = normalizeTimelineWindow(
-      parseDate(from) <= parseDate(to) ? parseDate(from) : earliestTime,
-      parseDate(from) <= parseDate(to) ? parseDate(to) : latestTime,
+      from <= to ? from : earliest,
+      from <= to ? to : latestTime,
       true,
     );
-    timelinePrefs = {
-      familyIds,
-      from: isoDate(bounds.start),
-      to: isoDate(bounds.end),
-      range: params.get('range') || timelinePrefs.range,
-    };
+    timelinePrefs.from = isoDate(bounds.start);
+    timelinePrefs.to = isoDate(bounds.end);
   }
 
   function renderTimeline(params) {
     timelineState(params);
     // Canonical dates make Back restore the view even when entered through #timeline.
     history.replaceState(null, '', timelineHref(timelinePrefs));
-    const familyControls = (core) =>
+    const familyControls = (predicate) =>
       families
-        .filter((family) => Boolean(family.core) === core)
+        .filter(predicate)
         .map(
           (family) =>
             /* HTML */ `<div class="family-control" data-highlight-family="${esc(family.id)}">
-              <label for="family-${esc(family.id)}"
-                ><input
-                  class="family-check"
-                  type="checkbox"
-                  id="family-${esc(family.id)}"
-                  data-family="${esc(family.id)}"
-                  ${timelinePrefs.familyIds.includes(family.id) ? 'checked' : ''}
-                /><span class="swatch" style="${familyStyle(family)}"></span>${esc(
-                  family.name,
-                )}</label
-              ><span class="family-version"
+              <input
+                class="family-check"
+                type="checkbox"
+                id="family-${esc(family.id)}"
+                data-family="${esc(family.id)}"
+                aria-label="Show ${esc(family.name)} on timeline"
+                ${timelinePrefs.familyIds.includes(family.id) ? 'checked' : ''}
+              /><span class="swatch" style="${familyStyle(family)}"></span
+              >${familyLink(family, 'family-control-link')}
+              <span class="family-version"
                 >${highestMap.has(family.id) ? score(highestMap.get(family.id)) : '—'}</span
               ><button
                 class="only-button"
@@ -489,27 +593,58 @@
       head(
         'VERSIONBENCH / RELEASE HISTORY',
         'Version Benchmark Timeline',
-        'Track benchmark scores by release date across model families.',
+        'Track numeric progress, reversals, and prolonged commitments to the same number.',
       ) +
       /* HTML */ `<div class="timeline-layout">
-        <aside class="panel families-panel" aria-label="Model family filters">
+        <aside class="panel families-panel" aria-label="Family filters">
           <div class="sidebar-title">
-            Model families<span class="mini-label"
+            Families<span class="mini-label"
               >${timelinePrefs.familyIds.length}/${families.length}</span
             >
           </div>
           <div class="sidebar-controls">
             <button class="text-button" data-family-set="core">Core 10</button
-            ><button class="text-button" data-family-set="all">All</button
+            ><button class="text-button" data-family-set="models">All models</button
             ><button class="text-button" data-family-set="none">None</button>
           </div>
+          <label class="sr-only" for="family-search">Find a family</label>
+          <input
+            id="family-search"
+            type="search"
+            placeholder="Find a family…"
+            class="family-search"
+          />
           <div class="family-section-label">CORE FAMILIES</div>
-          ${familyControls(true)}
-          <div class="family-section-label">ADDITIONAL FAMILIES</div>
-          ${familyControls(false)}
+          <div class="family-group">${familyControls((family) => family.core)}</div>
+          <details class="expanded-families" id="expanded-families" open>
+            <summary>Expanded dataset</summary>
+            <div class="software-controls">
+              <div class="family-section-label">SOFTWARE CONTROLS</div>
+              <p class="sidebar-note">Reference only. Excluded from model ranks and statistics.</p>
+              <div class="family-group">
+                ${familyControls((family) => family.kind === 'software')}
+              </div>
+              <button class="text-button" data-family-set="software">
+                Show software controls →
+              </button>
+            </div>
+            <details class="additional-models" id="additional-models" open>
+              <summary>Additional model families</summary>
+              <div class="family-group">
+                ${familyControls((family) => !family.core && family.kind !== 'software')}
+              </div>
+            </details>
+            <button class="text-button" data-family-set="all">Select every family</button>
+          </details>
         </aside>
         <div>
           <section class="panel">
+            <div class="timeline-filters">
+              ${filterControl('timeline-mode', 'Line shows', modeOptions, timelinePrefs.mode)}
+              ${filterControl('timeline-weights', 'Weights', weightsOptions, timelinePrefs.weights)}
+              ${filterControl('timeline-kind', 'Category', kindOptions, timelinePrefs.kind)}
+              ${filterControl('timeline-status', 'Release status', statusOptions, timelinePrefs.status)}
+            </div>
             <div class="chart-toolbar">
               <div class="segments" aria-label="Date range presets">
                 ${[
@@ -535,14 +670,14 @@
                 ><input
                   id="date-from"
                   type="date"
-                  min="${isoDate(earliestTime)}"
+                  min="${isoDate(timelineStartTime())}"
                   max="${isoDate(latestTime)}"
                   value="${esc(timelinePrefs.from)}"
                 /><label for="date-to">To</label
                 ><input
                   id="date-to"
                   type="date"
-                  min="${isoDate(earliestTime)}"
+                  min="${isoDate(timelineStartTime())}"
                   max="${isoDate(latestTime)}"
                   value="${esc(timelinePrefs.to)}"
                 />
@@ -551,7 +686,7 @@
             <div class="timeline-navigation">
               <p id="timeline-gesture-hint">
                 Scroll or pinch to zoom · Drag or swipe sideways to pan · Reset keeps selected
-                families<span class="sr-only"
+                filters<span class="sr-only"
                   >. Shift plus scroll also pans. Keyboard: plus and minus zoom, left and right
                   arrows pan, Home resets.</span
                 >
@@ -592,7 +727,8 @@
             ></div>
             <div class="timeline-bottom">
               <span
-                ><strong>Line:</strong> highest benchmark score to date.
+                ><strong>Line:</strong>
+                ${timelinePrefs.mode === 'latest' ? 'latest matching release; same-day ties use the highest score.' : 'highest matching score to date.'}
                 <strong>Points:</strong> individual releases.</span
               ><span
                 >Click a point for its release source. Outlined points contain multiple
@@ -601,12 +737,18 @@
             </div>
           </section>
           <p class="note">
-            Models with the same version remain at the same height. Every release retains its exact
-            date and numeric position. <a href="#methodology">Methodology ↗</a>
+            Filters apply to lines, points, and the table. Weights describe current checked
+            availability.
+            ${timelinePrefs.mode === 'latest' ? 'Lower numbers produce lower lines. The graph regrets nothing.' : 'Switch to “Latest release” to observe numeric regressions.'}
+            <a href="#methodology">Methodology ↗</a>
           </p>
           <details class="panel timeline-details subsection">
             <summary id="timeline-table-summary">Explore plotted releases in a table</summary>
             <div id="timeline-table" class="table-wrap"></div>
+            <div class="panel-foot">
+              <span>Only matching releases in the visible date range.</span
+              ><button class="text-button" data-export-timeline>Export CSV ↓</button>
+            </div>
           </details>
         </div>
       </div>`;
@@ -617,6 +759,7 @@
 
   // Keep continuous gesture deltas internally, while the displayed/shared view uses UTC days.
   function normalizeTimelineWindow(start, end, snap = false) {
+    const earliestTime = timelineStartTime();
     const fullSpan = latestTime - earliestTime;
     let span = Math.max(minimumTimelineSpan, Math.min(fullSpan, end - start));
     if (snap) {
@@ -643,7 +786,7 @@
     const zoomIn = document.querySelector('[data-timeline-zoom="in"]');
     const zoomOut = document.querySelector('[data-timeline-zoom="out"]');
     if (zoomIn) zoomIn.disabled = span <= minimumTimelineSpan;
-    if (zoomOut) zoomOut.disabled = span >= latestTime - earliestTime;
+    if (zoomOut) zoomOut.disabled = span >= latestTime - timelineStartTime();
     const error = document.getElementById('date-error');
     if (error) error.hidden = true;
     if (announce) {
@@ -725,7 +868,7 @@
     const span = gesture.end - gesture.start;
     const nextSpan = Math.max(
       minimumTimelineSpan,
-      Math.min(latestTime - earliestTime, span * factor),
+      Math.min(latestTime - timelineStartTime(), span * factor),
     );
     const fixedTime = gesture.start + span * anchor;
     applyTimelineWindow(fixedTime - nextSpan * anchor, fixedTime + nextSpan * (1 - anchor));
@@ -736,7 +879,7 @@
   function resetTimelineView() {
     commitTimelineGesture();
     beginTimelineGesture('control');
-    applyTimelineWindow(earliestTime, latestTime);
+    applyTimelineWindow(timelineStartTime(), latestTime);
     timelinePrefs.range = 'all';
     // Reset also makes a custom full-width view report the All time preset.
     if (timelineGesture) timelineGesture.dirty = location.hash !== timelineHref(timelinePrefs);
@@ -958,7 +1101,7 @@
     const end = parseDate(timelinePrefs.to);
     const actualEnd = end === start ? end + day : end;
     const familySet = new Set(timelinePrefs.familyIds);
-    const selected = datedReleases.filter((release) => familySet.has(release.family));
+    const selected = timelineReleases();
     const visible = selected.filter((release) => release.time >= start && release.time <= end);
     const max = Math.max(
       1,
@@ -976,21 +1119,34 @@
     const ticks = dateTicks(start, actualEnd, chartWidth);
     const steps = timelinePrefs.familyIds
       .map((familyId) => {
-        const list = selected
+        // Choose a daily maximum before drawing, so a day with several variants
+        // has one deterministic line height while keeping all its release points.
+        const daily = new Map();
+        selected
           .filter((release) => release.family === familyId && release.time <= end)
-          .sort((a, b) => a.time - b.time || a.score - b.score);
+          .forEach((release) => {
+            const previous = daily.get(release.time);
+            if (!previous || release.score > previous.score) daily.set(release.time, release);
+          });
+        const list = [...daily.values()].sort((a, b) => a.time - b.time);
         let high = null;
         let path = '';
         list.forEach((release) => {
           if (release.time < start) {
-            high = Math.max(high ?? -Infinity, release.score);
+            high =
+              timelinePrefs.mode === 'latest'
+                ? release.score
+                : Math.max(high ?? -Infinity, release.score);
             return;
           }
           if (!path && high !== null) path = `M${x(start).toFixed(2)},${y(high).toFixed(2)}`;
           if (high === null) {
             high = release.score;
             path = `M${x(release.time).toFixed(2)},${y(high).toFixed(2)}`;
-          } else if (release.score > high) {
+          } else if (
+            release.score !== high &&
+            (timelinePrefs.mode === 'latest' || release.score > high)
+          ) {
             path += `H${x(release.time).toFixed(2)}V${y(release.score).toFixed(2)}`;
             high = release.score;
           }
@@ -1068,9 +1224,10 @@
     >
       <title id="timeline-title">Version Benchmark release timeline</title>
       <desc id="timeline-description">
-        Release date on x axis, benchmark score (numeric version) on y axis. Lines show highest
-        version to date. Each release point links to its source; coincident points open a list.
-        ${visible.length} releases in the selected date range. Use Tab to explore points.
+        Release date on x axis, benchmark score (numeric version) on y axis. Lines show the
+        ${timelinePrefs.mode === 'latest' ? 'latest matching release' : 'highest matching score to date'}.
+        Each release point links to its source; coincident points open a list. ${visible.length}
+        releases in the selected date range. Use Tab to explore points.
       </desc>
       <text class="axis-title" x="${pad.left}" y="18">Benchmark score</text>
       ${Array.from(
@@ -1116,8 +1273,8 @@
               style="font-family:inherit;font-size:14px"
               >${
                 familySet.size
-                  ? 'No releases in this date range'
-                  : 'Select a model family to explore releases'
+                  ? 'No releases match these filters and dates'
+                  : 'Select a family to explore releases'
               }</text
             >`
           : ''
@@ -1333,9 +1490,9 @@
                         <div class="table-sub">${esc(statusLabel(release.status))}</div>
                       </td>
                       <td>
-                        <span class="family-inline"
+                        <a class="family-inline" href="${familyHref(release.family)}"
                           ><span class="swatch" style="${familyStyle(release.familyInfo)}"></span
-                          >${esc(release.familyInfo.name)}</span
+                          >${esc(release.familyInfo.name)}</a
                         >
                       </td>
                       <td class="score-cell">${score(release)}</td>
@@ -1600,6 +1757,7 @@
     const list = releases.filter(
       (release) =>
         (indexPrefs.family === 'all' || release.family === indexPrefs.family) &&
+        matchesFilters(release, indexPrefs) &&
         (!query ||
           [
             release.name,
@@ -1625,21 +1783,39 @@
   }
 
   function indexHref() {
-    return routeHref('releases', {
+    const inFamily = currentRoute?.page === 'family';
+    return routeHref(inFamily ? 'family' : 'releases', {
+      id: inFamily ? indexPrefs.family : undefined,
       q: indexPrefs.query || undefined,
-      family: indexPrefs.family === 'all' ? undefined : indexPrefs.family,
+      family: inFamily || indexPrefs.family === 'all' ? undefined : indexPrefs.family,
       sort: indexPrefs.sort,
       direction: indexPrefs.direction,
+      weights: indexPrefs.weights === 'all' ? undefined : indexPrefs.weights,
+      status: indexPrefs.status === 'all' ? undefined : indexPrefs.status,
+      kind: inFamily || indexPrefs.kind === 'model' ? undefined : indexPrefs.kind,
     });
   }
 
-  function renderReleases(params) {
+  function readIndexPrefs(params, family = null) {
     indexPrefs = {
       query: params.get('q') || '',
-      family: familyMap.has(params.get('family')) ? params.get('family') : 'all',
+      family: family || (familyMap.has(params.get('family')) ? params.get('family') : 'all'),
       sort: ['date', 'score', 'name'].includes(params.get('sort')) ? params.get('sort') : 'date',
       direction: params.get('direction') === 'asc' ? 'asc' : 'desc',
+      weights: optionValue(weightsOptions, params.get('weights')),
+      status: optionValue(statusOptions, params.get('status')),
+      kind: family
+        ? 'all'
+        : optionValue(
+            kindOptions,
+            params.get('kind'),
+            familyMap.get(params.get('family'))?.kind || 'model',
+          ),
     };
+  }
+
+  function renderReleases(params) {
+    readIndexPrefs(params);
     main.innerHTML =
       head(
         'VERSIONBENCH / DATA EXPLORER',
@@ -1673,6 +1849,9 @@
                   )
                   .join('')}
               </select>
+              ${filterControl('release-weights', 'Weights', weightsOptions, indexPrefs.weights)}
+              ${filterControl('release-status', 'Release status', statusOptions, indexPrefs.status)}
+              ${filterControl('release-kind', 'Category', kindOptions, indexPrefs.kind)}
             </div>
             <span id="release-count" class="index-count" aria-live="polite"></span>
           </div>
@@ -1688,11 +1867,161 @@
     updateReleaseTable();
   }
 
+  function renderFamily(params) {
+    const family = familyMap.get(params.get('id'));
+    if (!family) {
+      main.innerHTML =
+        head(
+          'VERSIONBENCH / FAMILY',
+          'Family not found',
+          'This family has not submitted a number.',
+        ) + '<p><a href="#leaderboard">Browse all families →</a></p>';
+      return;
+    }
+    readIndexPrefs(params, family.id);
+    const summary = familyStats.get(family.id);
+    const best = releaseMap.get(summary.firstReleaseAtHighestVersion.id);
+    const latest = releaseMap.get(summary.latestRelease.id);
+    const timeline = routeHref('timeline', {
+      families: family.id,
+      mode: family.kind === 'software' ? 'latest' : 'highest',
+    });
+    const decimal = (value) =>
+      value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const software = family.kind === 'software';
+    const metrics = software
+      ? [
+          [
+            'Recorded releases',
+            summary.releaseCount.toLocaleString('en-US'),
+            'Reference history only.',
+          ],
+          [
+            'Distinct versions',
+            summary.versionCount.toLocaleString('en-US'),
+            'Published labels. No rank assigned.',
+          ],
+        ]
+      : [
+          [
+            'Time at #1',
+            `${summary.daysAtNumberOne.toLocaleString('en-US')} days`,
+            'Including shared first place.',
+          ],
+          ['Average rank', decimal(summary.averageRank), 'Time-weighted. Every day counts.'],
+          [
+            'Number of releases',
+            summary.releaseCount.toLocaleString('en-US'),
+            'Recorded events, including variants.',
+          ],
+          [
+            'Average release rate',
+            `${decimal(summary.releaseRatePerYear)} / year`,
+            'Releases divided by time. Productivity.',
+          ],
+        ];
+    main.innerHTML =
+      `<a class="back-link" href="#leaderboard">← All families</a>` +
+      head(
+        'VERSIONBENCH / FAMILY',
+        esc(family.name),
+        `${esc(family.provider)} · ${software ? 'Software control · Unranked' : `Model family · Current rank #${summary.currentRank}`}`,
+        `<div class="head-actions"><a class="button" href="${timeline}">View timeline →</a><button class="button" data-export-releases>Export releases ↓</button></div>`,
+      ) +
+      `${family.scope ? `<p class="family-scope">${esc(family.scope)}</p>` : ''}` +
+      `<section class="family-metrics ${software ? 'control-metrics' : ''}" aria-label="${software ? 'Software reference summary' : 'Family statistics'}" style="${familyStyle(family)}">${metrics
+        .map(
+          ([label, value, caption]) =>
+            `<article class="stat"><h2>${label}</h2><strong>${value}</strong><p>${caption}</p></article>`,
+        )
+        .join('')}</section>` +
+      (software
+        ? '<p class="note">Software controls are excluded from model counts, leaderboard ranks, time at #1, and lifetime average rank. They are here to provide perspective.</p>'
+        : `<details class="stats-method"><summary>How these statistics are calculated</summary>
+        <p>Tracked from ${esc(summary.firstEventDate)} through ${esc(stats.snapshot)}, inclusive (${summary.trackedDays.toLocaleString('en-US')} UTC days).
+        Each model family competes from its first recorded event, using its highest numeric score reached by each day. All ${stats.familyCount} model families compete; software controls are excluded. Ties share rank and receive full days at #1.</p>
+        <p>Average rank is rank × days, divided by tracked days. Release rate is ${summary.releaseCount} recorded events / (${summary.trackedDays} days / 365.2425).
+        Announcements and variants count separately. Filters below affect the release table; these statistics always cover the whole family. <a href="#methodology">Full methodology →</a></p>
+      </details>`) +
+      (software
+        ? ''
+        : `<section class="panel family-rank-panel">
+        <div class="panel-head"><div><h2>Rank over time</h2><p>Position among model families. #1 is at the top. Software has no jurisdiction.</p></div></div>
+        <div id="family-rank-chart" class="family-rank-chart" data-rank-family="${esc(family.id)}"></div>
+        <details class="rank-history-details"><summary>View rank changes as a table</summary><div class="table-wrap"><table>
+          <caption class="sr-only">${esc(family.name)} historical rank changes</caption><thead><tr><th>From date (UTC)</th><th>Rank</th></tr></thead>
+          <tbody>${summary.rankHistory.map((entry) => `<tr><td>${esc(entry.date)}</td><td>#${entry.rank}</td></tr>`).join('')}</tbody>
+        </table></div></details></section>`) +
+      `<div class="family-highlights">
+        <section class="panel family-highlight"><span class="eyebrow">HIGHEST SCORE${software ? '' : ` · #${summary.currentRank}`}</span>
+          <strong class="family-highlight-score">${score(best)}</strong><h2>${sourceLink(best, esc(best.name))}</h2>
+          <p>First reached ${esc(best.date)}. Priority goes to the first number on the scene.</p>
+          <div class="head-actions">${analysisLink(best)} ${weightsLink(best)}</div></section>
+        <section class="panel family-highlight"><span class="eyebrow">LATEST RECORDED RELEASE</span>
+          <strong class="family-highlight-score">${score(latest)}</strong><h2>${sourceLink(latest, esc(latest.name))}</h2>
+          <p>${esc(latest.date)} · ${latest.score < best.score ? 'A lower number. The previous record stands.' : 'The number speaks for itself.'}</p>
+          <div class="head-actions">${analysisLink(latest)} ${weightsLink(latest)}</div></section>
+      </div>` +
+      `<section class="panel family-history"><div class="panel-head"><div><h2>Release history</h2><p>${esc(summary.firstEventDate)} – ${esc(summary.lastEventDate)} · Links, dates, and the numbers in question.</p></div></div>
+        <div class="table-toolbar"><div class="inline-controls">
+          <label class="sr-only" for="release-search">Search this family's releases</label><input class="search-input" id="release-search" type="search" placeholder="Search this family…" value="${esc(indexPrefs.query)}" />
+          ${filterControl('release-weights', 'Weights', weightsOptions, indexPrefs.weights)}
+          ${filterControl('release-status', 'Release status', statusOptions, indexPrefs.status)}
+        </div><span id="release-count" class="index-count" aria-live="polite"></span></div>
+        <div id="release-table" class="table-wrap"></div>
+        <div class="panel-foot"><span>First recorded release does not imply first-ever release.</span><a href="${compareHref()}" data-compare-link>Compare selected (${compareIds.length}) →</a></div></section>`;
+    updateReleaseTable();
+    if (!software) drawFamilyRank();
+  }
+
+  function drawFamilyRank() {
+    const container = document.getElementById('family-rank-chart');
+    if (!container) return;
+    const family = familyMap.get(container.dataset.rankFamily);
+    const summary = familyStats.get(family.id);
+    const entries = summary.rankHistory;
+    const width = Math.max(260, container.clientWidth);
+    const height = 280;
+    const pad = { top: 34, right: 32, bottom: 48, left: 48 };
+    const start = parseDate(summary.firstEventDate);
+    const end = Math.max(start + day, parseDate(stats.snapshot));
+    const maxRank = Math.max(2, ...entries.map((entry) => entry.rank));
+    const x = (time) =>
+      pad.left + ((time - start) / (end - start)) * (width - pad.left - pad.right);
+    const y = (rank) => pad.top + ((rank - 1) / (maxRank - 1)) * (height - pad.top - pad.bottom);
+    let path = `M${x(start).toFixed(2)},${y(entries[0].rank).toFixed(2)}`;
+    for (const entry of entries.slice(1))
+      path += `H${x(parseDate(entry.date)).toFixed(2)}V${y(entry.rank).toFixed(2)}`;
+    path += `H${x(end).toFixed(2)}`;
+    const interval = Math.max(1, Math.ceil((maxRank - 1) / 5));
+    const ticks = [
+      ...new Set([
+        1,
+        ...Array.from({ length: Math.floor(maxRank / interval) }, (_, i) => (i + 1) * interval),
+        maxRank,
+      ]),
+    ].sort((a, b) => a - b);
+    container.innerHTML = `<svg class="rank-svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="rank-title rank-description">
+      <title id="rank-title">${esc(family.name)} rank over time</title><desc id="rank-description">Daily competition rank from ${esc(summary.firstEventDate)} through ${esc(stats.snapshot)}. Lower ranks are better; number 1 is at the top. Software controls are excluded. A table of all rank changes follows.</desc>
+      <text class="axis-title" x="${pad.left}" y="17">Rank</text>
+      ${ticks.map((rank) => `<line class="grid-line" x1="${pad.left}" x2="${width - pad.right}" y1="${y(rank)}" y2="${y(rank)}"/><text x="${pad.left - 12}" y="${y(rank) + 4}" text-anchor="end">${rank}</text>`).join('')}
+      ${dateTicks(start, end, width - pad.left - pad.right)
+        .map(
+          (tick) =>
+            `<text x="${x(tick.time)}" y="${height - 25}" text-anchor="middle">${esc(tick.label)}</text>`,
+        )
+        .join('')}
+      <path class="rank-line" d="${path}" stroke="${family.color}" fill="none" stroke-width="2"/>
+      ${entries.map((entry) => `<circle class="rank-point" cx="${x(parseDate(entry.date)).toFixed(2)}" cy="${y(entry.rank).toFixed(2)}" r="4" fill="${family.color}" tabindex="0" role="img" aria-label="${esc(dateLabel(entry.date))}: rank ${entry.rank}" data-rank="${entry.rank}" data-rank-date="${entry.date}"><title>${esc(entry.date)} · Rank #${entry.rank}</title></circle>`).join('')}
+      <text class="axis-title" x="${width / 2}" y="${height - 5}" text-anchor="middle">Date (UTC)</text>
+    </svg>`;
+  }
+
   function updateReleaseTable() {
     const list = filteredReleases();
     document.getElementById('release-table').innerHTML = releaseTable(list, true, true);
     document.getElementById('release-count').textContent =
-      `${list.length} of ${releases.length} releases`;
+      `${list.length} of ${currentRoute?.page === 'family' ? familyStats.get(indexPrefs.family).releaseCount : releases.filter((release) => indexPrefs.kind === 'all' || release.familyInfo.kind === indexPrefs.kind).length} releases`;
   }
 
   function renderMethodology() {
@@ -1712,7 +2041,22 @@
         </p>
         <p>
           Version numbers are assigned independently by each provider. A higher position in this
-          benchmark does not imply a more capable model.
+          benchmark does not imply a more capable model. VersionBench obeys mathematics, not
+          semantic versioning. Thus <code>3.9 &gt; 3.10</code>. Vendors are advised to number
+          responsibly.
+        </p>
+        <h2>Software controls</h2>
+        <p>
+          Python, PyTorch, and GTA are unranked software controls. Python 3.10 scores
+          <code>3.1</code>; PyTorch 2.10 scores <code>2.1</code>. GTA V's platform releases each
+          score <code>5</code>. Stable minor versions are recorded for Python 3 and PyTorch 1.0
+          onward; patch releases and previews are excluded. GTA covers the releases and rereleases
+          of GTA V. Consistency is documented.
+        </p>
+        <p>
+          Software controls live in a separate category under “Expanded dataset”. They are
+          deselected by default, and their dates do not extend a model-only timeline. Select them to
+          include their history.
         </p>
         <h2>One leaderboard entry per family</h2>
         <p>
@@ -1732,15 +2076,34 @@
           The horizontal axis is the documented release or public announcement date, in UTC.
           Availability labels distinguish research announcements, previews, and released models; an
           announcement date does not imply general availability. The vertical axis is the exact
-          numeric version. The step line follows the highest version released by that family up to
-          each date. Individual points retain their own versions, so a later release with a lower
-          number can appear below the line.
+          numeric version. “Highest to date” follows the family's highest matching score reached so
+          far. “Latest release” follows the newest matching release and can go down. If several
+          releases share a day, that day's highest score sets the latest-release line. Individual
+          points retain every event and its own version.
         </p>
         <p>
           Variants retain separate release records even when they have the same numeric version.
           Points sharing the exact date and version occupy the same coordinate. An outlined point
           opens a list of all release sources at that position. Date filters change the visible
-          interval; a line can continue into that interval from a release that predates it.
+          interval; a line can continue into that interval from a release that predates it. Family,
+          weights, category, and release-status filters apply to points, lines, and the table,
+          including the history carried into the viewport. These filters are saved in the URL.
+        </p>
+        <h2>Family statistics</h2>
+        <p>
+          Each family enters the historical leaderboard on its first recorded event and remains
+          active through the snapshot date, inclusive. Every UTC day's events take effect together;
+          model families compete using their highest numeric score reached by then. Python, PyTorch,
+          and GTA are excluded from model statistics and ranks. Rank is one plus the number of
+          active model families with a strictly higher score.
+        </p>
+        <p>
+          <strong>Time at #1</strong> counts days in first place, giving each tied family the full
+          day. <strong>Average rank</strong> is the sum of rank × days at that rank, divided by
+          tracked days. <strong>Number of releases</strong> counts recorded events, including
+          variants and separate announcements. <strong>Average release rate</strong> is that count /
+          (tracked days / 365.2425), in releases per year. Quiet time after the last release still
+          counts as time. Page filters do not recalculate these metrics.
         </p>
         <h2>Comparison pages</h2>
         <p>
@@ -1763,14 +2126,17 @@
           availability is checked separately from the original event date and can include later
           publications, gated access, or restricted licenses. Community conversions and checkpoint
           differences are identified in source notes. “No public weights found” records the result
-          of the check; “Weights unverified” means an exact match remains unresolved.
+          of the check; “Weights unverified” means an exact match remains unresolved. Software
+          controls use “Not applicable”; their source code is not classified as model weights.
         </p>
         <p>
-          This snapshot contains <strong>${releases.length} release records</strong> across
-          <strong>${families.length} families</strong>, with
-          <strong>${sourceMap.size} source records</strong>, as of ${esc(dateLabel(latestDate))}. It
-          is a curated version history, not an exhaustive list of model sizes, checkpoints, API
-          aliases, or every deployment update. Muse is tracked as a separate family from Llama.
+          This snapshot contains <strong>${stats.releaseCount} model release records</strong> across
+          <strong>${stats.familyCount} model families</strong>, with
+          <strong>${stats.sourceCount} model source records</strong>, as of
+          ${esc(dateLabel(latestDate))}. Separately, it includes ${stats.softwareControlCount}
+          software controls with ${stats.softwareReleaseCount} release records. It is a curated
+          version history, not an exhaustive list of model sizes, checkpoints, API aliases, or every
+          deployment update. Muse is tracked as a separate family from Llama.
         </p>
         <p>
           The ten core families are
@@ -1783,7 +2149,7 @@
           Additional families are
           ${esc(
             families
-              .filter((family) => !family.core)
+              .filter((family) => !family.core && family.kind !== 'software')
               .map((family) => family.name)
               .join(', '),
           )}.
@@ -1807,18 +2173,27 @@
       return;
     }
     const [rawPage, rawParams = ''] = hash.split('?');
-    const page = ['leaderboard', 'timeline', 'compare', 'releases', 'methodology'].includes(rawPage)
+    const page = [
+      'leaderboard',
+      'timeline',
+      'compare',
+      'releases',
+      'family',
+      'methodology',
+    ].includes(rawPage)
       ? rawPage
       : 'leaderboard';
     const params = new URLSearchParams(rawParams);
     const focusId = document.activeElement?.id;
-    const samePage = page === previousPage;
+    const pageKey = page === 'family' ? `family:${params.get('id')}` : page;
+    const samePage = pageKey === previousPage;
     closeTooltip(false);
     currentRoute = { page, params };
     if (page === 'leaderboard') renderLeaderboard();
     if (page === 'timeline') renderTimeline(params);
     if (page === 'compare') renderCompare(params);
     if (page === 'releases') renderReleases(params);
+    if (page === 'family') renderFamily(params);
     if (page === 'methodology') renderMethodology();
     document.querySelectorAll('[data-nav]').forEach((link) => {
       const active = link.dataset.nav === page;
@@ -1834,7 +2209,7 @@
       window.scrollTo(0, 0);
       main.focus({ preventScroll: true });
     }
-    previousPage = page;
+    previousPage = pageKey;
   }
 
   function openPicker() {
@@ -1849,7 +2224,7 @@
   function renderPicker() {
     const query = document.getElementById('model-search').value.trim().toLocaleLowerCase();
     const highestOnly = document.getElementById('latest-only').checked;
-    const choices = (highestOnly ? ranked : releases).filter(
+    const choices = (highestOnly ? familyPeaks : releases).filter(
       (release) =>
         !query ||
         `${release.name} ${release.familyInfo.name} ${release.familyInfo.provider}`
@@ -1993,7 +2368,21 @@
       navigate(compareHref(compareIds.filter((id) => id !== target.dataset.removeRelease)));
     if (target.matches('[data-clear-comparison]')) navigate(compareHref([]));
     if (target.matches('[data-export-releases]'))
-      exportCSV(filteredReleases(), 'versionbench-releases.csv');
+      exportCSV(
+        filteredReleases(),
+        currentRoute?.page === 'family'
+          ? `versionbench-${indexPrefs.family}.csv`
+          : 'versionbench-releases.csv',
+      );
+    if (target.matches('[data-export-timeline]'))
+      exportCSV(
+        timelineReleases()
+          .filter(
+            (release) => release.date >= timelinePrefs.from && release.date <= timelinePrefs.to,
+          )
+          .sort((a, b) => b.time - a.time || b.score - a.score),
+        'versionbench-timeline.csv',
+      );
     if (target.matches('[data-export-comparison]'))
       exportCSV(selectedReleases(), 'versionbench-comparison.csv');
     if (target.matches('[data-leaderboard-scope]')) {
@@ -2002,12 +2391,26 @@
       updateSelectionUI();
     }
     if (target.matches('[data-family-set]')) {
+      const set = target.dataset.familySet;
       timelinePrefs.familyIds =
-        target.dataset.familySet === 'core'
+        set === 'core'
           ? [...coreIds]
-          : target.dataset.familySet === 'all'
+          : set === 'all'
             ? families.map((family) => family.id)
-            : [];
+            : set === 'models'
+              ? families.filter((family) => family.kind === 'model').map((family) => family.id)
+              : set === 'software'
+                ? families.filter((family) => family.kind === 'software').map((family) => family.id)
+                : [];
+      if (set === 'software')
+        Object.assign(timelinePrefs, {
+          mode: 'latest',
+          kind: 'all',
+          weights: 'all',
+          status: 'all',
+          range: 'all',
+        });
+      if (set === 'core' || set === 'models') timelinePrefs.kind = 'all';
       navigate(timelineHref(timelinePrefs));
     }
     if (target.matches('[data-only-family]')) {
@@ -2021,7 +2424,7 @@
       const range = target.dataset.range;
       const end = new Date(latestTime);
       const start = new Date(latestTime);
-      if (range === 'all') start.setTime(earliestTime);
+      if (range === 'all') start.setTime(timelineStartTime());
       else if (range === 'ytd') start.setTime(Date.UTC(end.getUTCFullYear(), 0, 1));
       else start.setUTCFullYear(end.getUTCFullYear() - (range === '1y' ? 1 : 3));
       timelinePrefs = {
@@ -2056,6 +2459,10 @@
         : timelinePrefs.familyIds.filter((id) => id !== target.dataset.family);
       navigate(timelineHref(timelinePrefs));
     }
+    if (target.matches('#timeline-mode,#timeline-weights,#timeline-kind,#timeline-status')) {
+      timelinePrefs[target.id.replace('timeline-', '')] = target.value;
+      navigate(timelineHref(timelinePrefs));
+    }
     if (target.matches('#date-from,#date-to')) {
       const from = document.getElementById('date-from').value;
       const to = document.getElementById('date-to').value;
@@ -2082,14 +2489,38 @@
       compareOrder = target.value;
       navigate(compareHref());
     }
-    if (target.matches('#release-family')) {
-      indexPrefs.family = target.value;
+    if (target.matches('#release-family,#release-weights,#release-status,#release-kind')) {
+      indexPrefs[target.id.replace('release-', '')] = target.value;
+      if (target.id === 'release-family' && familyMap.has(target.value)) {
+        indexPrefs.kind = familyMap.get(target.value).kind;
+        document.getElementById('release-kind').value = indexPrefs.kind;
+      }
+      if (
+        target.id === 'release-kind' &&
+        familyMap.has(indexPrefs.family) &&
+        indexPrefs.kind !== 'all' &&
+        familyMap.get(indexPrefs.family).kind !== indexPrefs.kind
+      ) {
+        indexPrefs.family = 'all';
+        document.getElementById('release-family').value = 'all';
+      }
       history.replaceState(null, '', indexHref());
       updateReleaseTable();
     }
   });
 
   main.addEventListener('input', (event) => {
+    if (event.target.id === 'family-search') {
+      const query = event.target.value.trim().toLocaleLowerCase();
+      document.querySelectorAll('.family-control').forEach((row) => {
+        const family = familyMap.get(row.dataset.highlightFamily);
+        row.hidden = !`${family.name} ${family.provider}`.toLocaleLowerCase().includes(query);
+      });
+      if (query) {
+        document.getElementById('expanded-families').open = true;
+        document.getElementById('additional-models').open = true;
+      }
+    }
     if (event.target.id === 'release-search') {
       indexPrefs.query = event.target.value;
       history.replaceState(null, '', indexHref());
@@ -2158,6 +2589,7 @@
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
       if (currentRoute?.page === 'timeline') drawTimeline();
+      if (currentRoute?.page === 'family') drawFamilyRank();
       if (currentRoute?.page === 'compare') {
         const list = selectedReleases();
         drawComparison(

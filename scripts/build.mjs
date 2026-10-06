@@ -14,10 +14,32 @@ for (const [source, target] of readmeTemplates)
 const html = template
   .replace('/* STYLES */', () => css)
   .replace('/* DATA */', () => JSON.stringify(data).replaceAll('<', '\\u003c'))
+  .replace('/* STATS */', () => JSON.stringify(stats).replaceAll('<', '\\u003c'))
   .replace('/* SCRIPT */', () => js);
 await writeFile(new URL('index.html', root), html);
 const tables = [
-  ['families', ['id', 'name', 'provider', 'color', 'core']],
+  ['families', ['id', 'name', 'provider', 'color', 'core', 'kind', 'scope']],
+  [
+    'family-stats',
+    [
+      'id',
+      'name',
+      'kind',
+      'releaseCount',
+      'versionCount',
+      'highestVersion',
+      'highestScore',
+      'currentRank',
+      'daysAtNumberOne',
+      'averageRank',
+      'trackedDays',
+      'releaseRatePerYear',
+      'firstEventDate',
+      'lastEventDate',
+      'artificialAnalysisReleaseCount',
+      'huggingFaceReleaseCount',
+    ],
+  ],
   ['sources', ['id', 'title', 'url', 'publisher', 'date', 'checkedAt']],
   [
     'releases',
@@ -44,7 +66,8 @@ const tables = [
 ];
 const csvCell = (value) => '"' + String(value ?? '').replaceAll('"', '""') + '"';
 for (const [name, fields] of tables) {
-  const rows = [fields, ...data[name].map((row) => fields.map((key) => row[key]))];
+  const records = name === 'family-stats' ? stats.families : data[name];
+  const rows = [fields, ...records.map((row) => fields.map((key) => row[key]))];
   await writeFile(
     new URL(`data/${name}.csv`, root),
     rows.map((row) => row.map(csvCell).join(',')).join('\r\n') + '\r\n',

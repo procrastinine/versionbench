@@ -544,5 +544,38 @@
         "pattern": "/A\\.X[- ](?:K)?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
       }
     ]
+  },
+  {
+    "family": "python",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://www.python.org/doc/versions/",
+        "pattern": "\\bPython (3\\.[0-9]+)(?![0-9.])"
+      }
+    ]
+  },
+  {
+    "family": "pytorch",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://github.com/pytorch/pytorch/releases",
+        "pattern": "\\bPyTorch ([12]\\.[0-9]+)\\.0\\b"
+      }
+    ]
+  },
+  {
+    "family": "gta",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://www.rockstargames.com/gta-v",
+        "pattern": "\\b(?:Grand Theft Auto|GTA)\\s*(V)\\b",
+        "versionMap": {
+          "V": "5"
+        }
+      }
+    ]
   }
 ]

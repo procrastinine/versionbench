@@ -6,336 +6,411 @@
       "name": "GPT",
       "provider": "OpenAI",
       "color": "#2455d6",
-      "core": true
+      "core": true,
+      "kind": "model"
     },
     {
       "id": "claude",
       "name": "Claude",
       "provider": "Anthropic",
       "color": "#b96842",
-      "core": true
+      "core": true,
+      "kind": "model"
     },
     {
       "id": "gemini",
       "name": "Gemini",
       "provider": "Google DeepMind",
       "color": "#7c50c7",
-      "core": true
+      "core": true,
+      "kind": "model"
     },
     {
       "id": "grok",
       "name": "Grok",
       "provider": "xAI",
       "color": "#364152",
-      "core": true
+      "core": true,
+      "kind": "model"
     },
     {
       "id": "llama",
       "name": "Llama",
       "provider": "Meta",
       "color": "#00889b",
-      "core": true
+      "core": true,
+      "kind": "model"
     },
     {
       "id": "mistral",
       "name": "Mistral",
       "provider": "Mistral AI",
       "color": "#d78a13",
-      "core": true
+      "core": true,
+      "kind": "model"
     },
     {
       "id": "qwen",
       "name": "Qwen",
       "provider": "Alibaba",
       "color": "#9c44b5",
-      "core": true
+      "core": true,
+      "kind": "model"
     },
     {
       "id": "deepseek",
       "name": "DeepSeek",
       "provider": "DeepSeek",
       "color": "#397dc7",
-      "core": true
+      "core": true,
+      "kind": "model"
     },
     {
       "id": "kimi",
       "name": "Kimi",
       "provider": "Moonshot AI",
       "color": "#208958",
-      "core": true
+      "core": true,
+      "kind": "model"
     },
     {
       "id": "glm",
       "name": "GLM",
       "provider": "Z.ai",
       "color": "#be4d72",
-      "core": true
+      "core": true,
+      "kind": "model"
     },
     {
       "id": "muse",
       "name": "Muse",
       "provider": "Meta",
       "color": "#506eae",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "gemma",
       "name": "Gemma",
       "provider": "Google DeepMind",
       "color": "#96823b",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "phi",
       "name": "Phi",
       "provider": "Microsoft",
       "color": "#83624c",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "olmo",
       "name": "OLMo",
       "provider": "Ai2",
       "color": "#4c8990",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "minimax",
       "name": "MiniMax",
       "provider": "MiniMax",
       "color": "#cb614a",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "nova",
       "name": "Amazon Nova",
       "provider": "Amazon",
       "color": "#7565a1",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "ernie",
       "name": "ERNIE",
       "provider": "Baidu",
       "color": "#626db4",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "openai-o",
       "name": "OpenAI o",
       "provider": "OpenAI",
       "color": "#087f8c",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "pangu",
       "name": "PanGu",
       "provider": "Huawei",
       "color": "#c63645",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "mimo",
       "name": "MiMo",
       "provider": "Xiaomi",
       "color": "#eb670e",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "granite",
       "name": "Granite",
       "provider": "IBM",
       "color": "#375f91",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "nemotron",
       "name": "Nemotron",
       "provider": "NVIDIA",
       "color": "#648513",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "seed",
       "name": "Seed",
       "provider": "ByteDance",
       "color": "#2f8f8a",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "palm",
       "name": "PaLM",
       "provider": "Google",
       "color": "#6877c8",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "yi",
       "name": "Yi",
       "provider": "01.AI",
       "color": "#6e66bc",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "internlm",
       "name": "InternLM / InternVL",
       "provider": "Shanghai AI Laboratory",
       "color": "#418b66",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "exaone",
       "name": "EXAONE",
       "provider": "LG AI Research",
       "color": "#a73768",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "minicpm",
       "name": "MiniCPM",
       "provider": "OpenBMB",
       "color": "#b04b82",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "step",
       "name": "Step",
       "provider": "StepFun",
       "color": "#cf7743",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "ling",
       "name": "Ling",
       "provider": "inclusionAI / Ant Group",
       "color": "#22828f",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "falcon",
       "name": "Falcon",
       "provider": "Technology Innovation Institute",
       "color": "#8d8260",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "jamba",
       "name": "Jamba",
       "provider": "AI21 Labs",
       "color": "#997241",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "inflection",
       "name": "Inflection",
       "provider": "Inflection AI",
       "color": "#92705c",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "lfm",
       "name": "LFM",
       "provider": "Liquid AI",
       "color": "#467b75",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "hermes",
       "name": "Hermes",
       "provider": "Nous Research",
       "color": "#8766a5",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "openchat",
       "name": "OpenChat",
       "provider": "OpenChat Team",
       "color": "#518e79",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "hunyuan",
       "name": "Hunyuan / Hy",
       "provider": "Tencent",
       "color": "#2974b0",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "longcat",
       "name": "LongCat",
       "provider": "Meituan",
       "color": "#cb7a35",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "solar",
       "name": "Solar",
       "provider": "Upstage",
       "color": "#cc6544",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "mercury",
       "name": "Mercury",
       "provider": "Inception",
       "color": "#637ddd",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "motif",
       "name": "Motif",
       "provider": "Motif Technologies",
       "color": "#757145",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "intellect",
       "name": "INTELLECT",
       "provider": "Prime Intellect",
       "color": "#858043",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "cogito",
       "name": "Cogito",
       "provider": "Deep Cogito",
       "color": "#507397",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "reka",
       "name": "Reka",
       "provider": "Reka AI",
       "color": "#7260a2",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "apriel",
       "name": "Apriel",
       "provider": "ServiceNow",
       "color": "#50774c",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "nanbeige",
       "name": "Nanbeige",
       "provider": "Nanbeige LLM Lab",
       "color": "#8d6e73",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "ring",
       "name": "Ring",
       "provider": "inclusionAI / Ant Group",
       "color": "#4b8c83",
-      "core": false
+      "core": false,
+      "kind": "model"
     },
     {
       "id": "ax",
       "name": "A.X",
       "provider": "SK Telecom",
       "color": "#b75a66",
-      "core": false
+      "core": false,
+      "kind": "model"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "provider": "Python Software Foundation",
+      "color": "#3874a4",
+      "core": false,
+      "kind": "software",
+      "scope": "Stable Python 3 minor releases, starting at 3.0. Patch and preview releases are excluded."
+    },
+    {
+      "id": "pytorch",
+      "name": "PyTorch",
+      "provider": "PyTorch Foundation",
+      "color": "#c75139",
+      "core": false,
+      "kind": "software",
+      "scope": "Stable PyTorch minor releases, starting at 1.0. Patch and preview releases are excluded."
+    },
+    {
+      "id": "gta",
+      "name": "GTA",
+      "provider": "Rockstar Games",
+      "color": "#478752",
+      "core": false,
+      "kind": "software",
+      "scope": "GTA V platform releases and rereleases only. Every release scores 5. Model rankings are unaffected."
     }
   ],
   "sources": [
@@ -3065,9 +3140,560 @@
       "url": "https://ai.google.dev/gemma/docs/releases",
       "publisher": "Google",
       "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-release-archive",
+      "title": "Python documentation by version — official release dates",
+      "url": "https://www.python.org/doc/versions/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-14-release",
+      "title": "Python 3.14.0 documentation",
+      "url": "https://docs.python.org/release/3.14.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-13-release",
+      "title": "Python 3.13.0 documentation",
+      "url": "https://docs.python.org/release/3.13.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-12-release",
+      "title": "Python 3.12.0 documentation",
+      "url": "https://docs.python.org/release/3.12.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-11-release",
+      "title": "Python 3.11.0 documentation",
+      "url": "https://docs.python.org/release/3.11.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-10-release",
+      "title": "Python 3.10.0 documentation",
+      "url": "https://docs.python.org/release/3.10.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-9-release",
+      "title": "Python 3.9.0 documentation",
+      "url": "https://docs.python.org/release/3.9.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-8-release",
+      "title": "Python 3.8.0 documentation",
+      "url": "https://docs.python.org/release/3.8.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-7-release",
+      "title": "Python 3.7.0 documentation",
+      "url": "https://docs.python.org/release/3.7.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-6-release",
+      "title": "Python 3.6.0 documentation",
+      "url": "https://docs.python.org/release/3.6.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-5-release",
+      "title": "Python 3.5.0 documentation",
+      "url": "https://docs.python.org/release/3.5.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-4-release",
+      "title": "Python 3.4.0 documentation",
+      "url": "https://docs.python.org/release/3.4.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-3-release",
+      "title": "Python 3.3.0 documentation",
+      "url": "https://docs.python.org/release/3.3.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-2-release",
+      "title": "Python 3.2.0 documentation",
+      "url": "https://docs.python.org/release/3.2/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-1-release",
+      "title": "Python 3.1.0 documentation",
+      "url": "https://docs.python.org/release/3.1/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "python-3-0-release",
+      "title": "Python 3.0.0 documentation",
+      "url": "https://docs.python.org/release/3.0/",
+      "publisher": "Python Software Foundation",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-14-release",
+      "title": "PyTorch 2.14.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.14.0",
+      "publisher": "PyTorch",
+      "date": "2026-09-02",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-13-release",
+      "title": "PyTorch 2.13.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.13.0",
+      "publisher": "PyTorch",
+      "date": "2026-07-08",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-12-release",
+      "title": "PyTorch 2.12.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.12.0",
+      "publisher": "PyTorch",
+      "date": "2026-05-13",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-11-release",
+      "title": "PyTorch 2.11.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.11.0",
+      "publisher": "PyTorch",
+      "date": "2026-03-23",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-10-release",
+      "title": "PyTorch 2.10.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.10.0",
+      "publisher": "PyTorch",
+      "date": "2026-01-21",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-9-release",
+      "title": "PyTorch 2.9.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.9.0",
+      "publisher": "PyTorch",
+      "date": "2025-10-15",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-8-release",
+      "title": "PyTorch 2.8.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.8.0",
+      "publisher": "PyTorch",
+      "date": "2025-08-06",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-7-release",
+      "title": "PyTorch 2.7.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.7.0",
+      "publisher": "PyTorch",
+      "date": "2025-04-23",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-6-release",
+      "title": "PyTorch 2.6.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.6.0",
+      "publisher": "PyTorch",
+      "date": "2025-01-29",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-5-release",
+      "title": "PyTorch 2.5.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.5.0",
+      "publisher": "PyTorch",
+      "date": "2024-10-17",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-4-release",
+      "title": "PyTorch 2.4.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.4.0",
+      "publisher": "PyTorch",
+      "date": "2024-07-24",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-3-release",
+      "title": "PyTorch 2.3.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.3.0",
+      "publisher": "PyTorch",
+      "date": "2024-04-24",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-2-release",
+      "title": "PyTorch 2.2.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.2.0",
+      "publisher": "PyTorch",
+      "date": "2024-01-30",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-1-release",
+      "title": "PyTorch 2.1.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.1.0",
+      "publisher": "PyTorch",
+      "date": "2023-10-04",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-2-0-release",
+      "title": "PyTorch 2.0.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v2.0.0",
+      "publisher": "PyTorch",
+      "date": "2023-03-15",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-13-release",
+      "title": "PyTorch 1.13.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.13.0",
+      "publisher": "PyTorch",
+      "date": "2022-10-28",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-12-release",
+      "title": "PyTorch 1.12.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.12.0",
+      "publisher": "PyTorch",
+      "date": "2022-06-28",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-11-release",
+      "title": "PyTorch 1.11.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.11.0",
+      "publisher": "PyTorch",
+      "date": "2022-03-10",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-10-release",
+      "title": "PyTorch 1.10.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.10.0",
+      "publisher": "PyTorch",
+      "date": "2021-10-21",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-9-release",
+      "title": "PyTorch 1.9.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.9.0",
+      "publisher": "PyTorch",
+      "date": "2021-06-15",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-8-release",
+      "title": "PyTorch 1.8.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.8.0",
+      "publisher": "PyTorch",
+      "date": "2021-03-04",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-7-release",
+      "title": "PyTorch 1.7.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.7.0",
+      "publisher": "PyTorch",
+      "date": "2020-10-27",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-6-release",
+      "title": "PyTorch 1.6.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.6.0",
+      "publisher": "PyTorch",
+      "date": "2020-07-28",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-5-release",
+      "title": "PyTorch 1.5.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.5.0",
+      "publisher": "PyTorch",
+      "date": "2020-04-21",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-4-release",
+      "title": "PyTorch 1.4.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.4.0",
+      "publisher": "PyTorch",
+      "date": "2020-01-16",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-3-release",
+      "title": "PyTorch 1.3.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.3.0",
+      "publisher": "PyTorch",
+      "date": "2019-10-10",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-2-release",
+      "title": "PyTorch 1.2.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.2.0",
+      "publisher": "PyTorch",
+      "date": "2019-08-08",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-1-release",
+      "title": "PyTorch 1.1.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.1.0",
+      "publisher": "PyTorch",
+      "date": "2019-05-01",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "pytorch-1-0-release",
+      "title": "PyTorch 1.0.0 release notes",
+      "url": "https://github.com/pytorch/pytorch/releases/tag/v1.0.0",
+      "publisher": "PyTorch",
+      "date": "2018-12-07",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "gta-v-ps3-xbox360-release",
+      "title": "Rockstar Games announces Grand Theft Auto V now available",
+      "url": "https://ir.take2games.com/static-files/dd93d264-3d54-404a-ab30-bc6c0fa07ed2",
+      "publisher": "Rockstar Games",
+      "date": "2013-09-17",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "gta-v-ps4-xboxone-release",
+      "title": "Grand Theft Auto V for PlayStation 4 and Xbox One available now",
+      "url": "https://ir.take2games.com/static-files/5d030179-84c3-47c6-8343-ba34e788652c",
+      "publisher": "Rockstar Games",
+      "date": "2014-11-18",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "gta-v-pc-release",
+      "title": "Grand Theft Auto V is now available for PC",
+      "url": "https://www.rockstargames.com/newswire/article/25o2411812a31k/grand-theft-auto-v-is-now-available-for-pc",
+      "publisher": "Rockstar Games",
+      "date": "2015-04-14",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "gta-v-ps5-xboxseries-release",
+      "title": "Grand Theft Auto V and GTA Online out now on PlayStation 5 and Xbox Series X|S",
+      "url": "https://www.rockstargames.com/newswire/article/4ka18ao8a4o227/grand-theft-auto-v-and-gta-online-out-now-on-playstation-5-and-xbox-se",
+      "publisher": "Rockstar Games",
+      "date": "2022-03-15",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "gta-v-pc-enhanced-release",
+      "title": "Free upgrade for Grand Theft Auto V on PC now available",
+      "url": "https://www.rockstargames.com/newswire/article/7551a7k917554a/free-upgrade-for-grand-theft-auto-v-on-pc-now-available",
+      "publisher": "Rockstar Games",
+      "date": "2025-03-04",
+      "checkedAt": "2026-10-06"
     }
   ],
   "releases": [
+    {
+      "id": "python-3-0",
+      "family": "python",
+      "name": "Python 3.0",
+      "version": "3.0",
+      "score": 3,
+      "date": "2008-12-03",
+      "status": "Released",
+      "sourceId": "python-3-0-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.0 = 3). The .0 patch component is omitted."
+    },
+    {
+      "id": "python-3-1",
+      "family": "python",
+      "name": "Python 3.1",
+      "version": "3.1",
+      "score": 3.1,
+      "date": "2009-06-26",
+      "status": "Released",
+      "sourceId": "python-3-1-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.1/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.1 = 3.1). The .0 patch component is omitted."
+    },
+    {
+      "id": "python-3-2",
+      "family": "python",
+      "name": "Python 3.2",
+      "version": "3.2",
+      "score": 3.2,
+      "date": "2011-02-20",
+      "status": "Released",
+      "sourceId": "python-3-2-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.2/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.2 = 3.2). The .0 patch component is omitted."
+    },
+    {
+      "id": "python-3-3",
+      "family": "python",
+      "name": "Python 3.3",
+      "version": "3.3",
+      "score": 3.3,
+      "date": "2012-09-29",
+      "status": "Released",
+      "sourceId": "python-3-3-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.3.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.3 = 3.3). The .0 patch component is omitted."
+    },
+    {
+      "id": "gta-v-ps3-xbox360",
+      "family": "gta",
+      "name": "GTA V (PlayStation 3 / Xbox 360)",
+      "version": "5",
+      "score": 5,
+      "date": "2013-09-17",
+      "status": "Released",
+      "sourceId": "gta-v-ps3-xbox360-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://ir.take2games.com/static-files/dd93d264-3d54-404a-ab30-bc6c0fa07ed2",
+      "weightsNote": "Software control; model weights do not apply.",
+      "mapping": "Roman numeral V = 5. Platform names, console generations, and Enhanced do not change the game’s version number.",
+      "note": "GTA V platform release. Still 5."
+    },
+    {
+      "id": "python-3-4",
+      "family": "python",
+      "name": "Python 3.4",
+      "version": "3.4",
+      "score": 3.4,
+      "date": "2014-03-17",
+      "status": "Released",
+      "sourceId": "python-3-4-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.4.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.4 = 3.4). The .0 patch component is omitted."
+    },
+    {
+      "id": "gta-v-ps4-xboxone",
+      "family": "gta",
+      "name": "GTA V (PlayStation 4 / Xbox One)",
+      "version": "5",
+      "score": 5,
+      "date": "2014-11-18",
+      "status": "Released",
+      "sourceId": "gta-v-ps4-xboxone-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://ir.take2games.com/static-files/5d030179-84c3-47c6-8343-ba34e788652c",
+      "weightsNote": "Software control; model weights do not apply.",
+      "mapping": "Roman numeral V = 5. Platform names, console generations, and Enhanced do not change the game’s version number.",
+      "note": "GTA V platform release. Still 5."
+    },
+    {
+      "id": "gta-v-pc",
+      "family": "gta",
+      "name": "GTA V (PC)",
+      "version": "5",
+      "score": 5,
+      "date": "2015-04-14",
+      "status": "Released",
+      "sourceId": "gta-v-pc-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://www.rockstargames.com/newswire/article/25o2411812a31k/grand-theft-auto-v-is-now-available-for-pc",
+      "weightsNote": "Software control; model weights do not apply.",
+      "mapping": "Roman numeral V = 5. Platform names, console generations, and Enhanced do not change the game’s version number.",
+      "note": "GTA V platform release. Still 5."
+    },
+    {
+      "id": "python-3-5",
+      "family": "python",
+      "name": "Python 3.5",
+      "version": "3.5",
+      "score": 3.5,
+      "date": "2015-09-13",
+      "status": "Released",
+      "sourceId": "python-3-5-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.5.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.5 = 3.5). The .0 patch component is omitted."
+    },
+    {
+      "id": "python-3-6",
+      "family": "python",
+      "name": "Python 3.6",
+      "version": "3.6",
+      "score": 3.6,
+      "date": "2016-12-23",
+      "status": "Released",
+      "sourceId": "python-3-6-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.6.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.6 = 3.6). The .0 patch component is omitted."
+    },
     {
       "id": "gpt-gpt-1-2018-06-11",
       "family": "gpt",
@@ -3084,6 +3710,39 @@
       "weightsSourceUrl": "https://huggingface.co/openai-community/openai-gpt",
       "weightsNote": "Original OpenAI GPT checkpoint, maintained by the Hugging Face OpenAI community organization.",
       "huggingFaceUrl": "https://huggingface.co/openai-community/openai-gpt"
+    },
+    {
+      "id": "python-3-7",
+      "family": "python",
+      "name": "Python 3.7",
+      "version": "3.7",
+      "score": 3.7,
+      "date": "2018-06-27",
+      "status": "Released",
+      "sourceId": "python-3-7-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.7.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.7 = 3.7). The .0 patch component is omitted."
+    },
+    {
+      "id": "pytorch-1-0",
+      "family": "pytorch",
+      "name": "PyTorch 1.0",
+      "version": "1.0",
+      "score": 1,
+      "date": "2018-12-07",
+      "status": "Released",
+      "sourceId": "pytorch-1-0-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.0.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.0 = 1). The .0 patch component is omitted."
     },
     {
       "id": "gpt-gpt-2-2019-02-14",
@@ -3119,6 +3778,22 @@
       "weightsNote": "Community PyTorch conversion of the published base encoder checkpoint; not an ERNIE chatbot."
     },
     {
+      "id": "pytorch-1-1",
+      "family": "pytorch",
+      "name": "PyTorch 1.1",
+      "version": "1.1",
+      "score": 1.1,
+      "date": "2019-05-01",
+      "status": "Released",
+      "sourceId": "pytorch-1-1-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.1.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.1 = 1.1). The .0 patch component is omitted."
+    },
+    {
       "id": "ernie-ernie-2-0-research-2019-07-29",
       "family": "ernie",
       "name": "ERNIE 2.0 (research)",
@@ -3135,6 +3810,87 @@
       "weightsNote": "Community PyTorch conversion of the published base encoder checkpoint; not an ERNIE chatbot."
     },
     {
+      "id": "pytorch-1-2",
+      "family": "pytorch",
+      "name": "PyTorch 1.2",
+      "version": "1.2",
+      "score": 1.2,
+      "date": "2019-08-08",
+      "status": "Released",
+      "sourceId": "pytorch-1-2-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.2.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.2 = 1.2). The .0 patch component is omitted."
+    },
+    {
+      "id": "pytorch-1-3",
+      "family": "pytorch",
+      "name": "PyTorch 1.3",
+      "version": "1.3",
+      "score": 1.3,
+      "date": "2019-10-10",
+      "status": "Released",
+      "sourceId": "pytorch-1-3-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.3.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.3 = 1.3). The .0 patch component is omitted."
+    },
+    {
+      "id": "python-3-8",
+      "family": "python",
+      "name": "Python 3.8",
+      "version": "3.8",
+      "score": 3.8,
+      "date": "2019-10-14",
+      "status": "Released",
+      "sourceId": "python-3-8-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.8.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.8 = 3.8). The .0 patch component is omitted."
+    },
+    {
+      "id": "pytorch-1-4",
+      "family": "pytorch",
+      "name": "PyTorch 1.4",
+      "version": "1.4",
+      "score": 1.4,
+      "date": "2020-01-16",
+      "status": "Released",
+      "sourceId": "pytorch-1-4-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.4.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.4 = 1.4). The .0 patch component is omitted."
+    },
+    {
+      "id": "pytorch-1-5",
+      "family": "pytorch",
+      "name": "PyTorch 1.5",
+      "version": "1.5",
+      "score": 1.5,
+      "date": "2020-04-21",
+      "status": "Released",
+      "sourceId": "pytorch-1-5-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.5.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.5 = 1.5). The .0 patch component is omitted."
+    },
+    {
       "id": "gpt-gpt-3-2020-05-28",
       "family": "gpt",
       "name": "GPT-3",
@@ -3148,6 +3904,71 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://arxiv.org/abs/2005.14165",
       "weightsNote": "GPT-3 and later numbered GPT models are provided through hosted products and APIs; no public weights found for this release."
+    },
+    {
+      "id": "pytorch-1-6",
+      "family": "pytorch",
+      "name": "PyTorch 1.6",
+      "version": "1.6",
+      "score": 1.6,
+      "date": "2020-07-28",
+      "status": "Released",
+      "sourceId": "pytorch-1-6-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.6.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.6 = 1.6). The .0 patch component is omitted."
+    },
+    {
+      "id": "python-3-9",
+      "family": "python",
+      "name": "Python 3.9",
+      "version": "3.9",
+      "score": 3.9,
+      "date": "2020-10-05",
+      "status": "Released",
+      "sourceId": "python-3-9-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.9.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.9 = 3.9). The .0 patch component is omitted."
+    },
+    {
+      "id": "pytorch-1-7",
+      "family": "pytorch",
+      "name": "PyTorch 1.7",
+      "version": "1.7",
+      "score": 1.7,
+      "date": "2020-10-27",
+      "status": "Released",
+      "sourceId": "pytorch-1-7-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.7.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.7 = 1.7). The .0 patch component is omitted."
+    },
+    {
+      "id": "pytorch-1-8",
+      "family": "pytorch",
+      "name": "PyTorch 1.8",
+      "version": "1.8",
+      "score": 1.8,
+      "date": "2021-03-04",
+      "status": "Released",
+      "sourceId": "pytorch-1-8-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.8.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.8 = 1.8). The .0 patch component is omitted."
     },
     {
       "id": "glm-glm-original-research-2021-03-18",
@@ -3182,6 +4003,22 @@
       "weightsNote": "The original cloud announcement and PanGu-Alpha repositories do not establish an exact checkpoint match for this PanGu NLP release."
     },
     {
+      "id": "pytorch-1-9",
+      "family": "pytorch",
+      "name": "PyTorch 1.9",
+      "version": "1.9",
+      "score": 1.9,
+      "date": "2021-06-15",
+      "status": "Released",
+      "sourceId": "pytorch-1-9-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.9.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.9 = 1.9). The .0 patch component is omitted."
+    },
+    {
       "id": "ernie-ernie-3-0-research-2021-07-05",
       "family": "ernie",
       "name": "ERNIE 3.0 (research)",
@@ -3198,6 +4035,71 @@
       "weightsNote": "Community PyTorch conversion of the published base encoder checkpoint; not an ERNIE chatbot."
     },
     {
+      "id": "python-3-10",
+      "family": "python",
+      "name": "Python 3.10",
+      "version": "3.10",
+      "score": 3.1,
+      "date": "2021-10-04",
+      "status": "Released",
+      "sourceId": "python-3-10-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.10.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.10 = 3.1). The .0 patch component is omitted."
+    },
+    {
+      "id": "pytorch-1-10",
+      "family": "pytorch",
+      "name": "PyTorch 1.10",
+      "version": "1.10",
+      "score": 1.1,
+      "date": "2021-10-21",
+      "status": "Released",
+      "sourceId": "pytorch-1-10-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.10.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.10 = 1.1). The .0 patch component is omitted."
+    },
+    {
+      "id": "pytorch-1-11",
+      "family": "pytorch",
+      "name": "PyTorch 1.11",
+      "version": "1.11",
+      "score": 1.11,
+      "date": "2022-03-10",
+      "status": "Released",
+      "sourceId": "pytorch-1-11-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.11.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.11 = 1.11). The .0 patch component is omitted."
+    },
+    {
+      "id": "gta-v-ps5-xboxseries",
+      "family": "gta",
+      "name": "GTA V (PlayStation 5 / Xbox Series X|S)",
+      "version": "5",
+      "score": 5,
+      "date": "2022-03-15",
+      "status": "Released",
+      "sourceId": "gta-v-ps5-xboxseries-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://www.rockstargames.com/newswire/article/4ka18ao8a4o227/grand-theft-auto-v-and-gta-online-out-now-on-playstation-5-and-xbox-se",
+      "weightsNote": "Software control; model weights do not apply.",
+      "mapping": "Roman numeral V = 5. Platform names, console generations, and Enhanced do not change the game’s version number.",
+      "note": "GTA V platform release. Still 5."
+    },
+    {
       "id": "palm-palm-2022-04-04",
       "family": "palm",
       "name": "PaLM",
@@ -3211,6 +4113,22 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/",
       "weightsNote": "Provider documentation offers hosted access; no public weights found for this release."
+    },
+    {
+      "id": "pytorch-1-12",
+      "family": "pytorch",
+      "name": "PyTorch 1.12",
+      "version": "1.12",
+      "score": 1.12,
+      "date": "2022-06-28",
+      "status": "Released",
+      "sourceId": "pytorch-1-12-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.12.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.12 = 1.12). The .0 patch component is omitted."
     },
     {
       "id": "glm-glm-130b-2022-08-04",
@@ -3229,6 +4147,39 @@
       "weightsSourceUrl": "https://github.com/zai-org/GLM-130B",
       "huggingFaceUrl": "https://huggingface.co/ianZzzzzz/GLM-130B-quant-int4-4gpu",
       "weightsNote": "Community INT4 conversion for four GPUs. The original publisher distributes the unquantized checkpoint through the download instructions linked as evidence."
+    },
+    {
+      "id": "python-3-11",
+      "family": "python",
+      "name": "Python 3.11",
+      "version": "3.11",
+      "score": 3.11,
+      "date": "2022-10-24",
+      "status": "Released",
+      "sourceId": "python-3-11-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.11.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.11 = 3.11). The .0 patch component is omitted."
+    },
+    {
+      "id": "pytorch-1-13",
+      "family": "pytorch",
+      "name": "PyTorch 1.13",
+      "version": "1.13",
+      "score": 1.13,
+      "date": "2022-10-28",
+      "status": "Released",
+      "sourceId": "pytorch-1-13-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v1.13.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (1.13 = 1.13). The .0 patch component is omitted."
     },
     {
       "id": "gpt-gpt-3-5-chatgpt-2022-11-30",
@@ -3342,6 +4293,22 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://openai.com/index/gpt-4-research/",
       "weightsNote": "GPT-3 and later numbered GPT models are provided through hosted products and APIs; no public weights found for this release."
+    },
+    {
+      "id": "pytorch-2-0",
+      "family": "pytorch",
+      "name": "PyTorch 2.0",
+      "version": "2.0",
+      "score": 2,
+      "date": "2023-03-15",
+      "status": "Released",
+      "sourceId": "pytorch-2-0-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.0.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.0 = 2). The .0 patch component is omitted."
     },
     {
       "id": "claude-claude-1-3-2023-04-18",
@@ -3723,6 +4690,39 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1",
       "huggingFaceUrl": "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1"
+    },
+    {
+      "id": "python-3-12",
+      "family": "python",
+      "name": "Python 3.12",
+      "version": "3.12",
+      "score": 3.12,
+      "date": "2023-10-02",
+      "status": "Released",
+      "sourceId": "python-3-12-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.12.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.12 = 3.12). The .0 patch component is omitted."
+    },
+    {
+      "id": "pytorch-2-1",
+      "family": "pytorch",
+      "name": "PyTorch 2.1",
+      "version": "2.1",
+      "score": 2.1,
+      "date": "2023-10-04",
+      "status": "Released",
+      "sourceId": "pytorch-2-1-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.1.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.1 = 2.1). The .0 patch component is omitted."
     },
     {
       "id": "kimi-kimi-chat-original-preview-2023-10-09",
@@ -4192,6 +5192,22 @@
       "huggingFaceUrl": "https://huggingface.co/OpenGVLab/InternVL-Chat-V1-1"
     },
     {
+      "id": "pytorch-2-2",
+      "family": "pytorch",
+      "name": "PyTorch 2.2",
+      "version": "2.2",
+      "score": 2.2,
+      "date": "2024-01-30",
+      "status": "Released",
+      "sourceId": "pytorch-2-2-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.2.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.2 = 2.2). The .0 patch component is omitted."
+    },
+    {
       "id": "minicpm-minicpm-2b-2024-02-01",
       "family": "minicpm",
       "name": "MiniCPM-2B",
@@ -4573,6 +5589,22 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://huggingface.co/microsoft/Phi-3-mini-128k-instruct",
       "huggingFaceUrl": "https://huggingface.co/microsoft/Phi-3-mini-128k-instruct"
+    },
+    {
+      "id": "pytorch-2-3",
+      "family": "pytorch",
+      "name": "PyTorch 2.3",
+      "version": "2.3",
+      "score": 2.3,
+      "date": "2024-04-24",
+      "status": "Released",
+      "sourceId": "pytorch-2-3-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.3.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.3 = 2.3). The .0 patch component is omitted."
     },
     {
       "id": "deepseek-deepseek-v2-2024-05-06",
@@ -4999,6 +6031,22 @@
       "huggingFaceUrl": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407"
     },
     {
+      "id": "pytorch-2-4",
+      "family": "pytorch",
+      "name": "PyTorch 2.4",
+      "version": "2.4",
+      "score": 2.4,
+      "date": "2024-07-24",
+      "status": "Released",
+      "sourceId": "pytorch-2-4-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.4.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.4 = 2.4). The .0 patch component is omitted."
+    },
+    {
       "id": "exaone-exaone-3-0-7-8b-2024-08-07",
       "family": "exaone",
       "name": "EXAONE 3.0 7.8B",
@@ -5353,6 +6401,23 @@
       "weightsNote": "Provider documentation offers hosted access; no public weights found for this release."
     },
     {
+      "id": "python-3-13",
+      "family": "python",
+      "name": "Python 3.13",
+      "version": "3.13",
+      "score": 3.13,
+      "date": "2024-10-07",
+      "status": "Released",
+      "sourceId": "python-3-13-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.13.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.13 = 3.13). The .0 patch component is omitted."
+    },
+    {
       "id": "gpt-gpt-4o-audio-preview-2024-10-17",
       "family": "gpt",
       "name": "GPT-4o Audio preview",
@@ -5368,6 +6433,22 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://openai.com/index/introducing-the-realtime-api/",
       "weightsNote": "GPT-3 and later numbered GPT models are provided through hosted products and APIs; no public weights found for this release."
+    },
+    {
+      "id": "pytorch-2-5",
+      "family": "pytorch",
+      "name": "PyTorch 2.5",
+      "version": "2.5",
+      "score": 2.5,
+      "date": "2024-10-17",
+      "status": "Released",
+      "sourceId": "pytorch-2-5-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.5.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.5 = 2.5). The .0 patch component is omitted."
     },
     {
       "id": "granite-granite-3-0-2024-10-21",
@@ -6039,6 +7120,22 @@
       "huggingFaceUrl": "https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5"
     },
     {
+      "id": "pytorch-2-6",
+      "family": "pytorch",
+      "name": "PyTorch 2.6",
+      "version": "2.6",
+      "score": 2.6,
+      "date": "2025-01-29",
+      "status": "Released",
+      "sourceId": "pytorch-2-6-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.6.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.6 = 2.6). The .0 patch component is omitted."
+    },
+    {
       "id": "mistral-mistral-small-3-2025-01-30",
       "family": "mistral",
       "name": "Mistral Small 3",
@@ -6250,6 +7347,22 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://openai.com/index/introducing-gpt-4-5/",
       "weightsNote": "GPT-3 and later numbered GPT models are provided through hosted products and APIs; no public weights found for this release."
+    },
+    {
+      "id": "gta-v-pc-enhanced",
+      "family": "gta",
+      "name": "GTA V Enhanced (PC)",
+      "version": "5",
+      "score": 5,
+      "date": "2025-03-04",
+      "status": "Released",
+      "sourceId": "gta-v-pc-enhanced-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://www.rockstargames.com/newswire/article/7551a7k917554a/free-upgrade-for-grand-theft-auto-v-on-pc-now-available",
+      "weightsNote": "Software control; model weights do not apply.",
+      "mapping": "Roman numeral V = 5. Platform names, console generations, and Enhanced do not change the game’s version number.",
+      "note": "GTA V platform release. Still 5."
     },
     {
       "id": "jamba-jamba-1-6-large-2025-03-06",
@@ -6674,6 +7787,22 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://huggingface.co/RekaAI/reka-flash-3",
       "huggingFaceUrl": "https://huggingface.co/RekaAI/reka-flash-3"
+    },
+    {
+      "id": "pytorch-2-7",
+      "family": "pytorch",
+      "name": "PyTorch 2.7",
+      "version": "2.7",
+      "score": 2.7,
+      "date": "2025-04-23",
+      "status": "Released",
+      "sourceId": "pytorch-2-7-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.7.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.7 = 2.7). The .0 patch component is omitted."
     },
     {
       "id": "ernie-ernie-4-5-turbo-2025-04-25",
@@ -7568,6 +8697,22 @@
       "weightsNote": "Provider documentation offers hosted access; no public weights found for this release."
     },
     {
+      "id": "pytorch-2-8",
+      "family": "pytorch",
+      "name": "PyTorch 2.8",
+      "version": "2.8",
+      "score": 2.8,
+      "date": "2025-08-06",
+      "status": "Released",
+      "sourceId": "pytorch-2-8-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.8.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.8 = 2.8). The .0 patch component is omitted."
+    },
+    {
       "id": "gpt-gpt-5-2025-08-07",
       "family": "gpt",
       "name": "GPT-5",
@@ -8075,6 +9220,23 @@
       "huggingFaceUrl": "https://huggingface.co/ibm-granite/granite-4.0-micro"
     },
     {
+      "id": "python-3-14",
+      "family": "python",
+      "name": "Python 3.14",
+      "version": "3.14",
+      "score": 3.14,
+      "date": "2025-10-07",
+      "status": "Released",
+      "sourceId": "python-3-14-release",
+      "dateSourceId": "python-release-archive",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://docs.python.org/release/3.14.0/",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this Python 3 minor version; date from the official release archive.",
+      "mapping": "Software control: major.minor is scored as a decimal (3.14 = 3.14). The .0 patch component is omitted."
+    },
+    {
       "id": "claude-claude-haiku-4-5-2025-10-15",
       "family": "claude",
       "name": "Claude Haiku 4.5",
@@ -8088,6 +9250,22 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://www.anthropic.com/news/claude-haiku-4-5",
       "weightsNote": "Provider documentation offers hosted access; no public weights found for this release."
+    },
+    {
+      "id": "pytorch-2-9",
+      "family": "pytorch",
+      "name": "PyTorch 2.9",
+      "version": "2.9",
+      "score": 2.9,
+      "date": "2025-10-15",
+      "status": "Released",
+      "sourceId": "pytorch-2-9-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.9.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.9 = 2.9). The .0 patch component is omitted."
     },
     {
       "id": "minimax-minimax-m2-2025-10-27",
@@ -8863,6 +10041,22 @@
       "huggingFaceUrl": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking"
     },
     {
+      "id": "pytorch-2-10",
+      "family": "pytorch",
+      "name": "PyTorch 2.10",
+      "version": "2.10",
+      "score": 2.1,
+      "date": "2026-01-21",
+      "status": "Released",
+      "sourceId": "pytorch-2-10-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.10.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.10 = 2.1). The .0 patch component is omitted."
+    },
+    {
       "id": "qwen-qwen3-max-thinking-2026-01-23",
       "family": "qwen",
       "name": "Qwen3-Max-Thinking",
@@ -9485,6 +10679,22 @@
       "huggingFaceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7"
     },
     {
+      "id": "pytorch-2-11",
+      "family": "pytorch",
+      "name": "PyTorch 2.11",
+      "version": "2.11",
+      "score": 2.11,
+      "date": "2026-03-23",
+      "status": "Released",
+      "sourceId": "pytorch-2-11-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.11.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.11 = 2.11). The .0 patch component is omitted."
+    },
+    {
       "id": "solar-solar-pro-3-march-update-2026-03-24",
       "family": "solar",
       "name": "Solar Pro 3 (March update)",
@@ -9991,6 +11201,22 @@
       "weightsNote": "Hosted release; the separately recorded ERNIE 4.5 open-model collection is not evidence that this exact hosted checkpoint was published."
     },
     {
+      "id": "pytorch-2-12",
+      "family": "pytorch",
+      "name": "PyTorch 2.12",
+      "version": "2.12",
+      "score": 2.12,
+      "date": "2026-05-13",
+      "status": "Released",
+      "sourceId": "pytorch-2-12-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.12.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.12 = 2.12). The .0 patch component is omitted."
+    },
+    {
       "id": "grok-grok-4-3-hermes-availability-2026-05-15",
       "family": "grok",
       "name": "Grok 4.3 (Hermes availability)",
@@ -10417,6 +11643,22 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://x.ai/news/grok-4-5",
       "weightsNote": "No public weights found for this exact release. Grok-1 and the December 2024 Grok-2 checkpoint have separate weight releases."
+    },
+    {
+      "id": "pytorch-2-13",
+      "family": "pytorch",
+      "name": "PyTorch 2.13",
+      "version": "2.13",
+      "score": 2.13,
+      "date": "2026-07-08",
+      "status": "Released",
+      "sourceId": "pytorch-2-13-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.13.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.13 = 2.13). The .0 patch component is omitted."
     },
     {
       "id": "gpt-gpt-5-6-luna-2026-07-09",
@@ -11051,6 +12293,22 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
       "weightsNote": "Provider documentation offers hosted access; no public weights found for this release."
+    },
+    {
+      "id": "pytorch-2-14",
+      "family": "pytorch",
+      "name": "PyTorch 2.14",
+      "version": "2.14",
+      "score": 2.14,
+      "date": "2026-09-02",
+      "status": "Released",
+      "sourceId": "pytorch-2-14-release",
+      "weightsStatus": "not-applicable",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://github.com/pytorch/pytorch/releases/tag/v2.14.0",
+      "weightsNote": "Software release; model weights do not apply.",
+      "note": "First stable release of this minor version. Date is the publisher’s GitHub release publication date in UTC.",
+      "mapping": "Software control: major.minor is scored as a decimal (2.14 = 2.14). The .0 patch component is omitted."
     },
     {
       "id": "qwen-qwen3-8-max-0902-api-snapshot-2026-09-02",
