@@ -142,7 +142,7 @@ export function buildStats(data) {
 }
 
 export function statsSummary(stats) {
-  return `Snapshot **${stats.snapshot}** · **${stats.familyCount} model families** · **${stats.releaseCount} model release events** · **${stats.sourceCount} model sources** · **${stats.artificialAnalysisReleaseCount} releases linked to Artificial Analysis** · **${stats.huggingFaceReleaseCount} releases linked to Hugging Face weights**\n\nSeparately: **${stats.softwareControlCount} software controls**, **${stats.softwareReleaseCount} release events**. Controls are excluded from model statistics and rankings.`;
+  return `Snapshot **${stats.snapshot}** · **${stats.familyCount}** model families · **${stats.releaseCount}** model release events · **${stats.sourceCount}** model sources · **${stats.artificialAnalysisReleaseCount}** releases linked to Artificial Analysis · **${stats.huggingFaceReleaseCount}** releases linked to Hugging Face weights\n\nSeparately: **${stats.softwareControlCount}** software controls, **${stats.softwareReleaseCount}** release events. Controls are excluded from model statistics and rankings.`;
 }
 
 export const readmeTemplates = [

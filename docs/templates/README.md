@@ -1,6 +1,6 @@
 # VersionBench
 
-**VersionBench: No training-data contamination, no judge bias, no prompt sensitivity, no sampling variance, no benchmark saturation, no data leakage, 100% reproducible.**
+VersionBench: No training-data contamination, no judge bias, no prompt sensitivity, no sampling variance, no benchmark saturation, no data leakage, 100% reproducible.
 
 VersionBench is a leaderboard that ranks language models by the numeric version in their names. It is also unironically quite a convenient place to look at the release history and announcement pages of LLMs.
 
@@ -9,6 +9,8 @@ VersionBench obeys mathematics, not semantic versioning. Thus 3.9 > 3.10. Vendor
 [Live demo](https://procrastinine.github.io/versionbench/) · [Data documentation](data/README.md) · [Generated statistics](data/stats.json)
 
 {{STATS_SUMMARY}}
+
+[![VersionBench leaderboard with model-family rankings, release links, and a version-number comparison chart.](docs/leaderboard.png)](https://procrastinine.github.io/versionbench/)
 
 ## Run locally
 
