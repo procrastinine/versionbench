@@ -1,0 +1,7 @@
+output/
+.playwright-cli/
+.DS_Store
+_site/
+node_modules/
+.env
+.env.*
