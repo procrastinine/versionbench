@@ -1,8 +1,8 @@
 # VersionBench
 
-An extremely scientific LLM benchmark: bigger version number wins. Includes an interactive, sourced history of model releases.
+An extremely scientific LLM benchmark: bigger version number wins.
 
-VersionBench is a tongue-in-cheek leaderboard that ranks language models by the numeric version in their names. The release dates and source links support the history; the scores measure naming, not intelligence or capability.
+VersionBench is a leaderboard that ranks language models by the numeric version in their names. It is also unironically quite a convenient place to look at the release history and announcement pages of LLMs.
 
 [GitHub Pages demo](https://procrastinine.github.io/versionbench/) · [Run locally](#run-locally) · [Explore the data](data/README.md)
 
