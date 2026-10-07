@@ -9,22 +9,23 @@ Generated from `data/history-review.json` and the release catalog. This records 
 | [Nemotron](https://procrastinine.github.io/versionbench/#family?id=nemotron) | 4 | 3 (2023-11-15) | Added Nemotron-3 8B in November 2023, before Nemotron-4. The first documented public series reviewed here starts at 3. |
 | [Seed](https://procrastinine.github.io/versionbench/#family?id=seed) | 1.6 | 1.5 (2025-01-22) | Added Seed/Doubao 1.5 Pro and Seed 1.5 VL from the publisher model portfolio. |
 | [EXAONE](https://procrastinine.github.io/versionbench/#family?id=exaone) | 3.0 | 1.0 (2021-12-14) | Added EXAONE 1.0 and 2.0 announcements, and separated EXAONE 3.0 announcement from its weights release. |
-| [Step](https://procrastinine.github.io/versionbench/#family?id=step) | 3 | 3 (2025-07-25) | Earlier Step-1, Step-1V, and Step-2 exist. Their original day-level public availability has not been recovered from accessible publisher pages. |
+| [Step](https://procrastinine.github.io/versionbench/#family?id=step) | 3 | 1 (2024-03-23) | Recovered the March 23, 2024 announcements of Step-1, Step-1V and the Step-2 partner API preview from firsthand GDPS conference reporting. |
 | [Inflection](https://procrastinine.github.io/versionbench/#family?id=inflection) | 3 | 1 (2023-06-22) | Recovered Inflection 1, 2, and 2.5 from archived copies of the original publisher announcements. |
 | [LFM](https://procrastinine.github.io/versionbench/#family?id=lfm) | 2 | 1 (2024-09-30) | Added the first Liquid Foundation Models series from September 2024. 1.3B, 3.1B, and 40.3B are sizes. |
 | [Hermes](https://procrastinine.github.io/versionbench/#family?id=hermes) | 3 | 1 (2023-06-03) | Added first-generation Hermes checkpoint history, Hermes 2 Vision and Yi variants, and the original August 2024 Hermes 3 release. |
 | [Hunyuan / Hy](https://procrastinine.github.io/versionbench/#family?id=hunyuan) | 3 | 1 (2023-09-07) | Added the September 2023 Hunyuan API announcement. Video and 3D model numbers are not language-model versions. |
 | [LongCat](https://procrastinine.github.io/versionbench/#family?id=longcat) | 2 | 1 (2025-08-29) | Added the August 2025 LongCat Flash Chat API launch from the official change log. |
 | [Solar](https://procrastinine.github.io/versionbench/#family?id=solar) | 3 | 1.0 (2023-12-14) | Added Solar 10.7B v1.0 and Solar Pro 2. The 10.7 in the original name is a size, not a version. |
-| [Mercury](https://procrastinine.github.io/versionbench/#family?id=mercury) | 2.5 | 2 (2026-02-24) | Added Mercury 2 from the publisher’s dated release archive. The original Mercury series predates it. |
+| [Mercury](https://procrastinine.github.io/versionbench/#family?id=mercury) | 2.5 | 1 (2025-02-26) | Recovered the original February 26, 2025 Mercury Coder playground launch from Inception’s dated post, before the later Mercury 2 series. |
 | [Motif](https://procrastinine.github.io/versionbench/#family?id=motif) | 3 | 1 (2025-06-06) | Added the initial Motif 2.6B checkpoint history and the Motif 2 technical report. 2.6B is a size; Motif 2 is a version. |
 | [INTELLECT](https://procrastinine.github.io/versionbench/#family?id=intellect) | 3 | 1 (2024-11-29) | Added INTELLECT-1 and INTELLECT-2 from their official release posts, including the INTELLECT-1 instruct variant. |
 | [Cogito](https://procrastinine.github.io/versionbench/#family?id=cogito) | 2.1 | 1 (2025-04-08) | Added v1 and v2 previews from the dated publisher research index. |
 | [Reka](https://procrastinine.github.io/versionbench/#family?id=reka) | 3 | 1 (2024-02-12) | Added the February 2024 Flash and Edge beta and April 2024 Core release. Unnumbered initial sub-lines are normalized to 1. |
 | [Apriel](https://procrastinine.github.io/versionbench/#family?id=apriel) | 1.6 | 1 (2025-04-11) | Added Apriel 5B checkpoint history and announcement, plus the Apriel 1.5 technical report. |
-| [Nanbeige](https://procrastinine.github.io/versionbench/#family?id=nanbeige) | 4.1 | 4 (2025-10-22) | Recovered Nanbeige 4 checkpoint history and an archived publisher repository confirming the original Nanbeige 16B series. |
-| [Ring](https://procrastinine.github.io/versionbench/#family?id=ring) | 2.6 | 1 (2025-04-01) | Added Ring Lite Distill Preview and Ring Lite 2507 from the publisher archive and dated blog. 2507 is a checkpoint suffix, not version 2507; 1T is a size. |
+| [Nanbeige](https://procrastinine.github.io/versionbench/#family?id=nanbeige) | 4.1 | 1 (2023-11-08) | Recovered the November 8, 2023 initial 16B release announcement from preserved upstream Git history and the original Nanbeige2 repository creation timestamp from an archived publisher page. |
+| [Ring](https://procrastinine.github.io/versionbench/#family?id=ring) | 2.6 | 1 (2025-04-01) | Ring 2.0 and 2.5 were already represented by first-weight commits. Removed stale pending entries without adding duplicate events, alongside the earlier Ring Lite history. |
 | [A.X](https://procrastinine.github.io/versionbench/#family?id=ax) | 4.0 | 1 (2023-09-26) | Added the A.X brand announcement and A.X 3.1. The latter was released after A.X 4.0, according to its model card. |
+| [Character.AI](https://procrastinine.github.io/versionbench/#family?id=character-ai) | 1 | 1.1 (2023-03-23) | Added the publisher’s C1.2 early preview and its explicit confirmation of C1.1 as the preceding model; moved PipSqueak to the earlier official community announcement. |
 
 ## Mistral
 
@@ -67,11 +68,9 @@ Checked 2026-10-06. Added EXAONE 1.0 and 2.0 announcements, and separated EXAONE
 
 ## Step
 
-Checked 2026-10-06. Earlier Step-1, Step-1V, and Step-2 exist. Their original day-level public availability has not been recovered from accessible publisher pages.
+Checked 2026-10-06. Recovered the March 23, 2024 announcements of Step-1, Step-1V and the Step-2 partner API preview from firsthand GDPS conference reporting.
 
-Still unresolved: Earlier releases remain in the pending list; a source-access failure is not evidence that Step began at 3.
-
-- [Step-3 is Large yet Affordable](https://arxiv.org/abs/2507.19427)
+- [Step-1, Step-1V and Step-2 preview at GDPS 2024](https://www.cls.cn/detail/1627876)
 
 ## Inflection
 
@@ -123,11 +122,10 @@ Still unresolved: Solar Pro preview and general availability have additional mil
 
 ## Mercury
 
-Checked 2026-10-06. Added Mercury 2 from the publisher’s dated release archive. The original Mercury series predates it.
+Checked 2026-10-06. Recovered the original February 26, 2025 Mercury Coder playground launch from Inception’s dated post, before the later Mercury 2 series.
 
-Still unresolved: Original Mercury Coder launched in February 2025, but the first day is not established by the accessible publisher announcement.
-
-- [Inception dated blog index](https://www.inceptionlabs.ai/blog)
+- [Introducing Mercury](https://www.inceptionlabs.ai/blog/introducing-mercury)
+- [Inception: Mercury Coder playground launch](https://x.com/_inception_ai/status/1894847926624714787)
 - [Introducing Mercury 2](https://www.inceptionlabs.ai/blog/introducing-mercury-2)
 
 ## Motif
@@ -173,21 +171,22 @@ Still unresolved: The initial checkpoint commit is not proof of public availabil
 
 ## Nanbeige
 
-Checked 2026-10-06. Recovered Nanbeige 4 checkpoint history and an archived publisher repository confirming the original Nanbeige 16B series.
+Checked 2026-10-06. Recovered the November 8, 2023 initial 16B release announcement from preserved upstream Git history and the original Nanbeige2 repository creation timestamp from an archived publisher page.
 
-Still unresolved: The old Nanbeige 16B, 1.5, and 2 repositories are unavailable. Their exact original public dates remain pending.
+Still unresolved: Nanbeige2 uses the labeled repository-creation fallback, which does not establish its first public day or any rename date. The 1.5 label survives in conversion provenance, but no independently dated publisher release was established; its exclusion is recorded in the candidate review.
 
+- [Original Nanbeige-16B release README preserved in upstream Git history](https://github.com/beijinggao/Nanbeige/blob/c6b08be4084cac8761e97e78c6ddd8dcfc459a0a/README.md)
+- [Nanbeige release README original commit metadata](https://api.github.com/repos/beijinggao/Nanbeige/commits/c6b08be4084cac8761e97e78c6ddd8dcfc459a0a)
+- [Nanbeige2-8B-Chat: Hugging Face repository creation metadata](https://web.archive.org/web/20240512234656id_/https://huggingface.co/Nanbeige/Nanbeige2-8B-Chat)
 - [Nanbeige 4 3B Thinking 2510 (checkpoint commit): first commit containing model weights](https://huggingface.co/Nanbeige/Nanbeige4-3B-Thinking-2510/commit/dec46638072e9bf6d7a676e855dfde2ec509ae10)
-- [Archived original Nanbeige publisher repository](https://web.archive.org/web/20240523090300/https://github.com/Nanbeige/Nanbeige)
 
 ## Ring
 
-Checked 2026-10-06. Added Ring Lite Distill Preview and Ring Lite 2507 from the publisher archive and dated blog. 2507 is a checkpoint suffix, not version 2507; 1T is a size.
+Checked 2026-10-06. Ring 2.0 and 2.5 were already represented by first-weight commits. Removed stale pending entries without adding duplicate events, alongside the earlier Ring Lite history.
 
-Still unresolved: Ring 2.0 and 2.5 inventories require separate dated publication evidence.
-
-- [InclusionAI model release archive](https://www.inclusion-ai.org/model/)
-- [Ring Lite 2507](https://inclusionai.github.io/blog/ring-lite-2507/)
+- [Ring-mini-2.0: first commit containing model weights](https://huggingface.co/inclusionAI/Ring-mini-2.0/commit/6e02e2252bf3c30b8e6c7186364a2082b41dcbd5)
+- [Ring-flash-2.0: first commit containing model weights](https://huggingface.co/inclusionAI/Ring-flash-2.0/commit/4589f02c55abf61aec7b34157fdffa0c2264cb30)
+- [Ring-2.5-1T: first commit containing model weights](https://huggingface.co/inclusionAI/Ring-2.5-1T/commit/284fcb88eb98c2e92bbc5c31d42d70498fcac655)
 
 ## A.X
 
@@ -197,3 +196,12 @@ Still unresolved: A.X K-series models use another numbered sub-line; exact relea
 
 - [SK Telecom introduces A.X and its AI strategy](https://news.sktelecom.com/en/678)
 - [A.X 3.1 model card](https://huggingface.co/skt/A.X-3.1)
+
+## Character.AI
+
+Checked 2026-10-06. Added the publisher’s C1.2 early preview and its explicit confirmation of C1.1 as the preceding model; moved PipSqueak to the earlier official community announcement.
+
+Still unresolved: The original C1.1 launch day is unknown; its Available by event is a conservative March 23, 2023 bound. A separate C1.0 model was not established and is excluded with evidence in the candidate review.
+
+- [Character.AI C1.2 early preview and C1.1 predecessor](https://blog.character.ai/character-ai/)
+- [Character.AI community update: introducing PipSqueak](https://www.reddit.com/r/CharacterAI/comments/1mv5p1x/community_update_august_2025_maybe_our_biggest/)

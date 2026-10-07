@@ -9,6 +9,7 @@ import { artifactExclusion } from './release-policy.mjs';
 const { values } = parseArgs({
   options: {
     family: { type: 'string' },
+    repository: { type: 'string' },
     offline: { type: 'boolean' },
     resume: { type: 'boolean' },
     apply: { type: 'boolean' },
@@ -23,7 +24,9 @@ const dataPath = resolve(root, 'data/releases.json');
 const data = JSON.parse(await readFile(dataPath));
 const manifest = JSON.parse(await readFile(resolve(root, 'data/checkpoint-imports.json')));
 const entries = manifest.filter(
-  (r) => !values.family || values.family.split(',').includes(r.family),
+  (r) =>
+    (!values.family || values.family.split(',').includes(r.family)) &&
+    (!values.repository || values.repository.split(',').includes(r.repository)),
 );
 if (!entries.length) throw new Error('No matching reviewed repository mappings');
 const client =
@@ -43,6 +46,10 @@ const records = await Promise.all(
       const evidence = await checkpointHistory(
         client,
         `https://huggingface.co/${entry.repository}`,
+        {
+          allowRepositoryCreated: entry.allowRepositoryCreated === true,
+          archivedMetadataUrl: entry.archivedMetadataUrl,
+        },
       );
       if (evidence.date.slice(0, 10) > data.updated)
         throw new Error('Checkpoint newer than dataset snapshot');
@@ -62,7 +69,7 @@ await mkdir(dirname(resolve(root, values.report)), { recursive: true });
 await writeFile(resolve(root, values.report), stableJSON(report));
 for (const r of records)
   console.log(
-    `${r.repository}: ${r.error || `${r.version} -> ${numericVersion(r.version)}, checkpoint commit ${r.evidence.date}`}`,
+    `${r.repository}: ${r.error || `${r.version} -> ${numericVersion(r.version)}, ${r.evidence.evidenceType} ${r.evidence.date}`}`,
   );
 if (records.some((r) => r.error)) {
   process.exitCode = 1;
@@ -70,20 +77,22 @@ if (records.some((r) => r.error)) {
 } else if (values.apply) {
   for (const r of records) {
     const { evidence } = r;
+    const fallback = evidence.evidenceType === 'repository-created';
+    const evidenceUrl = fallback ? evidence.metadataUrl : evidence.commitUrl;
     const date = evidence.date.slice(0, 10);
     const slug = r.repository.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     const sourceId = `checkpoint-${slug}`;
-    const existingSource = data.sources.find((s) => s.url === evidence.commitUrl);
+    const existingSource = data.sources.find((s) => s.url === evidenceUrl);
     const priorSource = data.sources.find((s) => s.id === sourceId);
-    if (priorSource && priorSource.url !== evidence.commitUrl)
+    if (priorSource && priorSource.url !== evidenceUrl)
       throw new Error(
         `Checkpoint history changed for ${r.repository}; review the existing source before applying`,
       );
     if (!existingSource && !data.sources.some((s) => s.id === sourceId))
       data.sources.push({
         id: sourceId,
-        title: `${r.name}: first commit containing model weights`,
-        url: evidence.commitUrl,
+        title: `${r.name}: ${fallback ? 'Hugging Face repository creation metadata' : 'first commit containing model weights'}`,
+        url: evidenceUrl,
         publisher: data.families.find((f) => f.id === r.family).provider,
         date,
         checkedAt: data.updated,
@@ -92,12 +101,12 @@ if (records.some((r) => r.error)) {
     const existingRelease = data.releases.find(
       (release) =>
         release.eventType === 'checkpoint' &&
-        release.huggingFaceUrl?.toLowerCase() === evidence.url.toLowerCase(),
+        (release.dateRepositoryUrl ?? release.huggingFaceUrl)?.toLowerCase() === evidence.url.toLowerCase(),
     );
     if (
       existingRelease &&
       (existingRelease.date !== date ||
-        data.sources.find((s) => s.id === existingRelease.sourceId)?.url !== evidence.commitUrl)
+        data.sources.find((s) => s.id === existingRelease.sourceId)?.url !== evidenceUrl)
     )
       throw new Error(
         `First weights evidence changed for ${r.repository}; review the existing record instead of adding a later commit`,
@@ -111,15 +120,17 @@ if (records.some((r) => r.error)) {
         score: numericVersion(r.version),
         date,
         eventType: 'checkpoint',
-        status: 'First weights commit',
-        dateBasis: 'checkpoint-commit',
+        status: fallback ? 'Repository created (fallback)' : 'First weights commit',
+        dateBasis: evidence.evidenceType,
         sourceId: existingSource?.id ?? sourceId,
         note: evidence.caveat + ' Date uses UTC.',
         mapping: r.mapping,
         weightsStatus: 'open',
         weightsCheckedAt: data.updated,
-        weightsSourceUrl: evidence.url,
-        huggingFaceUrl: evidence.url,
+        weightsSourceUrl: r.huggingFaceUrl ?? evidence.url,
+        huggingFaceUrl: r.huggingFaceUrl ?? evidence.url,
+        ...(r.huggingFaceUrl ? { dateRepositoryUrl: evidence.url } : {}),
+        ...(r.weightsNote ? { weightsNote: r.weightsNote } : {}),
       });
   }
   data.sources.sort((a, b) => a.id.localeCompare(b.id));

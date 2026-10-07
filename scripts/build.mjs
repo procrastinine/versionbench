@@ -11,11 +11,13 @@ const data = JSON.parse(raw);
 const watchlist = JSON.parse(await read('data/provider-sources.json'));
 const historyReview = JSON.parse(await read('data/history-review.json'));
 const pending = JSON.parse(await read('data/pending-releases.json'));
+const resolutions = JSON.parse(await read('data/candidate-resolutions.json'));
+const evidence = JSON.parse(await read('data/evidence/candidate-review.json'));
 const stats = buildStats(data);
 const documentation = [];
 for (const [source, target] of readmeTemplates)
   documentation.push([target, renderReadme(await read(source), stats, source)]);
-documentation.push(['docs/pending-releases.md', renderPending(data, pending)]);
+documentation.push(['docs/pending-releases.md', renderPending(data, pending, resolutions, evidence)]);
 documentation.push(['docs/source-watchlist.md', renderWatchlist(data, watchlist)]);
 documentation.push(['docs/history-audit.md', renderHistoryReview(data, historyReview)]);
 const html = template
@@ -62,6 +64,7 @@ const tables = [
       'status',
       'eventType',
       'dateBasis',
+      'dateRepositoryUrl',
       'sourceId',
       'dateSourceId',
       'artificialAnalysisUrl',

@@ -11,7 +11,7 @@ db.exec(`PRAGMA foreign_keys=ON;
 CREATE TABLE metadata (key TEXT PRIMARY KEY,value TEXT NOT NULL);
 CREATE TABLE families (id TEXT PRIMARY KEY,name TEXT NOT NULL,provider TEXT NOT NULL,color TEXT NOT NULL,core INTEGER NOT NULL CHECK(core IN(0,1)),kind TEXT NOT NULL CHECK(kind IN('model','software')),scope TEXT);
 CREATE TABLE sources (id TEXT PRIMARY KEY,title TEXT NOT NULL,url TEXT NOT NULL,publisher TEXT NOT NULL,published_date TEXT,checked_at TEXT NOT NULL);
-CREATE TABLE releases (id TEXT PRIMARY KEY,family_id TEXT NOT NULL REFERENCES families(id),name TEXT NOT NULL,version TEXT NOT NULL,score REAL NOT NULL CHECK(score>=0),release_date TEXT NOT NULL,status TEXT NOT NULL,event_type TEXT NOT NULL,date_basis TEXT NOT NULL,source_id TEXT NOT NULL REFERENCES sources(id),date_source_id TEXT REFERENCES sources(id),artificial_analysis_url TEXT,weights_status TEXT NOT NULL CHECK(weights_status IN('open','not-published','unverified','not-applicable')),weights_checked_at TEXT NOT NULL,hugging_face_url TEXT,weights_source_url TEXT NOT NULL,weights_note TEXT,note TEXT,mapping TEXT);
+CREATE TABLE releases (id TEXT PRIMARY KEY,family_id TEXT NOT NULL REFERENCES families(id),name TEXT NOT NULL,version TEXT NOT NULL,score REAL NOT NULL CHECK(score>=0),release_date TEXT NOT NULL,status TEXT NOT NULL,event_type TEXT NOT NULL,date_basis TEXT NOT NULL,date_repository_url TEXT,source_id TEXT NOT NULL REFERENCES sources(id),date_source_id TEXT REFERENCES sources(id),artificial_analysis_url TEXT,weights_status TEXT NOT NULL CHECK(weights_status IN('open','not-published','unverified','not-applicable')),weights_checked_at TEXT NOT NULL,hugging_face_url TEXT,weights_source_url TEXT NOT NULL,weights_note TEXT,note TEXT,mapping TEXT);
 CREATE TABLE family_stats (family_id TEXT PRIMARY KEY REFERENCES families(id),snapshot TEXT NOT NULL,release_count INTEGER NOT NULL,version_count INTEGER NOT NULL,highest_score REAL NOT NULL,first_release_at_highest_version TEXT NOT NULL REFERENCES releases(id),latest_release TEXT NOT NULL REFERENCES releases(id),current_rank INTEGER NOT NULL,days_at_number_one INTEGER NOT NULL,average_rank REAL NOT NULL,tracked_days INTEGER NOT NULL,release_rate_per_year REAL NOT NULL);
 CREATE TABLE family_rank_history (family_id TEXT NOT NULL REFERENCES family_stats(family_id),rank_date TEXT NOT NULL,rank INTEGER NOT NULL CHECK(rank>=1),PRIMARY KEY(family_id,rank_date));
 CREATE TABLE family_version_history (family_id TEXT NOT NULL REFERENCES families(id),version_date TEXT NOT NULL,version TEXT NOT NULL,score REAL NOT NULL,release_id TEXT NOT NULL REFERENCES releases(id),PRIMARY KEY(family_id,version_date));
@@ -25,7 +25,7 @@ for (const f of data.families)
 const source = db.prepare('INSERT INTO sources VALUES (?,?,?,?,?,?)');
 for (const s of data.sources)
   source.run(s.id, s.title, s.url, s.publisher, s.date ?? null, s.checkedAt);
-const release = db.prepare('INSERT INTO releases VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+const release = db.prepare('INSERT INTO releases VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
 for (const r of data.releases)
   release.run(
     r.id,
@@ -37,6 +37,7 @@ for (const r of data.releases)
     r.status,
     r.eventType,
     r.dateBasis ?? 'publisher',
+    r.dateRepositoryUrl ?? null,
     r.sourceId,
     r.dateSourceId ?? null,
     r.artificialAnalysisUrl ?? null,

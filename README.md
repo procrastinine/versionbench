@@ -10,7 +10,7 @@ VersionBench obeys mathematics, not semantic versioning. Thus 3.9 > 3.10. Vendor
 
 [Live demo](https://procrastinine.github.io/versionbench/) · [Data documentation](data/README.md) · [Generated statistics](data/stats.json) · [Pages to watch](docs/source-watchlist.md)
 
-Snapshot **2026-10-06** · **58** model families · **817** model release events · **547** model sources · **299** releases linked to Artificial Analysis · **498** releases linked to Hugging Face weights
+Snapshot **2026-10-06** · **58** model families · **834** model release events · **563** model sources · **299** releases linked to Artificial Analysis · **505** releases linked to Hugging Face weights
 
 Separately: **3** software controls, **49** release events. Controls are excluded from model statistics and rankings.
 
@@ -39,7 +39,7 @@ node scripts/audit-releases.mjs
 node scripts/audit-weights.mjs
 ```
 
-These commands save source responses and review reports under `output/`; they never run during a build or automatically add releases. Both support `--offline` to replay their saved snapshots. See the [data documentation](data/README.md), [earlier-version audit](docs/history-audit.md), and [unresolved candidates](docs/pending-releases.md). Quantizations do not get another vote.
+These commands save source responses and review reports under `output/`; they never run during a build or automatically add releases. Both support `--offline` to replay their saved snapshots. See the [data documentation](data/README.md), [earlier-version audit](docs/history-audit.md), and [candidate decisions](docs/pending-releases.md). Quantizations do not get another vote.
 
 ## Hosting
 

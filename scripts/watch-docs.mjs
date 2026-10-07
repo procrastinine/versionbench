@@ -11,7 +11,7 @@ export function renderWatchlist(data, definitions) {
     '',
     'Run `node scripts/audit-releases.mjs` to capture sources and build the review report. Run `node scripts/audit-releases.mjs --offline` to replay it without network access. `--family gemma,intellect --providers-only` narrows either run; `--snapshot FILE` preserves separate captures. Live captures can change; offline replay is deterministic.',
     '',
-    'Announcement, API availability, and weights publication require separate dated evidence. A Hugging Face link shows where weights are now, not when a hosted endpoint or announcement launched. Inventory creation/modified timestamps are never release dates.',
+    'Announcement, API availability, and weights publication require separate dated evidence. A Hugging Face link shows where weights are now, not when a hosted endpoint or announcement launched. Prefer the first commit containing weights for Hugging Face-only dates. A reviewed repository-creation fallback is allowed when that history is inaccessible and weight metadata is verified; label it explicitly. Modified timestamps never establish releases.',
     '',
     'Quantizations and format conversions remain visible as excluded artifacts in inventory reports, but never count as separate releases or missing model versions.',
     '',
@@ -77,19 +77,42 @@ export function renderHistoryReview(data, reviews) {
   return lines.join('\n').trimEnd() + '\n';
 }
 
-export function renderPending(data, pending) {
+export function renderPending(data, pending, resolutions = [], evidence = { observations: [] }) {
   const names = new Map(data.families.map((f) => [f.id, f.name]));
   const lines = [
-    '# Releases awaiting evidence',
+    '# Candidate review',
     '',
-    'Generated from `data/pending-releases.json`. These candidates have no invented release date and do not enter rankings or dated release counts. Uncertainty has not been promoted to a version number.',
+    'Generated offline from `data/pending-releases.json`, `data/candidate-resolutions.json`, and saved evidence in `data/evidence/candidate-review.json`. Every closed candidate retains its disposition, source, and any date limitation. Closing a review does not turn an availability bound into an exact launch day.',
     '',
+    `${pending.length} awaiting review · ${resolutions.length} resolved (${resolutions.filter((r) => r.outcome === 'added').length} added, ${resolutions.filter((r) => r.outcome === 'updated').length} corrected, ${resolutions.filter((r) => r.outcome === 'covered').length} already covered, ${resolutions.filter((r) => r.outcome === 'excluded').length} not imported).`,
+    '',
+    '## Awaiting evidence',
+    '',
+    ...(pending.length ? [
     '| Family | Candidate | Version label | Missing evidence | Sources |',
     '| --- | --- | --- | --- | --- |',
+    ] : ['No candidates awaiting review.']),
   ];
   for (const row of pending)
     lines.push(
       `| ${escape(names.get(row.family))} | ${escape(row.name)} | ${escape(row.version)} | ${escape(row.reason)} | ${row.sourceUrls.map((url, i) => `[${i + 1}](${url})`).join(' · ')} |`,
     );
+  if (resolutions.length) {
+    const observations = new Map(evidence.observations.map((r) => [r.id, r]));
+    const releases = new Map(data.releases.map((r) => [r.id, r]));
+    const labels = { added: 'Added', updated: 'Corrected', covered: 'Already covered', excluded: 'Not imported' };
+    lines.push('', '## Resolved candidates', '', '| Family | Candidate | Outcome | Recorded events | Decision and evidence |', '| --- | --- | --- | --- | --- |');
+    for (const row of resolutions) {
+      const links = [...new Set(row.evidenceIds.flatMap((id) => {
+        const item = observations.get(id);
+        return item.url ? [item.url] : item.sourceUrls;
+      }))];
+      const events = row.releaseIds.map((id) => {
+        const r = releases.get(id);
+        return `[${escape(r.name)}](https://procrastinine.github.io/versionbench/#family?id=${r.family}) — ${r.date} (${escape(r.status)})`;
+      }).join('<br>') || '—';
+      lines.push(`| ${escape(names.get(row.family))} | ${escape(row.name)} | ${labels[row.outcome]} | ${events} | ${escape(row.reason)} ${links.map((url, i) => `[Evidence ${i + 1}](${url})`).join(' · ')} |`);
+    }
+  }
   return lines.join('\n') + '\n';
 }

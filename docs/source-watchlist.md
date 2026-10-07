@@ -6,7 +6,7 @@ The audit traverses every page of each configured Hugging Face model inventory. 
 
 Run `node scripts/audit-releases.mjs` to capture sources and build the review report. Run `node scripts/audit-releases.mjs --offline` to replay it without network access. `--family gemma,intellect --providers-only` narrows either run; `--snapshot FILE` preserves separate captures. Live captures can change; offline replay is deterministic.
 
-Announcement, API availability, and weights publication require separate dated evidence. A Hugging Face link shows where weights are now, not when a hosted endpoint or announcement launched. Inventory creation/modified timestamps are never release dates.
+Announcement, API availability, and weights publication require separate dated evidence. A Hugging Face link shows where weights are now, not when a hosted endpoint or announcement launched. Prefer the first commit containing weights for Hugging Face-only dates. A reviewed repository-creation fallback is allowed when that history is inaccessible and weight metadata is verified; label it explicitly. Modified timestamps never establish releases.
 
 Quantizations and format conversions remain visible as excluded artifacts in inventory reports, but never count as separate releases or missing model versions.
 
@@ -790,8 +790,9 @@ Character.AI
 | [support.character.ai/hc/en-us/sections/15013580182799-Announcements](https://support.character.ai/hc/en-us/sections/15013580182799-Announcements) | Dated community announcements | announcement, hosted |
 | [blog.character.ai/pipsqueak2-and-more/](https://blog.character.ai/pipsqueak2-and-more/) | PipSqueak 2 access by subscription tier | announcement, hosted |
 | [blog.character.ai/new-styles-new-plan/](https://blog.character.ai/new-styles-new-plan/) | PipSqueak 3 and later related posts | announcement, hosted |
+| [support.character.ai/hc/en-us/sections/50236726192539-Community-Updates](https://support.character.ai/hc/en-us/sections/50236726192539-Community-Updates) | Official community model updates | announcement, preview |
 
-No official downloadable checkpoint was identified for the recorded chat styles. An open-source base model does not establish that Character.AI published its fine-tuned weights. c.ai 1.0/1.1/1.2 need primary date and model-identity evidence.
+No publisher weights were found for the recorded hosted models. C1.1 is dated with an explicit Available by bound; C1.2 has a dated early-preview announcement. A separate C1.0 release is not established. Open base models do not imply publication of Character.AI’s fine-tuned weights.
 
 <a id="apple"></a>
 ## Apple Foundation Models
@@ -831,6 +832,7 @@ WRITER
 | [writer.com/engineering/](https://writer.com/engineering/) | Engineering announcements and model generations. | announcement, api |
 | [dev.writer.com/home/models](https://dev.writer.com/home/models) | API model identities, current availability and deprecations. | announcement, api |
 | [Writer on Hugging Face](https://huggingface.co/Writer/models) | Enumerate all publisher repositories, including earlier generations and named variants. | weights |
+| [support.writer.com/articles/1313908954-what-s-new-at-writer](https://support.writer.com/articles/1313908954-what-s-new-at-writer) | Dated product availability and release notes | api, announcement |
 
 Dummy-weight test repositories do not establish open weights. Parameter counts and specialist-line names do not supply version numbers. Palmyra X4.3 weights are not weights for the hosted X4, X5 or X6 models.
 

@@ -64,7 +64,7 @@ export class SourceSnapshot {
         status: response.status,
         finalUrl: response.url || url,
         headers: Object.fromEntries(
-          ['content-type', 'link', 'etag', 'last-modified', 'retry-after'].flatMap((key) =>
+          ['content-type', 'link', 'etag', 'last-modified', 'retry-after', 'x-ratelimit-remaining'].flatMap((key) =>
             response.headers.get(key) ? [[key, response.headers.get(key)]] : [],
           ),
         ),
@@ -89,6 +89,8 @@ export class SourceSnapshot {
 
   checked(url, row) {
     if (row.error) throw new Error(row.error);
+    if (row.status === 429 || (row.status === 403 && row.headers?.['x-ratelimit-remaining'] === '0'))
+      this.blockedHosts.add(new URL(url).host);
     if (row.status < 200 || row.status >= 300) throw new Error(`HTTP ${row.status}: ${url}`);
     return row;
   }

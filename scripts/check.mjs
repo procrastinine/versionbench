@@ -6,8 +6,10 @@ import { artifactExclusion } from './release-policy.mjs';
 import { buildStats, readmeTemplates, renderReadme } from './stats.mjs';
 import { huggingFaceTarget } from './weights-audit.mjs';
 import { renderWatchlist, renderHistoryReview, renderPending } from './watch-docs.mjs';
+import { validateCandidateReview } from './candidate-review.mjs';
 const root = new URL('../', import.meta.url);
 const data = JSON.parse(await readFile(new URL('data/releases.json', root), 'utf8'));
+const imports = JSON.parse(await readFile(new URL('data/checkpoint-imports.json', root), 'utf8'));
 const unique = (rows, label) => {
   const ids = rows.map((row) => row.id);
   assert.equal(new Set(ids).size, ids.length, `Duplicate ${label} IDs`);
@@ -98,15 +100,31 @@ for (const r of data.releases) {
     `Version must preserve published display string: ${r.id}`,
   );
   if (r.eventType === 'checkpoint') {
-    assert.equal(r.dateBasis, 'checkpoint-commit', 'Label checkpoint dates');
+    assert.ok(['checkpoint-commit', 'repository-created'].includes(r.dateBasis), 'Label checkpoint date evidence');
     assert.ok(r.huggingFaceUrl, 'First-weight evidence needs a checkpoint repository');
-    const repository = r.huggingFaceUrl.toLowerCase().replace(/\/$/, '');
+    const repository = (r.dateRepositoryUrl ?? r.huggingFaceUrl).toLowerCase().replace(/\/$/, '');
+    huggingFaceTarget(repository);
     assert.ok(
       !firstWeightRepos.has(repository),
       `Later checkpoint commit is not another release: ${repository}`,
     );
     firstWeightRepos.add(repository);
-    assert.equal(r.status, 'First weights commit', 'Identify the first weight-bearing commit');
+    assert.equal(
+      r.status,
+      r.dateBasis === 'repository-created' ? 'Repository created (fallback)' : 'First weights commit',
+      'Identify the checkpoint date evidence',
+    );
+    if (r.dateBasis === 'repository-created') {
+      assert.match(r.note, /fallback/i, 'Explain repository-date fallbacks');
+      const mapping = imports.find((i) => 'https://huggingface.co/' + i.repository.toLowerCase() === repository);
+      assert.ok(mapping?.allowRepositoryCreated, 'Creation fallbacks require a reviewed mapping');
+      const expected = mapping.archivedMetadataUrl ?? 'https://huggingface.co/api/models/' + mapping.repository;
+      assert.equal(sources.get(r.sourceId).url, expected, 'Link the exact creation-date metadata');
+    }
+  }
+  if (r.dateBasis === 'documented-by') {
+    assert.equal(r.status, 'Available by', 'Do not present an availability bound as a launch day');
+    assert.match(r.note, /not.*(?:launch|release)/i, 'Explain the date bound');
   }
   assert.ok(Number.isFinite(r.score) && r.score >= 0, `Invalid score: ${r.id}`);
   assert.equal(numericVersion(r.version), r.score, `Score/version mismatch: ${r.id}`);
@@ -270,11 +288,14 @@ for (const row of pending) {
   assert.ok(!row.date, 'Pending candidates must not have invented dates');
   for (const url of row.sourceUrls) assert.equal(new URL(url).protocol, 'https:');
 }
+const resolutions = JSON.parse(await readFile(new URL('data/candidate-resolutions.json', root), 'utf8'));
+const evidence = JSON.parse(await readFile(new URL('data/evidence/candidate-review.json', root), 'utf8'));
+unique(resolutions, 'resolved candidate');
+validateCandidateReview(data, pending, resolutions, evidence);
 assert.equal(
   await readFile(new URL('docs/pending-releases.md', root), 'utf8'),
-  renderPending(data, pending),
+  renderPending(data, pending, resolutions, evidence),
 );
-const imports = JSON.parse(await readFile(new URL('data/checkpoint-imports.json', root), 'utf8'));
 assert.equal(
   new Set(imports.map((r) => r.repository)).size,
   imports.length,
@@ -288,6 +309,12 @@ for (const row of imports) {
   );
   huggingFaceTarget('https://huggingface.co/' + row.repository);
   numericVersion(row.version);
+  if (row.allowRepositoryCreated !== undefined)
+    assert.equal(typeof row.allowRepositoryCreated, 'boolean', 'Explicit creation fallback approval');
+  if (row.huggingFaceUrl) {
+    huggingFaceTarget(row.huggingFaceUrl);
+    assert.ok(row.weightsNote, 'Explain alternative weights links');
+  }
 }
 const stats = buildStats(data);
 assert.deepEqual(

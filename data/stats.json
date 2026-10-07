@@ -3,16 +3,16 @@
   "scope": "Model families only. Software controls are reported separately and excluded from all model statistics and ranks.",
   "familyCount": 58,
   "softwareControlCount": 3,
-  "releaseCount": 817,
+  "releaseCount": 834,
   "softwareReleaseCount": 49,
-  "sourceCount": 547,
+  "sourceCount": 563,
   "artificialAnalysisReleaseCount": 299,
   "artificialAnalysisProfileCount": 281,
-  "huggingFaceReleaseCount": 498,
-  "huggingFaceLinkCount": 478,
+  "huggingFaceReleaseCount": 505,
+  "huggingFaceLinkCount": 485,
   "releasesByWeightsStatus": {
-    "not-published": 316,
-    "open": 498,
+    "not-published": 326,
+    "open": 505,
     "unverified": 3
   },
   "firstEventDate": "2018-06-11",
@@ -23,34 +23,38 @@
     "2020": 1,
     "2021": 4,
     "2022": 3,
-    "2023": 102,
-    "2024": 216,
-    "2025": 251,
-    "2026": 236
+    "2023": 107,
+    "2024": 224,
+    "2025": 253,
+    "2026": 238
   },
   "releasesByEventType": {
-    "announcement": 44,
-    "api": 48,
-    "checkpoint": 136,
-    "preview": 92,
-    "release": 252,
+    "announcement": 48,
+    "api": 50,
+    "checkpoint": 141,
+    "preview": 94,
+    "release": 255,
     "research": 22,
-    "weights": 223
+    "weights": 224
   },
   "releasesByStatus": {
     "API available": 36,
     "API release": 8,
-    "Announced": 44,
+    "Announced": 47,
+    "Available by": 1,
     "Beta": 7,
     "Early access": 3,
     "Experimental": 8,
     "First weights commit": 136,
     "Limited access": 5,
+    "Limited availability": 2,
     "Limited preview": 6,
-    "Open weights": 224,
-    "Preview": 64,
+    "Open weights": 225,
+    "Preview": 66,
     "Public preview": 2,
-    "Released": 252,
+    "Released": 254,
+    "Repository created (fallback)": 5,
+    "Research access by request": 1,
     "Research announcement": 7,
     "Research": 15
   },
@@ -170,7 +174,7 @@
         }
       ],
       "trackedDays": 3040,
-      "daysAtNumberOne": 2348,
+      "daysAtNumberOne": 2341,
       "rankHistory": [
         {
           "date": "2018-06-11",
@@ -178,6 +182,14 @@
         },
         {
           "date": "2024-06-21",
+          "rank": 2
+        },
+        {
+          "date": "2024-11-07",
+          "rank": 3
+        },
+        {
+          "date": "2025-02-27",
           "rank": 2
         },
         {
@@ -193,7 +205,7 @@
           "rank": 1
         },
         {
-          "date": "2026-08-13",
+          "date": "2026-08-06",
           "rank": 2
         },
         {
@@ -202,7 +214,7 @@
         }
       ],
       "currentRank": 1,
-      "averageRank": 1.2608552631578946,
+      "averageRank": 1.3,
       "releaseRatePerYear": 6.968442434210526,
       "artificialAnalysisReleaseCount": 33,
       "huggingFaceReleaseCount": 2
@@ -335,6 +347,14 @@
           "rank": 3
         },
         {
+          "date": "2023-03-23",
+          "rank": 4
+        },
+        {
+          "date": "2023-04-18",
+          "rank": 3
+        },
+        {
           "date": "2023-05-10",
           "rank": 4
         },
@@ -365,6 +385,10 @@
         {
           "date": "2023-11-15",
           "rank": 8
+        },
+        {
+          "date": "2023-12-01",
+          "rank": 9
         },
         {
           "date": "2024-03-04",
@@ -431,7 +455,7 @@
           "rank": 5
         },
         {
-          "date": "2026-08-13",
+          "date": "2026-08-06",
           "rank": 6
         },
         {
@@ -444,7 +468,7 @@
         }
       ],
       "currentRank": 3,
-      "averageRank": 6.331542594013814,
+      "averageRank": 6.429009976976209,
       "releaseRatePerYear": 9.250193783576362,
       "artificialAnalysisReleaseCount": 28,
       "huggingFaceReleaseCount": 0
@@ -544,63 +568,67 @@
       "rankHistory": [
         {
           "date": "2023-12-06",
-          "rank": 15
+          "rank": 17
         },
         {
           "date": "2024-01-17",
-          "rank": 16
-        },
-        {
-          "date": "2024-02-04",
-          "rank": 17
-        },
-        {
-          "date": "2024-02-15",
-          "rank": 16
-        },
-        {
-          "date": "2024-04-09",
-          "rank": 17
-        },
-        {
-          "date": "2024-05-06",
           "rank": 18
         },
         {
-          "date": "2024-05-13",
+          "date": "2024-02-04",
           "rank": 19
         },
         {
-          "date": "2024-05-14",
+          "date": "2024-02-15",
+          "rank": 17
+        },
+        {
+          "date": "2024-03-23",
+          "rank": 18
+        },
+        {
+          "date": "2024-03-24",
+          "rank": 19
+        },
+        {
+          "date": "2024-04-09",
           "rank": 20
         },
         {
-          "date": "2024-06-06",
+          "date": "2024-05-06",
           "rank": 21
         },
         {
-          "date": "2024-07-24",
+          "date": "2024-05-13",
           "rank": 22
         },
         {
-          "date": "2024-08-13",
+          "date": "2024-05-14",
           "rank": 23
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-06-06",
           "rank": 24
         },
         {
-          "date": "2024-10-21",
+          "date": "2024-07-24",
           "rank": 25
         },
         {
-          "date": "2024-10-30",
+          "date": "2024-08-13",
           "rank": 26
         },
         {
-          "date": "2024-11-26",
+          "date": "2024-10-21",
           "rank": 27
+        },
+        {
+          "date": "2024-10-30",
+          "rank": 28
+        },
+        {
+          "date": "2024-11-26",
+          "rank": 29
         },
         {
           "date": "2024-12-11",
@@ -716,7 +744,7 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 23.30888030888031,
+      "averageRank": 24.18146718146718,
       "releaseRatePerYear": 18.332635135135135,
       "artificialAnalysisReleaseCount": 36,
       "huggingFaceReleaseCount": 0
@@ -816,78 +844,86 @@
       "rankHistory": [
         {
           "date": "2023-11-03",
-          "rank": 12
-        },
-        {
-          "date": "2023-11-15",
           "rank": 13
         },
         {
-          "date": "2023-11-22",
+          "date": "2023-11-15",
           "rank": 14
+        },
+        {
+          "date": "2023-11-22",
+          "rank": 15
         },
         {
           "date": "2023-11-28",
-          "rank": 15
+          "rank": 16
+        },
+        {
+          "date": "2023-12-01",
+          "rank": 17
         },
         {
           "date": "2024-01-17",
-          "rank": 16
+          "rank": 18
         },
         {
           "date": "2024-02-04",
-          "rank": 17
-        },
-        {
-          "date": "2024-02-15",
-          "rank": 18
-        },
-        {
-          "date": "2024-03-28",
-          "rank": 16
-        },
-        {
-          "date": "2024-04-09",
-          "rank": 17
-        },
-        {
-          "date": "2024-05-06",
-          "rank": 18
-        },
-        {
-          "date": "2024-05-13",
           "rank": 19
         },
         {
-          "date": "2024-05-14",
+          "date": "2024-02-15",
           "rank": 20
         },
         {
-          "date": "2024-06-06",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-07-24",
+          "date": "2024-03-24",
           "rank": 22
         },
         {
+          "date": "2024-03-28",
+          "rank": 19
+        },
+        {
+          "date": "2024-04-09",
+          "rank": 20
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 21
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 22
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 23
+        },
+        {
+          "date": "2024-06-06",
+          "rank": 24
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 25
+        },
+        {
           "date": "2024-08-13",
-          "rank": 14
+          "rank": 16
         },
         {
           "date": "2024-08-15",
-          "rank": 15
-        },
-        {
-          "date": "2024-09-05",
           "rank": 17
         },
         {
-          "date": "2024-09-19",
+          "date": "2024-09-05",
           "rank": 18
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-09-19",
           "rank": 19
         },
         {
@@ -960,7 +996,7 @@
         }
       ],
       "currentRank": 9,
-      "averageRank": 13.754911131898972,
+      "averageRank": 14.472404115996259,
       "releaseRatePerYear": 8.200018709073902,
       "artificialAnalysisReleaseCount": 14,
       "huggingFaceReleaseCount": 2
@@ -1039,20 +1075,24 @@
           "rank": 3
         },
         {
-          "date": "2023-04-18",
+          "date": "2023-03-23",
           "rank": 4
         },
         {
-          "date": "2023-05-10",
+          "date": "2023-04-18",
           "rank": 5
         },
         {
-          "date": "2023-06-25",
+          "date": "2023-05-10",
           "rank": 6
         },
         {
+          "date": "2023-06-25",
+          "rank": 7
+        },
+        {
           "date": "2023-07-07",
-          "rank": 8
+          "rank": 9
         },
         {
           "date": "2023-07-18",
@@ -1079,8 +1119,12 @@
           "rank": 9
         },
         {
-          "date": "2024-03-07",
+          "date": "2023-12-01",
           "rank": 10
+        },
+        {
+          "date": "2024-03-07",
+          "rank": 11
         },
         {
           "date": "2024-04-18",
@@ -1108,10 +1152,6 @@
         },
         {
           "date": "2025-04-05",
-          "rank": 4
-        },
-        {
-          "date": "2025-04-28",
           "rank": 5
         },
         {
@@ -1156,7 +1196,7 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 8.479182437547312,
+      "averageRank": 8.690386071158214,
       "releaseRatePerYear": 6.08276684330053,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 22
@@ -1244,90 +1284,102 @@
       "rankHistory": [
         {
           "date": "2023-09-27",
-          "rank": 21
+          "rank": 22
         },
         {
           "date": "2023-10-09",
-          "rank": 22
+          "rank": 23
         },
         {
           "date": "2023-11-02",
-          "rank": 24
-        },
-        {
-          "date": "2023-11-03",
           "rank": 25
         },
         {
-          "date": "2023-11-15",
+          "date": "2023-11-03",
           "rank": 26
         },
         {
-          "date": "2023-12-06",
+          "date": "2023-11-08",
           "rank": 27
         },
         {
-          "date": "2023-12-14",
+          "date": "2023-11-15",
           "rank": 28
         },
         {
-          "date": "2024-02-01",
+          "date": "2023-12-06",
+          "rank": 29
+        },
+        {
+          "date": "2023-12-14",
           "rank": 30
         },
         {
-          "date": "2024-02-12",
-          "rank": 31
-        },
-        {
-          "date": "2024-02-21",
+          "date": "2024-02-01",
           "rank": 32
         },
         {
+          "date": "2024-02-12",
+          "rank": 33
+        },
+        {
+          "date": "2024-02-21",
+          "rank": 34
+        },
+        {
           "date": "2024-02-26",
-          "rank": 18
-        },
-        {
-          "date": "2024-03-28",
-          "rank": 19
-        },
-        {
-          "date": "2024-04-05",
           "rank": 20
         },
         {
-          "date": "2024-04-09",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-05-06",
+          "date": "2024-03-24",
           "rank": 22
         },
         {
-          "date": "2024-05-13",
+          "date": "2024-03-28",
+          "rank": 23
+        },
+        {
+          "date": "2024-04-05",
           "rank": 24
         },
         {
-          "date": "2024-07-24",
-          "rank": 13
+          "date": "2024-04-09",
+          "rank": 25
         },
         {
-          "date": "2024-08-05",
+          "date": "2024-05-06",
+          "rank": 26
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 28
+        },
+        {
+          "date": "2024-07-24",
           "rank": 14
         },
         {
-          "date": "2024-08-15",
+          "date": "2024-08-05",
           "rank": 15
         },
         {
-          "date": "2024-09-05",
+          "date": "2024-08-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-08-15",
           "rank": 17
         },
         {
-          "date": "2024-09-19",
+          "date": "2024-09-05",
           "rank": 18
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-09-19",
           "rank": 19
         },
         {
@@ -1404,7 +1456,7 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 18.537974683544302,
+      "averageRank": 19.362567811934902,
       "releaseRatePerYear": 6.604746835443038,
       "artificialAnalysisReleaseCount": 16,
       "huggingFaceReleaseCount": 16
@@ -1492,78 +1544,94 @@
       "rankHistory": [
         {
           "date": "2023-08-03",
-          "rank": 10
-        },
-        {
-          "date": "2023-09-11",
           "rank": 11
         },
         {
-          "date": "2023-10-02",
+          "date": "2023-09-11",
           "rank": 12
+        },
+        {
+          "date": "2023-10-02",
+          "rank": 13
         },
         {
           "date": "2023-11-15",
-          "rank": 13
+          "rank": 14
         },
         {
           "date": "2023-11-22",
-          "rank": 14
+          "rank": 15
         },
         {
           "date": "2023-11-28",
-          "rank": 15
-        },
-        {
-          "date": "2024-01-17",
           "rank": 16
         },
         {
-          "date": "2024-04-09",
+          "date": "2023-12-01",
           "rank": 17
         },
         {
-          "date": "2024-05-06",
+          "date": "2024-01-17",
           "rank": 18
         },
         {
-          "date": "2024-05-13",
-          "rank": 19
-        },
-        {
-          "date": "2024-05-14",
-          "rank": 20
-        },
-        {
-          "date": "2024-06-06",
-          "rank": 12
-        },
-        {
-          "date": "2024-07-03",
-          "rank": 13
-        },
-        {
-          "date": "2024-08-05",
-          "rank": 14
-        },
-        {
-          "date": "2024-08-15",
-          "rank": 15
-        },
-        {
-          "date": "2024-09-05",
+          "date": "2024-02-04",
           "rank": 17
         },
         {
-          "date": "2024-09-19",
+          "date": "2024-03-23",
+          "rank": 18
+        },
+        {
+          "date": "2024-03-24",
+          "rank": 19
+        },
+        {
+          "date": "2024-04-09",
+          "rank": 20
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 21
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 22
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 23
+        },
+        {
+          "date": "2024-06-06",
+          "rank": 13
+        },
+        {
+          "date": "2024-07-03",
           "rank": 14
         },
         {
-          "date": "2024-10-07",
+          "date": "2024-08-05",
           "rank": 15
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-08-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-08-15",
+          "rank": 17
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 18
+        },
+        {
+          "date": "2024-09-19",
+          "rank": 15
+        },
+        {
+          "date": "2024-10-07",
           "rank": 16
         },
         {
@@ -1680,7 +1748,7 @@
         }
       ],
       "currentRank": 25,
-      "averageRank": 18.367786391042205,
+      "averageRank": 18.95090439276486,
       "releaseRatePerYear": 21.70691860465116,
       "artificialAnalysisReleaseCount": 25,
       "huggingFaceReleaseCount": 39
@@ -1762,70 +1830,82 @@
       "rankHistory": [
         {
           "date": "2023-11-02",
-          "rank": 12
+          "rank": 13
         },
         {
           "date": "2023-11-15",
-          "rank": 13
+          "rank": 14
         },
         {
           "date": "2023-11-22",
-          "rank": 14
+          "rank": 15
         },
         {
           "date": "2023-11-28",
-          "rank": 15
-        },
-        {
-          "date": "2024-01-17",
           "rank": 16
         },
         {
-          "date": "2024-02-04",
+          "date": "2023-12-01",
           "rank": 17
         },
         {
-          "date": "2024-02-15",
+          "date": "2024-01-17",
           "rank": 18
         },
         {
-          "date": "2024-03-28",
+          "date": "2024-02-04",
           "rank": 19
         },
         {
-          "date": "2024-04-05",
+          "date": "2024-02-15",
           "rank": 20
         },
         {
-          "date": "2024-04-09",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-05-06",
-          "rank": 12
+          "date": "2024-03-24",
+          "rank": 22
         },
         {
-          "date": "2024-07-03",
+          "date": "2024-03-28",
+          "rank": 23
+        },
+        {
+          "date": "2024-04-05",
+          "rank": 24
+        },
+        {
+          "date": "2024-04-09",
+          "rank": 25
+        },
+        {
+          "date": "2024-05-06",
           "rank": 13
         },
         {
-          "date": "2024-08-05",
+          "date": "2024-07-03",
           "rank": 14
+        },
+        {
+          "date": "2024-08-05",
+          "rank": 15
+        },
+        {
+          "date": "2024-08-06",
+          "rank": 16
         },
         {
           "date": "2024-08-15",
-          "rank": 15
+          "rank": 17
         },
         {
           "date": "2024-09-05",
-          "rank": 14
-        },
-        {
-          "date": "2024-10-07",
           "rank": 15
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-10-07",
           "rank": 16
         },
         {
@@ -1922,7 +2002,7 @@
         }
       ],
       "currentRank": 14,
-      "averageRank": 16.249532710280373,
+      "averageRank": 16.825233644859814,
       "releaseRatePerYear": 9.899095794392524,
       "artificialAnalysisReleaseCount": 21,
       "huggingFaceReleaseCount": 27
@@ -1998,115 +2078,123 @@
       "rankHistory": [
         {
           "date": "2023-10-09",
-          "rank": 12
-        },
-        {
-          "date": "2023-11-15",
           "rank": 13
         },
         {
-          "date": "2023-11-22",
+          "date": "2023-11-15",
           "rank": 14
         },
         {
-          "date": "2023-11-28",
+          "date": "2023-11-22",
           "rank": 15
         },
         {
-          "date": "2024-01-17",
+          "date": "2023-11-28",
           "rank": 16
         },
         {
-          "date": "2024-02-04",
+          "date": "2023-12-01",
           "rank": 17
         },
         {
-          "date": "2024-02-15",
+          "date": "2024-01-17",
           "rank": 18
         },
         {
-          "date": "2024-03-28",
+          "date": "2024-02-04",
           "rank": 19
         },
         {
-          "date": "2024-04-05",
+          "date": "2024-02-15",
           "rank": 20
         },
         {
-          "date": "2024-04-09",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-05-06",
+          "date": "2024-03-24",
           "rank": 22
         },
         {
-          "date": "2024-05-13",
+          "date": "2024-03-28",
+          "rank": 23
+        },
+        {
+          "date": "2024-04-05",
           "rank": 24
         },
         {
-          "date": "2024-07-24",
+          "date": "2024-04-09",
           "rank": 25
         },
         {
-          "date": "2024-08-22",
+          "date": "2024-05-06",
           "rank": 26
         },
         {
-          "date": "2024-10-09",
-          "rank": 27
-        },
-        {
-          "date": "2024-10-21",
+          "date": "2024-05-13",
           "rank": 28
         },
         {
+          "date": "2024-07-24",
+          "rank": 29
+        },
+        {
+          "date": "2024-08-22",
+          "rank": 30
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 31
+        },
+        {
           "date": "2024-10-30",
-          "rank": 29
-        },
-        {
-          "date": "2024-11-26",
-          "rank": 30
-        },
-        {
-          "date": "2024-12-20",
-          "rank": 31
-        },
-        {
-          "date": "2025-01-20",
-          "rank": 29
-        },
-        {
-          "date": "2025-03-06",
-          "rank": 30
-        },
-        {
-          "date": "2025-03-10",
-          "rank": 31
-        },
-        {
-          "date": "2025-05-11",
           "rank": 32
         },
         {
-          "date": "2025-05-20",
+          "date": "2024-11-26",
           "rank": 33
         },
         {
-          "date": "2025-06-09",
+          "date": "2024-12-20",
           "rank": 34
         },
         {
-          "date": "2025-06-25",
+          "date": "2025-01-20",
+          "rank": 31
+        },
+        {
+          "date": "2025-03-06",
+          "rank": 32
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 33
+        },
+        {
+          "date": "2025-05-11",
+          "rank": 34
+        },
+        {
+          "date": "2025-05-20",
           "rank": 35
         },
         {
-          "date": "2025-07-03",
+          "date": "2025-06-09",
           "rank": 36
         },
         {
-          "date": "2025-07-10",
+          "date": "2025-06-25",
           "rank": 37
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 38
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 39
         },
         {
           "date": "2025-07-11",
@@ -2198,7 +2286,7 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 28.275137111517367,
+      "averageRank": 29.857404021937842,
       "releaseRatePerYear": 6.67719378427788,
       "artificialAnalysisReleaseCount": 7,
       "huggingFaceReleaseCount": 7
@@ -2307,12 +2395,16 @@
           "rank": 3
         },
         {
-          "date": "2023-04-18",
+          "date": "2023-03-23",
           "rank": 4
         },
         {
-          "date": "2023-05-10",
+          "date": "2023-04-18",
           "rank": 5
+        },
+        {
+          "date": "2023-05-10",
+          "rank": 6
         },
         {
           "date": "2023-06-25",
@@ -2343,15 +2435,15 @@
           "rank": 2
         },
         {
-          "date": "2025-02-27",
+          "date": "2024-11-07",
           "rank": 3
         },
         {
-          "date": "2025-03-16",
+          "date": "2025-02-27",
           "rank": 4
         },
         {
-          "date": "2025-04-28",
+          "date": "2025-03-16",
           "rank": 5
         },
         {
@@ -2371,7 +2463,7 @@
           "rank": 3
         },
         {
-          "date": "2026-08-13",
+          "date": "2026-08-06",
           "rank": 4
         },
         {
@@ -2380,7 +2472,7 @@
         }
       ],
       "currentRank": 5,
-      "averageRank": 3.2069985214391328,
+      "averageRank": 3.341547560374569,
       "releaseRatePerYear": 5.220321586988664,
       "artificialAnalysisReleaseCount": 15,
       "huggingFaceReleaseCount": 26
@@ -2438,10 +2530,6 @@
       "rankHistory": [
         {
           "date": "2026-04-08",
-          "rank": 52
-        },
-        {
-          "date": "2026-04-14",
           "rank": 53
         },
         {
@@ -2466,7 +2554,7 @@
         }
       ],
       "currentRank": 58,
-      "averageRank": 56.09340659340659,
+      "averageRank": 56.12637362637363,
       "releaseRatePerYear": 8.027307692307692,
       "artificialAnalysisReleaseCount": 4,
       "huggingFaceReleaseCount": 0
@@ -2530,50 +2618,58 @@
       "rankHistory": [
         {
           "date": "2024-02-21",
-          "rank": 18
-        },
-        {
-          "date": "2024-03-28",
-          "rank": 19
-        },
-        {
-          "date": "2024-04-09",
           "rank": 20
         },
         {
-          "date": "2024-05-06",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-05-13",
+          "date": "2024-03-24",
+          "rank": 22
+        },
+        {
+          "date": "2024-03-28",
           "rank": 23
         },
         {
-          "date": "2024-05-14",
-          "rank": 12
+          "date": "2024-04-09",
+          "rank": 24
         },
         {
-          "date": "2024-07-03",
+          "date": "2024-05-06",
+          "rank": 25
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 27
+        },
+        {
+          "date": "2024-05-14",
           "rank": 13
         },
         {
-          "date": "2024-08-05",
+          "date": "2024-07-03",
           "rank": 14
         },
         {
-          "date": "2024-08-15",
+          "date": "2024-08-05",
           "rank": 15
         },
         {
-          "date": "2024-09-05",
+          "date": "2024-08-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-08-15",
           "rank": 17
         },
         {
-          "date": "2024-09-19",
+          "date": "2024-09-05",
           "rank": 18
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-09-19",
           "rank": 19
         },
         {
@@ -2686,7 +2782,7 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 18.169968717413973,
+      "averageRank": 18.636079249217936,
       "releaseRatePerYear": 13.71087591240876,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 36
@@ -2756,22 +2852,26 @@
       "rankHistory": [
         {
           "date": "2023-06-20",
-          "rank": 5
-        },
-        {
-          "date": "2023-06-25",
           "rank": 6
         },
         {
-          "date": "2023-07-07",
-          "rank": 8
+          "date": "2023-06-25",
+          "rank": 7
         },
         {
-          "date": "2023-07-18",
+          "date": "2023-07-07",
           "rank": 9
         },
         {
+          "date": "2023-07-18",
+          "rank": 10
+        },
+        {
           "date": "2023-07-19",
+          "rank": 11
+        },
+        {
+          "date": "2023-09-11",
           "rank": 10
         },
         {
@@ -2791,16 +2891,20 @@
           "rank": 14
         },
         {
-          "date": "2023-12-12",
-          "rank": 9
+          "date": "2023-12-01",
+          "rank": 15
         },
         {
-          "date": "2024-03-07",
+          "date": "2023-12-12",
           "rank": 10
         },
         {
-          "date": "2024-04-18",
+          "date": "2024-03-07",
           "rank": 11
+        },
+        {
+          "date": "2024-04-18",
+          "rank": 12
         },
         {
           "date": "2024-04-23",
@@ -2828,18 +2932,14 @@
         },
         {
           "date": "2024-12-12",
-          "rank": 2
-        },
-        {
-          "date": "2025-02-27",
           "rank": 3
         },
         {
-          "date": "2025-03-16",
+          "date": "2025-02-27",
           "rank": 4
         },
         {
-          "date": "2025-04-28",
+          "date": "2025-03-16",
           "rank": 5
         },
         {
@@ -2884,7 +2984,7 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 8.567634854771784,
+      "averageRank": 8.869709543568465,
       "releaseRatePerYear": 3.6372697095435687,
       "artificialAnalysisReleaseCount": 4,
       "huggingFaceReleaseCount": 12
@@ -2942,55 +3042,59 @@
       "rankHistory": [
         {
           "date": "2024-02-01",
-          "rank": 16
-        },
-        {
-          "date": "2024-02-04",
-          "rank": 17
-        },
-        {
-          "date": "2024-02-15",
           "rank": 18
         },
         {
-          "date": "2024-03-28",
+          "date": "2024-02-04",
           "rank": 19
         },
         {
-          "date": "2024-04-05",
+          "date": "2024-02-15",
           "rank": 20
         },
         {
-          "date": "2024-04-09",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-05-06",
+          "date": "2024-03-24",
           "rank": 22
         },
         {
-          "date": "2024-05-13",
+          "date": "2024-03-28",
+          "rank": 23
+        },
+        {
+          "date": "2024-04-05",
           "rank": 24
         },
         {
-          "date": "2024-07-24",
+          "date": "2024-04-09",
           "rank": 25
         },
         {
-          "date": "2024-08-22",
+          "date": "2024-05-06",
           "rank": 26
         },
         {
-          "date": "2024-10-09",
-          "rank": 27
-        },
-        {
-          "date": "2024-10-21",
+          "date": "2024-05-13",
           "rank": 28
         },
         {
-          "date": "2024-10-30",
+          "date": "2024-07-24",
           "rank": 29
+        },
+        {
+          "date": "2024-08-22",
+          "rank": 30
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 31
+        },
+        {
+          "date": "2024-10-30",
+          "rank": 32
         },
         {
           "date": "2024-11-26",
@@ -3078,7 +3182,7 @@
         }
       ],
       "currentRank": 30,
-      "averageRank": 25.40040858018386,
+      "averageRank": 26.46782431052094,
       "releaseRatePerYear": 1.865385597548519,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 5
@@ -3154,35 +3258,27 @@
       "rankHistory": [
         {
           "date": "2025-06-16",
-          "rank": 38
-        },
-        {
-          "date": "2025-07-03",
-          "rank": 39
-        },
-        {
-          "date": "2025-07-10",
-          "rank": 40
-        },
-        {
-          "date": "2025-07-25",
           "rank": 41
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-03",
           "rank": 42
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-10",
           "rank": 43
         },
         {
-          "date": "2025-10-01",
+          "date": "2025-07-31",
           "rank": 44
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 45
+        },
+        {
+          "date": "2025-10-01",
+          "rank": 46
         },
         {
           "date": "2025-10-27",
@@ -3258,7 +3354,7 @@
         }
       ],
       "currentRank": 30,
-      "averageRank": 35.53765690376569,
+      "averageRank": 36.16527196652719,
       "releaseRatePerYear": 5.348739539748954,
       "artificialAnalysisReleaseCount": 5,
       "huggingFaceReleaseCount": 6
@@ -3304,79 +3400,71 @@
       "rankHistory": [
         {
           "date": "2024-12-03",
-          "rank": 30
-        },
-        {
-          "date": "2024-12-20",
-          "rank": 31
-        },
-        {
-          "date": "2025-01-20",
-          "rank": 32
-        },
-        {
-          "date": "2025-01-22",
           "rank": 33
         },
         {
-          "date": "2025-03-10",
+          "date": "2024-12-20",
           "rank": 34
         },
         {
-          "date": "2025-05-10",
+          "date": "2025-01-20",
           "rank": 35
         },
         {
-          "date": "2025-05-11",
+          "date": "2025-01-22",
           "rank": 36
         },
         {
-          "date": "2025-05-20",
+          "date": "2025-03-10",
           "rank": 37
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-10",
           "rank": 38
         },
         {
-          "date": "2025-07-03",
+          "date": "2025-05-11",
           "rank": 39
         },
         {
-          "date": "2025-07-10",
+          "date": "2025-05-20",
           "rank": 40
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-06-09",
           "rank": 41
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-03",
           "rank": 42
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-10",
           "rank": 43
         },
         {
-          "date": "2025-10-01",
+          "date": "2025-07-31",
           "rank": 44
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 45
         },
         {
-          "date": "2025-10-27",
+          "date": "2025-10-01",
           "rank": 46
         },
         {
-          "date": "2025-11-06",
+          "date": "2025-10-27",
           "rank": 47
         },
         {
-          "date": "2025-11-07",
+          "date": "2025-11-06",
           "rank": 48
+        },
+        {
+          "date": "2025-11-07",
+          "rank": 49
         },
         {
           "date": "2025-12-02",
@@ -3448,7 +3536,7 @@
         }
       ],
       "currentRank": 51,
-      "averageRank": 40.17087667161962,
+      "averageRank": 41.539375928677565,
       "releaseRatePerYear": 4.8843722139673105,
       "artificialAnalysisReleaseCount": 7,
       "huggingFaceReleaseCount": 0
@@ -3555,8 +3643,12 @@
           "rank": 2
         },
         {
-          "date": "2025-02-27",
+          "date": "2024-11-07",
           "rank": 3
+        },
+        {
+          "date": "2025-02-27",
+          "rank": 4
         },
         {
           "date": "2025-03-16",
@@ -3591,7 +3683,7 @@
           "rank": 4
         },
         {
-          "date": "2026-08-13",
+          "date": "2026-08-06",
           "rank": 5
         },
         {
@@ -3600,7 +3692,7 @@
         }
       ],
       "currentRank": 6,
-      "averageRank": 1.965542521994135,
+      "averageRank": 2.0153958944281527,
       "releaseRatePerYear": 1.3388654692082111,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 4
@@ -3652,23 +3744,19 @@
       "rankHistory": [
         {
           "date": "2024-09-12",
-          "rank": 26
-        },
-        {
-          "date": "2024-10-09",
-          "rank": 27
+          "rank": 30
         },
         {
           "date": "2024-10-21",
-          "rank": 28
+          "rank": 31
         },
         {
           "date": "2024-10-30",
-          "rank": 29
+          "rank": 32
         },
         {
           "date": "2024-11-26",
-          "rank": 30
+          "rank": 33
         },
         {
           "date": "2024-12-20",
@@ -3680,10 +3768,6 @@
         },
         {
           "date": "2025-04-16",
-          "rank": 4
-        },
-        {
-          "date": "2025-04-28",
           "rank": 5
         },
         {
@@ -3728,7 +3812,7 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 12.671523178807947,
+      "averageRank": 13.116556291390728,
       "releaseRatePerYear": 6.288943708609271,
       "artificialAnalysisReleaseCount": 10,
       "huggingFaceReleaseCount": 0
@@ -3789,16 +3873,20 @@
           "rank": 3
         },
         {
-          "date": "2023-04-18",
+          "date": "2023-03-23",
           "rank": 4
         },
         {
-          "date": "2023-05-10",
+          "date": "2023-04-18",
           "rank": 5
         },
         {
-          "date": "2023-06-25",
+          "date": "2023-05-10",
           "rank": 6
+        },
+        {
+          "date": "2023-06-25",
+          "rank": 7
         },
         {
           "date": "2023-07-07",
@@ -3833,12 +3921,12 @@
           "rank": 2
         },
         {
-          "date": "2026-08-13",
+          "date": "2026-08-06",
           "rank": 3
         }
       ],
       "currentRank": 3,
-      "averageRank": 2.56353591160221,
+      "averageRank": 2.6202913108990455,
       "releaseRatePerYear": 1.1006805625313913,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 3
@@ -3896,67 +3984,59 @@
       "rankHistory": [
         {
           "date": "2025-04-30",
-          "rank": 34
-        },
-        {
-          "date": "2025-05-10",
-          "rank": 35
-        },
-        {
-          "date": "2025-05-11",
-          "rank": 36
-        },
-        {
-          "date": "2025-05-20",
           "rank": 37
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-10",
           "rank": 38
         },
         {
-          "date": "2025-07-03",
+          "date": "2025-05-11",
           "rank": 39
         },
         {
-          "date": "2025-07-10",
+          "date": "2025-05-20",
           "rank": 40
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-06-09",
           "rank": 41
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-03",
           "rank": 42
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-10",
           "rank": 43
         },
         {
-          "date": "2025-10-01",
+          "date": "2025-07-31",
           "rank": 44
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 45
         },
         {
-          "date": "2025-10-27",
+          "date": "2025-10-01",
           "rank": 46
         },
         {
-          "date": "2025-11-06",
+          "date": "2025-10-27",
           "rank": 47
         },
         {
-          "date": "2025-11-07",
+          "date": "2025-11-06",
           "rank": 48
         },
         {
-          "date": "2025-12-02",
+          "date": "2025-11-07",
           "rank": 49
+        },
+        {
+          "date": "2025-12-02",
+          "rank": 50
         },
         {
           "date": "2025-12-16",
@@ -4020,7 +4100,7 @@
         }
       ],
       "currentRank": 43,
-      "averageRank": 41.06285714285714,
+      "averageRank": 41.99809523809524,
       "releaseRatePerYear": 9.7398,
       "artificialAnalysisReleaseCount": 9,
       "huggingFaceReleaseCount": 9
@@ -4102,71 +4182,79 @@
       "rankHistory": [
         {
           "date": "2023-09-07",
-          "rank": 10
-        },
-        {
-          "date": "2023-09-11",
           "rank": 11
         },
         {
-          "date": "2023-10-02",
+          "date": "2023-09-11",
           "rank": 12
         },
         {
-          "date": "2023-11-15",
+          "date": "2023-10-02",
           "rank": 13
         },
         {
-          "date": "2023-11-22",
+          "date": "2023-11-15",
           "rank": 14
         },
         {
-          "date": "2023-11-28",
+          "date": "2023-11-22",
           "rank": 15
         },
         {
-          "date": "2024-01-17",
+          "date": "2023-11-28",
           "rank": 16
         },
         {
-          "date": "2024-02-04",
+          "date": "2023-12-01",
           "rank": 17
         },
         {
-          "date": "2024-02-15",
+          "date": "2024-01-17",
           "rank": 18
         },
         {
-          "date": "2024-03-28",
+          "date": "2024-02-04",
           "rank": 19
         },
         {
-          "date": "2024-04-05",
+          "date": "2024-02-15",
           "rank": 20
         },
         {
-          "date": "2024-04-09",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-05-06",
+          "date": "2024-03-24",
           "rank": 22
         },
         {
-          "date": "2024-05-13",
+          "date": "2024-03-28",
+          "rank": 23
+        },
+        {
+          "date": "2024-04-05",
           "rank": 24
         },
         {
-          "date": "2024-07-24",
+          "date": "2024-04-09",
           "rank": 25
         },
         {
-          "date": "2024-08-22",
+          "date": "2024-05-06",
           "rank": 26
         },
         {
-          "date": "2024-10-09",
-          "rank": 27
+          "date": "2024-05-13",
+          "rank": 28
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 29
+        },
+        {
+          "date": "2024-08-22",
+          "rank": 30
         },
         {
           "date": "2024-10-21",
@@ -4230,7 +4318,7 @@
         }
       ],
       "currentRank": 12,
-      "averageRank": 13.380106571936057,
+      "averageRank": 14.397868561278862,
       "releaseRatePerYear": 4.541203374777975,
       "artificialAnalysisReleaseCount": 9,
       "huggingFaceReleaseCount": 13
@@ -4291,15 +4379,15 @@
           "rank": 2
         },
         {
-          "date": "2025-02-27",
+          "date": "2024-11-07",
           "rank": 3
         },
         {
-          "date": "2025-03-16",
+          "date": "2025-02-27",
           "rank": 4
         },
         {
-          "date": "2025-04-28",
+          "date": "2025-03-16",
           "rank": 5
         },
         {
@@ -4344,7 +4432,7 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 6.131504257332072,
+      "averageRank": 6.294228949858089,
       "releaseRatePerYear": 2.7643708609271522,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 7
@@ -4408,58 +4496,50 @@
       "rankHistory": [
         {
           "date": "2025-01-22",
-          "rank": 29
-        },
-        {
-          "date": "2025-03-06",
-          "rank": 30
-        },
-        {
-          "date": "2025-03-10",
           "rank": 31
         },
         {
-          "date": "2025-05-11",
+          "date": "2025-03-06",
           "rank": 32
         },
         {
-          "date": "2025-05-20",
+          "date": "2025-03-10",
           "rank": 33
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-11",
           "rank": 34
         },
         {
-          "date": "2025-06-25",
-          "rank": 33
-        },
-        {
-          "date": "2025-07-03",
+          "date": "2025-05-20",
           "rank": 35
         },
         {
-          "date": "2025-07-10",
+          "date": "2025-06-09",
           "rank": 36
         },
         {
-          "date": "2025-07-11",
+          "date": "2025-06-25",
+          "rank": 35
+        },
+        {
+          "date": "2025-07-03",
           "rank": 37
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-07-10",
           "rank": 38
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-11",
           "rank": 39
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-31",
           "rank": 40
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 41
         },
         {
@@ -4536,7 +4616,7 @@
         }
       ],
       "currentRank": 48,
-      "averageRank": 39.829855537720704,
+      "averageRank": 40.56340288924559,
       "releaseRatePerYear": 5.862640449438203,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0
@@ -4585,8 +4665,12 @@
           "rank": 3
         },
         {
-          "date": "2023-04-18",
+          "date": "2023-03-23",
           "rank": 4
+        },
+        {
+          "date": "2023-04-18",
+          "rank": 5
         },
         {
           "date": "2023-05-10",
@@ -4617,39 +4701,43 @@
           "rank": 9
         },
         {
-          "date": "2024-03-07",
+          "date": "2023-12-01",
           "rank": 10
         },
         {
-          "date": "2024-04-18",
+          "date": "2024-03-07",
           "rank": 11
         },
         {
-          "date": "2024-04-23",
+          "date": "2024-04-18",
           "rank": 12
         },
         {
-          "date": "2024-07-03",
+          "date": "2024-04-23",
           "rank": 13
         },
         {
-          "date": "2024-08-05",
+          "date": "2024-07-03",
           "rank": 14
         },
         {
-          "date": "2024-08-15",
+          "date": "2024-08-05",
           "rank": 15
         },
         {
-          "date": "2024-09-05",
+          "date": "2024-08-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-08-15",
           "rank": 17
         },
         {
-          "date": "2024-09-19",
+          "date": "2024-09-05",
           "rank": 18
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-09-19",
           "rank": 19
         },
         {
@@ -4774,7 +4862,7 @@
         }
       ],
       "currentRank": 51,
-      "averageRank": 18.326654523375836,
+      "averageRank": 18.564055859137827,
       "releaseRatePerYear": 0.4435245901639344,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 0
@@ -4820,142 +4908,142 @@
       "rankHistory": [
         {
           "date": "2023-11-02",
-          "rank": 12
-        },
-        {
-          "date": "2023-11-15",
           "rank": 13
         },
         {
-          "date": "2023-11-22",
+          "date": "2023-11-15",
           "rank": 14
         },
         {
-          "date": "2023-11-28",
+          "date": "2023-11-22",
           "rank": 15
         },
         {
-          "date": "2024-01-17",
+          "date": "2023-11-28",
           "rank": 16
         },
         {
-          "date": "2024-02-04",
+          "date": "2023-12-01",
           "rank": 17
         },
         {
-          "date": "2024-02-15",
+          "date": "2024-01-17",
           "rank": 18
         },
         {
+          "date": "2024-02-04",
+          "rank": 19
+        },
+        {
+          "date": "2024-02-15",
+          "rank": 20
+        },
+        {
+          "date": "2024-03-23",
+          "rank": 21
+        },
+        {
+          "date": "2024-03-24",
+          "rank": 22
+        },
+        {
           "date": "2024-03-28",
-          "rank": 19
-        },
-        {
-          "date": "2024-04-05",
-          "rank": 20
-        },
-        {
-          "date": "2024-04-09",
-          "rank": 21
-        },
-        {
-          "date": "2024-05-06",
-          "rank": 22
-        },
-        {
-          "date": "2024-05-13",
-          "rank": 19
-        },
-        {
-          "date": "2024-05-14",
-          "rank": 20
-        },
-        {
-          "date": "2024-06-06",
-          "rank": 21
-        },
-        {
-          "date": "2024-07-24",
-          "rank": 22
-        },
-        {
-          "date": "2024-08-13",
           "rank": 23
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-04-05",
           "rank": 24
         },
         {
-          "date": "2024-10-21",
+          "date": "2024-04-09",
           "rank": 25
         },
         {
-          "date": "2024-10-30",
+          "date": "2024-05-06",
           "rank": 26
         },
         {
-          "date": "2024-11-26",
+          "date": "2024-05-13",
+          "rank": 22
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 23
+        },
+        {
+          "date": "2024-06-06",
+          "rank": 24
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 25
+        },
+        {
+          "date": "2024-08-13",
+          "rank": 26
+        },
+        {
+          "date": "2024-10-21",
           "rank": 27
         },
         {
-          "date": "2024-12-11",
+          "date": "2024-10-30",
           "rank": 28
         },
         {
-          "date": "2024-12-20",
+          "date": "2024-11-26",
           "rank": 29
         },
         {
-          "date": "2025-03-06",
+          "date": "2024-12-11",
           "rank": 30
         },
         {
-          "date": "2025-03-10",
+          "date": "2024-12-20",
           "rank": 31
         },
         {
-          "date": "2025-05-11",
+          "date": "2025-03-06",
           "rank": 32
         },
         {
-          "date": "2025-05-20",
+          "date": "2025-03-10",
           "rank": 33
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-11",
           "rank": 34
         },
         {
-          "date": "2025-06-25",
+          "date": "2025-05-20",
           "rank": 35
         },
         {
-          "date": "2025-07-03",
+          "date": "2025-06-09",
           "rank": 36
         },
         {
-          "date": "2025-07-10",
+          "date": "2025-06-25",
           "rank": 37
         },
         {
-          "date": "2025-07-11",
+          "date": "2025-07-03",
           "rank": 38
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-07-10",
           "rank": 39
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-11",
           "rank": 40
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-31",
           "rank": 41
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 42
         },
         {
@@ -5016,7 +5104,7 @@
         }
       ],
       "currentRank": 56,
-      "averageRank": 34.46355140186916,
+      "averageRank": 35.93271028037383,
       "releaseRatePerYear": 1.3653925233644861,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 4
@@ -5080,62 +5168,62 @@
       "rankHistory": [
         {
           "date": "2023-09-20",
-          "rank": 11
+          "rank": 12
         },
         {
           "date": "2023-10-02",
-          "rank": 12
+          "rank": 13
         },
         {
           "date": "2023-11-15",
-          "rank": 13
+          "rank": 14
         },
         {
           "date": "2023-11-22",
-          "rank": 14
+          "rank": 15
         },
         {
           "date": "2023-11-28",
-          "rank": 15
+          "rank": 16
+        },
+        {
+          "date": "2023-12-01",
+          "rank": 17
         },
         {
           "date": "2024-01-17",
-          "rank": 9
-        },
-        {
-          "date": "2024-03-07",
           "rank": 10
         },
         {
-          "date": "2024-04-18",
+          "date": "2024-03-07",
           "rank": 11
+        },
+        {
+          "date": "2024-04-18",
+          "rank": 12
         },
         {
           "date": "2024-04-23",
-          "rank": 12
-        },
-        {
-          "date": "2024-07-03",
-          "rank": 11
-        },
-        {
-          "date": "2024-08-05",
-          "rank": 12
-        },
-        {
-          "date": "2024-08-15",
           "rank": 13
         },
         {
-          "date": "2024-09-05",
+          "date": "2024-07-03",
+          "rank": 12
+        },
+        {
+          "date": "2024-08-05",
+          "rank": 13
+        },
+        {
+          "date": "2024-08-06",
           "rank": 14
         },
         {
-          "date": "2024-10-07",
+          "date": "2024-08-15",
           "rank": 15
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-10-07",
           "rank": 16
         },
         {
@@ -5232,7 +5320,7 @@
         }
       ],
       "currentRank": 27,
-      "averageRank": 16.60557053009883,
+      "averageRank": 17.02066486972147,
       "releaseRatePerYear": 3.937924528301887,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 12
@@ -5305,24 +5393,28 @@
           "rank": 3
         },
         {
-          "date": "2023-04-18",
+          "date": "2023-03-23",
           "rank": 4
         },
         {
-          "date": "2023-05-10",
+          "date": "2023-04-18",
           "rank": 5
         },
         {
-          "date": "2023-06-25",
+          "date": "2023-05-10",
           "rank": 6
         },
         {
+          "date": "2023-06-25",
+          "rank": 7
+        },
+        {
           "date": "2023-07-07",
-          "rank": 8
+          "rank": 9
         },
         {
           "date": "2023-07-18",
-          "rank": 9
+          "rank": 10
         },
         {
           "date": "2023-07-19",
@@ -5349,20 +5441,24 @@
           "rank": 9
         },
         {
-          "date": "2024-03-07",
+          "date": "2023-12-01",
           "rank": 10
         },
         {
-          "date": "2024-04-18",
+          "date": "2024-03-07",
           "rank": 11
         },
         {
-          "date": "2024-04-23",
+          "date": "2024-04-18",
           "rank": 12
         },
         {
-          "date": "2024-07-03",
+          "date": "2024-04-23",
           "rank": 13
+        },
+        {
+          "date": "2024-07-03",
+          "rank": 14
         },
         {
           "date": "2024-08-05",
@@ -5454,7 +5550,7 @@
         }
       ],
       "currentRank": 10,
-      "averageRank": 7.387940841865756,
+      "averageRank": 7.59613196814562,
       "releaseRatePerYear": 1.6620819112627987,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 6
@@ -5463,7 +5559,7 @@
       "id": "minicpm",
       "name": "MiniCPM",
       "kind": "model",
-      "releaseCount": 13,
+      "releaseCount": 14,
       "versionCount": 10,
       "highestVersion": "5",
       "highestScore": 5,
@@ -5493,6 +5589,12 @@
           "score": 2,
           "version": "2",
           "releaseId": "minicpm-openbmb-minicpm-v-2-checkpoint-2024-04-09"
+        },
+        {
+          "date": "2024-08-06",
+          "score": 2.6,
+          "version": "2.6",
+          "releaseId": "minicpm-v-2-6-weights-2024-08-06"
         },
         {
           "date": "2024-09-05",
@@ -5530,47 +5632,59 @@
       "rankHistory": [
         {
           "date": "2024-02-01",
-          "rank": 16
-        },
-        {
-          "date": "2024-02-04",
-          "rank": 17
-        },
-        {
-          "date": "2024-02-15",
           "rank": 18
         },
         {
-          "date": "2024-03-28",
+          "date": "2024-02-04",
           "rank": 19
         },
         {
-          "date": "2024-04-05",
+          "date": "2024-02-15",
           "rank": 20
         },
         {
-          "date": "2024-04-09",
-          "rank": 10
+          "date": "2024-03-23",
+          "rank": 21
         },
         {
-          "date": "2024-04-18",
+          "date": "2024-03-24",
+          "rank": 22
+        },
+        {
+          "date": "2024-03-28",
+          "rank": 23
+        },
+        {
+          "date": "2024-04-05",
+          "rank": 24
+        },
+        {
+          "date": "2024-04-09",
           "rank": 11
         },
         {
-          "date": "2024-04-23",
+          "date": "2024-04-18",
           "rank": 12
         },
         {
-          "date": "2024-07-03",
+          "date": "2024-04-23",
           "rank": 13
         },
         {
-          "date": "2024-08-05",
+          "date": "2024-07-03",
           "rank": 14
         },
         {
-          "date": "2024-08-15",
+          "date": "2024-08-05",
           "rank": 15
+        },
+        {
+          "date": "2024-08-06",
+          "rank": 13
+        },
+        {
+          "date": "2024-08-15",
+          "rank": 14
         },
         {
           "date": "2024-09-05",
@@ -5629,7 +5743,7 @@
           "rank": 5
         },
         {
-          "date": "2026-08-13",
+          "date": "2026-08-06",
           "rank": 6
         },
         {
@@ -5638,17 +5752,17 @@
         }
       ],
       "currentRank": 7,
-      "averageRank": 9.626149131767109,
-      "releaseRatePerYear": 4.850002553626149,
+      "averageRank": 9.896833503575076,
+      "releaseRatePerYear": 5.223079673135853,
       "artificialAnalysisReleaseCount": 2,
-      "huggingFaceReleaseCount": 13
+      "huggingFaceReleaseCount": 14
     },
     {
       "id": "step",
       "name": "Step",
       "kind": "model",
-      "releaseCount": 4,
-      "versionCount": 4,
+      "releaseCount": 7,
+      "versionCount": 6,
       "highestVersion": "5",
       "highestScore": 5,
       "firstReleaseAtHighestVersion": {
@@ -5663,9 +5777,15 @@
         "score": 5,
         "date": "2026-09-20"
       },
-      "firstEventDate": "2025-07-25",
+      "firstEventDate": "2024-03-23",
       "lastEventDate": "2026-09-20",
       "versionHistory": [
+        {
+          "date": "2024-03-23",
+          "score": 2,
+          "version": "2",
+          "releaseId": "step-step-2-preview-2024-03-23"
+        },
         {
           "date": "2025-07-25",
           "score": 3,
@@ -5691,9 +5811,81 @@
           "releaseId": "step-step-5-preview-hosted-release-2026-09-20"
         }
       ],
-      "trackedDays": 439,
+      "trackedDays": 928,
       "daysAtNumberOne": 0,
       "rankHistory": [
+        {
+          "date": "2024-03-23",
+          "rank": 11
+        },
+        {
+          "date": "2024-04-18",
+          "rank": 12
+        },
+        {
+          "date": "2024-04-23",
+          "rank": 13
+        },
+        {
+          "date": "2024-07-03",
+          "rank": 14
+        },
+        {
+          "date": "2024-08-05",
+          "rank": 15
+        },
+        {
+          "date": "2024-08-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-08-15",
+          "rank": 17
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 18
+        },
+        {
+          "date": "2024-09-19",
+          "rank": 19
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 20
+        },
+        {
+          "date": "2024-11-18",
+          "rank": 21
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 22
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 23
+        },
+        {
+          "date": "2025-02-19",
+          "rank": 24
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 26
+        },
+        {
+          "date": "2025-03-25",
+          "rank": 27
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 28
+        },
+        {
+          "date": "2025-07-08",
+          "rank": 29
+        },
         {
           "date": "2025-07-25",
           "rank": 19
@@ -5764,8 +5956,8 @@
         }
       ],
       "currentRank": 7,
-      "averageRank": 21.325740318906607,
-      "releaseRatePerYear": 3.3279498861047836,
+      "averageRank": 20.782327586206897,
+      "releaseRatePerYear": 2.7550619612068967,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 3
     },
@@ -5834,54 +6026,46 @@
       "rankHistory": [
         {
           "date": "2025-04-15",
-          "rank": 34
-        },
-        {
-          "date": "2025-05-10",
-          "rank": 31
-        },
-        {
-          "date": "2025-05-11",
-          "rank": 32
-        },
-        {
-          "date": "2025-05-20",
-          "rank": 33
-        },
-        {
-          "date": "2025-06-09",
-          "rank": 34
-        },
-        {
-          "date": "2025-06-25",
-          "rank": 35
-        },
-        {
-          "date": "2025-07-03",
-          "rank": 36
-        },
-        {
-          "date": "2025-07-10",
           "rank": 37
         },
         {
-          "date": "2025-07-11",
+          "date": "2025-05-10",
+          "rank": 33
+        },
+        {
+          "date": "2025-05-11",
+          "rank": 34
+        },
+        {
+          "date": "2025-05-20",
+          "rank": 35
+        },
+        {
+          "date": "2025-06-09",
+          "rank": 36
+        },
+        {
+          "date": "2025-06-25",
+          "rank": 37
+        },
+        {
+          "date": "2025-07-03",
           "rank": 38
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-07-10",
           "rank": 39
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-11",
           "rank": 40
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-31",
           "rank": 41
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 42
         },
         {
@@ -5966,7 +6150,7 @@
         }
       ],
       "currentRank": 30,
-      "averageRank": 38.83888888888889,
+      "averageRank": 39.42407407407408,
       "releaseRatePerYear": 5.411,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 7
@@ -6018,98 +6202,110 @@
       "rankHistory": [
         {
           "date": "2023-05-25",
-          "rank": 5
-        },
-        {
-          "date": "2023-06-25",
           "rank": 6
         },
         {
-          "date": "2023-07-07",
-          "rank": 8
+          "date": "2023-06-25",
+          "rank": 7
         },
         {
-          "date": "2023-07-18",
+          "date": "2023-07-07",
           "rank": 9
         },
         {
-          "date": "2023-07-19",
+          "date": "2023-07-18",
           "rank": 10
         },
         {
-          "date": "2023-09-11",
+          "date": "2023-07-19",
           "rank": 11
         },
         {
-          "date": "2023-10-02",
+          "date": "2023-09-11",
           "rank": 12
+        },
+        {
+          "date": "2023-10-02",
+          "rank": 13
         },
         {
           "date": "2023-11-15",
-          "rank": 13
+          "rank": 14
         },
         {
           "date": "2023-11-22",
-          "rank": 14
+          "rank": 15
         },
         {
           "date": "2023-11-28",
-          "rank": 15
-        },
-        {
-          "date": "2024-01-17",
           "rank": 16
         },
         {
-          "date": "2024-02-04",
+          "date": "2023-12-01",
           "rank": 17
         },
         {
-          "date": "2024-02-15",
+          "date": "2024-01-17",
           "rank": 18
         },
         {
-          "date": "2024-03-28",
+          "date": "2024-02-04",
           "rank": 19
         },
         {
-          "date": "2024-04-05",
+          "date": "2024-02-15",
           "rank": 20
         },
         {
-          "date": "2024-04-09",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-05-06",
+          "date": "2024-03-24",
           "rank": 22
         },
         {
-          "date": "2024-05-13",
-          "rank": 12
+          "date": "2024-03-28",
+          "rank": 23
         },
         {
-          "date": "2024-07-03",
+          "date": "2024-04-05",
+          "rank": 24
+        },
+        {
+          "date": "2024-04-09",
+          "rank": 25
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 26
+        },
+        {
+          "date": "2024-05-13",
           "rank": 13
         },
         {
-          "date": "2024-08-05",
+          "date": "2024-07-03",
           "rank": 14
         },
         {
-          "date": "2024-08-15",
+          "date": "2024-08-05",
           "rank": 15
         },
         {
-          "date": "2024-09-05",
+          "date": "2024-08-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-08-15",
           "rank": 17
         },
         {
-          "date": "2024-09-19",
+          "date": "2024-09-05",
           "rank": 18
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-09-19",
           "rank": 19
         },
         {
@@ -6218,7 +6414,7 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 18.754670999187653,
+      "averageRank": 19.402924451665314,
       "releaseRatePerYear": 1.1868155970755483,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 4
@@ -6282,98 +6478,86 @@
       "rankHistory": [
         {
           "date": "2024-03-28",
-          "rank": 19
-        },
-        {
-          "date": "2024-04-05",
-          "rank": 20
-        },
-        {
-          "date": "2024-04-09",
-          "rank": 21
-        },
-        {
-          "date": "2024-05-06",
-          "rank": 22
-        },
-        {
-          "date": "2024-05-13",
-          "rank": 24
-        },
-        {
-          "date": "2024-07-24",
-          "rank": 25
-        },
-        {
-          "date": "2024-08-22",
           "rank": 23
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-04-05",
           "rank": 24
         },
         {
-          "date": "2024-10-21",
+          "date": "2024-04-09",
           "rank": 25
         },
         {
-          "date": "2024-10-30",
+          "date": "2024-05-06",
           "rank": 26
         },
         {
-          "date": "2024-11-26",
-          "rank": 27
-        },
-        {
-          "date": "2024-12-11",
+          "date": "2024-05-13",
           "rank": 28
         },
         {
-          "date": "2024-12-20",
+          "date": "2024-07-24",
           "rank": 29
         },
         {
-          "date": "2025-03-10",
+          "date": "2024-08-22",
+          "rank": 26
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 27
+        },
+        {
+          "date": "2024-10-30",
+          "rank": 28
+        },
+        {
+          "date": "2024-11-26",
+          "rank": 29
+        },
+        {
+          "date": "2024-12-11",
           "rank": 30
         },
         {
-          "date": "2025-05-11",
+          "date": "2024-12-20",
           "rank": 31
         },
         {
-          "date": "2025-05-20",
+          "date": "2025-03-10",
           "rank": 32
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-11",
           "rank": 33
         },
         {
-          "date": "2025-07-03",
+          "date": "2025-05-20",
           "rank": 34
         },
         {
-          "date": "2025-07-10",
+          "date": "2025-06-09",
           "rank": 35
         },
         {
-          "date": "2025-07-11",
+          "date": "2025-07-03",
           "rank": 36
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-07-10",
           "rank": 37
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-11",
           "rank": 38
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-31",
           "rank": 39
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 40
         },
         {
@@ -6466,7 +6650,7 @@
         }
       ],
       "currentRank": 51,
-      "averageRank": 34.53087757313109,
+      "averageRank": 36.0465872156013,
       "releaseRatePerYear": 3.5614111592632716,
       "artificialAnalysisReleaseCount": 6,
       "huggingFaceReleaseCount": 9
@@ -6524,59 +6708,63 @@
       "rankHistory": [
         {
           "date": "2023-06-22",
-          "rank": 5
-        },
-        {
-          "date": "2023-06-25",
           "rank": 6
         },
         {
-          "date": "2023-07-07",
-          "rank": 8
+          "date": "2023-06-25",
+          "rank": 7
         },
         {
-          "date": "2023-07-18",
+          "date": "2023-07-07",
           "rank": 9
         },
         {
-          "date": "2023-07-19",
+          "date": "2023-07-18",
           "rank": 10
         },
         {
-          "date": "2023-09-11",
+          "date": "2023-07-19",
           "rank": 11
         },
         {
-          "date": "2023-10-02",
+          "date": "2023-09-11",
           "rank": 12
         },
         {
-          "date": "2023-11-15",
+          "date": "2023-10-02",
           "rank": 13
+        },
+        {
+          "date": "2023-11-15",
+          "rank": 14
         },
         {
           "date": "2023-11-22",
           "rank": 9
         },
         {
-          "date": "2024-04-18",
+          "date": "2023-12-01",
           "rank": 10
         },
         {
-          "date": "2024-04-23",
+          "date": "2024-04-18",
           "rank": 11
         },
         {
-          "date": "2024-08-05",
+          "date": "2024-04-23",
           "rank": 12
         },
         {
-          "date": "2024-08-15",
+          "date": "2024-08-05",
           "rank": 13
         },
         {
-          "date": "2024-09-05",
+          "date": "2024-08-06",
           "rank": 14
+        },
+        {
+          "date": "2024-08-15",
+          "rank": 15
         },
         {
           "date": "2024-10-07",
@@ -6684,7 +6872,7 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 17.117206982543642,
+      "averageRank": 17.527847049044055,
       "releaseRatePerYear": 1.2144389027431421,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0
@@ -6736,59 +6924,55 @@
       "rankHistory": [
         {
           "date": "2024-09-30",
-          "rank": 26
-        },
-        {
-          "date": "2024-10-09",
-          "rank": 27
-        },
-        {
-          "date": "2024-10-21",
-          "rank": 28
-        },
-        {
-          "date": "2024-10-30",
-          "rank": 29
-        },
-        {
-          "date": "2024-11-26",
           "rank": 30
         },
         {
-          "date": "2024-12-20",
+          "date": "2024-10-21",
           "rank": 31
         },
         {
-          "date": "2025-01-20",
+          "date": "2024-10-30",
           "rank": 32
         },
         {
-          "date": "2025-01-22",
+          "date": "2024-11-26",
           "rank": 33
         },
         {
-          "date": "2025-03-10",
+          "date": "2024-12-20",
           "rank": 34
         },
         {
-          "date": "2025-05-10",
+          "date": "2025-01-20",
           "rank": 35
         },
         {
-          "date": "2025-05-11",
+          "date": "2025-01-22",
           "rank": 36
         },
         {
-          "date": "2025-05-20",
+          "date": "2025-03-10",
           "rank": 37
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-10",
           "rank": 38
         },
         {
-          "date": "2025-07-03",
+          "date": "2025-05-11",
           "rank": 39
+        },
+        {
+          "date": "2025-05-20",
+          "rank": 40
+        },
+        {
+          "date": "2025-06-09",
+          "rank": 41
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 42
         },
         {
           "date": "2025-07-10",
@@ -6868,7 +7052,7 @@
         }
       ],
       "currentRank": 45,
-      "averageRank": 34.69606512890095,
+      "averageRank": 35.86024423337856,
       "releaseRatePerYear": 3.469060379918589,
       "artificialAnalysisReleaseCount": 6,
       "huggingFaceReleaseCount": 6
@@ -6932,63 +7116,71 @@
       "rankHistory": [
         {
           "date": "2023-06-03",
-          "rank": 5
-        },
-        {
-          "date": "2023-06-25",
           "rank": 6
         },
         {
-          "date": "2023-07-07",
-          "rank": 8
+          "date": "2023-06-25",
+          "rank": 7
         },
         {
-          "date": "2023-07-18",
+          "date": "2023-07-07",
           "rank": 9
         },
         {
-          "date": "2023-07-19",
+          "date": "2023-07-18",
           "rank": 10
         },
         {
-          "date": "2023-09-11",
+          "date": "2023-07-19",
           "rank": 11
         },
         {
-          "date": "2023-10-02",
+          "date": "2023-09-11",
           "rank": 12
         },
         {
-          "date": "2023-11-15",
+          "date": "2023-10-02",
           "rank": 13
         },
         {
-          "date": "2023-11-22",
+          "date": "2023-11-15",
           "rank": 14
+        },
+        {
+          "date": "2023-11-22",
+          "rank": 15
         },
         {
           "date": "2023-11-28",
           "rank": 9
         },
         {
-          "date": "2024-03-07",
+          "date": "2023-12-01",
           "rank": 10
         },
         {
-          "date": "2024-04-18",
+          "date": "2024-03-07",
           "rank": 11
         },
         {
-          "date": "2024-04-23",
+          "date": "2024-04-18",
           "rank": 12
         },
         {
-          "date": "2024-07-03",
+          "date": "2024-04-23",
           "rank": 13
         },
         {
-          "date": "2024-08-05",
+          "date": "2024-07-03",
           "rank": 14
+        },
+        {
+          "date": "2024-08-05",
+          "rank": 15
+        },
+        {
+          "date": "2024-08-06",
+          "rank": 16
         },
         {
           "date": "2024-08-15",
@@ -7068,7 +7260,7 @@
         }
       ],
       "currentRank": 11,
-      "averageRank": 10.824058919803601,
+      "averageRank": 11.188216039279869,
       "releaseRatePerYear": 2.9888911620294603,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 10
@@ -7138,7 +7330,7 @@
       "rankHistory": [
         {
           "date": "2023-07-01",
-          "rank": 6
+          "rank": 7
         },
         {
           "date": "2023-07-07",
@@ -7246,7 +7438,7 @@
         }
       ],
       "currentRank": 26,
-      "averageRank": 11.322445561139029,
+      "averageRank": 11.32747068676717,
       "releaseRatePerYear": 3.0589824120603017,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 10
@@ -7298,174 +7490,170 @@
       "rankHistory": [
         {
           "date": "2023-09-07",
-          "rank": 10
-        },
-        {
-          "date": "2023-09-11",
           "rank": 11
         },
         {
-          "date": "2023-10-02",
+          "date": "2023-09-11",
           "rank": 12
         },
         {
-          "date": "2023-11-15",
+          "date": "2023-10-02",
           "rank": 13
         },
         {
-          "date": "2023-11-22",
+          "date": "2023-11-15",
           "rank": 14
         },
         {
-          "date": "2023-11-28",
+          "date": "2023-11-22",
           "rank": 15
         },
         {
-          "date": "2024-01-17",
+          "date": "2023-11-28",
           "rank": 16
         },
         {
-          "date": "2024-02-04",
+          "date": "2023-12-01",
           "rank": 17
         },
         {
-          "date": "2024-02-15",
+          "date": "2024-01-17",
           "rank": 18
         },
         {
-          "date": "2024-03-28",
+          "date": "2024-02-04",
           "rank": 19
         },
         {
-          "date": "2024-04-05",
+          "date": "2024-02-15",
           "rank": 20
         },
         {
-          "date": "2024-04-09",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-05-06",
+          "date": "2024-03-24",
           "rank": 22
         },
         {
-          "date": "2024-05-13",
+          "date": "2024-03-28",
+          "rank": 23
+        },
+        {
+          "date": "2024-04-05",
           "rank": 24
         },
         {
-          "date": "2024-07-24",
+          "date": "2024-04-09",
           "rank": 25
         },
         {
-          "date": "2024-08-22",
+          "date": "2024-05-06",
           "rank": 26
         },
         {
-          "date": "2024-10-09",
-          "rank": 27
-        },
-        {
-          "date": "2024-10-21",
+          "date": "2024-05-13",
           "rank": 28
         },
         {
-          "date": "2024-10-30",
+          "date": "2024-07-24",
           "rank": 29
         },
         {
-          "date": "2024-11-26",
+          "date": "2024-08-22",
           "rank": 30
         },
         {
-          "date": "2024-12-20",
+          "date": "2024-10-21",
           "rank": 31
         },
         {
-          "date": "2025-01-20",
+          "date": "2024-10-30",
           "rank": 32
         },
         {
-          "date": "2025-01-22",
+          "date": "2024-11-26",
           "rank": 33
         },
         {
-          "date": "2025-03-10",
+          "date": "2024-12-20",
           "rank": 34
         },
         {
-          "date": "2025-05-10",
+          "date": "2025-01-20",
           "rank": 35
         },
         {
-          "date": "2025-05-11",
+          "date": "2025-01-22",
           "rank": 36
         },
         {
-          "date": "2025-05-20",
+          "date": "2025-03-10",
           "rank": 37
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-10",
           "rank": 38
         },
         {
-          "date": "2025-07-03",
+          "date": "2025-05-11",
           "rank": 39
         },
         {
-          "date": "2025-07-10",
+          "date": "2025-05-20",
           "rank": 40
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-06-09",
           "rank": 41
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-03",
           "rank": 42
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-10",
           "rank": 43
         },
         {
-          "date": "2025-10-01",
+          "date": "2025-07-31",
           "rank": 44
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 45
         },
         {
-          "date": "2025-10-27",
+          "date": "2025-10-01",
           "rank": 46
         },
         {
-          "date": "2025-11-06",
+          "date": "2025-10-27",
           "rank": 47
         },
         {
-          "date": "2025-11-07",
+          "date": "2025-11-06",
           "rank": 48
         },
         {
-          "date": "2025-12-02",
+          "date": "2025-11-07",
           "rank": 49
         },
         {
-          "date": "2025-12-16",
+          "date": "2025-12-02",
           "rank": 50
         },
         {
-          "date": "2025-12-21",
+          "date": "2025-12-16",
           "rank": 51
         },
         {
-          "date": "2026-02-24",
+          "date": "2025-12-21",
           "rank": 52
         },
         {
-          "date": "2026-04-14",
+          "date": "2026-02-24",
           "rank": 53
         },
         {
@@ -7494,7 +7682,7 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 30.74689165186501,
+      "averageRank": 32.815275310834814,
       "releaseRatePerYear": 1.2974866785079928,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 3
@@ -7546,50 +7734,42 @@
       "rankHistory": [
         {
           "date": "2025-08-29",
-          "rank": 42
-        },
-        {
-          "date": "2025-09-08",
-          "rank": 43
-        },
-        {
-          "date": "2025-10-01",
           "rank": 44
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 45
         },
         {
-          "date": "2025-10-27",
+          "date": "2025-10-01",
           "rank": 46
         },
         {
-          "date": "2025-11-06",
+          "date": "2025-10-27",
           "rank": 47
         },
         {
-          "date": "2025-11-07",
+          "date": "2025-11-06",
           "rank": 48
         },
         {
-          "date": "2025-12-02",
+          "date": "2025-11-07",
           "rank": 49
         },
         {
-          "date": "2025-12-16",
+          "date": "2025-12-02",
           "rank": 50
         },
         {
-          "date": "2025-12-21",
+          "date": "2025-12-16",
           "rank": 51
         },
         {
-          "date": "2026-02-24",
+          "date": "2025-12-21",
           "rank": 52
         },
         {
-          "date": "2026-04-14",
+          "date": "2026-02-24",
           "rank": 53
         },
         {
@@ -7634,7 +7814,7 @@
         }
       ],
       "currentRank": 45,
-      "averageRank": 47.603960396039604,
+      "averageRank": 48.301980198019805,
       "releaseRatePerYear": 3.616262376237624,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 2
@@ -7692,87 +7872,91 @@
       "rankHistory": [
         {
           "date": "2023-12-14",
-          "rank": 15
-        },
-        {
-          "date": "2024-01-17",
-          "rank": 16
-        },
-        {
-          "date": "2024-02-04",
           "rank": 17
         },
         {
-          "date": "2024-02-15",
+          "date": "2024-01-17",
           "rank": 18
         },
         {
-          "date": "2024-03-28",
+          "date": "2024-02-04",
           "rank": 19
         },
         {
-          "date": "2024-04-05",
+          "date": "2024-02-15",
           "rank": 20
         },
         {
-          "date": "2024-04-09",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-05-06",
+          "date": "2024-03-24",
           "rank": 22
         },
         {
-          "date": "2024-05-13",
+          "date": "2024-03-28",
+          "rank": 23
+        },
+        {
+          "date": "2024-04-05",
           "rank": 24
         },
         {
-          "date": "2024-07-24",
+          "date": "2024-04-09",
           "rank": 25
         },
         {
-          "date": "2024-08-22",
+          "date": "2024-05-06",
           "rank": 26
         },
         {
-          "date": "2024-10-09",
-          "rank": 27
-        },
-        {
-          "date": "2024-10-21",
+          "date": "2024-05-13",
           "rank": 28
         },
         {
-          "date": "2024-10-30",
+          "date": "2024-07-24",
           "rank": 29
         },
         {
-          "date": "2024-11-26",
+          "date": "2024-08-22",
           "rank": 30
         },
         {
-          "date": "2024-12-20",
+          "date": "2024-10-21",
           "rank": 31
         },
         {
-          "date": "2025-01-20",
+          "date": "2024-10-30",
           "rank": 32
         },
         {
-          "date": "2025-01-22",
+          "date": "2024-11-26",
           "rank": 33
         },
         {
-          "date": "2025-03-10",
+          "date": "2024-12-20",
           "rank": 34
         },
         {
-          "date": "2025-05-10",
+          "date": "2025-01-20",
           "rank": 35
         },
         {
-          "date": "2025-05-11",
+          "date": "2025-01-22",
           "rank": 36
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 37
+        },
+        {
+          "date": "2025-05-10",
+          "rank": 38
+        },
+        {
+          "date": "2025-05-11",
+          "rank": 39
         },
         {
           "date": "2025-05-20",
@@ -7860,7 +8044,7 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 26.95330739299611,
+      "averageRank": 28.575875486381324,
       "releaseRatePerYear": 4.263531128404669,
       "artificialAnalysisReleaseCount": 7,
       "huggingFaceReleaseCount": 4
@@ -7869,8 +8053,8 @@
       "id": "mercury",
       "name": "Mercury",
       "kind": "model",
-      "releaseCount": 2,
-      "versionCount": 2,
+      "releaseCount": 3,
+      "versionCount": 3,
       "highestVersion": "2.5",
       "highestScore": 2.5,
       "firstReleaseAtHighestVersion": {
@@ -7885,9 +8069,15 @@
         "score": 2.5,
         "date": "2026-09-08"
       },
-      "firstEventDate": "2026-02-24",
+      "firstEventDate": "2025-02-26",
       "lastEventDate": "2026-09-08",
       "versionHistory": [
+        {
+          "date": "2025-02-26",
+          "score": 1,
+          "version": "1",
+          "releaseId": "mercury-coder-launch-2025-02-26"
+        },
         {
           "date": "2026-02-24",
           "score": 2,
@@ -7901,9 +8091,77 @@
           "releaseId": "mercury-mercury-2-5-2026-09-08"
         }
       ],
-      "trackedDays": 225,
+      "trackedDays": 588,
       "daysAtNumberOne": 0,
       "rankHistory": [
+        {
+          "date": "2025-02-26",
+          "rank": 36
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 37
+        },
+        {
+          "date": "2025-05-10",
+          "rank": 38
+        },
+        {
+          "date": "2025-05-11",
+          "rank": 39
+        },
+        {
+          "date": "2025-05-20",
+          "rank": 40
+        },
+        {
+          "date": "2025-06-09",
+          "rank": 41
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 42
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 43
+        },
+        {
+          "date": "2025-07-31",
+          "rank": 44
+        },
+        {
+          "date": "2025-09-08",
+          "rank": 45
+        },
+        {
+          "date": "2025-10-01",
+          "rank": 46
+        },
+        {
+          "date": "2025-10-27",
+          "rank": 47
+        },
+        {
+          "date": "2025-11-06",
+          "rank": 48
+        },
+        {
+          "date": "2025-11-07",
+          "rank": 49
+        },
+        {
+          "date": "2025-12-02",
+          "rank": 50
+        },
+        {
+          "date": "2025-12-16",
+          "rank": 51
+        },
+        {
+          "date": "2025-12-21",
+          "rank": 52
+        },
         {
           "date": "2026-02-24",
           "rank": 41
@@ -7946,8 +8204,8 @@
         }
       ],
       "currentRank": 45,
-      "averageRank": 44.47555555555556,
-      "releaseRatePerYear": 3.2466,
+      "averageRank": 44.37244897959184,
+      "releaseRatePerYear": 1.863482142857143,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 0
     },
@@ -7998,47 +8256,39 @@
       "rankHistory": [
         {
           "date": "2025-06-06",
-          "rank": 37
-        },
-        {
-          "date": "2025-06-09",
-          "rank": 38
-        },
-        {
-          "date": "2025-07-03",
-          "rank": 39
-        },
-        {
-          "date": "2025-07-10",
           "rank": 40
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-06-09",
           "rank": 41
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-03",
           "rank": 42
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-10",
           "rank": 43
         },
         {
-          "date": "2025-10-01",
+          "date": "2025-07-31",
           "rank": 44
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 45
         },
         {
-          "date": "2025-10-27",
+          "date": "2025-10-01",
           "rank": 46
         },
         {
-          "date": "2025-11-06",
+          "date": "2025-10-27",
           "rank": 47
+        },
+        {
+          "date": "2025-11-06",
+          "rank": 48
         },
         {
           "date": "2025-11-07",
@@ -8130,7 +8380,7 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 39.01639344262295,
+      "averageRank": 39.71516393442623,
       "releaseRatePerYear": 2.9937909836065577,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 2
@@ -8188,27 +8438,27 @@
       "rankHistory": [
         {
           "date": "2024-11-29",
-          "rank": 30
-        },
-        {
-          "date": "2024-12-20",
-          "rank": 31
-        },
-        {
-          "date": "2025-01-20",
-          "rank": 32
-        },
-        {
-          "date": "2025-01-22",
           "rank": 33
         },
         {
-          "date": "2025-03-10",
+          "date": "2024-12-20",
           "rank": 34
         },
         {
-          "date": "2025-05-10",
+          "date": "2025-01-20",
           "rank": 35
+        },
+        {
+          "date": "2025-01-22",
+          "rank": 36
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 37
+        },
+        {
+          "date": "2025-05-10",
+          "rank": 38
         },
         {
           "date": "2025-05-11",
@@ -8284,7 +8534,7 @@
         }
       ],
       "currentRank": 30,
-      "averageRank": 28.58050221565731,
+      "averageRank": 29.302806499261447,
       "releaseRatePerYear": 2.6975073855243723,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 5
@@ -8336,35 +8586,31 @@
       "rankHistory": [
         {
           "date": "2025-04-08",
-          "rank": 34
-        },
-        {
-          "date": "2025-05-10",
-          "rank": 35
-        },
-        {
-          "date": "2025-05-11",
-          "rank": 36
-        },
-        {
-          "date": "2025-05-20",
           "rank": 37
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-10",
           "rank": 38
         },
         {
-          "date": "2025-07-03",
+          "date": "2025-05-11",
           "rank": 39
         },
         {
-          "date": "2025-07-10",
+          "date": "2025-05-20",
           "rank": 40
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-06-09",
           "rank": 41
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 42
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 43
         },
         {
           "date": "2025-07-31",
@@ -8440,7 +8686,7 @@
         }
       ],
       "currentRank": 48,
-      "averageRank": 37.82815356489945,
+      "averageRank": 38.44241316270567,
       "releaseRatePerYear": 2.003158135283364,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 3
@@ -8492,67 +8738,71 @@
       "rankHistory": [
         {
           "date": "2024-02-12",
-          "rank": 17
-        },
-        {
-          "date": "2024-02-15",
-          "rank": 18
-        },
-        {
-          "date": "2024-03-28",
           "rank": 19
         },
         {
-          "date": "2024-04-05",
+          "date": "2024-02-15",
           "rank": 20
         },
         {
-          "date": "2024-04-09",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-05-06",
+          "date": "2024-03-24",
           "rank": 22
         },
         {
-          "date": "2024-05-13",
+          "date": "2024-03-28",
+          "rank": 23
+        },
+        {
+          "date": "2024-04-05",
           "rank": 24
         },
         {
-          "date": "2024-07-24",
+          "date": "2024-04-09",
           "rank": 25
         },
         {
-          "date": "2024-08-22",
+          "date": "2024-05-06",
           "rank": 26
         },
         {
-          "date": "2024-10-09",
-          "rank": 27
-        },
-        {
-          "date": "2024-10-21",
+          "date": "2024-05-13",
           "rank": 28
         },
         {
-          "date": "2024-10-30",
+          "date": "2024-07-24",
           "rank": 29
         },
         {
-          "date": "2024-11-26",
+          "date": "2024-08-22",
           "rank": 30
         },
         {
-          "date": "2024-12-20",
+          "date": "2024-10-21",
           "rank": 31
         },
         {
-          "date": "2025-01-20",
+          "date": "2024-10-30",
           "rank": 32
         },
         {
-          "date": "2025-01-22",
+          "date": "2024-11-26",
           "rank": 33
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 34
+        },
+        {
+          "date": "2025-01-20",
+          "rank": 35
+        },
+        {
+          "date": "2025-01-22",
+          "rank": 36
         },
         {
           "date": "2025-03-10",
@@ -8628,7 +8878,7 @@
         }
       ],
       "currentRank": 30,
-      "averageRank": 23.526859504132233,
+      "averageRank": 24.90599173553719,
       "releaseRatePerYear": 2.26389979338843,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 3
@@ -8680,50 +8930,42 @@
       "rankHistory": [
         {
           "date": "2025-04-11",
-          "rank": 34
-        },
-        {
-          "date": "2025-05-10",
-          "rank": 35
-        },
-        {
-          "date": "2025-05-11",
-          "rank": 36
-        },
-        {
-          "date": "2025-05-20",
           "rank": 37
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-10",
           "rank": 38
         },
         {
-          "date": "2025-07-03",
+          "date": "2025-05-11",
           "rank": 39
         },
         {
-          "date": "2025-07-10",
+          "date": "2025-05-20",
           "rank": 40
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-06-09",
           "rank": 41
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-03",
           "rank": 42
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-10",
           "rank": 43
         },
         {
-          "date": "2025-10-01",
-          "rank": 41
+          "date": "2025-07-31",
+          "rank": 44
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
+          "rank": 45
+        },
+        {
+          "date": "2025-10-01",
           "rank": 42
         },
         {
@@ -8788,7 +9030,7 @@
         }
       ],
       "currentRank": 55,
-      "averageRank": 46.612132352941174,
+      "averageRank": 47.4797794117647,
       "releaseRatePerYear": 2.6856066176470588,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 4
@@ -8797,8 +9039,8 @@
       "id": "nanbeige",
       "name": "Nanbeige",
       "kind": "model",
-      "releaseCount": 3,
-      "versionCount": 3,
+      "releaseCount": 5,
+      "versionCount": 5,
       "highestVersion": "4.2",
       "highestScore": 4.2,
       "firstReleaseAtHighestVersion": {
@@ -8813,9 +9055,21 @@
         "score": 4.2,
         "date": "2026-07-24"
       },
-      "firstEventDate": "2025-10-22",
+      "firstEventDate": "2023-11-08",
       "lastEventDate": "2026-07-24",
       "versionHistory": [
+        {
+          "date": "2023-11-08",
+          "score": 1,
+          "version": "1",
+          "releaseId": "nanbeige-16b-announcement-2023-11-08"
+        },
+        {
+          "date": "2024-03-24",
+          "score": 2,
+          "version": "2",
+          "releaseId": "nanbeige-nanbeige-nanbeige2-8b-chat-checkpoint-2024-03-24"
+        },
         {
           "date": "2025-10-22",
           "score": 4,
@@ -8835,9 +9089,121 @@
           "releaseId": "nanbeige-nanbeige4-2-3b-technical-report-2026-07-24"
         }
       ],
-      "trackedDays": 350,
+      "trackedDays": 1064,
       "daysAtNumberOne": 0,
       "rankHistory": [
+        {
+          "date": "2023-11-08",
+          "rank": 13
+        },
+        {
+          "date": "2023-11-15",
+          "rank": 14
+        },
+        {
+          "date": "2023-11-22",
+          "rank": 15
+        },
+        {
+          "date": "2023-11-28",
+          "rank": 16
+        },
+        {
+          "date": "2023-12-01",
+          "rank": 17
+        },
+        {
+          "date": "2024-01-17",
+          "rank": 18
+        },
+        {
+          "date": "2024-02-04",
+          "rank": 19
+        },
+        {
+          "date": "2024-02-15",
+          "rank": 20
+        },
+        {
+          "date": "2024-03-23",
+          "rank": 21
+        },
+        {
+          "date": "2024-03-24",
+          "rank": 11
+        },
+        {
+          "date": "2024-04-18",
+          "rank": 12
+        },
+        {
+          "date": "2024-04-23",
+          "rank": 13
+        },
+        {
+          "date": "2024-07-03",
+          "rank": 14
+        },
+        {
+          "date": "2024-08-05",
+          "rank": 15
+        },
+        {
+          "date": "2024-08-06",
+          "rank": 16
+        },
+        {
+          "date": "2024-08-15",
+          "rank": 17
+        },
+        {
+          "date": "2024-09-05",
+          "rank": 18
+        },
+        {
+          "date": "2024-09-19",
+          "rank": 19
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 20
+        },
+        {
+          "date": "2024-11-18",
+          "rank": 21
+        },
+        {
+          "date": "2024-12-17",
+          "rank": 22
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 23
+        },
+        {
+          "date": "2025-02-19",
+          "rank": 24
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 26
+        },
+        {
+          "date": "2025-03-25",
+          "rank": 27
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 28
+        },
+        {
+          "date": "2025-07-08",
+          "rank": 29
+        },
+        {
+          "date": "2025-07-25",
+          "rank": 30
+        },
         {
           "date": "2025-10-22",
           "rank": 8
@@ -8868,10 +9234,10 @@
         }
       ],
       "currentRank": 12,
-      "averageRank": 10.3,
-      "releaseRatePerYear": 3.13065,
+      "averageRank": 17.48872180451128,
+      "releaseRatePerYear": 1.7163651315789474,
       "artificialAnalysisReleaseCount": 1,
-      "huggingFaceReleaseCount": 3
+      "huggingFaceReleaseCount": 5
     },
     {
       "id": "ring",
@@ -8926,39 +9292,35 @@
       "rankHistory": [
         {
           "date": "2025-04-01",
-          "rank": 34
-        },
-        {
-          "date": "2025-05-10",
-          "rank": 35
-        },
-        {
-          "date": "2025-05-11",
-          "rank": 36
-        },
-        {
-          "date": "2025-05-20",
           "rank": 37
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-10",
           "rank": 38
         },
         {
-          "date": "2025-07-03",
+          "date": "2025-05-11",
           "rank": 39
         },
         {
-          "date": "2025-07-10",
+          "date": "2025-05-20",
           "rank": 40
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-06-09",
           "rank": 41
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-03",
           "rank": 42
+        },
+        {
+          "date": "2025-07-10",
+          "rank": 43
+        },
+        {
+          "date": "2025-07-31",
+          "rank": 44
         },
         {
           "date": "2025-09-08",
@@ -9038,7 +9400,7 @@
         }
       ],
       "currentRank": 43,
-      "averageRank": 37.13537906137184,
+      "averageRank": 37.92057761732852,
       "releaseRatePerYear": 3.9556949458483754,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 6
@@ -9084,111 +9446,119 @@
       "rankHistory": [
         {
           "date": "2023-09-26",
-          "rank": 11
-        },
-        {
-          "date": "2023-10-02",
           "rank": 12
         },
         {
-          "date": "2023-11-15",
+          "date": "2023-10-02",
           "rank": 13
         },
         {
-          "date": "2023-11-22",
+          "date": "2023-11-15",
           "rank": 14
         },
         {
-          "date": "2023-11-28",
+          "date": "2023-11-22",
           "rank": 15
         },
         {
-          "date": "2024-01-17",
+          "date": "2023-11-28",
           "rank": 16
         },
         {
-          "date": "2024-02-04",
+          "date": "2023-12-01",
           "rank": 17
         },
         {
-          "date": "2024-02-15",
+          "date": "2024-01-17",
           "rank": 18
         },
         {
-          "date": "2024-03-28",
+          "date": "2024-02-04",
           "rank": 19
         },
         {
-          "date": "2024-04-05",
+          "date": "2024-02-15",
           "rank": 20
         },
         {
-          "date": "2024-04-09",
+          "date": "2024-03-23",
           "rank": 21
         },
         {
-          "date": "2024-05-06",
+          "date": "2024-03-24",
           "rank": 22
         },
         {
-          "date": "2024-05-13",
+          "date": "2024-03-28",
+          "rank": 23
+        },
+        {
+          "date": "2024-04-05",
           "rank": 24
         },
         {
-          "date": "2024-07-24",
+          "date": "2024-04-09",
           "rank": 25
         },
         {
-          "date": "2024-08-22",
+          "date": "2024-05-06",
           "rank": 26
         },
         {
-          "date": "2024-10-09",
-          "rank": 27
-        },
-        {
-          "date": "2024-10-21",
+          "date": "2024-05-13",
           "rank": 28
         },
         {
-          "date": "2024-10-30",
+          "date": "2024-07-24",
           "rank": 29
         },
         {
-          "date": "2024-11-26",
+          "date": "2024-08-22",
           "rank": 30
         },
         {
-          "date": "2024-12-20",
+          "date": "2024-10-21",
           "rank": 31
         },
         {
-          "date": "2025-01-20",
+          "date": "2024-10-30",
           "rank": 32
         },
         {
-          "date": "2025-01-22",
+          "date": "2024-11-26",
           "rank": 33
         },
         {
-          "date": "2025-03-10",
+          "date": "2024-12-20",
           "rank": 34
         },
         {
-          "date": "2025-05-10",
+          "date": "2025-01-20",
           "rank": 35
         },
         {
-          "date": "2025-05-11",
+          "date": "2025-01-22",
           "rank": 36
         },
         {
-          "date": "2025-05-20",
+          "date": "2025-03-10",
           "rank": 37
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-10",
           "rank": 38
+        },
+        {
+          "date": "2025-05-11",
+          "rank": 39
+        },
+        {
+          "date": "2025-05-20",
+          "rank": 40
+        },
+        {
+          "date": "2025-06-09",
+          "rank": 41
         },
         {
           "date": "2025-07-03",
@@ -9232,7 +9602,7 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 18.97018970189702,
+      "averageRank": 20.679313459801264,
       "releaseRatePerYear": 1.6496951219512195,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 4
@@ -9346,23 +9716,19 @@
       "rankHistory": [
         {
           "date": "2024-07-16",
-          "rank": 24
+          "rank": 28
         },
         {
           "date": "2024-07-24",
-          "rank": 25
+          "rank": 29
         },
         {
           "date": "2024-08-22",
-          "rank": 26
-        },
-        {
-          "date": "2024-10-09",
-          "rank": 27
+          "rank": 30
         },
         {
           "date": "2024-10-21",
-          "rank": 28
+          "rank": 31
         },
         {
           "date": "2024-10-30",
@@ -9474,7 +9840,7 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 25.68019680196802,
+      "averageRank": 26.17589175891759,
       "releaseRatePerYear": 9.434308118081182,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 21
@@ -9520,10 +9886,6 @@
       "rankHistory": [
         {
           "date": "2026-03-31",
-          "rank": 52
-        },
-        {
-          "date": "2026-04-14",
           "rank": 53
         },
         {
@@ -9560,7 +9922,7 @@
         }
       ],
       "currentRank": 51,
-      "averageRank": 55.45263157894737,
+      "averageRank": 55.526315789473685,
       "releaseRatePerYear": 17.30096052631579,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 9
@@ -9690,11 +10052,11 @@
       "rankHistory": [
         {
           "date": "2023-07-23",
-          "rank": 10
+          "rank": 11
         },
         {
           "date": "2023-09-11",
-          "rank": 11
+          "rank": 12
         },
         {
           "date": "2023-10-02",
@@ -9709,35 +10071,35 @@
           "rank": 7
         },
         {
-          "date": "2024-03-04",
+          "date": "2023-12-01",
           "rank": 8
         },
         {
-          "date": "2024-04-18",
+          "date": "2024-03-04",
           "rank": 9
         },
         {
-          "date": "2024-04-23",
+          "date": "2024-04-18",
           "rank": 10
         },
         {
-          "date": "2024-08-05",
+          "date": "2024-04-23",
           "rank": 11
         },
         {
-          "date": "2024-08-15",
+          "date": "2024-08-05",
           "rank": 12
         },
         {
-          "date": "2024-09-05",
+          "date": "2024-08-15",
           "rank": 13
         },
         {
-          "date": "2024-10-07",
+          "date": "2024-09-05",
           "rank": 14
         },
         {
-          "date": "2024-10-09",
+          "date": "2024-10-07",
           "rank": 15
         },
         {
@@ -9850,7 +10212,7 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 17.071672354948806,
+      "averageRank": 17.399317406143346,
       "releaseRatePerYear": 22.749746160409558,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 73
@@ -9859,8 +10221,8 @@
       "id": "character-ai",
       "name": "Character.AI",
       "kind": "model",
-      "releaseCount": 4,
-      "versionCount": 3,
+      "releaseCount": 6,
+      "versionCount": 5,
       "highestVersion": "3",
       "highestScore": 3,
       "firstReleaseAtHighestVersion": {
@@ -9875,14 +10237,14 @@
         "score": 3,
         "date": "2026-09-28"
       },
-      "firstEventDate": "2025-08-26",
+      "firstEventDate": "2023-03-23",
       "lastEventDate": "2026-09-28",
       "versionHistory": [
         {
-          "date": "2025-08-26",
-          "score": 1,
-          "version": "1",
-          "releaseId": "character-ai-pipsqueak-rollout-report-2025-08-26"
+          "date": "2023-03-23",
+          "score": 1.2,
+          "version": "1.2",
+          "releaseId": "character-ai-c1-2-preview-2023-03-23"
         },
         {
           "date": "2026-04-14",
@@ -9897,23 +10259,171 @@
           "releaseId": "character-ai-pipsqueak-3-2026-09-28"
         }
       ],
-      "trackedDays": 407,
+      "trackedDays": 1294,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
-          "date": "2025-08-26",
+          "date": "2023-03-23",
+          "rank": 3
+        },
+        {
+          "date": "2023-04-18",
+          "rank": 4
+        },
+        {
+          "date": "2023-05-10",
+          "rank": 5
+        },
+        {
+          "date": "2023-06-25",
+          "rank": 6
+        },
+        {
+          "date": "2023-07-07",
+          "rank": 8
+        },
+        {
+          "date": "2023-07-18",
+          "rank": 9
+        },
+        {
+          "date": "2023-07-19",
+          "rank": 10
+        },
+        {
+          "date": "2023-09-11",
+          "rank": 11
+        },
+        {
+          "date": "2023-10-02",
+          "rank": 12
+        },
+        {
+          "date": "2023-11-15",
+          "rank": 13
+        },
+        {
+          "date": "2023-11-22",
+          "rank": 14
+        },
+        {
+          "date": "2023-11-28",
+          "rank": 15
+        },
+        {
+          "date": "2023-12-01",
+          "rank": 16
+        },
+        {
+          "date": "2024-01-17",
+          "rank": 17
+        },
+        {
+          "date": "2024-02-04",
+          "rank": 18
+        },
+        {
+          "date": "2024-02-15",
+          "rank": 19
+        },
+        {
+          "date": "2024-03-23",
+          "rank": 20
+        },
+        {
+          "date": "2024-03-24",
+          "rank": 21
+        },
+        {
+          "date": "2024-03-28",
+          "rank": 22
+        },
+        {
+          "date": "2024-04-09",
+          "rank": 23
+        },
+        {
+          "date": "2024-05-06",
+          "rank": 24
+        },
+        {
+          "date": "2024-05-13",
+          "rank": 26
+        },
+        {
+          "date": "2024-05-14",
+          "rank": 27
+        },
+        {
+          "date": "2024-07-24",
+          "rank": 28
+        },
+        {
+          "date": "2024-08-22",
+          "rank": 29
+        },
+        {
+          "date": "2024-10-21",
+          "rank": 30
+        },
+        {
+          "date": "2024-10-30",
+          "rank": 31
+        },
+        {
+          "date": "2024-11-26",
+          "rank": 32
+        },
+        {
+          "date": "2024-12-20",
+          "rank": 33
+        },
+        {
+          "date": "2025-01-20",
+          "rank": 34
+        },
+        {
+          "date": "2025-01-22",
+          "rank": 35
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 36
+        },
+        {
+          "date": "2025-05-10",
+          "rank": 37
+        },
+        {
+          "date": "2025-05-11",
+          "rank": 38
+        },
+        {
+          "date": "2025-05-20",
+          "rank": 39
+        },
+        {
+          "date": "2025-06-09",
+          "rank": 40
+        },
+        {
+          "date": "2025-07-03",
+          "rank": 41
+        },
+        {
+          "date": "2025-07-10",
           "rank": 42
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-31",
           "rank": 43
         },
         {
-          "date": "2025-10-01",
+          "date": "2025-09-08",
           "rank": 44
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-10-01",
           "rank": 45
         },
         {
@@ -9990,8 +10500,8 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 47.203931203931205,
-      "releaseRatePerYear": 3.5896068796068796,
+      "averageRank": 31.048686244204017,
+      "releaseRatePerYear": 1.6935510046367852,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0
     },
@@ -10042,59 +10552,55 @@
       "rankHistory": [
         {
           "date": "2024-06-10",
-          "rank": 24
-        },
-        {
-          "date": "2024-07-24",
-          "rank": 25
-        },
-        {
-          "date": "2024-08-22",
-          "rank": 26
-        },
-        {
-          "date": "2024-10-09",
-          "rank": 27
-        },
-        {
-          "date": "2024-10-21",
           "rank": 28
         },
         {
-          "date": "2024-10-30",
+          "date": "2024-07-24",
           "rank": 29
         },
         {
-          "date": "2024-11-26",
+          "date": "2024-08-22",
           "rank": 30
         },
         {
-          "date": "2024-12-20",
+          "date": "2024-10-21",
           "rank": 31
         },
         {
-          "date": "2025-01-20",
+          "date": "2024-10-30",
           "rank": 32
         },
         {
-          "date": "2025-01-22",
+          "date": "2024-11-26",
           "rank": 33
         },
         {
-          "date": "2025-03-10",
+          "date": "2024-12-20",
           "rank": 34
         },
         {
-          "date": "2025-05-10",
+          "date": "2025-01-20",
           "rank": 35
         },
         {
-          "date": "2025-05-11",
+          "date": "2025-01-22",
           "rank": 36
         },
         {
-          "date": "2025-05-20",
+          "date": "2025-03-10",
           "rank": 37
+        },
+        {
+          "date": "2025-05-10",
+          "rank": 38
+        },
+        {
+          "date": "2025-05-11",
+          "rank": 39
+        },
+        {
+          "date": "2025-05-20",
+          "rank": 40
         },
         {
           "date": "2025-06-09",
@@ -10190,7 +10696,7 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 32.20494699646643,
+      "averageRank": 33.63368669022379,
       "releaseRatePerYear": 3.4416254416961127,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0
@@ -10248,23 +10754,19 @@
       "rankHistory": [
         {
           "date": "2025-08-08",
-          "rank": 42
-        },
-        {
-          "date": "2025-09-08",
-          "rank": 43
-        },
-        {
-          "date": "2025-10-01",
           "rank": 44
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 45
         },
         {
-          "date": "2025-10-27",
+          "date": "2025-10-01",
           "rank": 46
+        },
+        {
+          "date": "2025-10-27",
+          "rank": 47
         },
         {
           "date": "2025-11-06",
@@ -10344,7 +10846,7 @@
         }
       ],
       "currentRank": 27,
-      "averageRank": 30.331764705882353,
+      "averageRank": 30.72,
       "releaseRatePerYear": 8.593941176470588,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 10
@@ -10353,14 +10855,14 @@
       "id": "palmyra",
       "name": "Palmyra",
       "kind": "model",
-      "releaseCount": 17,
-      "versionCount": 4,
+      "releaseCount": 24,
+      "versionCount": 7,
       "highestVersion": "6",
       "highestScore": 6,
       "firstReleaseAtHighestVersion": {
-        "id": "palmyra-palmyra-x6-announcement-2026-08-13",
-        "name": "Palmyra X6",
-        "date": "2026-08-13"
+        "id": "palmyra-x6-availability-2026-08-06",
+        "name": "Palmyra X6 (platform availability)",
+        "date": "2026-08-06"
       },
       "latestRelease": {
         "id": "palmyra-palmyra-x6-announcement-2026-08-13",
@@ -10379,10 +10881,22 @@
           "releaseId": "palmyra-writer-palmyra-base-checkpoint-2023-02-03"
         },
         {
+          "date": "2023-12-01",
+          "score": 3,
+          "version": "3",
+          "releaseId": "palmyra-x-003-release-2023-12-01"
+        },
+        {
           "date": "2024-10-09",
           "score": 4,
           "version": "4",
           "releaseId": "palmyra-palmyra-x4-announcement-2024-10-09"
+        },
+        {
+          "date": "2024-11-07",
+          "score": 4.3,
+          "version": "4.3",
+          "releaseId": "palmyra-writer-palmyra-x-4-3-73b-checkpoint-2024-11-07"
         },
         {
           "date": "2025-04-28",
@@ -10391,102 +10905,94 @@
           "releaseId": "palmyra-palmyra-x5-announcement-2025-04-28"
         },
         {
-          "date": "2026-08-13",
+          "date": "2026-08-06",
           "score": 6,
           "version": "6",
-          "releaseId": "palmyra-palmyra-x6-announcement-2026-08-13"
+          "releaseId": "palmyra-x6-availability-2026-08-06"
         }
       ],
       "trackedDays": 1342,
-      "daysAtNumberOne": 100,
+      "daysAtNumberOne": 107,
       "rankHistory": [
         {
           "date": "2023-02-03",
           "rank": 3
         },
         {
-          "date": "2023-04-18",
+          "date": "2023-03-23",
           "rank": 4
         },
         {
-          "date": "2023-05-10",
+          "date": "2023-04-18",
           "rank": 5
         },
         {
-          "date": "2023-06-25",
+          "date": "2023-05-10",
           "rank": 6
         },
         {
-          "date": "2023-07-07",
-          "rank": 8
+          "date": "2023-06-25",
+          "rank": 7
         },
         {
-          "date": "2023-07-18",
+          "date": "2023-07-07",
           "rank": 9
         },
         {
-          "date": "2023-07-19",
+          "date": "2023-07-18",
           "rank": 10
         },
         {
-          "date": "2023-09-11",
+          "date": "2023-07-19",
           "rank": 11
         },
         {
-          "date": "2023-10-02",
+          "date": "2023-09-11",
           "rank": 12
         },
         {
-          "date": "2023-11-15",
+          "date": "2023-10-02",
           "rank": 13
         },
         {
-          "date": "2023-11-22",
+          "date": "2023-11-15",
           "rank": 14
         },
         {
-          "date": "2023-11-28",
+          "date": "2023-11-22",
           "rank": 15
         },
         {
-          "date": "2024-01-17",
+          "date": "2023-11-28",
           "rank": 16
         },
         {
-          "date": "2024-02-04",
-          "rank": 17
+          "date": "2023-12-01",
+          "rank": 4
         },
         {
-          "date": "2024-02-15",
-          "rank": 18
+          "date": "2024-01-16",
+          "rank": 5
         },
         {
-          "date": "2024-03-28",
-          "rank": 19
+          "date": "2024-02-26",
+          "rank": 6
         },
         {
-          "date": "2024-04-05",
-          "rank": 20
+          "date": "2024-06-20",
+          "rank": 7
         },
         {
-          "date": "2024-04-09",
-          "rank": 21
+          "date": "2024-06-21",
+          "rank": 8
         },
         {
-          "date": "2024-05-06",
-          "rank": 22
+          "date": "2024-07-23",
+          "rank": 9
         },
         {
-          "date": "2024-05-13",
-          "rank": 24
-        },
-        {
-          "date": "2024-07-24",
-          "rank": 25
-        },
-        {
-          "date": "2024-08-22",
-          "rank": 26
+          "date": "2024-08-20",
+          "rank": 10
         },
         {
           "date": "2024-10-09",
@@ -10521,7 +11027,7 @@
           "rank": 5
         },
         {
-          "date": "2026-08-13",
+          "date": "2026-08-06",
           "rank": 1
         },
         {
@@ -10530,16 +11036,16 @@
         }
       ],
       "currentRank": 2,
-      "averageRank": 8.035767511177347,
-      "releaseRatePerYear": 4.626767883755589,
+      "averageRank": 4.853204172876304,
+      "releaseRatePerYear": 6.531907600596125,
       "artificialAnalysisReleaseCount": 0,
-      "huggingFaceReleaseCount": 14
+      "huggingFaceReleaseCount": 18
     },
     {
       "id": "laguna",
       "name": "Laguna",
       "kind": "model",
-      "releaseCount": 6,
+      "releaseCount": 7,
       "versionCount": 3,
       "highestVersion": "2.1",
       "highestScore": 2.1,
@@ -10613,7 +11119,7 @@
       ],
       "currentRank": 48,
       "averageRank": 45.01851851851852,
-      "releaseRatePerYear": 13.5275,
+      "releaseRatePerYear": 15.782083333333334,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 6
     },
@@ -10670,87 +11176,79 @@
       "rankHistory": [
         {
           "date": "2024-11-30",
-          "rank": 30
-        },
-        {
-          "date": "2024-12-20",
-          "rank": 31
-        },
-        {
-          "date": "2025-01-20",
-          "rank": 32
-        },
-        {
-          "date": "2025-01-22",
           "rank": 33
         },
         {
-          "date": "2025-03-10",
+          "date": "2024-12-20",
           "rank": 34
         },
         {
-          "date": "2025-05-10",
+          "date": "2025-01-20",
           "rank": 35
         },
         {
-          "date": "2025-05-11",
+          "date": "2025-01-22",
           "rank": 36
         },
         {
-          "date": "2025-05-20",
+          "date": "2025-03-10",
           "rank": 37
         },
         {
-          "date": "2025-06-09",
+          "date": "2025-05-10",
           "rank": 38
         },
         {
-          "date": "2025-07-03",
+          "date": "2025-05-11",
           "rank": 39
         },
         {
-          "date": "2025-07-10",
+          "date": "2025-05-20",
           "rank": 40
         },
         {
-          "date": "2025-07-25",
+          "date": "2025-06-09",
           "rank": 41
         },
         {
-          "date": "2025-07-31",
+          "date": "2025-07-03",
           "rank": 42
         },
         {
-          "date": "2025-09-08",
+          "date": "2025-07-10",
           "rank": 43
         },
         {
-          "date": "2025-10-01",
+          "date": "2025-07-31",
           "rank": 44
         },
         {
-          "date": "2025-10-22",
+          "date": "2025-09-08",
           "rank": 45
         },
         {
-          "date": "2025-10-27",
+          "date": "2025-10-01",
           "rank": 46
         },
         {
-          "date": "2025-11-06",
+          "date": "2025-10-27",
           "rank": 47
         },
         {
-          "date": "2025-11-07",
+          "date": "2025-11-06",
           "rank": 48
         },
         {
-          "date": "2025-12-02",
+          "date": "2025-11-07",
           "rank": 49
         },
         {
-          "date": "2025-12-16",
+          "date": "2025-12-02",
           "rank": 50
+        },
+        {
+          "date": "2025-12-16",
+          "rank": 51
         },
         {
           "date": "2025-12-21",
@@ -10806,7 +11304,7 @@
         }
       ],
       "currentRank": 27,
-      "averageRank": 36.69970414201183,
+      "averageRank": 38.103550295857985,
       "releaseRatePerYear": 3.2417973372781064,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0

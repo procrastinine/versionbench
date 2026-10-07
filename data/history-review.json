@@ -62,13 +62,11 @@
     "family": "step",
     "previousFirstVersion": "3",
     "checkedAt": "2026-10-06",
-    "summary": "Earlier Step-1, Step-1V, and Step-2 exist. Their original day-level public availability has not been recovered from accessible publisher pages.",
+    "summary": "Recovered the March 23, 2024 announcements of Step-1, Step-1V and the Step-2 partner API preview from firsthand GDPS conference reporting.",
     "sourceIds": [
-      "step-3-paper"
+      "history-step-gdps-2024"
     ],
-    "unresolved": [
-      "Earlier releases remain in the pending list; a source-access failure is not evidence that Step began at 3."
-    ]
+    "unresolved": []
   },
   {
     "family": "inflection",
@@ -146,14 +144,13 @@
     "family": "mercury",
     "previousFirstVersion": "2.5",
     "checkedAt": "2026-10-06",
-    "summary": "Added Mercury 2 from the publisher’s dated release archive. The original Mercury series predates it.",
+    "summary": "Recovered the original February 26, 2025 Mercury Coder playground launch from Inception’s dated post, before the later Mercury 2 series.",
     "sourceIds": [
-      "inception-blog-index",
+      "history-mercury-original",
+      "history-mercury-coder-launch",
       "history-mercury-2"
     ],
-    "unresolved": [
-      "Original Mercury Coder launched in February 2025, but the first day is not established by the accessible publisher announcement."
-    ]
+    "unresolved": []
   },
   {
     "family": "motif",
@@ -220,27 +217,28 @@
     "family": "nanbeige",
     "previousFirstVersion": "4.1",
     "checkedAt": "2026-10-06",
-    "summary": "Recovered Nanbeige 4 checkpoint history and an archived publisher repository confirming the original Nanbeige 16B series.",
+    "summary": "Recovered the November 8, 2023 initial 16B release announcement from preserved upstream Git history and the original Nanbeige2 repository creation timestamp from an archived publisher page.",
     "sourceIds": [
-      "history-nanbeige-dec46638",
-      "history-nanbeige-archive"
+      "history-nanbeige-original-announcement",
+      "history-nanbeige-original-commit",
+      "checkpoint-nanbeige-nanbeige2-8b-chat",
+      "history-nanbeige-dec46638"
     ],
     "unresolved": [
-      "The old Nanbeige 16B, 1.5, and 2 repositories are unavailable. Their exact original public dates remain pending."
+      "Nanbeige2 uses the labeled repository-creation fallback, which does not establish its first public day or any rename date. The 1.5 label survives in conversion provenance, but no independently dated publisher release was established; its exclusion is recorded in the candidate review."
     ]
   },
   {
     "family": "ring",
     "previousFirstVersion": "2.6",
     "checkedAt": "2026-10-06",
-    "summary": "Added Ring Lite Distill Preview and Ring Lite 2507 from the publisher archive and dated blog. 2507 is a checkpoint suffix, not version 2507; 1T is a size.",
+    "summary": "Ring 2.0 and 2.5 were already represented by first-weight commits. Removed stale pending entries without adding duplicate events, alongside the earlier Ring Lite history.",
     "sourceIds": [
-      "history-ring-index",
-      "history-ring-lite2507"
+      "checkpoint-inclusionai-ring-mini-2-0",
+      "checkpoint-inclusionai-ring-flash-2-0",
+      "checkpoint-inclusionai-ring-2-5-1t"
     ],
-    "unresolved": [
-      "Ring 2.0 and 2.5 inventories require separate dated publication evidence."
-    ]
+    "unresolved": []
   },
   {
     "family": "ax",
@@ -253,6 +251,19 @@
     ],
     "unresolved": [
       "A.X K-series models use another numbered sub-line; exact release dates require review."
+    ]
+  },
+  {
+    "family": "character-ai",
+    "previousFirstVersion": "1",
+    "checkedAt": "2026-10-06",
+    "summary": "Added the publisher’s C1.2 early preview and its explicit confirmation of C1.1 as the preceding model; moved PipSqueak to the earlier official community announcement.",
+    "sourceIds": [
+      "history-character-ai-c12",
+      "history-character-ai-pipsqueak-community"
+    ],
+    "unresolved": [
+      "The original C1.1 launch day is unknown; its Available by event is a conservative March 23, 2023 bound. A separate C1.0 model was not established and is excluded with evidence in the candidate review."
     ]
   }
 ]

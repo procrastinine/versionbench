@@ -7,7 +7,7 @@ import { SourceSnapshot, paginatedJSON, sha256, stableJSON } from './source-snap
 import { inventorySource, pageInventory, auditInventory } from './source-inventory.mjs';
 import { observedVersions, compareProviderVersions, pageText } from './provider-audit.mjs';
 import { numericVersion } from './version.mjs';
-import { checkpointHistory } from './checkpoint-history.mjs';
+import { checkpointHistory, archivedHuggingFaceModel } from './checkpoint-history.mjs';
 
 const fixture = (responses) =>
   new SourceSnapshot(
@@ -221,7 +221,7 @@ test('variants and source failures remain visible even when numbered versions ma
   assert.equal(bad.families[0].comparison, 'review-source');
 });
 
-test('HF-only dates use the first weight-bearing commit, never repository creation or later uploads', async () => {
+test('accessible HF history uses the first weight-bearing commit, not creation or later uploads', async () => {
   const base = 'https://huggingface.co/api/models/o/m';
   const c = fixture({
     [base + '/commits/main']: [
@@ -244,9 +244,61 @@ test('HF-only dates use the first weight-bearing commit, never repository creati
       weight_map: { a: 'model-00001-of-00002.safetensors', b: 'model-00002-of-00002.safetensors' },
     },
   });
-  const result = await checkpointHistory(c, 'https://huggingface.co/o/m');
+  const result = await checkpointHistory(c, 'https://huggingface.co/o/m', { allowRepositoryCreated: true });
   assert.equal(result.revision, 'partial');
   assert.equal(result.checkpointFileCount, 1);
   assert.equal(result.evidenceType, 'checkpoint-commit');
   assert.match(result.caveat, /Later commits are not model releases/);
+});
+
+test('gated history uses creation only with explicit review and actual weights', async () => {
+  const base = 'https://huggingface.co/api/models/o/m';
+  const responses = {
+    [base + '/commits/main']: { status: 401, body: 'Gated' },
+    [base]: { id: 'o/m', createdAt: '2024-01-02T03:04:05Z', siblings: [{ rfilename: 'model.safetensors' }] },
+  };
+  await assert.rejects(checkpointHistory(fixture(responses), 'https://huggingface.co/o/m'), /HTTP 401/);
+  const result = await checkpointHistory(fixture(responses), 'https://huggingface.co/o/m', { allowRepositoryCreated: true });
+  assert.equal(result.evidenceType, 'repository-created');
+  assert.equal(result.date, '2024-01-02T03:04:05Z');
+  assert.equal(result.metadataUrl, base);
+  assert.match(result.caveat, /does not establish when weights/);
+  for (const [metadata, expected] of [
+    [{ ...responses[base], siblings: [{ rfilename: 'README.md' }] }, /actual model weights/],
+    [{ ...responses[base], createdAt: 'unknown' }, /valid createdAt/],
+    [{ ...responses[base], id: 'o/different' }, /identity mismatch/],
+  ])
+    await assert.rejects(checkpointHistory(fixture({ ...responses, [base]: metadata }), 'https://huggingface.co/o/m', { allowRepositoryCreated: true }), expected);
+});
+
+test('creation fallback does not mask missing snapshots, empty history, or rate limits', async () => {
+  const url = 'https://huggingface.co/o/m';
+  const api = 'https://huggingface.co/api/models/o/m/commits/main';
+  for (const [responses, expected] of [
+    [{}, /Missing from offline snapshot/],
+    [{ [api]: [] }, /Empty or invalid/],
+    [{ [api]: { status: 429, body: 'Too many requests' } }, /HTTP 429/],
+  ])
+    await assert.rejects(checkpointHistory(fixture(responses), url, { allowRepositoryCreated: true }), expected);
+  const limited = fixture({ [api]: { status: 403, body: 'Rate limited' } });
+  limited.blockedHosts.add('huggingface.co');
+  await assert.rejects(checkpointHistory(limited, url, { allowRepositoryCreated: true }), /HTTP 403/);
+});
+
+test('an archived publisher page can preserve creation evidence for a removed repository', async () => {
+  const url = 'https://huggingface.co/o/m';
+  const archive = 'https://web.archive.org/web/20240512234656id_/' + url;
+  const model = { id: 'o/m', createdAt: '2024-03-24T14:09:12Z', safetensors: { total: 1000 } };
+  const html = '<div data-props="' + JSON.stringify({ model }).replaceAll('"', '&quot;') + '"></div>';
+  assert.deepEqual(archivedHuggingFaceModel(html, 'o/m'), model);
+  assert.throws(() => archivedHuggingFaceModel(html, 'o/other'), /no metadata/);
+  const c = fixture({
+    ['https://huggingface.co/api/models/o/m/commits/main']: { status: 401, body: 'Unavailable' },
+    [archive]: { body: html },
+  });
+  const result = await checkpointHistory(c, url, { allowRepositoryCreated: true, archivedMetadataUrl: archive });
+  assert.equal(result.date, model.createdAt);
+  assert.equal(result.archivedSafetensorsParameters, 1000);
+  assert.match(result.caveat, /Archived publisher metadata/);
+  await assert.rejects(checkpointHistory(c, url, { allowRepositoryCreated: true, archivedMetadataUrl: archive.replace('/o/m', '/o/other') }), /exact publisher model URL/);
 });

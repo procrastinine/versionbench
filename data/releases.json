@@ -1443,6 +1443,14 @@
       "checkedAt": "2026-10-06"
     },
     {
+      "id": "checkpoint-nanbeige-nanbeige2-8b-chat",
+      "title": "Nanbeige2-8B-Chat: Hugging Face repository creation metadata",
+      "url": "https://web.archive.org/web/20240512234656id_/https://huggingface.co/Nanbeige/Nanbeige2-8B-Chat",
+      "publisher": "Nanbeige LLM Lab",
+      "date": "2024-03-24",
+      "checkedAt": "2026-10-06"
+    },
+    {
       "id": "checkpoint-openbmb-minicpm-o-2-6",
       "title": "MiniCPM-o-2_6: first commit containing model weights",
       "url": "https://huggingface.co/openbmb/MiniCPM-o-2_6/commit/2f6e034ddc79f08dd91b0da868a61ef3bfdc889c",
@@ -1627,6 +1635,14 @@
       "checkedAt": "2026-10-06"
     },
     {
+      "id": "checkpoint-writer-palmyra-56b-instruct",
+      "title": "Palmyra-56B-Instruct: Hugging Face repository creation metadata",
+      "url": "https://huggingface.co/api/models/Writer/Palmyra-56B-Instruct",
+      "publisher": "WRITER",
+      "date": "2024-05-16",
+      "checkedAt": "2026-10-06"
+    },
+    {
       "id": "checkpoint-writer-palmyra-base",
       "title": "palmyra-base: first commit containing model weights",
       "url": "https://huggingface.co/Writer/palmyra-base/commit/86b46eda8a0371690c97754616cbca9b21eb7868",
@@ -1659,11 +1675,27 @@
       "checkedAt": "2026-10-06"
     },
     {
+      "id": "checkpoint-writer-palmyra-local-1-7b",
+      "title": "Palmyra-local-1_7B: Hugging Face repository creation metadata",
+      "url": "https://huggingface.co/api/models/Writer/Palmyra-local-1_7B",
+      "publisher": "WRITER",
+      "date": "2025-03-23",
+      "checkedAt": "2026-10-06"
+    },
+    {
       "id": "checkpoint-writer-palmyra-med-20b",
       "title": "palmyra-med-20b: first commit containing model weights",
       "url": "https://huggingface.co/Writer/palmyra-med-20b/commit/147712f70f5d86d38716c7ea6ca119e8ec8de153",
       "publisher": "WRITER",
       "date": "2023-07-05",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "checkpoint-writer-palmyra-med-70b",
+      "title": "Palmyra-Med-70B: Hugging Face repository creation metadata",
+      "url": "https://huggingface.co/api/models/Writer/Palmyra-Med-70B",
+      "publisher": "WRITER",
+      "date": "2024-05-05",
       "checkedAt": "2026-10-06"
     },
     {
@@ -1712,6 +1744,14 @@
       "url": "https://huggingface.co/Writer/palmyra-vision/commit/737bc604dc11183d037305efc7e12c9673d5abe2",
       "publisher": "WRITER",
       "date": "2025-01-17",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "checkpoint-writer-palmyra-x-4-3-73b",
+      "title": "Palmyra-X-4.3-73B: Hugging Face repository creation metadata",
+      "url": "https://huggingface.co/api/models/Writer/Palmyra-X-4.3-73B",
+      "publisher": "WRITER",
+      "date": "2024-11-07",
       "checkedAt": "2026-10-06"
     },
     {
@@ -3292,6 +3332,30 @@
       "checkedAt": "2026-10-06"
     },
     {
+      "id": "history-character-ai-c12",
+      "title": "Character.AI C1.2 early preview and C1.1 predecessor",
+      "url": "https://blog.character.ai/character-ai/",
+      "publisher": "Character.AI",
+      "date": "2023-03-23",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "history-character-ai-pipsqueak-community",
+      "title": "Character.AI community update: introducing PipSqueak",
+      "url": "https://www.reddit.com/r/CharacterAI/comments/1mv5p1x/community_update_august_2025_maybe_our_biggest/",
+      "publisher": "Character.AI",
+      "date": "2025-08-20",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "history-character-ai-pipsqueak-embed",
+      "title": "Original PipSqueak community post timestamp",
+      "url": "https://embed.reddit.com/r/CharacterAI/comments/1mv5p1x/community_update_august_2025_maybe_our_biggest/",
+      "publisher": "Reddit / Character.AI",
+      "date": "2025-08-20",
+      "checkedAt": "2026-10-06"
+    },
+    {
       "id": "history-cogito-index",
       "title": "Cogito research and releases",
       "url": "https://www.deepcogito.com/research",
@@ -3457,6 +3521,30 @@
       "checkedAt": "2026-10-06"
     },
     {
+      "id": "history-mercury-coder-launch",
+      "title": "Inception: Mercury Coder playground launch",
+      "url": "https://x.com/_inception_ai/status/1894847926624714787",
+      "publisher": "Inception",
+      "date": "2025-02-26",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "history-mercury-original",
+      "title": "Introducing Mercury",
+      "url": "https://www.inceptionlabs.ai/blog/introducing-mercury",
+      "publisher": "Inception",
+      "date": "2025-02-26",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "history-minicpm-v-26",
+      "title": "MiniCPM-V publisher release news",
+      "url": "https://github.com/OpenBMB/MiniCPM-V",
+      "publisher": "OpenBMB",
+      "date": "2024-08-06",
+      "checkedAt": "2026-10-06"
+    },
+    {
       "id": "history-motif-1d731fb9",
       "title": "Motif 2.6B (checkpoint commit): first commit containing model weights",
       "url": "https://huggingface.co/Motif-Technologies/Motif-2.6B/commit/1d731fb911aaf9cdeb3fdd9dfa368db336fca067",
@@ -3488,11 +3576,43 @@
       "checkedAt": "2026-10-06"
     },
     {
+      "id": "history-nanbeige-original-announcement",
+      "title": "Original Nanbeige-16B release README preserved in upstream Git history",
+      "url": "https://github.com/beijinggao/Nanbeige/blob/c6b08be4084cac8761e97e78c6ddd8dcfc459a0a/README.md",
+      "publisher": "Nanbeige (original commit preserved by a fork)",
+      "date": "2023-11-08",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "history-nanbeige-original-commit",
+      "title": "Nanbeige release README original commit metadata",
+      "url": "https://api.github.com/repos/beijinggao/Nanbeige/commits/c6b08be4084cac8761e97e78c6ddd8dcfc459a0a",
+      "publisher": "GitHub / Nanbeige",
+      "date": "2023-11-08",
+      "checkedAt": "2026-10-06"
+    },
+    {
       "id": "history-nemotron-3",
       "title": "NVIDIA announces Nemotron-3 8B",
       "url": "https://developer.nvidia.com/blog/nvidia-ai-foundation-models-build-custom-enterprise-chatbots-and-co-pilots-with-production-ready-llms/",
       "publisher": "NVIDIA",
       "date": "2023-11-15",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "history-palmyra-models-2024-01",
+      "title": "Archived Writer model catalog: X V2 and X V3",
+      "url": "https://web.archive.org/web/20240116073001/https://dev.writer.com/docs/models",
+      "publisher": "Writer (archived)",
+      "date": "2024-01-16",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "history-palmyra-x-v2-v3-helm",
+      "title": "HELM model metadata: Palmyra X V2 and V3 release dates",
+      "url": "https://github.com/stanford-crfm/helm/blob/3900b1d318af02eb4e4f56da412a2ec8a7f5f3d6/src/helm/config/model_metadata.yaml",
+      "publisher": "Stanford CRFM / HELM",
+      "date": "2023-12-06",
       "checkedAt": "2026-10-06"
     },
     {
@@ -3549,6 +3669,14 @@
       "checkedAt": "2026-10-06"
     },
     {
+      "id": "history-step-gdps-2024",
+      "title": "Step-1, Step-1V and Step-2 preview at GDPS 2024",
+      "url": "https://www.cls.cn/detail/1627876",
+      "publisher": "STAR Market Daily / Cailian Press (conference reporting)",
+      "date": "2024-03-23",
+      "checkedAt": "2026-10-06"
+    },
+    {
       "id": "history-txgemma",
       "title": "Introducing TxGemma",
       "url": "https://developers.googleblog.com/en/introducing-txgemma-open-models-improving-therapeutics-development/",
@@ -3562,6 +3690,13 @@
       "url": "https://research.google/blog/vaultgemma-the-worlds-most-capable-differentially-private-llm/",
       "publisher": "Google Research",
       "date": "2025-09-12",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "history-writer-product-updates",
+      "title": "Writer product updates: Palmyra X6 availability",
+      "url": "https://support.writer.com/articles/1313908954-what-s-new-at-writer",
+      "publisher": "Writer",
       "checkedAt": "2026-10-06"
     },
     {
@@ -6126,6 +6261,39 @@
       "eventType": "release"
     },
     {
+      "id": "character-ai-c1-1-documented-2023-03-23",
+      "family": "character-ai",
+      "name": "C1.1 (availability documented)",
+      "version": "1.1",
+      "score": 1.1,
+      "date": "2023-03-23",
+      "eventType": "release",
+      "status": "Available by",
+      "sourceId": "history-character-ai-c12",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://blog.character.ai/character-ai/",
+      "weightsNote": "No public weights for this exact model were identified in the reviewed publisher sources.",
+      "dateBasis": "documented-by",
+      "note": "The publisher identifies C1.1 as the model preceding C1.2 on this date. This is a conservative available-by bound, not its original launch day; it must not be read as a simultaneous launch with C1.2."
+    },
+    {
+      "id": "character-ai-c1-2-preview-2023-03-23",
+      "family": "character-ai",
+      "name": "C1.2",
+      "version": "1.2",
+      "score": 1.2,
+      "date": "2023-03-23",
+      "eventType": "preview",
+      "status": "Preview",
+      "sourceId": "history-character-ai-c12",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://blog.character.ai/character-ai/",
+      "weightsNote": "No public weights for this exact model were identified in the reviewed publisher sources.",
+      "note": "Early preview on a subset of Characters, followed by a staged rollout."
+    },
+    {
       "id": "claude-claude-1-3-2023-04-18",
       "family": "claude",
       "name": "Claude 1.3",
@@ -7214,6 +7382,26 @@
       "huggingFaceUrl": "https://huggingface.co/dphn/dolphin-2.2-70b"
     },
     {
+      "id": "nanbeige-16b-announcement-2023-11-08",
+      "family": "nanbeige",
+      "name": "Nanbeige-16B (Base, Chat and 32K)",
+      "version": "1",
+      "score": 1,
+      "date": "2023-11-08",
+      "eventType": "announcement",
+      "status": "Announced",
+      "sourceId": "history-nanbeige-original-announcement",
+      "weightsStatus": "open",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF",
+      "weightsNote": "Original publisher repositories are unavailable. The link is a community conversion of the Chat variant; it is a surviving download, not a separate release or coverage of every announced variant.",
+      "dateSourceId": "history-nanbeige-original-commit",
+      "dateBasis": "announcement-commit",
+      "note": "The original release README announces Base, Chat, Base-32K and Chat-32K and links their downloads. The date is the original publisher commit, preserved in a fork, not the fork creation date or a later code update.",
+      "mapping": "16B is a parameter count and 32K is a context size. The unnumbered initial series maps to generation 1.",
+      "huggingFaceUrl": "https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF"
+    },
+    {
       "id": "dolphin-dphn-dolphin-2-2-yi-34b-checkpoint-2023-11-13",
       "family": "dolphin",
       "name": "dolphin-2_2-yi-34b",
@@ -7395,6 +7583,44 @@
       "weightsSourceUrl": "https://huggingface.co/Qwen/Qwen-Audio-Chat",
       "huggingFaceUrl": "https://huggingface.co/Qwen/Qwen-Audio-Chat",
       "eventType": "weights"
+    },
+    {
+      "id": "palmyra-x-002-release-2023-12-01",
+      "family": "palmyra",
+      "name": "Palmyra X 002 (V2)",
+      "version": "2",
+      "score": 2,
+      "date": "2023-12-01",
+      "eventType": "api",
+      "status": "Limited availability",
+      "sourceId": "history-palmyra-models-2024-01",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://web.archive.org/web/20240116073001/https://dev.writer.com/docs/models",
+      "weightsNote": "No public weights for this exact model were identified in the reviewed publisher sources.",
+      "dateSourceId": "history-palmyra-x-v2-v3-helm",
+      "dateBasis": "evaluation-metadata",
+      "note": "HELM explicitly records release_date 2023-12-01 and limited access for Palmyra X V2. The archived Writer catalog confirms this generation as an API model. This is the evaluation project’s recorded release date, not a retirement date or the documentation snapshot date.",
+      "mapping": "Writer X V2 and the zero-padded X 002 API generation map to version 2."
+    },
+    {
+      "id": "palmyra-x-003-release-2023-12-01",
+      "family": "palmyra",
+      "name": "Palmyra X 003 (V3)",
+      "version": "3",
+      "score": 3,
+      "date": "2023-12-01",
+      "eventType": "api",
+      "status": "Limited availability",
+      "sourceId": "history-palmyra-models-2024-01",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://web.archive.org/web/20240116073001/https://dev.writer.com/docs/models",
+      "weightsNote": "No public weights for this exact model were identified in the reviewed publisher sources.",
+      "dateSourceId": "history-palmyra-x-v2-v3-helm",
+      "dateBasis": "evaluation-metadata",
+      "note": "HELM explicitly records release_date 2023-12-01 and limited access for Palmyra X V3. The archived Writer catalog confirms this generation as an API model. This is the evaluation project’s recorded release date, not a retirement date or the documentation snapshot date.",
+      "mapping": "Writer X V3 and the zero-padded X 003 API generation map to version 3."
     },
     {
       "id": "gemini-gemini-1-0-nano-2023-12-06",
@@ -8309,6 +8535,54 @@
       "eventType": "preview"
     },
     {
+      "id": "step-step-1-announcement-2024-03-23",
+      "family": "step",
+      "name": "Step-1",
+      "version": "1",
+      "score": 1,
+      "date": "2024-03-23",
+      "eventType": "announcement",
+      "status": "Announced",
+      "sourceId": "history-step-gdps-2024",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://www.cls.cn/detail/1627876",
+      "weightsNote": "No public weights for this exact model were identified in the reviewed publisher sources.",
+      "note": "Publicly introduced by StepFun CEO Jiang Daxin at the GDPS opening. Training completion dates from 2023 are not public release dates."
+    },
+    {
+      "id": "step-step-1v-announcement-2024-03-23",
+      "family": "step",
+      "name": "Step-1V",
+      "version": "1",
+      "score": 1,
+      "date": "2024-03-23",
+      "eventType": "announcement",
+      "status": "Announced",
+      "sourceId": "history-step-gdps-2024",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://www.cls.cn/detail/1627876",
+      "weightsNote": "No public weights for this exact model were identified in the reviewed publisher sources.",
+      "note": "Publicly introduced by StepFun CEO Jiang Daxin at the GDPS opening. Training completion dates from 2023 are not public release dates."
+    },
+    {
+      "id": "step-step-2-preview-2024-03-23",
+      "family": "step",
+      "name": "Step-2",
+      "version": "2",
+      "score": 2,
+      "date": "2024-03-23",
+      "eventType": "preview",
+      "status": "Preview",
+      "sourceId": "history-step-gdps-2024",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://www.cls.cn/detail/1627876",
+      "weightsNote": "No public weights for this exact model were identified in the reviewed publisher sources.",
+      "note": "Announced at the GDPS opening, with API preview access for selected partners. This is not general availability."
+    },
+    {
       "id": "dolphin-dphn-dolphin-2-8-gemma-2b-checkpoint-2024-03-24",
       "family": "dolphin",
       "name": "dolphin-2.8-gemma-2b",
@@ -8325,6 +8599,26 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://huggingface.co/dphn/dolphin-2.8-gemma-2b",
       "huggingFaceUrl": "https://huggingface.co/dphn/dolphin-2.8-gemma-2b"
+    },
+    {
+      "id": "nanbeige-nanbeige-nanbeige2-8b-chat-checkpoint-2024-03-24",
+      "family": "nanbeige",
+      "name": "Nanbeige2-8B-Chat",
+      "version": "2",
+      "score": 2,
+      "date": "2024-03-24",
+      "eventType": "checkpoint",
+      "status": "Repository created (fallback)",
+      "dateBasis": "repository-created",
+      "sourceId": "checkpoint-nanbeige-nanbeige2-8b-chat",
+      "note": "Hugging Face repository creation date used as a fallback because first-weight history is inaccessible. Archived publisher metadata records model weights, but this date does not establish when weights were uploaded or the repository became public. Date uses UTC.",
+      "mapping": "2 is the publisher version label; 8B is its parameter count. The repository creation date predates the archived page and does not date any rename.",
+      "weightsStatus": "open",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://huggingface.co/tooktang/Nanbeige2-8B-Chat-GGUF",
+      "huggingFaceUrl": "https://huggingface.co/tooktang/Nanbeige2-8B-Chat-GGUF",
+      "dateRepositoryUrl": "https://huggingface.co/Nanbeige/Nanbeige2-8B-Chat",
+      "weightsNote": "The publisher repository is no longer accessible. This community conversion preserves weights from the named publisher model; it is a download link, not a separate release or the source of the event date."
     },
     {
       "id": "dolphin-dphn-dolphin-2-8-gemma-7b-checkpoint-2024-03-25",
@@ -8761,6 +9055,24 @@
       "huggingFaceUrl": "https://huggingface.co/google/codegemma-1.1-7b-it"
     },
     {
+      "id": "palmyra-writer-palmyra-med-70b-checkpoint-2024-05-05",
+      "family": "palmyra",
+      "name": "Palmyra-Med-70B",
+      "version": "1",
+      "score": 1,
+      "date": "2024-05-05",
+      "eventType": "checkpoint",
+      "status": "Repository created (fallback)",
+      "dateBasis": "repository-created",
+      "sourceId": "checkpoint-writer-palmyra-med-70b",
+      "note": "Hugging Face repository creation date used as a fallback because first-weight history is inaccessible. Model weights exist now, but this date does not establish when weights were uploaded or the repository became public. Date uses UTC.",
+      "mapping": "The unnumbered initial Med line maps to generation 1; 70B is its parameter count.",
+      "weightsStatus": "open",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://huggingface.co/Writer/Palmyra-Med-70B",
+      "huggingFaceUrl": "https://huggingface.co/Writer/Palmyra-Med-70B"
+    },
+    {
       "id": "deepseek-deepseek-v2-2024-05-06",
       "family": "deepseek",
       "name": "DeepSeek-V2",
@@ -8972,6 +9284,24 @@
       "weightsSourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite-Chat",
       "huggingFaceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite-Chat",
       "eventType": "release"
+    },
+    {
+      "id": "palmyra-writer-palmyra-56b-instruct-checkpoint-2024-05-16",
+      "family": "palmyra",
+      "name": "Palmyra-56B-Instruct",
+      "version": "1",
+      "score": 1,
+      "date": "2024-05-16",
+      "eventType": "checkpoint",
+      "status": "Repository created (fallback)",
+      "dateBasis": "repository-created",
+      "sourceId": "checkpoint-writer-palmyra-56b-instruct",
+      "note": "Hugging Face repository creation date used as a fallback because first-weight history is inaccessible. Model weights exist now, but this date does not establish when weights were uploaded or the repository became public. Date uses UTC.",
+      "mapping": "The unnumbered initial instruction model maps to generation 1; 56B is its parameter count.",
+      "weightsStatus": "open",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://huggingface.co/Writer/Palmyra-56B-Instruct",
+      "huggingFaceUrl": "https://huggingface.co/Writer/Palmyra-56B-Instruct"
     },
     {
       "id": "deepseek-deepseek-v2-0517-2024-05-17",
@@ -9903,6 +10233,23 @@
       "huggingFaceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct"
     },
     {
+      "id": "minicpm-v-2-6-weights-2024-08-06",
+      "family": "minicpm",
+      "name": "MiniCPM-V 2.6",
+      "version": "2.6",
+      "score": 2.6,
+      "date": "2024-08-06",
+      "eventType": "weights",
+      "status": "Open weights",
+      "sourceId": "history-minicpm-v-26",
+      "weightsStatus": "open",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://huggingface.co/openbmb/MiniCPM-V-2_6",
+      "weightsNote": "Publisher repository has model weight shards; Hugging Face access is gated.",
+      "note": "Publisher News explicitly dates the MiniCPM-V 2.6 open-weight release to August 6, 2024. This supersedes the need to infer a date from its gated commit history.",
+      "huggingFaceUrl": "https://huggingface.co/openbmb/MiniCPM-V-2_6"
+    },
+    {
       "id": "exaone-exaone-3-0-7-8b-2024-08-07",
       "family": "exaone",
       "name": "EXAONE 3.0 7.8B",
@@ -10670,6 +11017,24 @@
       "weightsSourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
       "weightsNote": "Provider documentation offers hosted access; no public weights found for this release.",
       "eventType": "release"
+    },
+    {
+      "id": "palmyra-writer-palmyra-x-4-3-73b-checkpoint-2024-11-07",
+      "family": "palmyra",
+      "name": "Palmyra-X-4.3-73B",
+      "version": "4.3",
+      "score": 4.3,
+      "date": "2024-11-07",
+      "eventType": "checkpoint",
+      "status": "Repository created (fallback)",
+      "dateBasis": "repository-created",
+      "sourceId": "checkpoint-writer-palmyra-x-4-3-73b",
+      "note": "Hugging Face repository creation date used as a fallback because first-weight history is inaccessible. Model weights exist now, but this date does not establish when weights were uploaded or the repository became public. Date uses UTC.",
+      "mapping": "4.3 is the published version; 73B is its parameter count.",
+      "weightsStatus": "open",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://huggingface.co/Writer/Palmyra-X-4.3-73B",
+      "huggingFaceUrl": "https://huggingface.co/Writer/Palmyra-X-4.3-73B"
     },
     {
       "id": "qwen-qwen2-5-coder-32b-2024-11-12",
@@ -11910,6 +12275,24 @@
       "eventType": "weights"
     },
     {
+      "id": "mercury-coder-launch-2025-02-26",
+      "family": "mercury",
+      "name": "Mercury Coder",
+      "version": "1",
+      "score": 1,
+      "date": "2025-02-26",
+      "eventType": "release",
+      "status": "Released",
+      "sourceId": "history-mercury-original",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://www.inceptionlabs.ai/blog/introducing-mercury",
+      "weightsNote": "No public weights for this exact model were identified in the reviewed publisher sources.",
+      "dateSourceId": "history-mercury-coder-launch",
+      "mapping": "The original unnumbered Mercury Coder maps to generation 1.",
+      "note": "The dated publisher post invites users to try Mercury Coder in its playground. Later refreshed checkpoints are separate milestones."
+    },
+    {
       "id": "phi-phi-4-mini-2025-02-26",
       "family": "phi",
       "name": "Phi-4 Mini",
@@ -12136,6 +12519,24 @@
       "weightsSourceUrl": "https://developers.openai.com/api/docs/changelog",
       "weightsNote": "Provider documentation offers hosted access; no public weights found for this release.",
       "eventType": "release"
+    },
+    {
+      "id": "palmyra-writer-palmyra-local-1-7b-checkpoint-2025-03-23",
+      "family": "palmyra",
+      "name": "Palmyra-local-1_7B",
+      "version": "1",
+      "score": 1,
+      "date": "2025-03-23",
+      "eventType": "checkpoint",
+      "status": "Repository created (fallback)",
+      "dateBasis": "repository-created",
+      "sourceId": "checkpoint-writer-palmyra-local-1-7b",
+      "note": "Hugging Face repository creation date used as a fallback because first-weight history is inaccessible. Model weights exist now, but this date does not establish when weights were uploaded or the repository became public. Date uses UTC.",
+      "mapping": "1_7B denotes 1.7 billion parameters, not version 1.7. This initial unnumbered local model maps to generation 1.",
+      "weightsStatus": "open",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://huggingface.co/Writer/Palmyra-local-1_7B",
+      "huggingFaceUrl": "https://huggingface.co/Writer/Palmyra-local-1_7B"
     },
     {
       "id": "deepseek-deepseek-v3-0324-2025-03-24",
@@ -13963,6 +14364,24 @@
       "huggingFaceUrl": "https://huggingface.co/google/gemma-3-270m-it"
     },
     {
+      "id": "character-ai-pipsqueak-announcement-2025-08-20",
+      "family": "character-ai",
+      "name": "PipSqueak (rollout announcement)",
+      "version": "1",
+      "score": 1,
+      "date": "2025-08-20",
+      "status": "Announced",
+      "eventType": "announcement",
+      "sourceId": "history-character-ai-pipsqueak-community",
+      "mapping": "Unnumbered first generation is normalized to 1. Parameter counts and base-model generations are not this model’s version.",
+      "note": "Official community announcement during the staged rollout. Some experimental access preceded this post; the date is the announcement, not a claim about the first test user. The August 26 retrospective covers the same rollout.",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://blog.character.ai/breaking-news-our-open-source-models-are-a-lot-of-fun/",
+      "weightsNote": "No downloadable weights for this specific model were found in the publisher material. Related research models or open base models are not equivalent checkpoints.",
+      "dateSourceId": "history-character-ai-pipsqueak-embed"
+    },
+    {
       "id": "deepseek-deepseek-v3-1-2025-08-21",
       "family": "deepseek",
       "name": "DeepSeek-V3.1",
@@ -14028,23 +14447,6 @@
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://huggingface.co/openbmb/MiniCPM-V-4_5",
       "huggingFaceUrl": "https://huggingface.co/openbmb/MiniCPM-V-4_5"
-    },
-    {
-      "id": "character-ai-pipsqueak-rollout-report-2025-08-26",
-      "family": "character-ai",
-      "name": "PipSqueak (rollout report)",
-      "version": "1",
-      "score": 1,
-      "date": "2025-08-26",
-      "status": "Announced",
-      "eventType": "announcement",
-      "sourceId": "addition-character-ai-pipsqueak-rollout-report",
-      "mapping": "Unnumbered first generation is normalized to 1. Parameter counts and base-model generations are not this model’s version.",
-      "note": "The publisher says millions already had access by this report. The exact beginning of the earlier rollout is unresolved.",
-      "weightsStatus": "not-published",
-      "weightsCheckedAt": "2026-10-06",
-      "weightsSourceUrl": "https://blog.character.ai/breaking-news-our-open-source-models-are-a-lot-of-fun/",
-      "weightsNote": "No downloadable weights for this specific model were found in the publisher material. Related research models or open base models are not equivalent checkpoints."
     },
     {
       "id": "hermes-hermes-4-14b-2025-08-26",
@@ -18224,6 +18626,23 @@
       "huggingFaceUrl": "https://huggingface.co/poolside/Laguna-S-2.1"
     },
     {
+      "id": "laguna-s-2-1-base-announcement-2026-07-21",
+      "family": "laguna",
+      "name": "Laguna S 2.1 Base",
+      "version": "2.1",
+      "score": 2.1,
+      "date": "2026-07-21",
+      "eventType": "announcement",
+      "status": "Research access by request",
+      "sourceId": "laguna-laguna-s-2-1-2026-07-21",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://huggingface.co/poolside/Laguna-S-2.1-base",
+      "weightsNote": "Publisher explicitly withholds public base weights. By-request research access and a model card are not an open-weight release.",
+      "note": "The launch post offers the base model to researchers by request. Its Hugging Face card explicitly says the base model is not public; the repository contains no downloadable model weights.",
+      "mapping": "2.1 is the Laguna version; S denotes the size line. Base is distinct from the public instruction model."
+    },
+    {
       "id": "qwen-qwen3-7-flash-2026-07-21",
       "family": "qwen",
       "name": "Qwen3.7-Flash",
@@ -18426,6 +18845,22 @@
       "eventType": "release"
     },
     {
+      "id": "palmyra-x6-availability-2026-08-06",
+      "family": "palmyra",
+      "name": "Palmyra X6 (platform availability)",
+      "version": "6",
+      "score": 6,
+      "date": "2026-08-06",
+      "eventType": "release",
+      "status": "Released",
+      "sourceId": "history-writer-product-updates",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-06",
+      "weightsSourceUrl": "https://support.writer.com/articles/1313908954-what-s-new-at-writer",
+      "weightsNote": "No public weights for this exact model were identified in the reviewed publisher sources.",
+      "note": "Writer’s dated August 6 product update says Palmyra X6 is now available. The August 13 engineering announcement remains a separate event."
+    },
+    {
       "id": "gpt-gpt-5-6-cyber-2026-08-10",
       "family": "gpt",
       "name": "GPT-5.6 Cyber",
@@ -18585,7 +19020,7 @@
       "eventType": "announcement",
       "status": "Announced",
       "sourceId": "palmyra-palmyra-x6-2026-08-13",
-      "note": "The article byline is August 13 and says the model is available today. A separate “July 2026” research label does not establish an earlier exact release day.",
+      "note": "Engineering announcement dated August 13. The earlier August 6 platform availability is separately recorded from Writer’s product changelog.",
       "weightsStatus": "not-published",
       "weightsCheckedAt": "2026-10-06",
       "weightsSourceUrl": "https://writer.com/engineering/palmyra-x6/",

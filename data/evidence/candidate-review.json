@@ -1,0 +1,322 @@
+{
+  "checkedAt": "2026-10-06",
+  "observations": [
+    {
+      "id": "character-c12",
+      "url": "https://blog.character.ai/character-ai/",
+      "type": "publisher-announcement",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "077e6220d1d241378b6b3d0056f7f0bc861a297a51d82cc0dee697bd4e32e27e",
+      "facts": {
+        "published": "2023-03-23",
+        "preview": "C1.2",
+        "previousModel": "C1.1",
+        "limitation": "The post does not give the original C1.1 launch date or establish a separate C1.0 release."
+      }
+    },
+    {
+      "id": "character-initial",
+      "url": "https://blog.character.ai/introducing-character/",
+      "type": "publisher-retrospective",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "2d17911e3f0d52eade28cb95320ad342b676d0130adf97a68a45b059692e63c9",
+      "facts": {
+        "published": "2022-12-05",
+        "betaLaunchMonth": "2022-09",
+        "limitation": "The beta announcement does not name a separate model C1.0."
+      }
+    },
+    {
+      "id": "pipsqueak-community",
+      "url": "https://embed.reddit.com/r/CharacterAI/comments/1mv5p1x/community_update_august_2025_maybe_our_biggest/",
+      "type": "publisher-community-announcement",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "6024f36f8ed385f5078dcec9711a2620172b8ac081340dabd62421a34231143e",
+      "facts": {
+        "published": "2025-08-20T05:02:26.908000+0000",
+        "author": "MarieLovesMatcha",
+        "announcement": "PipSqueak staged rollout",
+        "limitation": "Earlier experimental access is not dated by this announcement."
+      }
+    },
+    {
+      "id": "step-gdps",
+      "url": "https://www.cls.cn/detail/1627876",
+      "type": "firsthand-conference-report",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "7d05157219ddf313336aa98d70b403930b2c5bbf5bcfb4773939759161907bf5",
+      "facts": {
+        "published": "2024-03-23",
+        "speaker": "StepFun CEO Jiang Daxin",
+        "announced": [
+          "Step-1",
+          "Step-1V",
+          "Step-2 preview"
+        ],
+        "access": "Step-2 API preview for selected partners"
+      }
+    },
+    {
+      "id": "nanbeige-original-readme",
+      "url": "https://raw.githubusercontent.com/beijinggao/Nanbeige/c6b08be4084cac8761e97e78c6ddd8dcfc459a0a/README.md",
+      "type": "preserved-publisher-announcement",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "b2819127665341f118ba2a806c10221dfad159f9a4cc8c74d4583421777be162",
+      "facts": {
+        "models": [
+          "Nanbeige-16B-Base",
+          "Nanbeige-16B-Chat",
+          "Nanbeige-16B-Base-32K",
+          "Nanbeige-16B-Chat-32K"
+        ],
+        "announcesReleaseAndLinksDownloads": true
+      }
+    },
+    {
+      "id": "nanbeige-original-commit",
+      "url": "https://api.github.com/repos/beijinggao/Nanbeige/commits/c6b08be4084cac8761e97e78c6ddd8dcfc459a0a",
+      "type": "preserved-publisher-commit",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "527a1493965fa213dc718c80c931f459701922290e93cca5c3c71b0c5ecc0381",
+      "facts": {
+        "committed": "2023-11-08T04:22:17Z",
+        "sha": "c6b08be4084cac8761e97e78c6ddd8dcfc459a0a",
+        "includes": "Original release README",
+        "limitation": "Announcement publication date, not a generic source-code commit counted as new weights."
+      }
+    },
+    {
+      "id": "nanbeige-old-mirror",
+      "url": "https://huggingface.co/mradermacher/Nanbeige1.5-8B-Chat-GGUF/raw/7659447088111b102c35529def3851313919f496/README.md",
+      "type": "conversion-provenance",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "c1aed62c9189350cb8e430fc0b848778b0a37009c537d9413f95acf30e443a46",
+      "facts": {
+        "baseModel": "Nanbeige/Nanbeige1.5-8B-Chat",
+        "revision": "7659447088111b102c35529def3851313919f496",
+        "limitation": "This is a conversion repository, not an independently dated publisher release."
+      }
+    },
+    {
+      "id": "nanbeige-current-mirror",
+      "url": "https://huggingface.co/mradermacher/Nanbeige1.5-8B-Chat-GGUF/raw/main/README.md",
+      "type": "conversion-provenance",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "a401f8efebb99acad9372b317ba23a6e52ff83aa76d4c3397989320aac90f158",
+      "facts": {
+        "baseModel": "Nanbeige/Nanbeige2-8B-Chat",
+        "repositoryName": "Nanbeige1.5-8B-Chat-GGUF",
+        "limitation": "The old 1.5 mirror now points at version 2. A rename is plausible, but neither identical upstream weights nor a separately released 1.5 checkpoint has been established."
+      }
+    },
+    {
+      "id": "nanbeige-archived-model",
+      "url": "https://web.archive.org/web/20240512234656id_/https://huggingface.co/Nanbeige/Nanbeige2-8B-Chat",
+      "type": "archived-repository-metadata",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "acaf2fb96f85b1b8998d40064e212e9bda8168687512654c75b61a387512d891",
+      "facts": {
+        "repository": "Nanbeige/Nanbeige2-8B-Chat",
+        "createdAt": "2024-03-24T14:09:12.000Z",
+        "safetensorsParameters": 7772344320,
+        "limitation": "Repository creation fallback; neither the original upload day nor a possible rename day is established."
+      }
+    },
+    {
+      "id": "mercury-launch",
+      "url": "https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInceptionAILabs%2Fstatus%2F1894847926624714787&omit_script=true",
+      "type": "publisher-announcement",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "1923281a121316bd1f70ac9b3238a7f5b64d20b78d318b0e582913a10d92f772",
+      "facts": {
+        "published": "2025-02-26",
+        "author": "Inception",
+        "url": "https://x.com/_inception_ai/status/1894847926624714787",
+        "availability": "Mercury Coder playground"
+      }
+    },
+    {
+      "id": "writer-med",
+      "url": "https://huggingface.co/api/models/Writer/Palmyra-Med-70B",
+      "type": "repository-metadata",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "88b2bf5c46aa174dd00f552829678538a71e43cf6713dfd7a8ad9b436d2382d0",
+      "facts": {
+        "repository": "Writer/Palmyra-Med-70B",
+        "createdAt": "2024-05-05T23:44:37.000Z",
+        "gated": "auto",
+        "weightFiles": 30,
+        "historyStatus": 401,
+        "limitation": "Creation fallback. Current weights exist; their first upload date and original public access date remain unknown."
+      }
+    },
+    {
+      "id": "writer-56b",
+      "url": "https://huggingface.co/api/models/Writer/Palmyra-56B-Instruct",
+      "type": "repository-metadata",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "84c3a8005030c5e477a710afa1dbec286345f1a46f631bf00d1b39bffeb85745",
+      "facts": {
+        "repository": "Writer/Palmyra-56B-Instruct",
+        "createdAt": "2024-05-16T16:56:09.000Z",
+        "gated": "manual",
+        "weightFiles": 12,
+        "historyStatus": 401,
+        "limitation": "Creation fallback. Current weights exist; their first upload date and original public access date remain unknown."
+      }
+    },
+    {
+      "id": "writer-43",
+      "url": "https://huggingface.co/api/models/Writer/Palmyra-X-4.3-73B",
+      "type": "repository-metadata",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "6884a035f9fa6fbee1960f360960ccd9c052b77352733f93ae8cc805d789535c",
+      "facts": {
+        "repository": "Writer/Palmyra-X-4.3-73B",
+        "createdAt": "2024-11-07T14:55:41.000Z",
+        "gated": "manual",
+        "weightFiles": 31,
+        "historyStatus": 401,
+        "limitation": "Creation fallback. Current weights exist; their first upload date and original public access date remain unknown."
+      }
+    },
+    {
+      "id": "writer-local",
+      "url": "https://huggingface.co/api/models/Writer/Palmyra-local-1_7B",
+      "type": "repository-metadata",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "2139556b9bba33b6acba418be48b1d515267dcc7d59cef469a5325d05248d0ba",
+      "facts": {
+        "repository": "Writer/Palmyra-local-1_7B",
+        "createdAt": "2025-03-23T13:37:33.000Z",
+        "gated": "manual",
+        "weightFiles": 1,
+        "historyStatus": 401,
+        "limitation": "Creation fallback. Current weights exist; their first upload date and original public access date remain unknown."
+      }
+    },
+    {
+      "id": "laguna-launch",
+      "url": "https://www.poolside.ai/blog/introducing-laguna-s-2-1",
+      "type": "publisher-announcement",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "d3168d78606dbb95b589a83d06ae07dfa160e64cacfdb92f3d1d28da6fde44e2",
+      "facts": {
+        "published": "2026-07-21",
+        "baseModelAccess": "By request for researchers"
+      }
+    },
+    {
+      "id": "laguna-base-card",
+      "url": "https://huggingface.co/poolside/Laguna-S-2.1-base/raw/main/README.md",
+      "type": "publisher-model-card",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "81fb54bc9f0b500461bd4ddd8a3b6efd1bb7e1c8ae6a2d3a86c2e9c5fb177f6a",
+      "facts": {
+        "publicBaseWeights": false,
+        "access": "By request",
+        "limitation": "Model card explicitly says the base model is not made public."
+      }
+    },
+    {
+      "id": "minicpm-news",
+      "url": "https://raw.githubusercontent.com/OpenBMB/MiniCPM-V/main/README.md",
+      "type": "publisher-release-notes",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "978333665b038c2fd4c5e5da7260edbef7043d3b1f53d2dc1a89cbe2202efcec",
+      "facts": {
+        "released": "2024-08-06",
+        "model": "MiniCPM-V 2.6",
+        "openWeights": true
+      }
+    },
+    {
+      "id": "palmyra-helm",
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/3900b1d318af02eb4e4f56da412a2ec8a7f5f3d6/src/helm/config/model_metadata.yaml",
+      "type": "evaluation-project-metadata",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "4279df41b17d1439cb201aecec1757a643b0c8f7496931ad6f7840108d957979",
+      "facts": {
+        "releaseDate": "2023-12-01",
+        "models": [
+          "writer/palmyra-x-v2",
+          "writer/palmyra-x-v3"
+        ],
+        "access": "limited",
+        "limitation": "HELM supplied release metadata; not an inference from the commit timestamp."
+      }
+    },
+    {
+      "id": "palmyra-writer-archive",
+      "url": "https://web.archive.org/web/20240116073001id_/https://dev.writer.com/docs/models",
+      "type": "archived-publisher-model-catalog",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "d313237d209a33c8d320e1f677b5044c2a87a489b1c563dfe98b9453f359cbc2",
+      "facts": {
+        "models": [
+          "Palmyra-X V2",
+          "Palmyra-X V3"
+        ],
+        "access": "API, Writer Platform"
+      }
+    },
+    {
+      "id": "writer-x6-updates",
+      "url": "https://support.writer.com/articles/1313908954-what-s-new-at-writer",
+      "type": "publisher-release-notes",
+      "checkedAt": "2026-10-06",
+      "responseSha256": "d98f022198def9ade708551686dee45ba18202e788db66b615ff744d3bb9c267",
+      "facts": {
+        "available": "2026-08-06",
+        "model": "Palmyra X6"
+      }
+    },
+    {
+      "id": "ring-ring-2-0-existing",
+      "type": "existing-first-weights-records",
+      "checkedAt": "2026-10-06",
+      "releaseIds": [
+        "ring-inclusionai-ring-mini-2-0-checkpoint-2025-09-08",
+        "ring-inclusionai-ring-flash-2-0-checkpoint-2025-09-19"
+      ],
+      "sourceUrls": [
+        "https://huggingface.co/inclusionAI/Ring-mini-2.0/commit/6e02e2252bf3c30b8e6c7186364a2082b41dcbd5",
+        "https://huggingface.co/inclusionAI/Ring-flash-2.0/commit/4589f02c55abf61aec7b34157fdffa0c2264cb30"
+      ]
+    },
+    {
+      "id": "ring-ring-2-5-existing",
+      "type": "existing-first-weights-records",
+      "checkedAt": "2026-10-06",
+      "releaseIds": [
+        "ring-inclusionai-ring-2-5-1t-checkpoint-2026-02-10"
+      ],
+      "sourceUrls": [
+        "https://huggingface.co/inclusionAI/Ring-2.5-1T/commit/284fcb88eb98c2e92bbc5c31d42d70498fcac655"
+      ]
+    }
+  ],
+  "candidateIds": [
+    "character-ai-c-ai-1-0",
+    "character-ai-c-ai-1-1",
+    "character-ai-c-ai-1-2",
+    "character-ai-pipsqueak-initial-rollout",
+    "step-step-1",
+    "step-step-1v",
+    "step-step-2",
+    "nanbeige-nanbeige-16b",
+    "nanbeige-nanbeige-1-5",
+    "nanbeige-nanbeige-2",
+    "mercury-mercury-coder",
+    "ring-ring-2-0",
+    "ring-ring-2-5",
+    "writer-palmyra-med-70b",
+    "writer-palmyra-56b-instruct",
+    "writer-palmyra-x-4-3-73b",
+    "writer-palmyra-local-1-7b",
+    "poolside-laguna-s-2-1-base",
+    "openbmb-minicpm-v-2-6",
+    "palmyra-x-002",
+    "palmyra-x-003"
+  ]
+}

@@ -30,44 +30,62 @@
   {
     "family": "palmyra",
     "url": "https://huggingface.co/Writer/Palmyra-Med-70B",
-    "disposition": "date-unresolved",
-    "reason": "Publisher repository is listed, but checkpoint history requires access. The exact release date has not been established.",
-    "checkedAt": "2026-10-06"
+    "disposition": "covered",
+    "reason": "Added with the explicitly labeled Hugging Face repository-creation fallback. Current metadata confirms real weights; the gated first-weight history remains inaccessible. Parameter counts do not become version numbers.",
+    "checkedAt": "2026-10-06",
+    "releaseIds": [
+      "palmyra-writer-palmyra-med-70b-checkpoint-2024-05-05"
+    ]
   },
   {
     "family": "palmyra",
     "url": "https://huggingface.co/Writer/Palmyra-56B-Instruct",
-    "disposition": "date-unresolved",
-    "reason": "Publisher repository is listed, but checkpoint history requires access. The exact release date has not been established.",
-    "checkedAt": "2026-10-06"
+    "disposition": "covered",
+    "reason": "Added with the explicitly labeled Hugging Face repository-creation fallback. Current metadata confirms real weights; the gated first-weight history remains inaccessible. Parameter counts do not become version numbers.",
+    "checkedAt": "2026-10-06",
+    "releaseIds": [
+      "palmyra-writer-palmyra-56b-instruct-checkpoint-2024-05-16"
+    ]
   },
   {
     "family": "palmyra",
     "url": "https://huggingface.co/Writer/Palmyra-X-4.3-73B",
-    "disposition": "date-unresolved",
-    "reason": "Publisher repository is listed, but checkpoint history requires access. The exact release date has not been established.",
-    "checkedAt": "2026-10-06"
+    "disposition": "covered",
+    "reason": "Added with the explicitly labeled Hugging Face repository-creation fallback. Current metadata confirms real weights; the gated first-weight history remains inaccessible. Parameter counts do not become version numbers.",
+    "checkedAt": "2026-10-06",
+    "releaseIds": [
+      "palmyra-writer-palmyra-x-4-3-73b-checkpoint-2024-11-07"
+    ]
   },
   {
     "family": "palmyra",
     "url": "https://huggingface.co/Writer/Palmyra-local-1_7B",
-    "disposition": "date-unresolved",
-    "reason": "Publisher repository is listed, but checkpoint history requires access. The exact release date has not been established.",
-    "checkedAt": "2026-10-06"
+    "disposition": "covered",
+    "reason": "Added with the explicitly labeled Hugging Face repository-creation fallback. Current metadata confirms real weights; the gated first-weight history remains inaccessible. Parameter counts do not become version numbers.",
+    "checkedAt": "2026-10-06",
+    "releaseIds": [
+      "palmyra-writer-palmyra-local-1-7b-checkpoint-2025-03-23"
+    ]
   },
   {
     "family": "laguna",
     "url": "https://huggingface.co/poolside/Laguna-S-2.1-base",
-    "disposition": "date-unresolved",
-    "reason": "No complete checkpoint was found in accessible history; a model listing alone does not establish a weight release.",
-    "checkedAt": "2026-10-06"
+    "disposition": "covered",
+    "reason": "Added the July 21, 2026 announcement as research access by request. The publisher explicitly withholds public base weights, so it is not marked open.",
+    "checkedAt": "2026-10-06",
+    "releaseIds": [
+      "laguna-s-2-1-base-announcement-2026-07-21"
+    ]
   },
   {
     "family": "minicpm",
     "url": "https://huggingface.co/openbmb/MiniCPM-V-2_6",
-    "disposition": "date-unresolved",
-    "reason": "Checkpoint history is inaccessible; the exact publisher release date requires separate verification.",
-    "checkedAt": "2026-10-06"
+    "disposition": "covered",
+    "reason": "Added the August 6, 2024 weights release from OpenBMB’s dated News, without needing a gated-history fallback.",
+    "checkedAt": "2026-10-06",
+    "releaseIds": [
+      "minicpm-v-2-6-weights-2024-08-06"
+    ]
   },
   {
     "family": "gemma",
@@ -1453,5 +1471,55 @@
     ],
     "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
     "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "nanbeige",
+    "url": "https://huggingface.co/TheBloke/Nanbeige-16B-Chat-GGUF",
+    "disposition": "covered",
+    "reason": "Added the original November 8, 2023 announcement preserved in Git history. It explicitly introduces the four initial 16B variants and their downloads.",
+    "checkedAt": "2026-10-06",
+    "releaseIds": [
+      "nanbeige-16b-announcement-2023-11-08"
+    ]
+  },
+  {
+    "family": "nanbeige",
+    "url": "https://huggingface.co/Nanbeige/Nanbeige2-8B-Chat",
+    "disposition": "covered",
+    "reason": "Added the original publisher repository using its archived March 24, 2024 creation timestamp as the reviewed fallback. Surviving conversion weights are linked without becoming a separate release.",
+    "checkedAt": "2026-10-06",
+    "releaseIds": [
+      "nanbeige-nanbeige-nanbeige2-8b-chat-checkpoint-2024-03-24"
+    ]
+  },
+  {
+    "family": "ring",
+    "url": "https://huggingface.co/inclusionAI/Ring-mini-2.0",
+    "disposition": "covered",
+    "reason": "Already represented by the first commits containing publisher weights. Closed the stale pending entry without adding duplicate releases.",
+    "checkedAt": "2026-10-06",
+    "releaseIds": [
+      "ring-inclusionai-ring-mini-2-0-checkpoint-2025-09-08"
+    ]
+  },
+  {
+    "family": "ring",
+    "url": "https://huggingface.co/inclusionAI/Ring-flash-2.0",
+    "disposition": "covered",
+    "reason": "Already represented by the first commits containing publisher weights. Closed the stale pending entry without adding duplicate releases.",
+    "checkedAt": "2026-10-06",
+    "releaseIds": [
+      "ring-inclusionai-ring-flash-2-0-checkpoint-2025-09-19"
+    ]
+  },
+  {
+    "family": "ring",
+    "url": "https://huggingface.co/inclusionAI/Ring-2.5-1T",
+    "disposition": "covered",
+    "reason": "Already represented by the first commits containing publisher weights. Closed the stale pending entry without adding duplicate releases.",
+    "checkedAt": "2026-10-06",
+    "releaseIds": [
+      "ring-inclusionai-ring-2-5-1t-checkpoint-2026-02-10"
+    ]
   }
 ]

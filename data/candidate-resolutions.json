@@ -1,0 +1,321 @@
+[
+  {
+    "id": "character-ai-c-ai-1-0",
+    "family": "character-ai",
+    "name": "c.ai 1.0",
+    "version": "1.0",
+    "outcome": "excluded",
+    "releaseIds": [],
+    "evidenceIds": [
+      "character-initial",
+      "character-c12"
+    ],
+    "reason": "No independently identified C1.0 model was established. The original beta is unnumbered in its publisher announcement; the later post explicitly names C1.1 and C1.2. Do not invent a C1.0 release from a presumed version sequence.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "character-ai-c-ai-1-1",
+    "family": "character-ai",
+    "name": "c.ai 1.1",
+    "version": "1.1",
+    "outcome": "added",
+    "releaseIds": [
+      "character-ai-c1-1-documented-2023-03-23"
+    ],
+    "evidenceIds": [
+      "character-c12"
+    ],
+    "reason": "Added C1.1 with an explicit Available by bound of March 23, 2023. The publisher names it as C1.2’s predecessor; its original launch day is not claimed.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "character-ai-c-ai-1-2",
+    "family": "character-ai",
+    "name": "c.ai 1.2",
+    "version": "1.2",
+    "outcome": "added",
+    "releaseIds": [
+      "character-ai-c1-2-preview-2023-03-23"
+    ],
+    "evidenceIds": [
+      "character-c12"
+    ],
+    "reason": "Added the publisher’s March 23, 2023 C1.2 early preview. Corrected the informal c.ai 1.2 label to the published name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "character-ai-pipsqueak-initial-rollout",
+    "family": "character-ai",
+    "name": "PipSqueak initial rollout",
+    "version": "1",
+    "outcome": "updated",
+    "releaseIds": [
+      "character-ai-pipsqueak-announcement-2025-08-20"
+    ],
+    "evidenceIds": [
+      "pipsqueak-community"
+    ],
+    "reason": "Moved the rollout announcement from the August 26 retrospective to the original August 20, 2025 official community announcement. Earlier test access is not another dated release.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "step-step-1",
+    "family": "step",
+    "name": "Step-1",
+    "version": "1",
+    "outcome": "added",
+    "releaseIds": [
+      "step-step-1-announcement-2024-03-23"
+    ],
+    "evidenceIds": [
+      "step-gdps"
+    ],
+    "reason": "Added the March 23, 2024 GDPS announcement, documented by reporters at the opening. Step-2 is a partner API preview, not general availability.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "step-step-1v",
+    "family": "step",
+    "name": "Step-1V",
+    "version": "1",
+    "outcome": "added",
+    "releaseIds": [
+      "step-step-1v-announcement-2024-03-23"
+    ],
+    "evidenceIds": [
+      "step-gdps"
+    ],
+    "reason": "Added the March 23, 2024 GDPS announcement, documented by reporters at the opening. Step-2 is a partner API preview, not general availability.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "step-step-2",
+    "family": "step",
+    "name": "Step-2",
+    "version": "2",
+    "outcome": "added",
+    "releaseIds": [
+      "step-step-2-preview-2024-03-23"
+    ],
+    "evidenceIds": [
+      "step-gdps"
+    ],
+    "reason": "Added the March 23, 2024 GDPS announcement, documented by reporters at the opening. Step-2 is a partner API preview, not general availability.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "nanbeige-nanbeige-16b",
+    "family": "nanbeige",
+    "name": "Nanbeige 16B",
+    "version": "1",
+    "outcome": "added",
+    "releaseIds": [
+      "nanbeige-16b-announcement-2023-11-08"
+    ],
+    "evidenceIds": [
+      "nanbeige-original-readme",
+      "nanbeige-original-commit"
+    ],
+    "reason": "Added the original November 8, 2023 announcement preserved in Git history. It explicitly introduces the four initial 16B variants and their downloads.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "nanbeige-nanbeige-1-5",
+    "family": "nanbeige",
+    "name": "Nanbeige 1.5",
+    "version": "1.5",
+    "outcome": "excluded",
+    "releaseIds": [],
+    "evidenceIds": [
+      "nanbeige-old-mirror",
+      "nanbeige-current-mirror",
+      "nanbeige-archived-model"
+    ],
+    "reason": "Not counted as an independent release: the surviving 1.5 conversion repository originally referenced that name but now identifies Nanbeige2-8B-Chat as its source. This suggests a rename, without establishing a separate publisher checkpoint or its date. Retain the historical label here; do not promote the conversion upload into another model release.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "nanbeige-nanbeige-2",
+    "family": "nanbeige",
+    "name": "Nanbeige 2",
+    "version": "2",
+    "outcome": "added",
+    "releaseIds": [
+      "nanbeige-nanbeige-nanbeige2-8b-chat-checkpoint-2024-03-24"
+    ],
+    "evidenceIds": [
+      "nanbeige-archived-model"
+    ],
+    "reason": "Added the original publisher repository using its archived March 24, 2024 creation timestamp as the reviewed fallback. Surviving conversion weights are linked without becoming a separate release.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "mercury-mercury-coder",
+    "family": "mercury",
+    "name": "Mercury Coder",
+    "version": "1",
+    "outcome": "added",
+    "releaseIds": [
+      "mercury-coder-launch-2025-02-26"
+    ],
+    "evidenceIds": [
+      "mercury-launch"
+    ],
+    "reason": "Added the February 26, 2025 Mercury Coder playground launch from Inception’s dated announcement.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "ring-ring-2-0",
+    "family": "ring",
+    "name": "Ring 2.0",
+    "version": "2.0",
+    "outcome": "covered",
+    "releaseIds": [
+      "ring-inclusionai-ring-mini-2-0-checkpoint-2025-09-08",
+      "ring-inclusionai-ring-flash-2-0-checkpoint-2025-09-19"
+    ],
+    "evidenceIds": [
+      "ring-ring-2-0-existing"
+    ],
+    "reason": "Already represented by the first commits containing publisher weights. Closed the stale pending entry without adding duplicate releases.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "ring-ring-2-5",
+    "family": "ring",
+    "name": "Ring 2.5",
+    "version": "2.5",
+    "outcome": "covered",
+    "releaseIds": [
+      "ring-inclusionai-ring-2-5-1t-checkpoint-2026-02-10"
+    ],
+    "evidenceIds": [
+      "ring-ring-2-5-existing"
+    ],
+    "reason": "Already represented by the first commits containing publisher weights. Closed the stale pending entry without adding duplicate releases.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "writer-palmyra-med-70b",
+    "family": "palmyra",
+    "name": "Palmyra-Med-70B",
+    "version": "1",
+    "outcome": "added",
+    "releaseIds": [
+      "palmyra-writer-palmyra-med-70b-checkpoint-2024-05-05"
+    ],
+    "evidenceIds": [
+      "writer-med"
+    ],
+    "reason": "Added with the explicitly labeled Hugging Face repository-creation fallback. Current metadata confirms real weights; the gated first-weight history remains inaccessible. Parameter counts do not become version numbers.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "writer-palmyra-56b-instruct",
+    "family": "palmyra",
+    "name": "Palmyra-56B-Instruct",
+    "version": "1",
+    "outcome": "added",
+    "releaseIds": [
+      "palmyra-writer-palmyra-56b-instruct-checkpoint-2024-05-16"
+    ],
+    "evidenceIds": [
+      "writer-56b"
+    ],
+    "reason": "Added with the explicitly labeled Hugging Face repository-creation fallback. Current metadata confirms real weights; the gated first-weight history remains inaccessible. Parameter counts do not become version numbers.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "writer-palmyra-x-4-3-73b",
+    "family": "palmyra",
+    "name": "Palmyra-X-4.3-73B",
+    "version": "4.3",
+    "outcome": "added",
+    "releaseIds": [
+      "palmyra-writer-palmyra-x-4-3-73b-checkpoint-2024-11-07"
+    ],
+    "evidenceIds": [
+      "writer-43"
+    ],
+    "reason": "Added with the explicitly labeled Hugging Face repository-creation fallback. Current metadata confirms real weights; the gated first-weight history remains inaccessible. Parameter counts do not become version numbers.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "writer-palmyra-local-1-7b",
+    "family": "palmyra",
+    "name": "Palmyra-local-1_7B",
+    "version": "1",
+    "outcome": "added",
+    "releaseIds": [
+      "palmyra-writer-palmyra-local-1-7b-checkpoint-2025-03-23"
+    ],
+    "evidenceIds": [
+      "writer-local"
+    ],
+    "reason": "Added with the explicitly labeled Hugging Face repository-creation fallback. Current metadata confirms real weights; the gated first-weight history remains inaccessible. Parameter counts do not become version numbers.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "poolside-laguna-s-2-1-base",
+    "family": "laguna",
+    "name": "Laguna-S-2.1-base",
+    "version": "2.1",
+    "outcome": "added",
+    "releaseIds": [
+      "laguna-s-2-1-base-announcement-2026-07-21"
+    ],
+    "evidenceIds": [
+      "laguna-launch",
+      "laguna-base-card"
+    ],
+    "reason": "Added the July 21, 2026 announcement as research access by request. The publisher explicitly withholds public base weights, so it is not marked open.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "openbmb-minicpm-v-2-6",
+    "family": "minicpm",
+    "name": "MiniCPM-V-2_6",
+    "version": "2.6",
+    "outcome": "added",
+    "releaseIds": [
+      "minicpm-v-2-6-weights-2024-08-06"
+    ],
+    "evidenceIds": [
+      "minicpm-news"
+    ],
+    "reason": "Added the August 6, 2024 weights release from OpenBMB’s dated News, without needing a gated-history fallback.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "palmyra-x-002",
+    "family": "palmyra",
+    "name": "Palmyra X 002",
+    "version": "2",
+    "outcome": "added",
+    "releaseIds": [
+      "palmyra-x-002-release-2023-12-01"
+    ],
+    "evidenceIds": [
+      "palmyra-helm",
+      "palmyra-writer-archive"
+    ],
+    "reason": "Added the December 1, 2023 limited-access release date explicitly recorded by HELM; archived Writer documentation confirms the generation and API identity. Retirement dates were not used.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "palmyra-x-003",
+    "family": "palmyra",
+    "name": "Palmyra X 003",
+    "version": "3",
+    "outcome": "added",
+    "releaseIds": [
+      "palmyra-x-003-release-2023-12-01"
+    ],
+    "evidenceIds": [
+      "palmyra-helm",
+      "palmyra-writer-archive"
+    ],
+    "reason": "Added the December 1, 2023 limited-access release date explicitly recorded by HELM; archived Writer documentation confirms the generation and API identity. Retirement dates were not used.",
+    "checkedAt": "2026-10-06"
+  }
+]

@@ -1872,7 +1872,7 @@
           <div class="panel-foot">
             <span
               >Dates identify announcements, API access, weights releases, research, or explicitly
-              labeled checkpoint commits.</span
+              labeled checkpoint date evidence.</span
             ><a href="${compareHref()}" data-compare-link
               >Compare selected (${compareIds.length}) →</a
             >
@@ -2251,9 +2251,15 @@
         <h2>Sources and date evidence</h2>
         <p>
           When Hugging Face is the only release evidence, only the first commit containing model
-          weights counts for that checkpoint. Repository creation, documentation changes and later
-          weight uploads are not new model releases. Quantizations and format conversions do not
+          weights counts for that checkpoint. If that history is inaccessible, a reviewed repository
+          creation date can serve as an explicitly labeled fallback after verifying weight metadata.
+          Documentation changes and later weight uploads are not new model releases. Quantizations and format conversions do not
           count either. Uploading is not a numbering strategy.
+        </p>
+        <p>
+          A repository creation fallback does not establish when weights were uploaded or made
+          public. “Available by” marks dated evidence that a hosted model already existed, not its
+          original launch day. Historical ranks use the recorded dates and inherit these limits.
         </p>
         <p>
           The release index links each record to its original provider announcement, documentation,
@@ -2422,6 +2428,7 @@
       'status',
       'event_type',
       'date_basis',
+      'date_repository_url',
       'source_title',
       'source_url',
       'date_source_url',
@@ -2448,6 +2455,7 @@
       release.status,
       release.eventType,
       release.dateBasis || 'publisher',
+      release.dateRepositoryUrl,
       release.source?.title,
       release.source?.url,
       release.dateSource?.url,

@@ -950,5 +950,48 @@
     "name": "GLM-5.3 (checkpoint commit)",
     "version": "5.3",
     "mapping": "The explicit model generation supplies the version; parameter counts and checkpoint dates do not."
+  },
+  {
+    "repository": "Nanbeige/Nanbeige2-8B-Chat",
+    "family": "nanbeige",
+    "name": "Nanbeige2-8B-Chat",
+    "version": "2",
+    "mapping": "2 is the publisher version label; 8B is its parameter count. The repository creation date predates the archived page and does not date any rename.",
+    "allowRepositoryCreated": true,
+    "archivedMetadataUrl": "https://web.archive.org/web/20240512234656id_/https://huggingface.co/Nanbeige/Nanbeige2-8B-Chat",
+    "huggingFaceUrl": "https://huggingface.co/tooktang/Nanbeige2-8B-Chat-GGUF",
+    "weightsNote": "The publisher repository is no longer accessible. This community conversion preserves weights from the named publisher model; it is a download link, not a separate release or the source of the event date."
+  },
+  {
+    "repository": "Writer/Palmyra-56B-Instruct",
+    "family": "palmyra",
+    "name": "Palmyra-56B-Instruct",
+    "version": "1",
+    "mapping": "The unnumbered initial instruction model maps to generation 1; 56B is its parameter count.",
+    "allowRepositoryCreated": true
+  },
+  {
+    "repository": "Writer/Palmyra-local-1_7B",
+    "family": "palmyra",
+    "name": "Palmyra-local-1_7B",
+    "version": "1",
+    "mapping": "1_7B denotes 1.7 billion parameters, not version 1.7. This initial unnumbered local model maps to generation 1.",
+    "allowRepositoryCreated": true
+  },
+  {
+    "repository": "Writer/Palmyra-Med-70B",
+    "family": "palmyra",
+    "name": "Palmyra-Med-70B",
+    "version": "1",
+    "mapping": "The unnumbered initial Med line maps to generation 1; 70B is its parameter count.",
+    "allowRepositoryCreated": true
+  },
+  {
+    "repository": "Writer/Palmyra-X-4.3-73B",
+    "family": "palmyra",
+    "name": "Palmyra-X-4.3-73B",
+    "version": "4.3",
+    "mapping": "4.3 is the published version; 73B is its parameter count.",
+    "allowRepositoryCreated": true
   }
 ]

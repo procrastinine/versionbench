@@ -2528,10 +2528,20 @@
           "announcement",
           "hosted"
         ]
+      },
+      {
+        "type": "page",
+        "url": "https://support.character.ai/hc/en-us/sections/50236726192539-Community-Updates",
+        "scopePattern": "PipSqueak|C1[.]",
+        "purpose": "Official community model updates",
+        "signals": [
+          "announcement",
+          "preview"
+        ]
       }
     ],
     "coverageNotes": [
-      "No official downloadable checkpoint was identified for the recorded chat styles. An open-source base model does not establish that Character.AI published its fine-tuned weights. c.ai 1.0/1.1/1.2 need primary date and model-identity evidence."
+      "No publisher weights were found for the recorded hosted models. C1.1 is dated with an explicit Available by bound; C1.2 has a dated early-preview announcement. A separate C1.0 release is not established. Open base models do not imply publication of Character.AI’s fine-tuned weights."
     ]
   },
   {
@@ -2680,6 +2690,16 @@
           "003": "3",
           "004": "4"
         }
+      },
+      {
+        "type": "page",
+        "url": "https://support.writer.com/articles/1313908954-what-s-new-at-writer",
+        "scopePattern": "Palmyra",
+        "purpose": "Dated product availability and release notes",
+        "signals": [
+          "api",
+          "announcement"
+        ]
       }
     ],
     "coverageNotes": [

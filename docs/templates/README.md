@@ -35,7 +35,7 @@ node scripts/audit-releases.mjs
 node scripts/audit-weights.mjs
 ```
 
-These commands save source responses and review reports under `output/`; they never run during a build or automatically add releases. Both support `--offline` to replay their saved snapshots. See the [data documentation](data/README.md), [earlier-version audit](docs/history-audit.md), and [unresolved candidates](docs/pending-releases.md). Quantizations do not get another vote.
+These commands save source responses and review reports under `output/`; they never run during a build or automatically add releases. Both support `--offline` to replay their saved snapshots. See the [data documentation](data/README.md), [earlier-version audit](docs/history-audit.md), and [candidate decisions](docs/pending-releases.md). Quantizations do not get another vote.
 
 ## Hosting
 
