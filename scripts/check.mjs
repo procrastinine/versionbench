@@ -8,8 +8,13 @@ import { huggingFaceTarget } from './weights-audit.mjs';
 import { renderWatchlist, renderHistoryReview, renderPending } from './watch-docs.mjs';
 import { validateCandidateReview } from './candidate-review.mjs';
 import { buildBrowserScript } from './browser-bundle.mjs';
+import { validateSoftwareCoverage } from './software-releases.mjs';
 const root = new URL('../', import.meta.url);
 const data = JSON.parse(await readFile(new URL('data/releases.json', root), 'utf8'));
+validateSoftwareCoverage(
+  data,
+  JSON.parse(await readFile(new URL('data/evidence/software-releases.json', root), 'utf8')),
+);
 const imports = JSON.parse(await readFile(new URL('data/checkpoint-imports.json', root), 'utf8'));
 const unique = (rows, label) => {
   const ids = rows.map((row) => row.id);

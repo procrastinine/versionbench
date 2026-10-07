@@ -71,3 +71,22 @@ test('GTA control converts only an explicitly configured Roman numeral', () => {
     /Missing numeric version/,
   );
 });
+
+test('software watchlists capture full patches and early PyTorch versions without preview suffixes', () => {
+  for (const [family, text, expected] of [
+    [
+      'python',
+      'Python 3.9.1 Python 3.9.10 Python 3.14.0 Python 3.15.0rc3 Python 3.15.0-beta1',
+      ['3.9.1', '3.9.10', '3.14.0'],
+    ],
+    [
+      'pytorch',
+      'PyTorch 0.1.6 PyTorch 2.9.1 PyTorch 2.15.0rc1 PyTorch 2.15.0-beta1',
+      ['2.9.1', '0.1.6'],
+    ],
+  ])
+    assert.deepEqual(
+      observedVersions(text, pattern(family)).map((r) => r.version),
+      expected,
+    );
+});

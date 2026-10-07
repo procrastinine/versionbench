@@ -2196,38 +2196,35 @@
       {
         "type": "page",
         "url": "https://www.python.org/doc/versions/",
-        "pattern": "\\bPython (3\\.[0-9]+)(?![0-9.])",
+        "pattern": "\\bPython (3\\.[0-9]+(?:\\.[0-9]+)?)(?![0-9.A-Za-z-])",
         "scopePattern": "Python|CPython",
-        "purpose": "Model documentation and release history",
+        "purpose": "Official software releases and release history",
         "signals": [
-          "announcement",
-          "api"
+          "announcement"
         ]
       },
       {
         "type": "page",
         "url": "https://github.com/python/cpython",
         "scopePattern": "Python|CPython",
-        "purpose": "Official code, model cards, and release links",
+        "purpose": "Official software source repository",
         "signals": [
-          "announcement",
-          "weights"
+          "announcement"
         ]
       },
       {
         "type": "page",
         "url": "https://www.python.org/downloads/",
         "scopePattern": "Python|CPython",
-        "pattern": "\\bPython (3\\.[0-9]+)(?![0-9.])",
-        "purpose": "Publisher announcements and release history",
+        "pattern": "\\bPython (3\\.[0-9]+(?:\\.[0-9]+)?)(?![0-9.A-Za-z-])",
+        "purpose": "Official software releases and release history",
         "signals": [
-          "announcement",
-          "api"
+          "announcement"
         ]
       }
     ],
     "coverageNotes": [
-      "Software controls only; excluded from model rankings. Watch sources do not expand the declared control scope automatically."
+      "Software controls only; excluded from model rankings. Minor and patch releases are imported from saved official catalogs by scripts/import-software.mjs. Python starts at 3.0; PyTorch includes numbered 0.x releases. Drafts and prereleases are excluded."
     ]
   },
   {
@@ -2236,38 +2233,35 @@
       {
         "type": "page",
         "url": "https://github.com/pytorch/pytorch/releases",
-        "pattern": "\\bPyTorch ([12]\\.[0-9]+)\\.0\\b",
+        "pattern": "\\bPyTorch ([0-9]+\\.[0-9]+(?:\\.[0-9]+)?)(?![0-9.A-Za-z-])",
         "scopePattern": "PyTorch",
-        "purpose": "Model documentation and release history",
+        "purpose": "Official software releases and release history",
         "signals": [
-          "announcement",
-          "api"
+          "announcement"
         ]
       },
       {
         "type": "page",
         "url": "https://pytorch.org/blog/",
         "scopePattern": "PyTorch",
-        "pattern": "\\bPyTorch ([12]\\.[0-9]+)\\.0\\b",
-        "purpose": "Publisher announcements and release history",
+        "pattern": "\\bPyTorch ([0-9]+\\.[0-9]+(?:\\.[0-9]+)?)(?![0-9.A-Za-z-])",
+        "purpose": "Official software releases and release history",
         "signals": [
-          "announcement",
-          "api"
+          "announcement"
         ]
       },
       {
         "type": "page",
         "url": "https://github.com/pytorch/pytorch",
         "scopePattern": "PyTorch",
-        "purpose": "Official code, model cards, and release links",
+        "purpose": "Official software source repository",
         "signals": [
-          "announcement",
-          "weights"
+          "announcement"
         ]
       }
     ],
     "coverageNotes": [
-      "Software controls only; excluded from model rankings. Watch sources do not expand the declared control scope automatically."
+      "Software controls only; excluded from model rankings. Minor and patch releases are imported from saved official catalogs by scripts/import-software.mjs. Python starts at 3.0; PyTorch includes numbered 0.x releases. Drafts and prereleases are excluded."
     ]
   },
   {

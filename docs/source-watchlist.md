@@ -699,11 +699,11 @@ Python Software Foundation · software control
 
 | Page | Watch for | Evidence |
 | --- | --- | --- |
-| [www.python.org/doc/versions/](https://www.python.org/doc/versions/) | Model documentation and release history | announcement, api |
-| [github.com/python/cpython](https://github.com/python/cpython) | Official code, model cards, and release links | announcement, weights |
-| [www.python.org/downloads/](https://www.python.org/downloads/) | Publisher announcements and release history | announcement, api |
+| [www.python.org/doc/versions/](https://www.python.org/doc/versions/) | Official software releases and release history | announcement |
+| [github.com/python/cpython](https://github.com/python/cpython) | Official software source repository | announcement |
+| [www.python.org/downloads/](https://www.python.org/downloads/) | Official software releases and release history | announcement |
 
-Software controls only; excluded from model rankings. Watch sources do not expand the declared control scope automatically.
+Software controls only; excluded from model rankings. Minor and patch releases are imported from saved official catalogs by scripts/import-software.mjs. Python starts at 3.0; PyTorch includes numbered 0.x releases. Drafts and prereleases are excluded.
 
 <a id="pytorch"></a>
 ## PyTorch
@@ -712,11 +712,11 @@ PyTorch Foundation · software control
 
 | Page | Watch for | Evidence |
 | --- | --- | --- |
-| [github.com/pytorch/pytorch/releases](https://github.com/pytorch/pytorch/releases) | Model documentation and release history | announcement, api |
-| [pytorch.org/blog/](https://pytorch.org/blog/) | Publisher announcements and release history | announcement, api |
-| [github.com/pytorch/pytorch](https://github.com/pytorch/pytorch) | Official code, model cards, and release links | announcement, weights |
+| [github.com/pytorch/pytorch/releases](https://github.com/pytorch/pytorch/releases) | Official software releases and release history | announcement |
+| [pytorch.org/blog/](https://pytorch.org/blog/) | Official software releases and release history | announcement |
+| [github.com/pytorch/pytorch](https://github.com/pytorch/pytorch) | Official software source repository | announcement |
 
-Software controls only; excluded from model rankings. Watch sources do not expand the declared control scope automatically.
+Software controls only; excluded from model rankings. Minor and patch releases are imported from saved official catalogs by scripts/import-software.mjs. Python starts at 3.0; PyTorch includes numbered 0.x releases. Drafts and prereleases are excluded.
 
 <a id="gta"></a>
 ## GTA

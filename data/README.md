@@ -4,7 +4,7 @@
 
 Snapshot **2026-10-06** · **58** model families · **834** model release events · **563** model sources · **299** releases linked to Artificial Analysis · **505** releases linked to Hugging Face weights
 
-Separately: **3** software controls, **49** release events. Controls are excluded from model statistics and rankings.
+Separately: **3** software controls, **278** release events. Controls are excluded from model statistics and rankings.
 
 ## Files
 
@@ -65,7 +65,7 @@ Quantizations and format conversions are not releases: GGUF, GGML, GPTQ, AWQ, EX
 
 Each family uses its highest numeric version, represented by the earliest recorded event at that version. Same-day ties use alphabetical model names. Later releases with lower version numbers remain in the timeline without lowering the family's maximum.
 
-Python and PyTorch are software controls, with stable minor releases from Python 3.0 and PyTorch 1.0 onward. Patch releases and previews are excluded. Their `major.minor` strings are scored as decimals, so Python 3.10 scores 3.1 and loses to 3.9. The `version` string preserves the published label; `versionCount` counts distinct labels. GTA records GTA V's platform releases and rereleases, converting the Roman numeral V to 5 every time. The version has shown considerable discipline.
+Python and PyTorch are software controls, including minor and patch releases. Python starts at 3.0 and uses the official documentation release archive; PyTorch includes the official GitHub catalog's numbered releases, including 0.x, excluding drafts and entries marked prerelease. Dates use the Python archive's stated day and PyTorch's GitHub publication time in UTC. Published version labels are retained, including `.0` where the source uses it; existing release IDs remain valid. Later dots are removed as for models: Python 3.9.9 scores 3.99, then 3.9.10 scores 3.910 (3.91). Maintenance can be a setback. `versionCount` counts distinct labels, even when scores tie. GTA records GTA V's platform releases and rereleases, converting the Roman numeral V to 5 every time. The version has shown considerable discipline.
 
 Software controls occupy a separate category under “Expanded dataset”. They are excluded from the default timeline and its date range. They are also excluded from the model leaderboard, model counts, and all historical model statistics. `stats.json` reports them separately under `softwareControls`, `softwareControlCount`, and `softwareReleaseCount`; all other aggregate counts and the `families` summaries describe models only. `family-stats.csv` and SQLite's `family_stats` table contain only model families.
 
@@ -115,6 +115,22 @@ node scripts/audit-releases.mjs --resume
 ```
 
 `--snapshot FILE` and `--report FILE` select paths. `--resume` is not a fresh check; add `--retry-errors` to retry saved failures after fixing access or waiting for the rate limit. Output snapshots can be large and are ignored by Git. The curated release/source records, review decisions and watchlists are checked in, so builds do not need snapshots. The manual [source audit workflow](../.github/workflows/audit.yml) uploads captured evidence for review; deployment only builds saved data.
+
+Python and PyTorch have a separate deterministic importer. The complete extracted catalogs, excluded entries, source URLs, and response hashes are saved in `evidence/software-releases.json`. Generation checks every software record against this evidence, including patch versions that score below an earlier release. Fetching happens only with `--refresh`:
+
+```sh
+# Fetch all catalog pages and save a proposal; do not change the dataset.
+node scripts/import-software.mjs --refresh
+
+# Review output/software-releases/catalog.json, then replay the capture and apply.
+node scripts/import-software.mjs --offline --apply
+node scripts/generate.mjs
+
+# Check against committed evidence without a network or output/ cache.
+node scripts/import-software.mjs
+```
+
+The check exits 1 when saved catalogs contain changes not yet applied. `--apply` alone regenerates software records from committed evidence; `--offline` instead replays the raw capture selected by `--snapshot`. The importer follows every GitHub pagination link, rejects incomplete or conflicting evidence, preserves existing release IDs, and never removes a recorded version just because a refreshed source omits it. Update the dataset's `updated` date when accepting newer releases; entries after that date remain excluded.
 
 For a reviewed checkpoint mapping, use the optional importer separately from the build:
 

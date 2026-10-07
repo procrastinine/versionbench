@@ -31,9 +31,11 @@ export function createMethodology(app) {
         <p>
           Python, PyTorch, and GTA are unranked software controls. Python 3.10 scores
           <code>3.1</code>; PyTorch 2.10 scores <code>2.1</code>. GTA V's platform releases each
-          score <code>5</code>. Stable minor versions are recorded for Python 3 and PyTorch 1.0
-          onward; patch releases and previews are excluded. GTA covers the releases and rereleases
-          of GTA V. Consistency is documented.
+          score <code>5</code>. Python includes stable minor and patch releases from 3.0; PyTorch
+          includes numbered releases from its official catalog, including 0.x, except entries marked
+          prerelease. Python 3.9.9 scores <code>3.99</code>, then 3.9.10 scores <code>3.91</code>.
+          Maintenance can be a setback. GTA covers the releases and rereleases of GTA V. Consistency
+          is documented.
         </p>
         <p>
           Software controls live in a separate category under “Expanded dataset”. They are
