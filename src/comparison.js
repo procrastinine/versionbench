@@ -2,7 +2,7 @@
 export function createComparison(app) {
   const { state } = app;
   const { main, dialog } = app.dom;
-  const { esc, dateLabel, numberLabel, takeWithTies, familyStyle, score } = app.format;
+  const { esc, dateLabel, numberLabel, spreadLabel, takeWithTies, familyStyle, score } = app.format;
   const { families, releases, familyPeaks, ranked } = app.catalog;
   const { compareHref, uniqueValidIds } = app.router;
   const { head, note, toast, selectedReleases, releaseTable } = app.ui;
@@ -126,7 +126,7 @@ export function createComparison(app) {
               </p>
             </div>
             <div class="summary-block">
-              <span>Score spread</span><strong>${numberLabel(max - min)}</strong>
+              <span>Score spread</span><strong>${spreadLabel(max, min)}</strong>
               <p>Highest minus lowest numeric version</p>
             </div>
             <div class="summary-block">

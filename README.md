@@ -12,7 +12,7 @@ VersionBench obeys mathematics, not semantic versioning. Thus 3.9 > 3.10. Vendor
 
 Snapshot **2026-10-06** · **58** model families · **834** model release events · **563** model sources · **299** releases linked to Artificial Analysis · **505** releases linked to Hugging Face weights
 
-Separately: **3** software controls, **278** release events. Controls are excluded from model statistics and rankings.
+Separately: **3** software controls, **382** release events. Controls are excluded from model statistics and rankings.
 
 [![VersionBench leaderboard with model-family rankings, release links, and a version-number comparison chart.](docs/leaderboard.png)](https://procrastinine.github.io/versionbench/)
 

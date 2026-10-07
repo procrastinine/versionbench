@@ -49,7 +49,7 @@
 "ax","A.X","SK Telecom","#b75a66","false","model",""
 "python","Python","Python Software Foundation","#3874a4","false","software","All stable Python 3 minor and patch releases from 3.0 in the official release archive. Previews are excluded."
 "pytorch","PyTorch","PyTorch Foundation","#c75139","false","software","All numbered PyTorch minor and patch releases in the official GitHub release catalog, including 0.x. Drafts and entries marked prerelease are excluded."
-"gta","GTA","Rockstar Games","#478752","false","software","GTA V platform releases and rereleases only. Every release scores 5. Model rankings are unaffected."
+"gta","GTA","Rockstar Games","#478752","false","software","GTA V platform releases, rereleases, and title updates in the saved GTA Wiki version history. Every release scores 5. Weekly content events are excluded."
 "ornith","Ornith","Ornith AI","#548c7e","false","model","Ornith coding models; sizes and quantizations do not change the generation."
 "smollm","SmolLM","Hugging Face","#c19731","false","model","SmolLM and SmolVLM, including their numbered language and vision-language releases."
 "bonsai","Bonsai / Ternary","PrismML","#589151","false","model","Binary and Ternary Bonsai language models. Bit depths and parameter counts are not version numbers; image generators are excluded."

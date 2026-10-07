@@ -2291,10 +2291,19 @@
           "announcement",
           "api"
         ]
+      },
+      {
+        "type": "page",
+        "url": "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes#Version_History",
+        "scopePattern": "Grand Theft Auto|GTA|Title Update",
+        "purpose": "GTA V title-update history; captured through the public wiki API by scripts/import-gta.mjs",
+        "signals": [
+          "announcement"
+        ]
       }
     ],
     "coverageNotes": [
-      "Software controls only; excluded from model rankings. Watch sources do not expand the declared control scope automatically."
+      "GTA V platform releases, rereleases, and title-update rows are software controls. Every VersionBench version and score remains 5; patch and GTA Online numbers are labels only. Weekly content events are excluded."
     ]
   },
   {

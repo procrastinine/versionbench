@@ -4,7 +4,7 @@
   "familyCount": 58,
   "softwareControlCount": 3,
   "releaseCount": 834,
-  "softwareReleaseCount": 278,
+  "softwareReleaseCount": 382,
   "sourceCount": 563,
   "artificialAnalysisReleaseCount": 299,
   "artificialAnalysisProfileCount": 281,
@@ -12497,7 +12497,7 @@
       "id": "gta",
       "name": "GTA",
       "kind": "software",
-      "releaseCount": 5,
+      "releaseCount": 109,
       "versionCount": 1,
       "highestVersion": "5",
       "highestScore": 5,
@@ -12507,14 +12507,14 @@
         "date": "2013-09-17"
       },
       "latestRelease": {
-        "id": "gta-v-pc-enhanced",
-        "name": "GTA V Enhanced (PC)",
+        "id": "gta-v-update-2026-01-27-1-72",
+        "name": "GTA V title update 1.72",
         "version": "5",
         "score": 5,
-        "date": "2025-03-04"
+        "date": "2026-01-27"
       },
       "firstEventDate": "2013-09-17",
-      "lastEventDate": "2025-03-04",
+      "lastEventDate": "2026-01-27",
       "versionHistory": [
         {
           "date": "2013-09-17",

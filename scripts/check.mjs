@@ -9,11 +9,17 @@ import { renderWatchlist, renderHistoryReview, renderPending } from './watch-doc
 import { validateCandidateReview } from './candidate-review.mjs';
 import { buildBrowserScript } from './browser-bundle.mjs';
 import { validateSoftwareCoverage } from './software-releases.mjs';
+import { validateGtaUpdates } from './gta-updates.mjs';
 const root = new URL('../', import.meta.url);
 const data = JSON.parse(await readFile(new URL('data/releases.json', root), 'utf8'));
 validateSoftwareCoverage(
   data,
   JSON.parse(await readFile(new URL('data/evidence/software-releases.json', root), 'utf8')),
+);
+validateGtaUpdates(
+  data,
+  JSON.parse(await readFile(new URL('data/evidence/gta-updates.json', root), 'utf8')),
+  JSON.parse(await readFile(new URL('data/gta-update-reviews.json', root), 'utf8')),
 );
 const imports = JSON.parse(await readFile(new URL('data/checkpoint-imports.json', root), 'utf8'));
 const unique = (rows, label) => {

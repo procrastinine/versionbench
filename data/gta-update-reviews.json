@@ -1,0 +1,53 @@
+[
+  {
+    "rowDate": "2019-12-15",
+    "versions": ["1.50"],
+    "date": "2019-12-19",
+    "dateBasis": "documented-by",
+    "reason": "The history explicitly marks December 15 as unconfirmed and says this update preceded Festive Surprise. December 19, when that event began, is used as a conservative available-by bound, not an exact release date.",
+    "evidence": [
+      {
+        "url": "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-1.50",
+        "fetchUrl": "https://gta.fandom.com/api.php?action=parse&page=Grand_Theft_Auto_V%2FTitle_Update_Notes%2FUpdate-1.50&prop=wikitext&format=json&formatversion=2",
+        "title": "GTA Wiki: unconfirmed date of title update 1.50",
+        "publisher": "GTA Wiki contributors",
+        "pattern": "Actual date unconfirmed"
+      },
+      {
+        "url": "https://gta.fandom.com/wiki/Festive_Surprise_2019",
+        "fetchUrl": "https://gta.fandom.com/api.php?action=parse&page=Festive_Surprise_2019&prop=wikitext&format=json&formatversion=2",
+        "title": "GTA Wiki: Festive Surprise 2019 dates",
+        "publisher": "GTA Wiki contributors",
+        "pattern": "The event started on December 19, 2019"
+      }
+    ]
+  },
+  {
+    "rowDate": "2025-03-07",
+    "versions": ["1.71"],
+    "date": "2025-07-08",
+    "reason": "The table gives March 7 for a PC update under 1.71, before 1.71 launched. Rockstar's linked 1.71 notes date the PC Legacy/Enhanced patch to July 8. The publisher date replaces the inconsistent table date.",
+    "evidence": [
+      {
+        "url": "https://support.rockstargames.com/articles/5IxfVX33w3X8fKooGKswfj/gtav-title-update-1-71-notes-ps5-ps4-xbox-series-x-or-s-xbox-one-pc-enhanced",
+        "title": "Rockstar Games: GTA V title update 1.71 notes",
+        "publisher": "Rockstar Games",
+        "pattern": "July 8, 2025\\] - PC \\(Legacy and Enhanced\\)"
+      }
+    ]
+  },
+  {
+    "rowDate": "2025-08-12",
+    "versions": ["1.70"],
+    "correctedVersions": ["1.71"],
+    "reason": "The table labels the August 12 PC Enhanced patch 1.70 but links to the 1.71 notes. Rockstar lists this dated patch under title update 1.71; the update label follows those notes. The VersionBench score remains 5.",
+    "evidence": [
+      {
+        "url": "https://support.rockstargames.com/articles/5IxfVX33w3X8fKooGKswfj/gtav-title-update-1-71-notes-ps5-ps4-xbox-series-x-or-s-xbox-one-pc-enhanced",
+        "title": "Rockstar Games: GTA V title update 1.71 notes",
+        "publisher": "Rockstar Games",
+        "pattern": "August 12, 2025\\] - PC \\(Enhanced\\)"
+      }
+    ]
+  }
+]

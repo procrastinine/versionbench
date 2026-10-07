@@ -4,7 +4,7 @@
 
 Snapshot **2026-10-06** · **58** model families · **834** model release events · **563** model sources · **299** releases linked to Artificial Analysis · **505** releases linked to Hugging Face weights
 
-Separately: **3** software controls, **278** release events. Controls are excluded from model statistics and rankings.
+Separately: **3** software controls, **382** release events. Controls are excluded from model statistics and rankings.
 
 ## Files
 
@@ -65,7 +65,9 @@ Quantizations and format conversions are not releases: GGUF, GGML, GPTQ, AWQ, EX
 
 Each family uses its highest numeric version, represented by the earliest recorded event at that version. Same-day ties use alphabetical model names. Later releases with lower version numbers remain in the timeline without lowering the family's maximum.
 
-Python and PyTorch are software controls, including minor and patch releases. Python starts at 3.0 and uses the official documentation release archive; PyTorch includes the official GitHub catalog's numbered releases, including 0.x, excluding drafts and entries marked prerelease. Dates use the Python archive's stated day and PyTorch's GitHub publication time in UTC. Published version labels are retained, including `.0` where the source uses it; existing release IDs remain valid. Later dots are removed as for models: Python 3.9.9 scores 3.99, then 3.9.10 scores 3.910 (3.91). Maintenance can be a setback. `versionCount` counts distinct labels, even when scores tie. GTA records GTA V's platform releases and rereleases, converting the Roman numeral V to 5 every time. The version has shown considerable discipline.
+Python and PyTorch are software controls, including minor and patch releases. Python starts at 3.0 and uses the official documentation release archive; PyTorch includes the official GitHub catalog's numbered releases, including 0.x, excluding drafts and entries marked prerelease. Dates use the Python archive's stated day and PyTorch's GitHub publication time in UTC. Published version labels are retained, including `.0` where the source uses it; existing release IDs remain valid. Later dots are removed as for models: Python 3.9.9 scores 3.99, then 3.9.10 scores 3.910 (3.91). Python 3.11.17 scores 3.1117; displayed scores retain all stored digits. Maintenance can be a setback. `versionCount` counts distinct labels, even when scores tie.
+
+GTA includes GTA V's platform releases, rereleases, and title updates from the [GTA Wiki version history](https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes#Version_History). Each dated title-update row is one event, with repeated platform columns combined. Weekly in-game content events are excluded, and platform-launch rows reuse the existing releases. Patch/build/Online labels stay in names and notes; every GTA record has `version: "5"` and `score: 5`. The version has shown considerable discipline. Wiki dates are secondary evidence. Reviewed corrections and an explicitly uncertain date's conservative available-by bound are retained in `gta-update-reviews.json` and the release notes.
 
 Software controls occupy a separate category under “Expanded dataset”. They are excluded from the default timeline and its date range. They are also excluded from the model leaderboard, model counts, and all historical model statistics. `stats.json` reports them separately under `softwareControls`, `softwareControlCount`, and `softwareReleaseCount`; all other aggregate counts and the `families` summaries describe models only. `family-stats.csv` and SQLite's `family_stats` table contain only model families.
 
@@ -131,6 +133,8 @@ node scripts/import-software.mjs
 ```
 
 The check exits 1 when saved catalogs contain changes not yet applied. `--apply` alone regenerates software records from committed evidence; `--offline` instead replays the raw capture selected by `--snapshot`. The importer follows every GitHub pagination link, rejects incomplete or conflicting evidence, preserves existing release IDs, and never removes a recorded version just because a refreshed source omits it. Update the dataset's `updated` date when accepting newer releases; entries after that date remain excluded.
+
+GTA follows the same workflow with `node scripts/import-gta.mjs --refresh`, then `node scripts/import-gta.mjs --offline --apply` and the generator. `node scripts/import-gta.mjs` checks the committed `evidence/gta-updates.json` without fetching. The importer uses the wiki's public API, accounts for every history row, preserves separate dates for updates sharing patch notes, and requires saved evidence for date/label corrections. Generation rejects omitted updates or any GTA score other than 5.
 
 For a reviewed checkpoint mapping, use the optional importer separately from the build:
 

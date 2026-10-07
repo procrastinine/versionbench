@@ -7,6 +7,7 @@ export function createFamilyPage(app) {
     parseDate,
     day,
     numberLabel,
+    calculatedLabel,
     filterControl,
     sourceLink,
     analysisLink,
@@ -257,7 +258,7 @@ export function createFamilyPage(app) {
           return `<line class="grid-line" x1="${pad.left}" x2="${right}" y1="${y}" y2="${y}"/>${software ? '' : `<text x="${pad.left - 12}" y="${y + 4}" text-anchor="end">${value}</text>`}`;
         })
         .join('')}
-      ${versionTicks.map((value) => `<text x="${right + 12}" y="${yVersion(value) + 4}" text-anchor="start">${numberLabel(value)}</text>`).join('')}
+      ${versionTicks.map((value) => `<text x="${right + 12}" y="${yVersion(value) + 4}" text-anchor="start">${calculatedLabel(value)}</text>`).join('')}
       ${dateTicks(start, end, right - pad.left)
         .map(
           (tick) =>

@@ -34,8 +34,9 @@ export function createMethodology(app) {
           score <code>5</code>. Python includes stable minor and patch releases from 3.0; PyTorch
           includes numbered releases from its official catalog, including 0.x, except entries marked
           prerelease. Python 3.9.9 scores <code>3.99</code>, then 3.9.10 scores <code>3.91</code>.
-          Maintenance can be a setback. GTA covers the releases and rereleases of GTA V. Consistency
-          is documented.
+          Maintenance can be a setback. GTA covers platform releases, rereleases, and title updates
+          of GTA V. Patch labels stay in the release details; every version and score remains
+          <code>5</code>. Consistency is documented.
         </p>
         <p>
           Software controls live in a separate category under “Expanded dataset”. They are

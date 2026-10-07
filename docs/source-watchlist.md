@@ -727,8 +727,9 @@ Rockstar Games · software control
 | --- | --- | --- |
 | [www.rockstargames.com/gta-v](https://www.rockstargames.com/gta-v) | Model documentation and release history | announcement, api |
 | [www.rockstargames.com/newswire](https://www.rockstargames.com/newswire) | Publisher announcements and release history | announcement, api |
+| [gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes#Version_History](https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes#Version_History) | GTA V title-update history; captured through the public wiki API by scripts/import-gta.mjs | announcement |
 
-Software controls only; excluded from model rankings. Watch sources do not expand the declared control scope automatically.
+GTA V platform releases, rereleases, and title-update rows are software controls. Every VersionBench version and score remains 5; patch and GTA Online numbers are labels only. Weekly content events are excluded.
 
 <a id="ornith"></a>
 ## Ornith

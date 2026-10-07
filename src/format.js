@@ -39,7 +39,20 @@ export function createFormatting(app) {
         }).format(parseDate(value))
       : 'Date not established';
 
-  const numberLabel = (value) => (Number.isFinite(value) ? String(Number(value.toFixed(3))) : '—');
+  // Stored scores are exact display values; patch digits must not be rounded away.
+  const numberLabel = (value) => (Number.isFinite(value) ? String(value) : '—');
+  // Derived axis ticks need float-noise cleanup.
+  const calculatedLabel = (value) =>
+    Number.isFinite(value) ? String(Number(value.toPrecision(15))) : '—';
+  const spreadLabel = (highest, lowest) => {
+    if (![highest, lowest].every(Number.isFinite)) return '—';
+    const places = (value) => {
+      const [coefficient, exponent = '0'] = String(value).split('e');
+      return Math.max(0, (coefficient.split('.')[1]?.length ?? 0) - Number(exponent));
+    };
+    const digits = Math.min(100, Math.max(places(highest), places(lowest)));
+    return numberLabel(Number((highest - lowest).toFixed(digits)));
+  };
 
   // Limited leaderboards must include the complete boundary tie group.
   const takeWithTies = (rows, limit) => {
@@ -174,6 +187,8 @@ export function createFormatting(app) {
     isoDate,
     dateLabel,
     numberLabel,
+    calculatedLabel,
+    spreadLabel,
     takeWithTies,
     minimumTimelineSpan,
     optionValue,

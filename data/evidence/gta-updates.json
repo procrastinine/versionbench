@@ -1,0 +1,2865 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-06",
+  "capturedAt": "2026-10-07T01:51:17.264Z",
+  "source": {
+    "url": "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes#Version_History",
+    "apiUrl": "https://gta.fandom.com/api.php?action=parse&page=Grand_Theft_Auto_V%2FTitle_Update_Notes&prop=wikitext&format=json&formatversion=2",
+    "sha256": "a8d0be152d51183940441ddc511c70e50ec0217fdbf2e3c8be86567b73d68083"
+  },
+  "reviewsHash": "fb6699afdc9ae4a94bb23dc823a45074980a65b4197e2ac68ec4214da27d5865",
+  "rowCount": 323,
+  "updates": [
+    {
+      "id": "gta-v-update-2013-10-01-1-01",
+      "row": 2,
+      "rowDate": "2013-10-01",
+      "date": "2013-10-01",
+      "versions": [
+        "1.01"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2013-10-01"
+      ]
+    },
+    {
+      "id": "gta-v-update-2013-10-04-1-02",
+      "row": 3,
+      "rowDate": "2013-10-04",
+      "date": "2013-10-04",
+      "versions": [
+        "1.02"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2013-10-04"
+      ]
+    },
+    {
+      "id": "gta-v-update-2013-10-09-1-03",
+      "row": 4,
+      "rowDate": "2013-10-09",
+      "date": "2013-10-09",
+      "versions": [
+        "1.03"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2013-10-09"
+      ]
+    },
+    {
+      "id": "gta-v-update-2013-10-18-1-04",
+      "row": 5,
+      "rowDate": "2013-10-18",
+      "date": "2013-10-18",
+      "versions": [
+        "1.04"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2013-10-18"
+      ]
+    },
+    {
+      "id": "gta-v-update-2013-11-05-1-05",
+      "row": 6,
+      "rowDate": "2013-11-05",
+      "date": "2013-11-05",
+      "versions": [
+        "1.05"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2013-11-05"
+      ]
+    },
+    {
+      "id": "gta-v-update-2013-11-20-1-06",
+      "row": 7,
+      "rowDate": "2013-11-20",
+      "date": "2013-11-20",
+      "versions": [
+        "1.06"
+      ],
+      "title": "Beach Bum Update",
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2013-11-20"
+      ]
+    },
+    {
+      "id": "gta-v-update-2013-12-10-1-07",
+      "row": 8,
+      "rowDate": "2013-12-10",
+      "date": "2013-12-10",
+      "versions": [
+        "1.07"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2013-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2013-12-17-1-08",
+      "row": 9,
+      "rowDate": "2013-12-17",
+      "date": "2013-12-17",
+      "versions": [
+        "1.08"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2013-12-17"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-01-11-1-09",
+      "row": 10,
+      "rowDate": "2014-01-11",
+      "date": "2014-01-11",
+      "versions": [
+        "1.09"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-01-11"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-02-13-1-10",
+      "row": 11,
+      "rowDate": "2014-02-13",
+      "date": "2014-02-13",
+      "versions": [
+        "1.10"
+      ],
+      "title": "Valentine's Day Massacre Special",
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-02-13"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-03-04-1-11",
+      "row": 12,
+      "rowDate": "2014-03-04",
+      "date": "2014-03-04",
+      "versions": [
+        "1.11"
+      ],
+      "title": "The Business Update",
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-03-04"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-04-08-1-12",
+      "row": 13,
+      "rowDate": "2014-04-08",
+      "date": "2014-04-08",
+      "versions": [
+        "1.12"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-04-08"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-05-13-1-13",
+      "row": 14,
+      "rowDate": "2014-05-13",
+      "date": "2014-05-13",
+      "versions": [
+        "1.13"
+      ],
+      "title": "The High Life Update",
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-05-13"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-06-17-1-14",
+      "row": 15,
+      "rowDate": "2014-06-17",
+      "date": "2014-06-17",
+      "versions": [
+        "1.14"
+      ],
+      "title": "The \"I'm Not a Hipster\" Update",
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-06-17"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-07-01-1-15",
+      "row": 16,
+      "rowDate": "2014-07-01",
+      "date": "2014-07-01",
+      "versions": [
+        "1.15"
+      ],
+      "title": "Independence Day Special",
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-07-01"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-08-19-1-16",
+      "row": 17,
+      "rowDate": "2014-08-19",
+      "date": "2014-08-19",
+      "versions": [
+        "1.16"
+      ],
+      "title": "The San Andreas Flight School Update",
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-08-19"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-10-02-1-17",
+      "row": 18,
+      "rowDate": "2014-10-02",
+      "date": "2014-10-02",
+      "versions": [
+        "1.17"
+      ],
+      "title": "The Last Team Standing Update",
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-10-02"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-11-18-1-01-1-17",
+      "row": 20,
+      "rowDate": "2014-11-18",
+      "date": "2014-11-18",
+      "versions": [
+        "1.01",
+        "1.17"
+      ],
+      "platforms": [
+        "PS4 / Xbox One"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-11-18"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-11-18-1-18-1-02",
+      "row": 21,
+      "rowDate": "2014-11-18",
+      "date": "2014-11-18",
+      "versions": [
+        "1.18",
+        "1.02"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360",
+        "PS4 / Xbox One"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-11-18"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-11-22-1-03-1-19",
+      "row": 22,
+      "rowDate": "2014-11-22",
+      "date": "2014-11-22",
+      "versions": [
+        "1.03",
+        "1.19"
+      ],
+      "platforms": [
+        "PS4 / Xbox One"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-11-22"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-11-26-1-04-1-20",
+      "row": 23,
+      "rowDate": "2014-11-26",
+      "date": "2014-11-26",
+      "versions": [
+        "1.04",
+        "1.20"
+      ],
+      "platforms": [
+        "PS4 / Xbox One"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-11-26"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-12-18-1-19-1-05-1-21",
+      "row": 24,
+      "rowDate": "2014-12-18",
+      "date": "2014-12-18",
+      "versions": [
+        "1.19",
+        "1.05",
+        "1.21"
+      ],
+      "title": "Festive Surprise",
+      "platforms": [
+        "PS3 / Xbox 360",
+        "PS4 / Xbox One"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-12-18"
+      ]
+    },
+    {
+      "id": "gta-v-update-2014-12-23-1-20-1-06-1-22",
+      "row": 25,
+      "rowDate": "2014-12-23",
+      "date": "2014-12-23",
+      "versions": [
+        "1.20",
+        "1.06",
+        "1.22"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360",
+        "PS4 / Xbox One"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2014-12-23"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-03-10-1-21-1-07-1-23",
+      "row": 26,
+      "rowDate": "2015-03-10",
+      "date": "2015-03-10",
+      "versions": [
+        "1.21",
+        "1.07",
+        "1.23"
+      ],
+      "title": "Heists Update",
+      "platforms": [
+        "PS3 / Xbox 360",
+        "PS4 / Xbox One"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-03-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-03-15-1-22-1-08-1-24",
+      "row": 27,
+      "rowDate": "2015-03-15",
+      "date": "2015-03-15",
+      "versions": [
+        "1.22",
+        "1.08",
+        "1.24"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360",
+        "PS4 / Xbox One"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-03-15"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-03-26-1-23-1-09-1-25",
+      "row": 28,
+      "rowDate": "2015-03-26",
+      "date": "2015-03-26",
+      "versions": [
+        "1.23",
+        "1.09",
+        "1.25"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360",
+        "PS4 / Xbox One"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-03-26"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-04-02-1-10-1-26",
+      "row": 29,
+      "rowDate": "2015-04-02",
+      "date": "2015-04-02",
+      "versions": [
+        "1.10",
+        "1.26"
+      ],
+      "platforms": [
+        "PS4 / Xbox One"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-04-02"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-04-14-1-01",
+      "row": 31,
+      "rowDate": "2015-04-14",
+      "date": "2015-04-14",
+      "versions": [
+        "1.01"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-04-14"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-04-17-335-1-1-24",
+      "row": 32,
+      "rowDate": "2015-04-17",
+      "date": "2015-04-17",
+      "versions": [
+        "335.1",
+        "1.24"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-04-17"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-04-30-350-1-1-25",
+      "row": 33,
+      "rowDate": "2015-04-30",
+      "date": "2015-04-30",
+      "versions": [
+        "350.1",
+        "1.25"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-04-30"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-05-01-350-2-1-26",
+      "row": 34,
+      "rowDate": "2015-05-01",
+      "date": "2015-05-01",
+      "versions": [
+        "350.2",
+        "1.26"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-05-01"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-06-10-1-24-1-27-1-11-350-3",
+      "row": 35,
+      "rowDate": "2015-06-10",
+      "date": "2015-06-10",
+      "versions": [
+        "1.24",
+        "1.27",
+        "1.11",
+        "350.3"
+      ],
+      "title": "Ill-Gotten Gains Part 1",
+      "platforms": [
+        "PS3 / Xbox 360",
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-06-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-07-08-1-25-1-28-1-12-393-2",
+      "row": 36,
+      "rowDate": "2015-07-08",
+      "date": "2015-07-08",
+      "versions": [
+        "1.25",
+        "1.28",
+        "1.12",
+        "393.2"
+      ],
+      "title": "Ill-Gotten Gains Part 2",
+      "platforms": [
+        "PS3 / Xbox 360",
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-07-08"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-07-21-393-4-1-28-01",
+      "row": 37,
+      "rowDate": "2015-07-21",
+      "date": "2015-07-21",
+      "versions": [
+        "393.4",
+        "1.28.01"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-07-21"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-09-15-1-13-1-29",
+      "row": 38,
+      "rowDate": "2015-09-15",
+      "date": "2015-09-15",
+      "versions": [
+        "1.13",
+        "1.29"
+      ],
+      "title": "Freemode Events Update",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-09-15"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-10-20-1-14-1-30",
+      "row": 39,
+      "rowDate": "2015-10-20",
+      "date": "2015-10-20",
+      "versions": [
+        "1.14",
+        "1.30"
+      ],
+      "title": "Lowriders",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-10-20"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-11-17-1-29",
+      "row": 41,
+      "rowDate": "2015-11-17",
+      "date": "2015-11-17",
+      "versions": [
+        "1.29"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-11-17"
+      ]
+    },
+    {
+      "id": "gta-v-update-2015-12-15-1-15-1-31",
+      "row": 42,
+      "rowDate": "2015-12-15",
+      "date": "2015-12-15",
+      "versions": [
+        "1.15",
+        "1.31"
+      ],
+      "title": "Executives and Other Criminals",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2015-12-15"
+      ]
+    },
+    {
+      "id": "gta-v-update-2016-01-28-1-16-1-32",
+      "row": 43,
+      "rowDate": "2016-01-28",
+      "date": "2016-01-28",
+      "versions": [
+        "1.16",
+        "1.32"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2016-01-28"
+      ]
+    },
+    {
+      "id": "gta-v-update-2016-03-15-1-17-1-33",
+      "row": 46,
+      "rowDate": "2016-03-15",
+      "date": "2016-03-15",
+      "versions": [
+        "1.17",
+        "1.33"
+      ],
+      "title": "Lowriders: Custom Classics",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2016-03-15"
+      ]
+    },
+    {
+      "id": "gta-v-update-2016-06-07-1-18-1-34",
+      "row": 54,
+      "rowDate": "2016-06-07",
+      "date": "2016-06-07",
+      "versions": [
+        "1.18",
+        "1.34"
+      ],
+      "title": "Further Adventures in Finance and Felony",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2016-06-07"
+      ]
+    },
+    {
+      "id": "gta-v-update-2016-07-12-1-19-1-35",
+      "row": 59,
+      "rowDate": "2016-07-12",
+      "date": "2016-07-12",
+      "versions": [
+        "1.19",
+        "1.35"
+      ],
+      "title": "Cunning Stunts",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2016-07-12"
+      ]
+    },
+    {
+      "id": "gta-v-update-2016-10-04-1-20-1-36",
+      "row": 63,
+      "rowDate": "2016-10-04",
+      "date": "2016-10-04",
+      "versions": [
+        "1.20",
+        "1.36"
+      ],
+      "title": "Bikers",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2016-10-04"
+      ]
+    },
+    {
+      "id": "gta-v-update-2016-12-09-1-36",
+      "row": 72,
+      "rowDate": "2016-12-09",
+      "date": "2016-12-09",
+      "versions": [
+        "1.36"
+      ],
+      "platforms": [
+        "PS3 / Xbox 360"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2016-12-09"
+      ]
+    },
+    {
+      "id": "gta-v-update-2016-12-13-1-21-1-37",
+      "row": 73,
+      "rowDate": "2016-12-13",
+      "date": "2016-12-13",
+      "versions": [
+        "1.21",
+        "1.37"
+      ],
+      "title": "Import/Export",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2016-12-13"
+      ]
+    },
+    {
+      "id": "gta-v-update-2017-03-14-1-38",
+      "row": 81,
+      "rowDate": "2017-03-14",
+      "date": "2017-03-14",
+      "versions": [
+        "1.38"
+      ],
+      "title": "Cunning Stunts: Special Vehicle Circuit",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2017-03-14"
+      ]
+    },
+    {
+      "id": "gta-v-update-2017-04-05-1-39",
+      "row": 85,
+      "rowDate": "2017-04-05",
+      "date": "2017-04-05",
+      "versions": [
+        "1.39"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2017-04-05"
+      ]
+    },
+    {
+      "id": "gta-v-update-2017-06-13-1-40",
+      "row": 89,
+      "rowDate": "2017-06-13",
+      "date": "2017-06-13",
+      "versions": [
+        "1.40"
+      ],
+      "title": "Gunrunning",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2017-06-13"
+      ]
+    },
+    {
+      "id": "gta-v-update-2017-08-29-1-41",
+      "row": 98,
+      "rowDate": "2017-08-29",
+      "date": "2017-08-29",
+      "versions": [
+        "1.41"
+      ],
+      "title": "Smuggler's Run",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2017-08-29"
+      ]
+    },
+    {
+      "id": "gta-v-update-2017-12-12-1-42",
+      "row": 111,
+      "rowDate": "2017-12-12",
+      "date": "2017-12-12",
+      "versions": [
+        "1.42"
+      ],
+      "title": "Doomsday Heist",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2017-12-12"
+      ]
+    },
+    {
+      "id": "gta-v-update-2018-03-20-1-43",
+      "row": 125,
+      "rowDate": "2018-03-20",
+      "date": "2018-03-20",
+      "versions": [
+        "1.43"
+      ],
+      "title": "Southern San Andreas Super Sport Series",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2018-03-20"
+      ]
+    },
+    {
+      "id": "gta-v-update-2018-07-24-1-44",
+      "row": 135,
+      "rowDate": "2018-07-24",
+      "date": "2018-07-24",
+      "versions": [
+        "1.44"
+      ],
+      "title": "After Hours",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2018-07-24"
+      ]
+    },
+    {
+      "id": "gta-v-update-2018-10-16-1-45",
+      "row": 148,
+      "rowDate": "2018-10-16",
+      "date": "2018-10-16",
+      "versions": [
+        "1.45"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2018-10-16"
+      ]
+    },
+    {
+      "id": "gta-v-update-2018-12-11-1-46",
+      "row": 149,
+      "rowDate": "2018-12-11",
+      "date": "2018-12-11",
+      "versions": [
+        "1.46"
+      ],
+      "title": "Arena War",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2018-12-11"
+      ]
+    },
+    {
+      "id": "gta-v-update-2019-07-23-1-47",
+      "row": 162,
+      "rowDate": "2019-07-23",
+      "date": "2019-07-23",
+      "versions": [
+        "1.47"
+      ],
+      "title": "The Diamond Casino & Resort",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2019-07-23"
+      ]
+    },
+    {
+      "id": "gta-v-update-2019-07-25-1-48",
+      "row": 163,
+      "rowDate": "2019-07-25",
+      "date": "2019-07-25",
+      "versions": [
+        "1.48"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2019-07-25"
+      ]
+    },
+    {
+      "id": "gta-v-update-2019-12-12-1-49",
+      "row": 181,
+      "rowDate": "2019-12-12",
+      "date": "2019-12-12",
+      "versions": [
+        "1.49"
+      ],
+      "title": "The Diamond Casino Heist",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2019-12-12"
+      ]
+    },
+    {
+      "id": "gta-v-update-2019-12-15-1-50",
+      "row": 182,
+      "rowDate": "2019-12-15",
+      "date": "2019-12-19",
+      "versions": [
+        "1.50"
+      ],
+      "uncertainty": "Exact patch date unconfirmed, was prior to Festive Surprise though",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-1.50"
+      ],
+      "review": {
+        "reason": "The history explicitly marks December 15 as unconfirmed and says this update preceded Festive Surprise. December 19, when that event began, is used as a conservative available-by bound, not an exact release date.",
+        "evidence": [
+          {
+            "url": "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-1.50",
+            "title": "GTA Wiki: unconfirmed date of title update 1.50",
+            "publisher": "GTA Wiki contributors",
+            "sha256": "dd7a9500a13bdb5091e2c017df07811c014706cb9b54f3acf88ab5629942331a",
+            "proof": "Actual date unconfirmed"
+          },
+          {
+            "url": "https://gta.fandom.com/wiki/Festive_Surprise_2019",
+            "title": "GTA Wiki: Festive Surprise 2019 dates",
+            "publisher": "GTA Wiki contributors",
+            "sha256": "d0f932fc28ccca0a074de96d93868f6a7466f668c845c1304429cedeb5567648",
+            "proof": "The event started on December 19, 2019"
+          }
+        ]
+      },
+      "dateBasis": "documented-by"
+    },
+    {
+      "id": "gta-v-update-2020-08-11-1-51",
+      "row": 195,
+      "rowDate": "2020-08-11",
+      "date": "2020-08-11",
+      "versions": [
+        "1.51"
+      ],
+      "title": "Los Santos Summer Special",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2020-08-11"
+      ]
+    },
+    {
+      "id": "gta-v-update-2020-09-09-1-52",
+      "row": 196,
+      "rowDate": "2020-09-09",
+      "date": "2020-09-09",
+      "versions": [
+        "1.52"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2020-09-09"
+      ]
+    },
+    {
+      "id": "gta-v-update-2020-12-15-1-52",
+      "row": 197,
+      "rowDate": "2020-12-15",
+      "date": "2020-12-15",
+      "versions": [
+        "1.52"
+      ],
+      "title": "The Cayo Perico Heist",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2020-12-15"
+      ]
+    },
+    {
+      "id": "gta-v-update-2021-02-10-1-53",
+      "row": 206,
+      "rowDate": "2021-02-10",
+      "date": "2021-02-10",
+      "versions": [
+        "1.53"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2021-02-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2021-03-16-1-54",
+      "row": 209,
+      "rowDate": "2021-03-16",
+      "date": "2021-03-16",
+      "versions": [
+        "1.54"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2021-03-16"
+      ]
+    },
+    {
+      "id": "gta-v-update-2021-07-20-1-57",
+      "row": 213,
+      "rowDate": "2021-07-20",
+      "date": "2021-07-20",
+      "versions": [
+        "1.57"
+      ],
+      "title": "Los Santos Tuners",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2021-07-20"
+      ]
+    },
+    {
+      "id": "gta-v-update-2021-12-15-1-58",
+      "row": 220,
+      "rowDate": "2021-12-15",
+      "date": "2021-12-15",
+      "versions": [
+        "1.58"
+      ],
+      "title": "The Contract",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2021-12-15"
+      ]
+    },
+    {
+      "id": "gta-v-update-2022-04-26-1-59",
+      "row": 230,
+      "rowDate": "2022-04-26",
+      "date": "2022-04-26",
+      "versions": [
+        "1.59"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2022-04-26"
+      ]
+    },
+    {
+      "id": "gta-v-update-2022-05-17-1-60",
+      "row": 231,
+      "rowDate": "2022-05-17",
+      "date": "2022-05-17",
+      "versions": [
+        "1.60"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2022-05-17"
+      ]
+    },
+    {
+      "id": "gta-v-update-2022-07-26-1-61",
+      "row": 232,
+      "rowDate": "2022-07-26",
+      "date": "2022-07-26",
+      "versions": [
+        "1.61"
+      ],
+      "title": "The Criminal Enterprises",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2022-07-26"
+      ]
+    },
+    {
+      "id": "gta-v-update-2022-09-02-1-62",
+      "row": 238,
+      "rowDate": "2022-09-02",
+      "date": "2022-09-02",
+      "versions": [
+        "1.62"
+      ],
+      "platforms": [
+        "PS4 / Xbox One"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2022-09-02"
+      ]
+    },
+    {
+      "id": "gta-v-update-2022-10-25-1-63",
+      "row": 245,
+      "rowDate": "2022-10-25",
+      "date": "2022-10-25",
+      "versions": [
+        "1.63"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2022-10-25"
+      ]
+    },
+    {
+      "id": "gta-v-update-2022-12-13-1-64",
+      "row": 249,
+      "rowDate": "2022-12-13",
+      "date": "2022-12-13",
+      "versions": [
+        "1.64"
+      ],
+      "title": "Los Santos Drug Wars",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2022-12-13"
+      ]
+    },
+    {
+      "id": "gta-v-update-2022-12-16-1-65",
+      "row": 250,
+      "rowDate": "2022-12-16",
+      "date": "2022-12-16",
+      "versions": [
+        "1.65"
+      ],
+      "platforms": [
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2022-12-16"
+      ]
+    },
+    {
+      "id": "gta-v-update-2023-02-01-1-66",
+      "row": 255,
+      "rowDate": "2023-02-01",
+      "date": "2023-02-01",
+      "versions": [
+        "1.66"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2023-02-01"
+      ]
+    },
+    {
+      "id": "gta-v-update-2023-02-28-1-66",
+      "row": 258,
+      "rowDate": "2023-02-28",
+      "date": "2023-02-28",
+      "versions": [
+        "1.66"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2023-02-28"
+      ]
+    },
+    {
+      "id": "gta-v-update-2023-06-13-1-67",
+      "row": 259,
+      "rowDate": "2023-06-13",
+      "date": "2023-06-13",
+      "versions": [
+        "1.67"
+      ],
+      "title": "San Andreas Mercenaries",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2023-06-13"
+      ]
+    },
+    {
+      "id": "gta-v-update-2023-10-03-1-67",
+      "row": 266,
+      "rowDate": "2023-10-03",
+      "date": "2023-10-03",
+      "versions": [
+        "1.67"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2023-06-13"
+      ]
+    },
+    {
+      "id": "gta-v-update-2023-12-12-1-68",
+      "row": 268,
+      "rowDate": "2023-12-12",
+      "date": "2023-12-12",
+      "versions": [
+        "1.68"
+      ],
+      "title": "The Chop Shop",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2023-12-12"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-01-16-1-68",
+      "row": 272,
+      "rowDate": "2024-01-16",
+      "date": "2024-01-16",
+      "versions": [
+        "1.68"
+      ],
+      "platforms": [
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2023-12-12"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-01-23-1-68",
+      "row": 273,
+      "rowDate": "2024-01-23",
+      "date": "2024-01-23",
+      "versions": [
+        "1.68"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2023-12-12"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-02-20-1-68",
+      "row": 276,
+      "rowDate": "2024-02-20",
+      "date": "2024-02-20",
+      "versions": [
+        "1.68"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2023-12-12"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-04-16-1-68",
+      "row": 280,
+      "rowDate": "2024-04-16",
+      "date": "2024-04-16",
+      "versions": [
+        "1.68"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2023-12-12"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-06-25-1-69",
+      "row": 281,
+      "rowDate": "2024-06-25",
+      "date": "2024-06-25",
+      "versions": [
+        "1.69"
+      ],
+      "title": "Bottom Dollar Bounties",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-06-25"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-07-17-1-69",
+      "row": 284,
+      "rowDate": "2024-07-17",
+      "date": "2024-07-17",
+      "versions": [
+        "1.69"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-06-25"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-09-17-1-69",
+      "row": 287,
+      "rowDate": "2024-09-17",
+      "date": "2024-09-17",
+      "versions": [
+        "1.69"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-06-25"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-09-25-1-69",
+      "row": 288,
+      "rowDate": "2024-09-25",
+      "date": "2024-09-25",
+      "versions": [
+        "1.69"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-06-25"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-10-15-1-69",
+      "row": 289,
+      "rowDate": "2024-10-15",
+      "date": "2024-10-15",
+      "versions": [
+        "1.69"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-06-25"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-10-30-1-69",
+      "row": 290,
+      "rowDate": "2024-10-30",
+      "date": "2024-10-30",
+      "versions": [
+        "1.69"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-06-25"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-12-10-1-70",
+      "row": 291,
+      "rowDate": "2024-12-10",
+      "date": "2024-12-10",
+      "versions": [
+        "1.70"
+      ],
+      "title": "Agents of Sabotage",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2024-12-13-1-70",
+      "row": 292,
+      "rowDate": "2024-12-13",
+      "date": "2024-12-13",
+      "versions": [
+        "1.70"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-01-21-1-70",
+      "row": 295,
+      "rowDate": "2025-01-21",
+      "date": "2025-01-21",
+      "versions": [
+        "1.70"
+      ],
+      "platforms": [
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-01-23-1-70",
+      "row": 296,
+      "rowDate": "2025-01-23",
+      "date": "2025-01-23",
+      "versions": [
+        "1.70"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-02-06-1-70",
+      "row": 298,
+      "rowDate": "2025-02-06",
+      "date": "2025-02-06",
+      "versions": [
+        "1.70"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-02-19-1-70",
+      "row": 300,
+      "rowDate": "2025-02-19",
+      "date": "2025-02-19",
+      "versions": [
+        "1.70"
+      ],
+      "platforms": [
+        "PC Legacy"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-03-05-1-70",
+      "row": 304,
+      "rowDate": "2025-03-05",
+      "date": "2025-03-05",
+      "versions": [
+        "1.70"
+      ],
+      "platforms": [
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-03-06-1-70",
+      "row": 305,
+      "rowDate": "2025-03-06",
+      "date": "2025-03-06",
+      "versions": [
+        "1.70"
+      ],
+      "platforms": [
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-03-07-1-70",
+      "row": 306,
+      "rowDate": "2025-03-07",
+      "date": "2025-03-07",
+      "versions": [
+        "1.70"
+      ],
+      "platforms": [
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-03-12-1-70",
+      "row": 307,
+      "rowDate": "2025-03-12",
+      "date": "2025-03-12",
+      "versions": [
+        "1.70"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2024-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-06-17-1-71",
+      "row": 309,
+      "rowDate": "2025-06-17",
+      "date": "2025-06-17",
+      "versions": [
+        "1.71"
+      ],
+      "title": "Money Fronts",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2025-06-17"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-03-07-1-71",
+      "row": 311,
+      "rowDate": "2025-03-07",
+      "date": "2025-07-08",
+      "versions": [
+        "1.71"
+      ],
+      "platforms": [
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2025-06-17"
+      ],
+      "review": {
+        "reason": "The table gives March 7 for a PC update under 1.71, before 1.71 launched. Rockstar's linked 1.71 notes date the PC Legacy/Enhanced patch to July 8. The publisher date replaces the inconsistent table date.",
+        "evidence": [
+          {
+            "url": "https://support.rockstargames.com/articles/5IxfVX33w3X8fKooGKswfj/gtav-title-update-1-71-notes-ps5-ps4-xbox-series-x-or-s-xbox-one-pc-enhanced",
+            "title": "Rockstar Games: GTA V title update 1.71 notes",
+            "publisher": "Rockstar Games",
+            "sha256": "5305f4cce122d204fd16ffbdd312d7874faebac7921222cb42260779b0003002",
+            "proof": "July 8, 2025] - PC (Legacy and Enhanced)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gta-v-update-2025-08-12-1-70",
+      "row": 313,
+      "rowDate": "2025-08-12",
+      "date": "2025-08-12",
+      "versions": [
+        "1.71"
+      ],
+      "platforms": [
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2025-06-17"
+      ],
+      "review": {
+        "reason": "The table labels the August 12 PC Enhanced patch 1.70 but links to the 1.71 notes. Rockstar lists this dated patch under title update 1.71; the update label follows those notes. The VersionBench score remains 5.",
+        "evidence": [
+          {
+            "url": "https://support.rockstargames.com/articles/5IxfVX33w3X8fKooGKswfj/gtav-title-update-1-71-notes-ps5-ps4-xbox-series-x-or-s-xbox-one-pc-enhanced",
+            "title": "Rockstar Games: GTA V title update 1.71 notes",
+            "publisher": "Rockstar Games",
+            "sha256": "5305f4cce122d204fd16ffbdd312d7874faebac7921222cb42260779b0003002",
+            "proof": "August 12, 2025] - PC (Enhanced)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gta-v-update-2025-10-22-1-71",
+      "row": 318,
+      "rowDate": "2025-10-22",
+      "date": "2025-10-22",
+      "versions": [
+        "1.71"
+      ],
+      "platforms": [
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2025-06-17"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-12-10-1-72",
+      "row": 319,
+      "rowDate": "2025-12-10",
+      "date": "2025-12-10",
+      "versions": [
+        "1.72"
+      ],
+      "title": "A Safehouse in the Hills",
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2025-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2025-12-17-1-72",
+      "row": 320,
+      "rowDate": "2025-12-17",
+      "date": "2025-12-17",
+      "versions": [
+        "1.72"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2025-12-10"
+      ]
+    },
+    {
+      "id": "gta-v-update-2026-01-27-1-72",
+      "row": 322,
+      "rowDate": "2026-01-27",
+      "date": "2026-01-27",
+      "versions": [
+        "1.72"
+      ],
+      "platforms": [
+        "PS4 / Xbox One",
+        "PC Legacy",
+        "PS5 / Xbox Series X|S / PC Enhanced"
+      ],
+      "notesUrls": [
+        "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes/Update-2025-12-10"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "row": 1,
+      "date": "2013-09-17",
+      "reason": "Platform launch already recorded"
+    },
+    {
+      "row": 19,
+      "date": "2014-11-18",
+      "reason": "Platform launch already recorded"
+    },
+    {
+      "row": 30,
+      "date": "2015-04-14",
+      "reason": "Platform launch already recorded"
+    },
+    {
+      "row": 40,
+      "date": "2015-10-29",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 44,
+      "date": "2016-02-11",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 45,
+      "date": "2016-02-26",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 47,
+      "date": "2016-04-01",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 48,
+      "date": "2016-04-08",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 49,
+      "date": "2016-04-15",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 50,
+      "date": "2016-04-22",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 51,
+      "date": "2016-04-29",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 52,
+      "date": "2016-05-06",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 53,
+      "date": "2016-05-13",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 55,
+      "date": "2016-06-14",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 56,
+      "date": "2016-06-21",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 57,
+      "date": "2016-06-28",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 58,
+      "date": "2016-07-05",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 60,
+      "date": "2016-07-19",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 61,
+      "date": "2016-07-26",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 62,
+      "date": "2016-08-02",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 64,
+      "date": "2016-10-11",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 65,
+      "date": "2016-10-25",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 66,
+      "date": "2016-10-28",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 67,
+      "date": "2016-11-01",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 68,
+      "date": "2016-11-08",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 69,
+      "date": "2016-11-15",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 70,
+      "date": "2016-11-22",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 71,
+      "date": "2016-11-29",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 74,
+      "date": "2016-12-20",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 75,
+      "date": "2016-12-23",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 76,
+      "date": "2017-01-02",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 77,
+      "date": "2017-01-10",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 78,
+      "date": "2017-01-17",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 79,
+      "date": "2017-02-14",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 80,
+      "date": "2017-02-28",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 82,
+      "date": "2017-03-21",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 83,
+      "date": "2017-03-28",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 84,
+      "date": "2017-04-04",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 86,
+      "date": "2017-04-11",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 87,
+      "date": "2017-04-18",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 88,
+      "date": "2017-04-25",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 90,
+      "date": "2017-06-30",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 91,
+      "date": "2017-07-11",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 92,
+      "date": "2017-07-18",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 93,
+      "date": "2017-07-25",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 94,
+      "date": "2017-08-01",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 95,
+      "date": "2017-08-08",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 96,
+      "date": "2017-08-15",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 97,
+      "date": "2017-08-22",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 99,
+      "date": "2017-09-12",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 100,
+      "date": "2017-09-19",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 101,
+      "date": "2017-09-26",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 102,
+      "date": "2017-10-03",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 103,
+      "date": "2017-10-10",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 104,
+      "date": "2017-10-17",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 105,
+      "date": "2017-10-27",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 106,
+      "date": "2017-10-31",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 107,
+      "date": "2017-11-07",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 108,
+      "date": "2017-11-14",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 109,
+      "date": "2017-11-21",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 110,
+      "date": "2017-11-28",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 112,
+      "date": "2017-12-19",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 113,
+      "date": "2017-12-22",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 114,
+      "date": "2017-12-25",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 115,
+      "date": "2017-12-26",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 116,
+      "date": "2018-01-02",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 117,
+      "date": "2018-01-09",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 118,
+      "date": "2018-01-16",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 119,
+      "date": "2018-01-23",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 120,
+      "date": "2018-01-30",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 121,
+      "date": "2018-02-06",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 122,
+      "date": "2018-02-13",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 123,
+      "date": "2018-02-20",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 124,
+      "date": "2018-02-27",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 126,
+      "date": "2018-03-27",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 127,
+      "date": "2018-04-03",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 128,
+      "date": "2018-04-17",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 129,
+      "date": "2018-05-01",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 130,
+      "date": "2018-05-08",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 131,
+      "date": "2018-05-15",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 132,
+      "date": "2018-05-29",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 133,
+      "date": "2018-06-05",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 134,
+      "date": "2018-06-19",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 136,
+      "date": "2018-07-31",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 137,
+      "date": "2018-08-03",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 138,
+      "date": "2018-08-07",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 139,
+      "date": "2018-08-14",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 140,
+      "date": "2018-08-21",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 141,
+      "date": "2018-08-28",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 142,
+      "date": "2018-09-04",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 143,
+      "date": "2018-09-11",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 144,
+      "date": "2018-09-18",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 145,
+      "date": "2018-09-25",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 146,
+      "date": "2018-10-02",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 147,
+      "date": "2018-10-09",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 150,
+      "date": "2018-12-18",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 151,
+      "date": "2018-12-25",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 152,
+      "date": "2018-12-26",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 153,
+      "date": "2019-01-01",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 154,
+      "date": "2019-01-08",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 155,
+      "date": "2018-01-15",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 156,
+      "date": "2019-01-22",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 157,
+      "date": "2019-01-29",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 158,
+      "date": "2019-02-07",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 159,
+      "date": "2019-02-14",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 160,
+      "date": "2019-02-21",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 161,
+      "date": "2019-02-28",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 164,
+      "date": "2019-08-01",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 165,
+      "date": "2019-08-08",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 166,
+      "date": "2019-08-15",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 167,
+      "date": "2019-08-22",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 168,
+      "date": "2019-08-29",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 169,
+      "date": "2018-09-05",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 170,
+      "date": "2019-09-12",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 171,
+      "date": "2019-09-19",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 172,
+      "date": "2019-09-26",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 173,
+      "date": "2019-10-03",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 174,
+      "date": "2019-10-10",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 175,
+      "date": "2019-10-17",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 176,
+      "date": "2019-10-24",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 177,
+      "date": "2019-10-31",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 178,
+      "date": "2019-11-07",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 179,
+      "date": "2019-11-14",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 180,
+      "date": "2019-11-28",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 183,
+      "date": "2019-12-19",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 184,
+      "date": "2019-12-25",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 185,
+      "date": "2020-01-02",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 186,
+      "date": "2020-01-09",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 187,
+      "date": "2020-01-16",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 188,
+      "date": "2020-01-23",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 189,
+      "date": "2020-01-30",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 190,
+      "date": "2020-02-06",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 191,
+      "date": "2020-02-13",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 192,
+      "date": "2020-02-20",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 193,
+      "date": "2020-02-27",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 194,
+      "date": "2020-03-05",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 198,
+      "date": "2020-12-15",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 199,
+      "date": "2020-12-22",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 200,
+      "date": "2020-12-31",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 201,
+      "date": "2021-01-07",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 202,
+      "date": "2021-01-14",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 203,
+      "date": "2021-01-21",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 204,
+      "date": "2021-01-28",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 205,
+      "date": "2021-02-04",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 207,
+      "date": "2021-02-18",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 208,
+      "date": "2021-02-25",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 210,
+      "date": "2021-05-27",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 211,
+      "date": "2021-06-24",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 212,
+      "date": "2021-07-08",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 214,
+      "date": "2021-07-29",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 215,
+      "date": "2021-08-05",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 216,
+      "date": "2021-08-12",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 217,
+      "date": "2021-08-19",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 218,
+      "date": "2021-08-26",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 219,
+      "date": "2021-09-01",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 221,
+      "date": "2021-12-23",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 222,
+      "date": "2021-12-30",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 223,
+      "date": "2022-01-06",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 224,
+      "date": "2022-01-13",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 225,
+      "date": "2022-01-20",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 226,
+      "date": "2022-01-27",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 227,
+      "date": "2022-02-03",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 228,
+      "date": "2022-02-10",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 229,
+      "date": "2022-03-15",
+      "reason": "Platform launch already recorded"
+    },
+    {
+      "row": 233,
+      "date": "2022-08-04",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 234,
+      "date": "2022-08-11",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 235,
+      "date": "2022-08-18",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 236,
+      "date": "2022-08-25",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 237,
+      "date": "2022-09-01",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 239,
+      "date": "2022-09-15",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 240,
+      "date": "2022-09-22",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 241,
+      "date": "2022-09-29",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 242,
+      "date": "2022-10-06",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 243,
+      "date": "2022-10-13",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 244,
+      "date": "2022-10-20",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 246,
+      "date": "2022-10-27",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 247,
+      "date": "2022-11-10",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 248,
+      "date": "2022-11-22",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 251,
+      "date": "2022-12-29",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 252,
+      "date": "2023-01-12",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 253,
+      "date": "2023-01-19",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 254,
+      "date": "2023-01-26",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 256,
+      "date": "2023-02-09",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 257,
+      "date": "2023-02-16",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 260,
+      "date": "2023-06-22",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 261,
+      "date": "2023-07-20",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 262,
+      "date": "2023-08-10",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 263,
+      "date": "2023-08-17",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 264,
+      "date": "2023-09-14",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 265,
+      "date": "2023-09-28",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 267,
+      "date": "2023-10-12",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 269,
+      "date": "2023-12-21",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 270,
+      "date": "2024-01-04",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 271,
+      "date": "2024-01-11",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 274,
+      "date": "2024-01-25",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 275,
+      "date": "2024-02-15",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 277,
+      "date": "2024-02-22",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 278,
+      "date": "2024-03-07",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 279,
+      "date": "2024-04-04",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 282,
+      "date": "2024-07-04",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 283,
+      "date": "2024-07-11",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 285,
+      "date": "2024-07-25",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 286,
+      "date": "2024-08-01",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 293,
+      "date": "2024-12-19",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 294,
+      "date": "2025-01-09",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 297,
+      "date": "2025-01-23",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 299,
+      "date": "2025-02-06",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 301,
+      "date": "2025-02-20",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 302,
+      "date": "2025-03-04",
+      "reason": "Platform launch already recorded"
+    },
+    {
+      "row": 303,
+      "date": "2025-03-04",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 308,
+      "date": "2025-04-17",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 310,
+      "date": "2025-06-26",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 312,
+      "date": "2025-07-24",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 314,
+      "date": "2025-08-14",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 315,
+      "date": "2025-08-28",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 316,
+      "date": "2025-10-01",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 317,
+      "date": "2025-10-16",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 321,
+      "date": "2026-01-14",
+      "reason": "In-game content event, not a title update"
+    },
+    {
+      "row": 323,
+      "date": "2026-02-11",
+      "reason": "In-game content event, not a title update"
+    }
+  ]
+}
