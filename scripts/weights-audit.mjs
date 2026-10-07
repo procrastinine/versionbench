@@ -1,3 +1,4 @@
+import { SourceSnapshot } from './source-snapshot.mjs';
 // Inspect public Hub metadata only. Never download weights or execute model code.
 export function huggingFaceTarget(url) {
   const parsed = new URL(url);
@@ -37,34 +38,8 @@ export function inspectCheckpoint(model) {
   };
 }
 
-export async function auditWeights(data, fetcher = fetch) {
-  const cache = new Map();
-  let rateLimitError;
-  const get = (path) => {
-    if (!cache.has(path))
-      cache.set(
-        path,
-        (async () => {
-          if (rateLimitError) throw rateLimitError;
-          const response = await fetcher(`https://huggingface.co/api/${path}`, {
-            signal: AbortSignal.timeout(30000),
-          });
-          if (response.status === 429) {
-            const seconds = response.headers?.get('ratelimit')?.match(/\bt=(\d+)/)?.[1];
-            rateLimitError = Object.assign(
-              new Error(
-                `Hugging Face API rate limit; remaining requests stopped.${seconds ? ` Retry after ${seconds} seconds.` : ''}`,
-              ),
-              { code: 'RATE_LIMITED' },
-            );
-            throw rateLimitError;
-          }
-          if (!response.ok) throw new Error(`HTTP ${response.status}: ${path}`);
-          return response.json();
-        })(),
-      );
-    return cache.get(path);
-  };
+export async function auditWeights(data, client = new SourceSnapshot()) {
+  const get = (path) => client.json('https://huggingface.co/api/' + path);
   const urls = [...new Set(data.releases.map((r) => r.huggingFaceUrl).filter(Boolean))].sort();
   const checks = [];
   let next = 0;
@@ -91,7 +66,7 @@ export async function auditWeights(data, fetcher = fetch) {
                 checkpoint = inspectCheckpoint(await get(`models/${model.id}`));
                 break;
               } catch (error) {
-                if (error.code === 'RATE_LIMITED') throw error;
+                if (/HTTP 429|Stopped after rate limit/.test(error.message)) throw error;
                 errors.push(`${model.id}: ${error.message}`);
               }
             }
@@ -109,7 +84,7 @@ export async function auditWeights(data, fetcher = fetch) {
         } catch (error) {
           checks.push({
             url,
-            status: error.code === 'RATE_LIMITED' ? 'deferred' : 'review',
+            status: /HTTP 429|Stopped after rate limit/.test(error.message) ? 'deferred' : 'review',
             error: error.message,
           });
         }
@@ -117,7 +92,7 @@ export async function auditWeights(data, fetcher = fetch) {
     }),
   );
   return {
-    checkedAt: new Date().toISOString(),
+    checkedAt: client.snapshot.capturedAt,
     snapshot: data.updated,
     releaseCount: data.releases.length,
     linkedReleaseCount: data.releases.filter((r) => r.huggingFaceUrl).length,

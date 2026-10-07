@@ -2,6 +2,8 @@
   'use strict';
   const data = JSON.parse(document.getElementById('release-data').textContent);
   const stats = JSON.parse(document.getElementById('stats-data').textContent);
+  const pending = JSON.parse(document.getElementById('pending-data').textContent);
+  const watchlist = JSON.parse(document.getElementById('watch-data').textContent);
   const familyStats = new Map(
     [...stats.families, ...stats.softwareControls].map((family) => [family.id, family]),
   );
@@ -97,7 +99,13 @@
   const main = document.getElementById('main');
   const tooltip = document.getElementById('tooltip');
   const dialog = document.getElementById('model-dialog');
-  let compareIds = ranked.slice(0, 3).map((release) => release.id);
+  // Every limited leaderboard view includes the complete boundary tie group.
+  const takeWithTies = (rows, limit) => {
+    if (!rows.length || limit < 1) return [];
+    const cutoff = rows[Math.min(rows.length, limit) - 1].score;
+    return rows.filter((release) => release.score >= cutoff);
+  };
+  let compareIds = takeWithTies(ranked, 3).map((release) => release.id);
   let compareOrder = 'score';
   let draftIds = new Set();
   let previousPage = '';
@@ -307,7 +315,7 @@
 
   function renderLeaderboard() {
     const list = ranked.filter((release) => leaderboardScope === 'all' || release.familyInfo.core);
-    const chartList = list.slice(0, 10);
+    const chartList = takeWithTies(list, 10);
     const ceiling = Math.max(1, Math.ceil(list[0]?.score || 1));
     main.innerHTML =
       head(
@@ -315,9 +323,8 @@
         'Version Benchmark Leaderboard',
         'No training-data contamination, no judge bias, no prompt sensitivity, no sampling variance, no benchmark saturation, no data leakage, 100% reproducible.<span class="benchmark-definition">Benchmark score = numeric release version.</span>',
       ) +
-      /* HTML */ `<div class="stats">
-          ${ranked
-            .slice(0, 3)
+      /* HTML */ `<div class="stats leaderboard-cards">
+          ${takeWithTies(ranked, 3)
             .map(
               (release) =>
                 /* HTML */ `<article class="stat" style="${familyStyle(release.familyInfo)}">
@@ -1287,6 +1294,10 @@
         visible.sort((a, b) => b.time - a.time || b.score - a.score),
         false,
       );
+    bindReleasePoints(container);
+  }
+
+  function bindReleasePoints(container) {
     container.querySelectorAll('[data-point-ids]').forEach((point) => {
       point.addEventListener('pointerenter', (event) => {
         if (!pinnedPoint) showPointTooltip(point, event, false);
@@ -1342,7 +1353,7 @@
     const group = point.dataset.pointIds.split(',').map((id) => releaseMap.get(id));
     const release = group[0];
     if (!release) return;
-    tooltip.innerHTML = `${pinned ? '<button class="tip-close" aria-label="Close release list">×</button>' : ''}<strong>${group.length > 1 ? `${group.length} releases at version ${score(release)}` : esc(release.name)}</strong><div class="tip-meta"><span>${esc(release.date)}</span><span>Benchmark score ${score(release)}</span></div>${
+    tooltip.innerHTML = `${pinned ? '<button class="tip-close" aria-label="Close release list">×</button>' : ''}<strong>${point.dataset.pointTitle ? esc(point.dataset.pointTitle) : group.length > 1 ? `${group.length} releases at version ${score(release)}` : esc(release.name)}</strong><div class="tip-meta"><span>${esc(release.date)}</span><span>${point.dataset.rank ? `Family rank #${point.dataset.rank}` : `Benchmark score ${score(release)}`}</span></div>${
       group.length > 1
         ? /* HTML */ `<div class="point-source-list">
               ${group
@@ -1362,7 +1373,7 @@
             <p>
               ${
                 pinned
-                  ? 'Release links open announcements; HF links open model weights.'
+                  ? 'Release links open the dated evidence; HF links open model weights.'
                   : 'Click or press Enter to choose a release source.'
               }
             </p>`
@@ -1603,8 +1614,10 @@
         </section>
         <div class="presets" aria-label="Comparison presets">
           <span class="preset-label">Quick selections</span
-          ><a class="preset" href="${compareHref(ranked.slice(0, 3).map((release) => release.id))}"
-            >Top 3 families</a
+          ><a
+            class="preset"
+            href="${compareHref(takeWithTies(ranked, 3).map((release) => release.id))}"
+            >Top 3, including ties</a
           ><a
             class="preset"
             href="${compareHref(
@@ -1857,7 +1870,9 @@
           </div>
           <div id="release-table" class="table-wrap"></div>
           <div class="panel-foot">
-            <span>Dates represent documented public releases or announcements.</span
+            <span
+              >Dates identify announcements, API access, weights releases, research, or explicitly
+              labeled checkpoint commits.</span
             ><a href="${compareHref()}" data-compare-link
               >Compare selected (${compareIds.length}) →</a
             >
@@ -1889,6 +1904,8 @@
     const decimal = (value) =>
       value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     const software = family.kind === 'software';
+    const unresolved = pending.filter((row) => row.family === family.id);
+    const watched = watchlist.find((entry) => entry.family === family.id);
     const metrics = software
       ? [
           [
@@ -1943,15 +1960,19 @@
         <p>Average rank is rank × days, divided by tracked days. Release rate is ${summary.releaseCount} recorded events / (${summary.trackedDays} days / 365.2425).
         Announcements and variants count separately. Filters below affect the release table; these statistics always cover the whole family. <a href="#methodology">Full methodology →</a></p>
       </details>`) +
-      (software
-        ? ''
-        : `<section class="panel family-rank-panel">
-        <div class="panel-head"><div><h2>Rank over time</h2><p>Position among model families. #1 is at the top. Software has no jurisdiction.</p></div></div>
+      `<section class="panel family-rank-panel" style="${familyStyle(family)}">
+        <div class="panel-head"><div><h2>${software ? 'Version over time' : 'Version and rank over time'}</h2><p>${software ? 'Latest released version. Numeric regressions remain on the record.' : 'Lines: highest version and historical rank. Points: every release, including lower versions. Click for sources.'}</p></div></div>
+        <div class="family-chart-legend">${software ? '' : '<span><i class="legend-rank"></i>Rank · left axis</span>'}<span><i class="legend-version"></i>Version · right axis</span></div>
         <div id="family-rank-chart" class="family-rank-chart" data-rank-family="${esc(family.id)}"></div>
-        <details class="rank-history-details"><summary>View rank changes as a table</summary><div class="table-wrap"><table>
-          <caption class="sr-only">${esc(family.name)} historical rank changes</caption><thead><tr><th>From date (UTC)</th><th>Rank</th></tr></thead>
-          <tbody>${summary.rankHistory.map((entry) => `<tr><td>${esc(entry.date)}</td><td>#${entry.rank}</td></tr>`).join('')}</tbody>
-        </table></div></details></section>`) +
+        <details class="rank-history-details"><summary>View changes as a table</summary><div class="table-wrap"><table>
+          <caption class="sr-only">${esc(family.name)} version${software ? '' : ' and rank'} history</caption><thead><tr><th>From date (UTC)</th>${software ? '' : '<th>Rank</th>'}<th>Version</th><th>Numeric score</th></tr></thead>
+          <tbody>${familyHistoryRows(summary)
+            .map(
+              (entry) =>
+                `<tr><td>${esc(entry.date)}</td>${software ? '' : `<td>#${entry.rank}</td>`}<td>${esc(entry.version)}</td><td>${numberLabel(entry.score)}</td></tr>`,
+            )
+            .join('')}</tbody>
+        </table></div></details></section>` +
       `<div class="family-highlights">
         <section class="panel family-highlight"><span class="eyebrow">HIGHEST SCORE${software ? '' : ` · #${summary.currentRank}`}</span>
           <strong class="family-highlight-score">${score(best)}</strong><h2>${sourceLink(best, esc(best.name))}</h2>
@@ -1969,9 +1990,40 @@
           ${filterControl('release-status', 'Release status', statusOptions, indexPrefs.status)}
         </div><span id="release-count" class="index-count" aria-live="polite"></span></div>
         <div id="release-table" class="table-wrap"></div>
-        <div class="panel-foot"><span>First recorded release does not imply first-ever release.</span><a href="${compareHref()}" data-compare-link>Compare selected (${compareIds.length}) →</a></div></section>`;
+        <div class="panel-foot"><span>First recorded release does not imply first-ever release.</span><a href="${compareHref()}" data-compare-link>Compare selected (${compareIds.length}) →</a></div></section>` +
+      (unresolved.length
+        ? `<section class="panel family-sources"><div class="panel-head"><div><h2>Awaiting date evidence</h2><p>These candidates do not enter dated rankings.</p></div></div><ul>${unresolved.map((row) => `<li><strong>${esc(row.name)}</strong><span>${esc(row.reason)} ${row.sourceUrls.map((url, i) => `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ${i + 1} ↗</a>`).join(' · ')}</span></li>`).join('')}</ul></section>`
+        : '') +
+      `<section class="panel family-sources"><div class="panel-head"><div><h2>Pages to watch</h2><p>Announcements, API releases, and weights can arrive on different days.</p></div></div>
+        <ul>${watched.sources
+          .map((source) => {
+            const url =
+              source.type === 'huggingface'
+                ? `https://huggingface.co/${source.author}/models`
+                : source.url;
+            const label =
+              source.type === 'huggingface'
+                ? `${source.author} on Hugging Face`
+                : url.replace(/^https:\/\//, '');
+            return `<li><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a><span>${esc(source.purpose)}</span></li>`;
+          })
+          .join('')}</ul>
+        <div class="panel-foot"><span>Listed sources are monitored by the repository audit. The numbers receive no special treatment.</span></div></section>`;
     updateReleaseTable();
-    if (!software) drawFamilyRank();
+    drawFamilyRank();
+  }
+
+  function familyHistoryRows(summary) {
+    const ranks = summary.rankHistory ?? [];
+    const versions = summary.versionHistory;
+    const dates = [...new Set([...ranks, ...versions].map((entry) => entry.date))].sort();
+    let ri = 0,
+      vi = 0;
+    return dates.map((date) => {
+      while (ri + 1 < ranks.length && ranks[ri + 1].date <= date) ri++;
+      while (vi + 1 < versions.length && versions[vi + 1].date <= date) vi++;
+      return { ...versions[vi], date, ...(ranks.length ? { rank: ranks[ri].rank } : {}) };
+    });
   }
 
   function drawFamilyRank() {
@@ -1979,20 +2031,50 @@
     if (!container) return;
     const family = familyMap.get(container.dataset.rankFamily);
     const summary = familyStats.get(family.id);
-    const entries = summary.rankHistory;
-    const width = Math.max(260, container.clientWidth);
-    const height = 280;
-    const pad = { top: 34, right: 32, bottom: 48, left: 48 };
+    const entries = summary.rankHistory ?? [];
+    const versions = summary.versionHistory;
+    const software = family.kind === 'software';
+    const familyReleases = datedReleases.filter((release) => release.family === family.id);
+    const versionGroups = new Map();
+    for (const release of familyReleases) {
+      const key = release.date + ':' + release.score;
+      if (!versionGroups.has(key)) versionGroups.set(key, []);
+      versionGroups.get(key).push(release);
+    }
+    const rankDates = software
+      ? []
+      : [...new Set([...entries.map((e) => e.date), ...familyReleases.map((r) => r.date)])].sort();
+    const rankPoints = rankDates.map((date) => {
+      const entry = entries.findLast((e) => e.date <= date);
+      const own = familyReleases.filter((r) => r.date === date);
+      return {
+        date,
+        rank: entry.rank,
+        changed: entries.some((e) => e.date === date),
+        releases:
+          entry.date === date
+            ? datedReleases.filter((r) => r.date === date && r.familyInfo.kind !== 'software')
+            : own,
+      };
+    });
+    const width = Math.max(280, container.clientWidth);
+    const height = 320;
+    const pad = { top: 24, right: 72, bottom: 52, left: software ? 30 : 66 };
     const start = parseDate(summary.firstEventDate);
     const end = Math.max(start + day, parseDate(stats.snapshot));
     const maxRank = Math.max(2, ...entries.map((entry) => entry.rank));
-    const x = (time) =>
-      pad.left + ((time - start) / (end - start)) * (width - pad.left - pad.right);
-    const y = (rank) => pad.top + ((rank - 1) / (maxRank - 1)) * (height - pad.top - pad.bottom);
-    let path = `M${x(start).toFixed(2)},${y(entries[0].rank).toFixed(2)}`;
-    for (const entry of entries.slice(1))
-      path += `H${x(parseDate(entry.date)).toFixed(2)}V${y(entry.rank).toFixed(2)}`;
-    path += `H${x(end).toFixed(2)}`;
+    const maxVersion = Math.max(1, Math.ceil(summary.highestScore));
+    const plotHeight = height - pad.top - pad.bottom;
+    const right = width - pad.right;
+    const x = (time) => pad.left + ((time - start) / (end - start)) * (right - pad.left);
+    const yRank = (rank) => pad.top + ((rank - 1) / (maxRank - 1)) * plotHeight;
+    const yVersion = (value) => height - pad.bottom - (value / maxVersion) * plotHeight;
+    const stepPath = (series, value, y) => {
+      let path = `M${x(start).toFixed(2)},${y(series[0][value]).toFixed(2)}`;
+      for (const entry of series.slice(1))
+        path += `H${x(parseDate(entry.date)).toFixed(2)}V${y(entry[value]).toFixed(2)}`;
+      return path + `H${x(end).toFixed(2)}`;
+    };
     const interval = Math.max(1, Math.ceil((maxRank - 1) / 5));
     const ticks = [
       ...new Set([
@@ -2001,20 +2083,72 @@
         maxRank,
       ]),
     ].sort((a, b) => a - b);
-    container.innerHTML = `<svg class="rank-svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="rank-title rank-description">
-      <title id="rank-title">${esc(family.name)} rank over time</title><desc id="rank-description">Daily competition rank from ${esc(summary.firstEventDate)} through ${esc(stats.snapshot)}. Lower ranks are better; number 1 is at the top. Software controls are excluded. A table of all rank changes follows.</desc>
-      <text class="axis-title" x="${pad.left}" y="17">Rank</text>
-      ${ticks.map((rank) => `<line class="grid-line" x1="${pad.left}" x2="${width - pad.right}" y1="${y(rank)}" y2="${y(rank)}"/><text x="${pad.left - 12}" y="${y(rank) + 4}" text-anchor="end">${rank}</text>`).join('')}
-      ${dateTicks(start, end, width - pad.left - pad.right)
+    // Do not crowd the final rank tick against the preceding one.
+    const rankTicks = ticks.filter(
+      (rank, i) => i === ticks.length - 1 || maxRank - rank >= interval * 0.55,
+    );
+    const versionTicks = Array.from({ length: 6 }, (_, i) => (i * maxVersion) / 5);
+    const middle = pad.top + plotHeight / 2;
+    const releasePoint = (group, cx, cy, shape, extra, label) => {
+      const attrs = `data-point-ids="${esc(group.map((r) => r.id).join(','))}" data-point-families="${esc([...new Set(group.map((r) => r.family))].join(','))}" ${extra}`;
+      const hit = `<circle class="point-hit" cx="${cx}" cy="${cy}" r="10" fill="transparent"/>`;
+      const title = `<title>${esc(label)}</title>`;
+      if (group.length === 1)
+        return `<a class="point-link family-point" ${attrs} href="${esc(group[0].source.url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(label)}. Open release source.">${hit}${shape}${title}</a>`;
+      return `<g class="point-link point-group family-point" ${attrs} role="button" tabindex="0" aria-haspopup="dialog" aria-label="${esc(label)}. Open ${group.length} release sources.">${hit}${shape}${title}</g>`;
+    };
+    container.innerHTML = `<svg class="rank-svg" viewBox="0 0 ${width} ${height}" role="group" aria-labelledby="rank-title rank-description">
+      <title id="rank-title">${esc(family.name)} version${software ? '' : ' and rank'} over time</title>
+      <desc id="rank-description">${software ? 'Latest released version on the right axis. Software controls have no rank.' : 'Historical competition rank on the left axis, with number 1 at the top. Highest numeric version reached on the right axis, with higher versions at the top.'} Both use dates from ${esc(summary.firstEventDate)} through ${esc(stats.snapshot)}. A table of all changes follows.</desc>
+      ${software ? '' : `<text class="axis-title rank-axis-title" transform="translate(16 ${middle}) rotate(-90)" text-anchor="middle">Rank</text>`}
+      <text class="axis-title version-axis-title" transform="translate(${width - 15} ${middle}) rotate(90)" text-anchor="middle">Version</text>
+      ${(software ? versionTicks : rankTicks)
+        .map((value) => {
+          const y = software ? yVersion(value) : yRank(value);
+          return `<line class="grid-line" x1="${pad.left}" x2="${right}" y1="${y}" y2="${y}"/>${software ? '' : `<text x="${pad.left - 12}" y="${y + 4}" text-anchor="end">${value}</text>`}`;
+        })
+        .join('')}
+      ${versionTicks.map((value) => `<text x="${right + 12}" y="${yVersion(value) + 4}" text-anchor="start">${numberLabel(value)}</text>`).join('')}
+      ${dateTicks(start, end, right - pad.left)
         .map(
           (tick) =>
-            `<text x="${x(tick.time)}" y="${height - 25}" text-anchor="middle">${esc(tick.label)}</text>`,
+            `<text x="${x(tick.time)}" y="${height - 27}" text-anchor="middle">${esc(tick.label)}</text>`,
         )
         .join('')}
-      <path class="rank-line" d="${path}" stroke="${family.color}" fill="none" stroke-width="2"/>
-      ${entries.map((entry) => `<circle class="rank-point" cx="${x(parseDate(entry.date)).toFixed(2)}" cy="${y(entry.rank).toFixed(2)}" r="4" fill="${family.color}" tabindex="0" role="img" aria-label="${esc(dateLabel(entry.date))}: rank ${entry.rank}" data-rank="${entry.rank}" data-rank-date="${entry.date}"><title>${esc(entry.date)} · Rank #${entry.rank}</title></circle>`).join('')}
-      <text class="axis-title" x="${width / 2}" y="${height - 5}" text-anchor="middle">Date (UTC)</text>
+      <path class="family-version-line" d="${stepPath(versions, 'score', yVersion)}" fill="none" stroke-width="2.5" stroke-dasharray="6 4"/>
+      ${software ? '' : `<path class="rank-line" d="${stepPath(entries, 'rank', yRank)}" stroke="${family.color}" fill="none" stroke-width="2.5"/>`}
+      ${[...versionGroups.values()]
+        .map((group) => {
+          const r = group[0],
+            cx = x(r.time),
+            cy = yVersion(r.score);
+          return releasePoint(
+            group,
+            cx,
+            cy,
+            `<rect class="family-version-point" x="${cx - 3.5}" y="${cy - 3.5}" width="7" height="7"/>`,
+            `data-version="${esc(r.version)}" data-version-score="${r.score}" data-version-date="${r.date}"`,
+            `${r.date} · Version ${r.version} · ${group.map((r) => r.name).join(' / ')}`,
+          );
+        })
+        .join('')}
+      ${rankPoints
+        .map((entry) => {
+          const cx = x(parseDate(entry.date)),
+            cy = yRank(entry.rank);
+          return releasePoint(
+            entry.releases,
+            cx,
+            cy,
+            `<circle class="rank-point" cx="${cx}" cy="${cy}" r="${entry.changed ? 4.5 : 3.5}" fill="${family.color}"/>`,
+            `data-rank="${entry.rank}" data-rank-date="${entry.date}" data-rank-change="${entry.changed}" data-point-title="${esc(family.name)} · rank #${entry.rank}"`,
+            `${entry.date} · ${family.name} rank #${entry.rank} · ${entry.releases.map((r) => r.name).join(' / ')}`,
+          );
+        })
+        .join('')}
+      <text class="axis-title" x="${(pad.left + right) / 2}" y="${height - 6}" text-anchor="middle">Date (UTC)</text>
     </svg>`;
+    bindReleasePoints(container);
   }
 
   function updateReleaseTable() {
@@ -2043,7 +2177,8 @@
           Version numbers are assigned independently by each provider. A higher position in this
           benchmark does not imply a more capable model. VersionBench obeys mathematics, not
           semantic versioning. Thus <code>3.9 &gt; 3.10</code>. Vendors are advised to number
-          responsibly.
+          responsibly. Additional decimal points are removed: Dolphin <code>2.9.3</code> scores
+          <code>2.93</code>. The published label stays intact.
         </p>
         <h2>Software controls</h2>
         <p>
@@ -2073,7 +2208,8 @@
         </p>
         <h2>Release timeline</h2>
         <p>
-          The horizontal axis is the documented release or public announcement date, in UTC.
+          The horizontal axis uses the documented event date. Checkpoint commits use UTC and are
+          labeled separately; they do not establish when a private repository became public.
           Availability labels distinguish research announcements, previews, and released models; an
           announcement date does not imply general availability. The vertical axis is the exact
           numeric version. “Highest to date” follows the family's highest matching score reached so
@@ -2113,6 +2249,12 @@
           URL fragment, so the same HTML file can reopen a comparison without a server.
         </p>
         <h2>Sources and date evidence</h2>
+        <p>
+          When Hugging Face is the only release evidence, only the first commit containing model
+          weights counts for that checkpoint. Repository creation, documentation changes and later
+          weight uploads are not new model releases. Quantizations and format conversions do not
+          count either. Uploading is not a numbering strategy.
+        </p>
         <p>
           The release index links each record to its original provider announcement, documentation,
           repository, or model card. When a separate source establishes the date, it appears under
@@ -2278,6 +2420,8 @@
       'score',
       'release_date',
       'status',
+      'event_type',
+      'date_basis',
       'source_title',
       'source_url',
       'date_source_url',
@@ -2302,6 +2446,8 @@
       release.score,
       release.date,
       release.status,
+      release.eventType,
+      release.dateBasis || 'publisher',
       release.source?.title,
       release.source?.url,
       release.dateSource?.url,

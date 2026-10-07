@@ -1,0 +1,38 @@
+name: Review external model sources
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '26.1.0'
+          package-manager-cache: false
+      - name: Capture release sources and report gaps
+        id: releases
+        continue-on-error: true
+        run: node scripts/audit-releases.mjs
+      - name: Check saved weight associations
+        id: weights
+        continue-on-error: true
+        run: node scripts/audit-weights.mjs
+      - name: Save evidence and reports for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-audit
+          path: output/*.json
+          retention-days: 14
+      - name: Flag unresolved review items
+        if: steps.releases.outcome == 'failure' || steps.weights.outcome == 'failure'
+        run: |
+          echo 'Review the captured source-audit artifact. The curated catalog was not modified.'
+          exit 1

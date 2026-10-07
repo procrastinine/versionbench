@@ -5,8 +5,59 @@
       {
         "type": "page",
         "url": "https://developers.openai.com/api/docs/models",
-        "pattern": "\\bGPT[ -]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bGPT[ -]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "GPT",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "openai",
+        "scopePattern": "GPT",
+        "pattern": "/GPT[ -]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher model inventory (all pages)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://openai.com/news/",
+        "scopePattern": "GPT",
+        "pattern": "\\bGPT[ -]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://developers.openai.com/api/docs/changelog",
+        "scopePattern": "GPT",
+        "pattern": "\\bGPT[ -]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/openai/gpt-oss",
+        "scopePattern": "GPT",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -15,8 +66,50 @@
       {
         "type": "page",
         "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
-        "pattern": "\\bClaude[- ]+(?:(?:Opus|Sonnet|Haiku|Fable)[- ]+)?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bClaude[- ]+(?:(?:Opus|Sonnet|Haiku|Fable)[- ]+)?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Claude",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.anthropic.com/news",
+        "scopePattern": "Claude",
+        "pattern": "\\bClaude[- ]+(?:(?:Opus|Sonnet|Haiku|Fable)[- ]+)?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://platform.claude.com/docs/en/release-notes/overview",
+        "scopePattern": "Claude",
+        "pattern": "\\bClaude[- ]+(?:(?:Opus|Sonnet|Haiku|Fable)[- ]+)?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/anthropics/claude-cookbooks",
+        "scopePattern": "Claude",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "No verified publisher Hugging Face inventory is configured for this family; watch the official release pages for any weights announcement."
     ]
   },
   {
@@ -25,8 +118,50 @@
       {
         "type": "page",
         "url": "https://ai.google.dev/gemini-api/docs/models",
-        "pattern": "\\bGemini[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bGemini[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Gemini",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://ai.google.dev/gemini-api/docs/changelog",
+        "scopePattern": "Gemini",
+        "pattern": "\\bGemini[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://blog.google/technology/ai/",
+        "scopePattern": "Gemini",
+        "pattern": "\\bGemini[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/google-gemini/cookbook",
+        "scopePattern": "Gemini",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "No verified publisher Hugging Face inventory is configured for this family; watch the official release pages for any weights announcement."
     ]
   },
   {
@@ -35,8 +170,48 @@
       {
         "type": "page",
         "url": "https://docs.x.ai/developers/models",
-        "pattern": "\\bGrok[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bGrok[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Grok",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "xai-org",
+        "scopePattern": "Grok",
+        "pattern": "/Grok[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher model inventory (all pages)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://x.ai/news",
+        "scopePattern": "Grok",
+        "pattern": "\\bGrok[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/xai-org/grok-1",
+        "scopePattern": "Grok",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -45,8 +220,47 @@
       {
         "type": "huggingface",
         "author": "meta-llama",
-        "pattern": "/Llama[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "(?:Code)?Llama(?:[ -]?Guard)?[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "scopePattern": "(?:Code|Prompt[ -]?)?Llama|Llama[ -]?Guard",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.llama.com/",
+        "scopePattern": "(?:Code|Prompt[ -]?)?Llama|Llama[ -]?Guard",
+        "pattern": "(?:Code)?Llama(?:[ -]?Guard)?[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/meta-llama/llama-models",
+        "scopePattern": "(?:Code|Prompt[ -]?)?Llama|Llama[ -]?Guard",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/meta-llama/PurpleLlama",
+        "scopePattern": "Llama[ -]?Guard|Prompt[ -]?Guard|Llama",
+        "purpose": "Safety-tuned Llama variants and their release history",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -55,13 +269,48 @@
       {
         "type": "huggingface",
         "author": "mistralai",
-        "pattern": "/(?:Mistral|Ministral)(?:[- ](?:Small|Medium|Large))?[- ]([0-9]{1,2}(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/(?:Mistral|Ministral)(?:[- ](?:Small|Medium|Large))?[- ]([0-9]{1,2}(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Mistral|Ministral|Codestral|Magistral|Devstral|Pixtral|Voxtral",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
       },
       {
         "type": "page",
         "url": "https://docs.mistral.ai/getting-started/models",
-        "pattern": "\\bMistral[- ]+(?:Small|Medium|Large)[- ]+([0-9]{1,2}(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bMistral[- ]+(?:Small|Medium|Large)[- ]+([0-9]{1,2}(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Mistral|Ministral|Codestral|Magistral|Devstral|Pixtral|Voxtral",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://mistral.ai/news",
+        "scopePattern": "Mistral|Ministral|Codestral|Magistral|Devstral|Pixtral|Voxtral",
+        "pattern": "\\b(?:Mistral|Ministral)(?:[- ](?:Small|Medium|Large))?[- ]([0-9]{1,2}(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/mistralai/mistral-inference",
+        "scopePattern": "Mistral|Ministral|Codestral|Magistral|Devstral|Pixtral|Voxtral",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -70,13 +319,69 @@
       {
         "type": "huggingface",
         "author": "Qwen",
-        "pattern": "/Qwen([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Qwen([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Qwen|QwQ|QVQ",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
       },
       {
         "type": "page",
         "url": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
-        "pattern": "\\bQwen[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bQwen[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Qwen|QwQ|QVQ",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://qwenlm.github.io/blog/",
+        "scopePattern": "Qwen|QwQ|QVQ",
+        "pattern": "\\bQwen([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://qwen.ai/blog",
+        "scopePattern": "Qwen|QwQ|QVQ",
+        "pattern": "\\bQwen([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/QwenLM/Qwen3",
+        "scopePattern": "Qwen|QwQ|QVQ",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/QwenLM/Qwen2.5",
+        "scopePattern": "Qwen|QwQ|QVQ",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -85,13 +390,47 @@
       {
         "type": "huggingface",
         "author": "deepseek-ai",
-        "pattern": "/DeepSeek[- ]V?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/DeepSeek[- ]V?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "DeepSeek",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
       },
       {
         "type": "page",
         "url": "https://api-docs.deepseek.com/updates/",
-        "pattern": "\\bDeepSeek[- ]V([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bDeepSeek[- ]V([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "DeepSeek",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/deepseek-ai/DeepSeek-V3",
+        "scopePattern": "DeepSeek",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+        "scopePattern": "DeepSeek",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -100,13 +439,48 @@
       {
         "type": "huggingface",
         "author": "moonshotai",
-        "pattern": "/Kimi[- ]K([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Kimi[- ]K([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Kimi|Moonshot",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
       },
       {
         "type": "page",
         "url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
-        "pattern": "\\bKimi[- ]K?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bKimi[- ]K?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Kimi|Moonshot",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://platform.moonshot.ai/docs/intro",
+        "scopePattern": "Kimi|Moonshot",
+        "pattern": "\\bKimi[- ]K([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/MoonshotAI/Kimi-K2",
+        "scopePattern": "Kimi|Moonshot",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -115,13 +489,47 @@
       {
         "type": "huggingface",
         "author": "zai-org",
-        "pattern": "/GLM[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/GLM[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "(?:Chat)?GLM|CogVLM",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
       },
       {
         "type": "page",
         "url": "https://docs.z.ai/release-notes/new-released",
-        "pattern": "\\bGLM[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bGLM[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "(?:Chat)?GLM|CogVLM",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/zai-org/GLM-4",
+        "scopePattern": "(?:Chat)?GLM|CogVLM",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/THUDM/ChatGLM-6B",
+        "scopePattern": "(?:Chat)?GLM|CogVLM",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -130,8 +538,29 @@
       {
         "type": "page",
         "url": "https://research.meta.ai/",
-        "pattern": "\\bMuse[- ]Spark[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bMuse[- ]Spark[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Muse",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://ai.meta.com/blog/",
+        "scopePattern": "Muse",
+        "pattern": "\\bMuse[- ]Spark[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "No verified publisher Hugging Face inventory is configured for this family; watch the official release pages for any weights announcement."
     ]
   },
   {
@@ -140,8 +569,60 @@
       {
         "type": "huggingface",
         "author": "google",
-        "pattern": "/Gemma[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/(?:Code|Recurrent|Pali|Shield|Data|Med|Translate|Function|Embedding|Vault|Diffusion|Tx|T5)?Gemma[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Gemma",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ],
+        "excludePattern": "embeddinggemma|gemma-scope|(?:mtp|drafter|speculator)(?:-|$)"
+      },
+      {
+        "type": "page",
+        "url": "https://ai.google.dev/gemma/docs/releases",
+        "scopePattern": "Gemma",
+        "pattern": "\\bGemma[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://ai.google.dev/gemma/docs",
+        "scopePattern": "Gemma",
+        "pattern": "\\bGemma[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/google-deepmind/gemma",
+        "scopePattern": "Gemma",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://huggingface.co/google/collections",
+        "scopePattern": "Gemma",
+        "purpose": "Publisher collections and model links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "Text-generating encoder-decoder and multimodal variants, including T5Gemma, are in scope. Embedding-only checkpoints and interpretability tools stay in the inventory with explicit exclusions."
     ]
   },
   {
@@ -150,8 +631,26 @@
       {
         "type": "huggingface",
         "author": "microsoft",
-        "pattern": "/Phi[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Phi[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Phi[- _0-9]|PhiCookBook",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/microsoft/PhiCookBook",
+        "scopePattern": "Phi[- _0-9]|PhiCookBook",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -160,9 +659,48 @@
       {
         "type": "huggingface",
         "author": "allenai",
-        "pattern": "/OLMo[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))",
-        "excludePattern": "tokenizer"
+        "pattern": "/OLMo[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "excludePattern": "tokenizer",
+        "scopePattern": "OLMo",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://allenai.org/blog",
+        "scopePattern": "OLMo",
+        "pattern": "\\bOLMo[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/allenai/OLMo",
+        "scopePattern": "OLMo",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/allenai/OLMo-core",
+        "scopePattern": "OLMo",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -171,13 +709,48 @@
       {
         "type": "huggingface",
         "author": "MiniMaxAI",
-        "pattern": "/MiniMax[- ]M([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/MiniMax[- ]M([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "MiniMax|abab",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
       },
       {
         "type": "page",
         "url": "https://agent.minimax.io/docs/changelog",
-        "pattern": "\\b(?:MiniMax[- ])?M([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\b(?:MiniMax[- ])?M([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "MiniMax|abab",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.minimax.io/news",
+        "scopePattern": "MiniMax|abab",
+        "pattern": "\\bMiniMax[- ]M([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/MiniMax-AI/MiniMax-M1",
+        "scopePattern": "MiniMax|abab",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -186,8 +759,39 @@
       {
         "type": "page",
         "url": "https://docs.aws.amazon.com/nova/latest/nova2-userguide/what-is-nova-2.html",
-        "pattern": "\\b(?:Amazon )?Nova[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\b(?:Amazon )?Nova[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Nova",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://aws.amazon.com/ai/generative-ai/nova/",
+        "scopePattern": "Nova",
+        "pattern": "\\b(?:Amazon )?Nova[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/aws-samples/amazon-nova-samples",
+        "scopePattern": "Nova",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "No verified publisher Hugging Face inventory is configured for this family; watch the official release pages for any weights announcement."
     ]
   },
   {
@@ -196,8 +800,37 @@
       {
         "type": "page",
         "url": "https://ernie.baidu.com/blog/posts/",
-        "pattern": "\\bERNIE[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bERNIE[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "ERNIE",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "baidu",
+        "scopePattern": "ERNIE",
+        "pattern": "/ERNIE[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher model inventory (all pages)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/PaddlePaddle/ERNIE",
+        "scopePattern": "ERNIE",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -206,13 +839,51 @@
       {
         "type": "page",
         "url": "https://developers.openai.com/api/docs/models",
-        "pattern": "\\bo([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bo([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "\\bo[134]\\b|reasoning",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
       },
       {
         "type": "page",
         "url": "https://developers.openai.com/api/docs/models/o4-mini",
-        "pattern": "\\bo([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bo([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "\\bo[134]\\b|reasoning",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://openai.com/news/",
+        "scopePattern": "\\bo[134]\\b|reasoning",
+        "pattern": "\\bo([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://developers.openai.com/api/docs/changelog",
+        "scopePattern": "\\bo[134]\\b|reasoning",
+        "pattern": "\\bo([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "No verified publisher Hugging Face inventory is configured for this family; watch the official release pages for any weights announcement."
     ]
   },
   {
@@ -221,13 +892,68 @@
       {
         "type": "page",
         "url": "https://www.huaweicloud.com/product/pangu.html",
-        "pattern": "(?:Pangu|盘古)(?:大模型)?[- ]*([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "(?:Pangu|盘古)(?:大模型)?[- ]*([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "PanGu|盘古",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
       },
       {
         "type": "page",
         "url": "https://www.huaweicloud.com/eu/news/20250620192415143.html",
-        "pattern": "Pangu(?: Models)?[- ]+([0-9]+(?:\\.[0-9]+)?)(?![0-9.])"
+        "pattern": "Pangu(?: Models)?[- ]+([0-9]+(?:\\.[0-9]+)?)(?![0-9.])",
+        "scopePattern": "PanGu|盘古",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "openpangu",
+        "scopePattern": "PanGu|盘古",
+        "pattern": "(?:Pangu|盘古)(?:大模型)?[- ]*([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher model inventory (all pages)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "huawei-noah",
+        "scopePattern": "PanGu|盘古",
+        "pattern": "(?:Pangu|盘古)(?:大模型)?[- ]*([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher model inventory (all pages)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/huawei-noah/Pretrained-Language-Model",
+        "scopePattern": "PanGu|盘古",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://huggingface.co/openpangu",
+        "scopePattern": "PanGu|盘古",
+        "purpose": "Publisher collections and model links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -236,8 +962,48 @@
       {
         "type": "page",
         "url": "https://mimo.mi.com/docs/en-US/updates/model",
-        "pattern": "\\bMiMo[- ]V([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bMiMo[- ]V([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "MiMo",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "XiaomiMiMo",
+        "scopePattern": "MiMo",
+        "pattern": "/MiMo[- ]V([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher model inventory (all pages)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/XiaomiMiMo/MiMo",
+        "scopePattern": "MiMo",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://mimo.mi.com/",
+        "scopePattern": "MiMo",
+        "pattern": "\\bMiMo[- ]V([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -246,8 +1012,59 @@
       {
         "type": "huggingface",
         "author": "ibm-granite",
-        "pattern": "/Granite[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Granite[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Granite",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.ibm.com/granite/docs/",
+        "scopePattern": "Granite",
+        "pattern": "\\bGranite[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://research.ibm.com/topics/granite",
+        "scopePattern": "Granite",
+        "pattern": "\\bGranite[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/ibm-granite/granite-code-models",
+        "scopePattern": "Granite",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/ibm-granite/granite-3.0-language-models",
+        "scopePattern": "Granite",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "Some publisher pages require JavaScript or have removed historical content. Capture failures remain explicit review items; the Hugging Face inventory is checked independently."
     ]
   },
   {
@@ -256,8 +1073,37 @@
       {
         "type": "huggingface",
         "author": "nvidia",
-        "pattern": "/(?:NVIDIA-)?Nemotron[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/(?:NVIDIA-)?Nemotron[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Nemotron",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://research.nvidia.com/labs/nemotron/",
+        "scopePattern": "Nemotron",
+        "pattern": "\\b(?:NVIDIA-)?Nemotron[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/NVIDIA-NeMo/Nemotron",
+        "scopePattern": "Nemotron",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -266,8 +1112,48 @@
       {
         "type": "page",
         "url": "https://seed.bytedance.com/en/",
-        "pattern": "\\bSeed[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bSeed[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Seed|Doubao",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "ByteDance-Seed",
+        "scopePattern": "Seed|Doubao",
+        "pattern": "/Seed[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher model inventory (all pages)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://seed.bytedance.com/en/seed_model_portfolio",
+        "scopePattern": "Seed|Doubao",
+        "pattern": "\\bSeed[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/ByteDance-Seed",
+        "scopePattern": "Seed|Doubao",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -276,8 +1162,29 @@
       {
         "type": "page",
         "url": "https://ai.google/discover/palm2/",
-        "pattern": "\\bPaLM[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bPaLM[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "PaLM",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/",
+        "scopePattern": "PaLM",
+        "pattern": "\\bPaLM[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "No verified publisher Hugging Face inventory is configured for this family; watch the official release pages for any weights announcement."
     ]
   },
   {
@@ -286,8 +1193,36 @@
       {
         "type": "huggingface",
         "author": "01-ai",
-        "pattern": "/Yi[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Yi[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "(?:/|\\b)Yi(?:[- _0-9]|$)",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/01-ai/Yi",
+        "scopePattern": "(?:/|\\b)Yi(?:[- _0-9]|$)",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/01-ai/Yi-1.5",
+        "scopePattern": "(?:/|\\b)Yi(?:[- _0-9]|$)",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -296,13 +1231,46 @@
       {
         "type": "huggingface",
         "author": "internlm",
-        "pattern": "/InternLM([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/InternLM([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "InternLM|InternVL",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
       },
       {
         "type": "huggingface",
         "author": "OpenGVLab",
-        "pattern": "/InternVL([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/InternVL([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "InternLM|InternVL",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/InternLM/InternLM",
+        "scopePattern": "InternLM|InternVL",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/OpenGVLab/InternVL",
+        "scopePattern": "InternLM|InternVL",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -311,8 +1279,37 @@
       {
         "type": "huggingface",
         "author": "LGAI-EXAONE",
-        "pattern": "/(?:K-)?EXAONE[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/(?:K-)?EXAONE[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "EXAONE",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.lgresearch.ai/news",
+        "scopePattern": "EXAONE",
+        "pattern": "\\b(?:K-)?EXAONE[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/LG-AI-EXAONE/EXAONE-3.0",
+        "scopePattern": "EXAONE",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -321,8 +1318,36 @@
       {
         "type": "huggingface",
         "author": "openbmb",
-        "pattern": "/MiniCPM(?:[- ]?[Vo])?[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/MiniCPM(?:[- ]?[Vo])?[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "MiniCPM",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/OpenBMB/MiniCPM",
+        "scopePattern": "MiniCPM",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/OpenBMB/MiniCPM-V",
+        "scopePattern": "MiniCPM",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -331,13 +1356,48 @@
       {
         "type": "huggingface",
         "author": "stepfun-ai",
-        "pattern": "/Step[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Step[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Step[- _0-9]|阶跃",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
       },
       {
         "type": "page",
         "url": "https://platform.stepfun.com/",
-        "pattern": "\\bStep[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bStep[- ]+([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Step[- _0-9]|阶跃",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.stepfun.com/",
+        "scopePattern": "Step[- _0-9]|阶跃",
+        "pattern": "\\bStep[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/stepfun-ai/Step3",
+        "scopePattern": "Step[- _0-9]|阶跃",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -346,13 +1406,37 @@
       {
         "type": "huggingface",
         "author": "inclusionAI",
-        "pattern": "/Ling[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Ling[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "(?:/|\\b)Ling[- _0-9]|Bailing",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
       },
       {
         "type": "page",
         "url": "https://vercel.com/ai-gateway/models/ling-3.1-flash",
-        "pattern": "\\bLing[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bLing[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "(?:/|\\b)Ling[- _0-9]|Bailing",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/inclusionAI/Ling",
+        "scopePattern": "(?:/|\\b)Ling[- _0-9]|Bailing",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -361,8 +1445,37 @@
       {
         "type": "huggingface",
         "author": "tiiuae",
-        "pattern": "/Falcon[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Falcon[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Falcon",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://falconllm.tii.ae/",
+        "scopePattern": "Falcon",
+        "pattern": "\\bFalcon[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/tiiuae",
+        "scopePattern": "Falcon",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -371,8 +1484,48 @@
       {
         "type": "huggingface",
         "author": "ai21labs",
-        "pattern": "/(?:AI21-)?Jamba(?:(?:[- ](?:Mini|Large))?[- ])?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/(?:AI21-)?Jamba(?:(?:[- ](?:Mini|Large))?[- ])?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Jamba",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.ai21.com/blog/jamba/",
+        "scopePattern": "Jamba",
+        "pattern": "\\b(?:AI21-)?Jamba(?:(?:[- ](?:Mini|Large))?[- ])?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://docs.ai21.com/docs/jamba-foundation-models",
+        "scopePattern": "Jamba",
+        "pattern": "\\b(?:AI21-)?Jamba(?:(?:[- ](?:Mini|Large))?[- ])?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/AI21Labs",
+        "scopePattern": "Jamba",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -381,13 +1534,38 @@
       {
         "type": "page",
         "url": "https://inflection.ai/blog",
-        "pattern": "\\bInflection[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bInflection[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Inflection",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
       },
       {
         "type": "page",
         "url": "https://inflection.ai/blog/enterprise",
-        "pattern": "\\bInflection[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bInflection[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Inflection",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/InflectionAI/Inflection-Benchmarks",
+        "scopePattern": "Inflection",
+        "purpose": "Publisher research and historical model references",
+        "signals": [
+          "announcement"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "No verified publisher Hugging Face inventory is configured for this family; watch the official release pages for any weights announcement."
     ]
   },
   {
@@ -396,8 +1574,48 @@
       {
         "type": "huggingface",
         "author": "LiquidAI",
-        "pattern": "/LFM([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/LFM([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "LFM|Liquid",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.liquid.ai/models",
+        "scopePattern": "LFM|Liquid",
+        "pattern": "\\bLFM([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.liquid.ai/blog",
+        "scopePattern": "LFM|Liquid",
+        "pattern": "\\bLFM([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/Liquid4All",
+        "scopePattern": "LFM|Liquid",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -406,8 +1624,37 @@
       {
         "type": "huggingface",
         "author": "NousResearch",
-        "pattern": "/Hermes[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Hermes[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Hermes|Nous-Hermes",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://nousresearch.com/",
+        "scopePattern": "Hermes|Nous-Hermes",
+        "pattern": "\\bHermes[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/NousResearch/Hermes-Function-Calling",
+        "scopePattern": "Hermes|Nous-Hermes",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -416,8 +1663,26 @@
       {
         "type": "huggingface",
         "author": "openchat",
-        "pattern": "/OpenChat[-_ ]v?([0-9]{1,2}(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/OpenChat[-_ ]v?([0-9]{1,2}(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "OpenChat",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/imoneoi/openchat",
+        "scopePattern": "OpenChat",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -426,8 +1691,47 @@
       {
         "type": "huggingface",
         "author": "tencent",
-        "pattern": "/(?:Hy|Hunyuan[- ])([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/(?:Hy|Hunyuan[- ])([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Hunyuan|/Hy[0-9]",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://hunyuan.tencent.com/",
+        "scopePattern": "Hunyuan|/Hy[0-9]",
+        "pattern": "\\b(?:Hy|Hunyuan[- ])([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/Tencent/Hunyuan-Large",
+        "scopePattern": "Hunyuan|/Hy[0-9]",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/Tencent-Hunyuan",
+        "scopePattern": "Hunyuan|/Hy[0-9]",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -436,8 +1740,49 @@
       {
         "type": "page",
         "url": "https://longcat.chat/platform/docs/ChangeLog.html",
-        "pattern": "\\bLongCat[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bLongCat[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "LongCat",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "meituan-longcat",
+        "scopePattern": "LongCat",
+        "pattern": "/LongCat[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher model inventory (all pages)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://longcat.ai/",
+        "scopePattern": "LongCat",
+        "pattern": "\\bLongCat[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/meituan-longcat/LongCat-Flash-Chat",
+        "scopePattern": "LongCat",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "Some publisher pages require JavaScript or have removed historical content. Capture failures remain explicit review items; the Hugging Face inventory is checked independently."
     ]
   },
   {
@@ -446,8 +1791,48 @@
       {
         "type": "page",
         "url": "https://www.upstage.ai/news",
-        "pattern": "\\bSolar[- ](?:Pro[- ]|Open[- ])?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bSolar[- ](?:Pro[- ]|Open[- ])?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Solar",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "upstage",
+        "scopePattern": "Solar",
+        "pattern": "/Solar[- ](?:Pro[- ]|Open[- ])?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher model inventory (all pages)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.upstage.ai/blog",
+        "scopePattern": "Solar",
+        "pattern": "\\bSolar[- ](?:Pro[- ]|Open[- ])?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/UpstageAI",
+        "scopePattern": "Solar",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -456,8 +1841,40 @@
       {
         "type": "page",
         "url": "https://www.inceptionlabs.ai/blog",
-        "pattern": "\\bMercury[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bMercury[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Mercury",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://docs.inceptionlabs.ai/",
+        "scopePattern": "Mercury",
+        "pattern": "\\bMercury[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-2",
+        "scopePattern": "Mercury",
+        "pattern": "\\bMercury[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "No verified publisher Hugging Face inventory is configured for this family; watch the official release pages for any weights announcement."
     ]
   },
   {
@@ -466,8 +1883,48 @@
       {
         "type": "page",
         "url": "https://chat.motiftech.io/release",
-        "pattern": "\\bMotif[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bMotif[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Motif",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "Motif-Technologies",
+        "scopePattern": "Motif",
+        "pattern": "/Motif[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher model inventory (all pages)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://huggingface.co/motif-technologies",
+        "scopePattern": "Motif",
+        "purpose": "Publisher collections and model links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/motiftechnologies",
+        "scopePattern": "Motif",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "The publisher account is Motif-Technologies; repository spelling and case are preserved."
     ]
   },
   {
@@ -476,8 +1933,37 @@
       {
         "type": "huggingface",
         "author": "PrimeIntellect",
-        "pattern": "/INTELLECT[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/INTELLECT[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "INTELLECT",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.primeintellect.ai/blog",
+        "scopePattern": "INTELLECT",
+        "pattern": "\\bINTELLECT[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/PrimeIntellect-ai/prime",
+        "scopePattern": "INTELLECT",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -486,8 +1972,37 @@
       {
         "type": "huggingface",
         "author": "deepcogito",
-        "pattern": "/Cogito(?:-\\d+[bB])?[- ]v([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Cogito(?:-\\d+[bB])?[- ]v([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Cogito",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.deepcogito.com/research",
+        "scopePattern": "Cogito",
+        "pattern": "\\bCogito(?:-\\d+[bB])?[- ]v([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/DeepCogito/cogito-v2",
+        "scopePattern": "Cogito",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -496,13 +2011,48 @@
       {
         "type": "huggingface",
         "author": "RekaAI",
-        "pattern": "/Reka[- ]Flash[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Reka[- ]Flash[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Reka",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
       },
       {
         "type": "page",
         "url": "https://reka.ai/legal/latest-changes",
-        "pattern": "\\bReka[- ]Flash[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "\\bReka[- ]Flash[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Reka",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://reka.ai/news",
+        "scopePattern": "Reka",
+        "pattern": "\\bReka[- ]Flash[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/reka-ai",
+        "scopePattern": "Reka",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -511,8 +2061,36 @@
       {
         "type": "huggingface",
         "author": "ServiceNow-AI",
-        "pattern": "/Apriel[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Apriel[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Apriel",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://huggingface.co/ServiceNow-AI/collections",
+        "scopePattern": "Apriel",
+        "purpose": "Publisher collections and model links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/ServiceNow/Apriel",
+        "scopePattern": "Apriel",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -521,8 +2099,28 @@
       {
         "type": "huggingface",
         "author": "Nanbeige",
-        "pattern": "/Nanbeige[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/Nanbeige[- ]?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "Nanbeige",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/Nanbeige/Nanbeige",
+        "scopePattern": "Nanbeige",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
+      "The historical GitHub repository and some older Hugging Face checkpoints are unavailable. Failures remain visible in the audit; a current listing alone cannot establish earlier coverage.",
+      "Some publisher pages require JavaScript or have removed historical content. Capture failures remain explicit review items; the Hugging Face inventory is checked independently."
     ]
   },
   {
@@ -531,8 +2129,26 @@
       {
         "type": "huggingface",
         "author": "inclusionAI",
-        "pattern": "/Ring[- ]([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "(?:^|/|\\b)Ring(?:[- ](?:flash|mini|lite|linear|sparse))*[- ]?(\\d{1,2}(?:[._]\\d+)?)(?![\\d.]*[bmkt]|\\d)",
+        "scopePattern": "(?:/|\\b)Ring[- _0-9]",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/inclusionAI/Ring",
+        "scopePattern": "(?:/|\\b)Ring[- _0-9]",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -541,8 +2157,37 @@
       {
         "type": "huggingface",
         "author": "skt",
-        "pattern": "/A\\.X[- ](?:K)?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmk](?:[^a-z]|$))"
+        "pattern": "/A\\.X[- ](?:K)?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "scopePattern": "A\\.X|A-X",
+        "purpose": "Publisher model inventory (all pages, including earlier and unnumbered variants)",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/SKT-AI/A.X-3",
+        "scopePattern": "A\\.X|A-X",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://news.sktelecom.com/en/678",
+        "scopePattern": "A\\.X|A-X",
+        "pattern": "\\bA\\.X[- ](?:K)?([0-9]+(?:[._][0-9]+)?)(?![0-9._]|[bmkt](?:[^a-z]|$))",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence."
     ]
   },
   {
@@ -551,8 +2196,38 @@
       {
         "type": "page",
         "url": "https://www.python.org/doc/versions/",
-        "pattern": "\\bPython (3\\.[0-9]+)(?![0-9.])"
+        "pattern": "\\bPython (3\\.[0-9]+)(?![0-9.])",
+        "scopePattern": "Python|CPython",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/python/cpython",
+        "scopePattern": "Python|CPython",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.python.org/downloads/",
+        "scopePattern": "Python|CPython",
+        "pattern": "\\bPython (3\\.[0-9]+)(?![0-9.])",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "Software controls only; excluded from model rankings. Watch sources do not expand the declared control scope automatically."
     ]
   },
   {
@@ -561,8 +2236,38 @@
       {
         "type": "page",
         "url": "https://github.com/pytorch/pytorch/releases",
-        "pattern": "\\bPyTorch ([12]\\.[0-9]+)\\.0\\b"
+        "pattern": "\\bPyTorch ([12]\\.[0-9]+)\\.0\\b",
+        "scopePattern": "PyTorch",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://pytorch.org/blog/",
+        "scopePattern": "PyTorch",
+        "pattern": "\\bPyTorch ([12]\\.[0-9]+)\\.0\\b",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/pytorch/pytorch",
+        "scopePattern": "PyTorch",
+        "purpose": "Official code, model cards, and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
+    ],
+    "coverageNotes": [
+      "Software controls only; excluded from model rankings. Watch sources do not expand the declared control scope automatically."
     ]
   },
   {
@@ -574,8 +2279,481 @@
         "pattern": "\\b(?:Grand Theft Auto|GTA)\\s*(V)\\b",
         "versionMap": {
           "V": "5"
+        },
+        "scopePattern": "GTA|Grand Theft Auto",
+        "purpose": "Model documentation and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.rockstargames.com/newswire",
+        "scopePattern": "GTA|Grand Theft Auto",
+        "pattern": "\\b(?:Grand Theft Auto|GTA)\\s*(V)\\b",
+        "purpose": "Publisher announcements and release history",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      }
+    ],
+    "coverageNotes": [
+      "Software controls only; excluded from model rankings. Watch sources do not expand the declared control scope automatically."
+    ]
+  },
+  {
+    "family": "ornith",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "ornith-ai",
+        "scopePattern": "Ornith",
+        "pattern": "Ornith[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "All official Ornith checkpoints and packaging variants",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/ornith-ai/Ornith-1",
+        "scopePattern": "Ornith",
+        "pattern": "Ornith[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Publisher repository and release links",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://ornith.ai/ornith_1_5.html",
+        "scopePattern": "Ornith",
+        "pattern": "Ornith[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Publisher model announcement",
+        "signals": [
+          "announcement"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://ornith.ai/ornith_1_0.html",
+        "scopePattern": "Ornith",
+        "pattern": "Ornith[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Historical first-generation announcement",
+        "signals": [
+          "announcement"
+        ]
+      }
+    ],
+    "coverageNotes": []
+  },
+  {
+    "family": "smollm",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "HuggingFaceTB",
+        "scopePattern": "Smol(?:LM|VLM)",
+        "pattern": "Smol(?:LM|VLM)[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "All SmolLM and SmolVLM checkpoints",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/huggingface/smollm",
+        "scopePattern": "Smol(?:LM|VLM)",
+        "pattern": "Smol(?:LM|VLM)[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Language and vision model releases and training recipes",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://huggingface.co/blog/smollm3",
+        "scopePattern": "Smol(?:LM|VLM)",
+        "pattern": "Smol(?:LM|VLM)[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Latest numbered language-model release and related posts",
+        "signals": [
+          "announcement"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://huggingface.co/blog/smolvlm2",
+        "scopePattern": "Smol(?:LM|VLM)",
+        "pattern": "Smol(?:LM|VLM)[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Vision-language release and related posts",
+        "signals": [
+          "announcement"
+        ]
+      }
+    ],
+    "coverageNotes": []
+  },
+  {
+    "family": "bonsai",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "prism-ml",
+        "scopePattern": "Bonsai",
+        "pattern": "(?:Ternary[ -])?Bonsai[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Binary and ternary language checkpoints; image models are reviewed separately",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://prismml.com/blog",
+        "scopePattern": "Bonsai",
+        "pattern": "(?:Ternary[ -])?Bonsai[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Dated model announcements",
+        "signals": [
+          "announcement"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://prismml.com/news",
+        "scopePattern": "Bonsai",
+        "pattern": "(?:Ternary[ -])?Bonsai[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Publisher news archive",
+        "signals": [
+          "announcement"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+        "scopePattern": "Bonsai",
+        "pattern": "(?:Ternary[ -])?Bonsai[ -]?(\\d+(?:\\.\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Official demos, model table, and framework support",
+        "signals": [
+          "weights"
+        ]
+      }
+    ],
+    "coverageNotes": []
+  },
+  {
+    "family": "dolphin",
+    "sources": [
+      {
+        "type": "huggingface",
+        "author": "dphn",
+        "scopePattern": "dolphin",
+        "pattern": "(?:^|/|\\b)(?:fc-)?Dolphin(?:[-_ ]?X)?[-_ ]?(\\d+(?:[._]\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Every official Dolphin repository, including historical releases moved from cognitivecomputations",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/QuixiAI/dolphin",
+        "scopePattern": "dolphin",
+        "pattern": "(?:^|/|\\b)(?:fc-)?Dolphin(?:[-_ ]?X)?[-_ ]?(\\d+(?:[._]\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Training repository and model documentation",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://dolphinmodel.com/",
+        "scopePattern": "dolphin",
+        "pattern": "(?:^|/|\\b)(?:fc-)?Dolphin(?:[-_ ]?X)?[-_ ]?(\\d+(?:[._]\\d+)*)(?![\\d.]*[BMKT])",
+        "purpose": "Publisher model pages and announcements",
+        "signals": [
+          "announcement"
+        ]
+      }
+    ],
+    "coverageNotes": [
+      "Patch segments are joined after the first decimal point: Dolphin 2.9.3 scores 2.93. The original label is retained. Current repository commit history is not proof of the first public availability date."
+    ]
+  },
+  {
+    "family": "character-ai",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://blog.character.ai/",
+        "scopePattern": "PipSqueak|DeepSqueak|ShortSqueak|c\\.ai|Character\\.?AI",
+        "pattern": "PipSqueak[ -]?(\\d+(?:\\.\\d+)*)",
+        "purpose": "Publisher posts, model rollouts, and chat-style changes",
+        "signals": [
+          "announcement",
+          "hosted"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://support.character.ai/hc/en-us/sections/15013580182799-Announcements",
+        "scopePattern": "PipSqueak|DeepSqueak|ShortSqueak|c\\.ai|Character\\.?AI",
+        "pattern": "PipSqueak[ -]?(\\d+(?:\\.\\d+)*)",
+        "purpose": "Dated community announcements",
+        "signals": [
+          "announcement",
+          "hosted"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://blog.character.ai/pipsqueak2-and-more/",
+        "scopePattern": "PipSqueak|DeepSqueak|ShortSqueak|c\\.ai|Character\\.?AI",
+        "pattern": "PipSqueak[ -]?(\\d+(?:\\.\\d+)*)",
+        "purpose": "PipSqueak 2 access by subscription tier",
+        "signals": [
+          "announcement",
+          "hosted"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://blog.character.ai/new-styles-new-plan/",
+        "scopePattern": "PipSqueak|DeepSqueak|ShortSqueak|c\\.ai|Character\\.?AI",
+        "pattern": "PipSqueak[ -]?(\\d+(?:\\.\\d+)*)",
+        "purpose": "PipSqueak 3 and later related posts",
+        "signals": [
+          "announcement",
+          "hosted"
+        ]
+      }
+    ],
+    "coverageNotes": [
+      "No official downloadable checkpoint was identified for the recorded chat styles. An open-source base model does not establish that Character.AI published its fine-tuned weights. c.ai 1.0/1.1/1.2 need primary date and model-identity evidence."
+    ]
+  },
+  {
+    "family": "apple",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://machinelearning.apple.com/highlights",
+        "scopePattern": "Foundation|AFM",
+        "purpose": "Dated Apple foundation-model research and announcements",
+        "signals": [
+          "announcement",
+          "research"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models",
+        "scopePattern": "Foundation|AFM",
+        "purpose": "Explicit generation numbering and model variants",
+        "signals": [
+          "announcement",
+          "research"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://developer.apple.com/documentation/Updates/FoundationModels",
+        "scopePattern": "Foundation|AFM",
+        "purpose": "Framework and model availability updates; do not score SDK or OS versions",
+        "signals": [
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "apple",
+        "scopePattern": "Foundation|AFM",
+        "purpose": "Watch for a matching AFM checkpoint; unrelated Apple research models are not AFM weights",
+        "signals": [
+          "weights"
+        ],
+        "allowEmpty": true
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/apple",
+        "scopePattern": "Foundation|AFM",
+        "purpose": "Official research repositories and Foundation Models tooling",
+        "signals": [
+          "research",
+          "weights"
+        ]
+      }
+    ],
+    "coverageNotes": [
+      "Apple’s publicly distributed research models and MLX conversions are not automatically the proprietary Apple Intelligence foundation models. The Hugging Face AFM scope may legitimately return no matching repository; this remains a visible check."
+    ]
+  },
+  {
+    "family": "jan",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://jan.ai/blog",
+        "scopePattern": "Jan",
+        "pattern": "Jan[ -]*v([0-9]+(?:\\.[0-9]+)*)",
+        "purpose": "Publisher model announcements; Jan application versions do not count.",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "janhq",
+        "scopePattern": "^Jan[-_]",
+        "pattern": "Jan-v([0-9]+(?:\\.[0-9]+)*)",
+        "purpose": "Enumerate all publisher repositories, including earlier generations and named variants.",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/janhq",
+        "scopePattern": "Jan",
+        "purpose": "Organization model repositories; distinguish model versions from the desktop application.",
+        "signals": [
+          "research",
+          "weights"
+        ]
+      }
+    ],
+    "coverageNotes": [
+      "The Jan application is not this model family. Quantization and format variants are excluded. Checkpoint history dates are not proof of the first public release."
+    ]
+  },
+  {
+    "family": "palmyra",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://writer.com/engineering/",
+        "scopePattern": "Palmyra",
+        "pattern": "Palmyra[ -]*X[ -]*([0-9]+(?:\\.[0-9]+)*)(?![0-9.]|[ -]?[BbKkMm])",
+        "purpose": "Engineering announcements and model generations.",
+        "signals": [
+          "announcement",
+          "api"
+        ],
+        "versionMap": {
+          "002": "2",
+          "003": "3",
+          "004": "4"
+        }
+      },
+      {
+        "type": "page",
+        "url": "https://dev.writer.com/home/models",
+        "scopePattern": "Palmyra",
+        "pattern": "Palmyra[ -]*X[ -]*([0-9]+(?:\\.[0-9]+)*)(?![0-9.]|[ -]?[BbKkMm])",
+        "purpose": "API model identities, current availability and deprecations.",
+        "signals": [
+          "announcement",
+          "api"
+        ],
+        "versionMap": {
+          "002": "2",
+          "003": "3",
+          "004": "4"
+        }
+      },
+      {
+        "type": "huggingface",
+        "author": "Writer",
+        "scopePattern": "Palmyra",
+        "pattern": "Palmyra[ -]*X[ -]*([0-9]+(?:\\.[0-9]+)*)(?![0-9.]|[ -]?[BbKkMm])",
+        "excludePattern": "dummy",
+        "purpose": "Enumerate all publisher repositories, including earlier generations and named variants.",
+        "signals": [
+          "weights"
+        ],
+        "versionMap": {
+          "002": "2",
+          "003": "3",
+          "004": "4"
         }
       }
+    ],
+    "coverageNotes": [
+      "Dummy-weight test repositories do not establish open weights. Parameter counts and specialist-line names do not supply version numbers. Palmyra X4.3 weights are not weights for the hosted X4, X5 or X6 models."
+    ]
+  },
+  {
+    "family": "laguna",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://www.poolside.ai/blog",
+        "scopePattern": "Laguna",
+        "pattern": "Laguna[ -]+(?:XS|S|M)[. -]([0-9]+(?:\\.[0-9]+)*)",
+        "purpose": "Model announcements, API previews and later weight releases.",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "huggingface",
+        "author": "poolside",
+        "scopePattern": "^Laguna",
+        "pattern": "Laguna[- ](?:XS|S|M)[.-]([0-9]+(?:\\.[0-9]+)*)",
+        "excludePattern": "dflash|speculator|tiny-per-element",
+        "purpose": "Enumerate all publisher repositories, including earlier generations and named variants.",
+        "signals": [
+          "weights"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://github.com/poolsideai",
+        "scopePattern": "Laguna|Poolside",
+        "purpose": "Publisher model cards and research repositories.",
+        "signals": [
+          "research",
+          "weights"
+        ]
+      }
+    ],
+    "coverageNotes": [
+      "Size lines M, S and XS retain their own published generation numbers. Speculative decoding drafts, test fixtures and format conversions are not separate language-model releases."
+    ]
+  },
+  {
+    "family": "aion",
+    "sources": [
+      {
+        "type": "page",
+        "url": "https://www.aionlabs.ai/docs/models/",
+        "scopePattern": "Aion",
+        "pattern": "Aion(?:Labs:)?[ -]+(?:RP[ -]+)?([0-9]+(?:\\.[0-9]+)*)",
+        "purpose": "Publisher model identities and explicit release dates.",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      },
+      {
+        "type": "page",
+        "url": "https://openrouter.ai/aion-labs",
+        "scopePattern": "Aion",
+        "pattern": "Aion[ -]+([0-9]+(?:\\.[0-9]+)*)",
+        "purpose": "Gateway inventory and retired variants; listing dates are distinct from release dates.",
+        "signals": [
+          "announcement",
+          "api"
+        ]
+      }
+    ],
+    "coverageNotes": [
+      "Aion Labs is distinct from Microsoft’s Aion research model. No official public checkpoint repository was identified for these hosted variants; upstream GLM, DeepSeek and Llama weights are not exact Aion weights."
     ]
   }
 ]

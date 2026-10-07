@@ -1,0 +1,1457 @@
+[
+  {
+    "family": "dolphin",
+    "url": "https://huggingface.co/dphn/Dolphin-Llama3-8B-Instruct-exl2-6bpw",
+    "disposition": "out-of-scope",
+    "reason": "Repository is a placeholder without a complete checkpoint in any accessible commit. A repository name alone is not a weights release.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "dolphin",
+    "url": "https://huggingface.co/dphn/Dolphin-Mistral-24B-Venice-Edition-exl2-6bpw",
+    "disposition": "out-of-scope",
+    "reason": "Repository is a placeholder without a complete checkpoint in any accessible commit. A repository name alone is not a weights release.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "dolphin",
+    "url": "https://huggingface.co/dphn/Dolphin-Mistral-24B-Venice-Edition-GGUF",
+    "disposition": "out-of-scope",
+    "reason": "Repository is a placeholder without a complete checkpoint in any accessible commit. A repository name alone is not a weights release.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "dolphin",
+    "url": "https://huggingface.co/dphn/Dolphin-X1-8B-exl2",
+    "disposition": "out-of-scope",
+    "reason": "Repository is a placeholder without a complete checkpoint in any accessible commit. A repository name alone is not a weights release.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "palmyra",
+    "url": "https://huggingface.co/Writer/Palmyra-Med-70B",
+    "disposition": "date-unresolved",
+    "reason": "Publisher repository is listed, but checkpoint history requires access. The exact release date has not been established.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "palmyra",
+    "url": "https://huggingface.co/Writer/Palmyra-56B-Instruct",
+    "disposition": "date-unresolved",
+    "reason": "Publisher repository is listed, but checkpoint history requires access. The exact release date has not been established.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "palmyra",
+    "url": "https://huggingface.co/Writer/Palmyra-X-4.3-73B",
+    "disposition": "date-unresolved",
+    "reason": "Publisher repository is listed, but checkpoint history requires access. The exact release date has not been established.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "palmyra",
+    "url": "https://huggingface.co/Writer/Palmyra-local-1_7B",
+    "disposition": "date-unresolved",
+    "reason": "Publisher repository is listed, but checkpoint history requires access. The exact release date has not been established.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "laguna",
+    "url": "https://huggingface.co/poolside/Laguna-S-2.1-base",
+    "disposition": "date-unresolved",
+    "reason": "No complete checkpoint was found in accessible history; a model listing alone does not establish a weight release.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "minicpm",
+    "url": "https://huggingface.co/openbmb/MiniCPM-V-2_6",
+    "disposition": "date-unresolved",
+    "reason": "Checkpoint history is inaccessible; the exact publisher release date requires separate verification.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/codegemma-1.1-2b",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-codegemma-1-1-2024-05-03"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/codegemma-2b",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-codegemma-2024-04-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/codegemma-7b",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-codegemma-2024-04-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/embeddinggemma-2",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/embeddinggemma-300m",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-7b-aps-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-gemma-aps-2024-10-15"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2-12b-it",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2-12b-pt",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2-1b-it",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2-1b-pt",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2-270m-it",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2-270m-pt",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2-27b-it",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2-27b-pt",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2-4b-it",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2-4b-pt",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-27b-pt-res",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2b-pt-att",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2b-pt-mlp",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2b-pt-res",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-2b-pt-transcoders",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-9b-it-res",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-9b-pt-att",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-9b-pt-mlp",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/gemma-scope-9b-pt-res",
+    "disposition": "out-of-scope",
+    "reason": "Embedding-only or sparse-autoencoder interpretability artifacts are not generative language models.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/medgemma-4b-pt",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-medgemma-4b-2025-05-20"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-ai2d-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-ai2d-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-aokvqa-da-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-aokvqa-da-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-aokvqa-mc-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-aokvqa-mc-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-coco35l-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-coco35l-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-cococap-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-cococap-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-docvqa-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-docvqa-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-docvqa-896",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-gqa-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-gqa-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-infovqa-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-infovqa-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-infovqa-896",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-nlvr2-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-nlvr2-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-ocrvqa-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-ocrvqa-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-ocrvqa-896",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-okvqa-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-okvqa-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-refcoco-seg-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-refcoco-seg-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-refcoco-seg-896",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-rsvqa-hr-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-rsvqa-hr-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-rsvqa-lr-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-rsvqa-lr-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-scicap-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-scicap-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-science-qa-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-science-qa-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-screen2words-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-screen2words-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-stvqa-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-stvqa-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-stvqa-896",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-tallyqa-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-tallyqa-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-textcaps-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-textcaps-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-textvqa-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-textvqa-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-textvqa-896",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-vizwizvqa-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-vizwizvqa-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-vqav2-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-vqav2-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-widgetcap-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-ft-widgetcap-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-mix-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-pt-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-pt-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma-3b-pt-896",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2024-05-14"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-10b-ft-docci-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-2024-12-05"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-10b-mix-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-mix-2025-02-19"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-10b-mix-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-mix-2025-02-19"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-10b-pt-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-2024-12-05"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-10b-pt-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-2024-12-05"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-10b-pt-896",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-2024-12-05"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-28b-mix-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-mix-2025-02-19"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-28b-mix-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-mix-2025-02-19"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-28b-pt-224",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-2024-12-05"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-28b-pt-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-2024-12-05"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-28b-pt-896",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-2024-12-05"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-3b-ft-docci-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-2024-12-05"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-3b-mix-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-mix-2025-02-19"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-3b-pt-448",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-2024-12-05"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/paligemma2-3b-pt-896",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-paligemma-2-2024-12-05"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/recurrentgemma-2b",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-recurrentgemma-2b-2024-04-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/recurrentgemma-2b-it-sfp-cpp",
+    "disposition": "out-of-scope",
+    "reason": "C++ runtime format conversion, not a separate trained model release.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/recurrentgemma-2b-sfp-cpp",
+    "disposition": "out-of-scope",
+    "reason": "C++ runtime format conversion, not a separate trained model release.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/recurrentgemma-9b",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-recurrentgemma-9b-2024-06-11"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/shieldgemma-27b",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-shieldgemma-2024-07-31"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/shieldgemma-9b",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-shieldgemma-2024-07-31"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-2-1b-1b",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2-2025-12-18"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-2-270m-270m",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2-2025-12-18"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-2b-2b-prefixlm",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-2b-2b-prefixlm-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-2b-2b-ul2-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-9b-2b-prefixlm",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-9b-2b-prefixlm-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-9b-2b-ul2",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-9b-2b-ul2-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-9b-9b-prefixlm",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-9b-9b-prefixlm-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-9b-9b-ul2",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-9b-9b-ul2-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-b-b-prefixlm",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-b-b-prefixlm-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-b-b-ul2",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-b-b-ul2-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-l-l-prefixlm",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-l-l-prefixlm-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-l-l-ul2",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-l-l-ul2-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-ml-ml-prefixlm",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-ml-ml-prefixlm-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-ml-ml-ul2",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-ml-ml-ul2-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-s-s-prefixlm",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-s-s-prefixlm-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-s-s-ul2",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-s-s-ul2-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-xl-xl-prefixlm",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-xl-xl-prefixlm-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-xl-xl-ul2",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/t5gemma-xl-xl-ul2-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-t5gemma-2025-07-09"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/translategemma-12b-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-translategemma-2026-01-15"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/translategemma-27b-it",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-translategemma-2026-01-15"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/txgemma-27b-predict",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-txgemma-2025-03-25"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/txgemma-2b-predict",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-txgemma-2025-03-25"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/txgemma-9b-chat",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-txgemma-2025-03-25"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "family": "gemma",
+    "url": "https://huggingface.co/google/txgemma-9b-predict",
+    "disposition": "covered",
+    "releaseIds": [
+      "gemma-txgemma-2025-03-25"
+    ],
+    "reason": "This size, objective or task variant belongs to the linked named release milestone. Its exact repository stays in the inventory; no additional release date is inferred from its name.",
+    "checkedAt": "2026-10-06"
+  }
+]

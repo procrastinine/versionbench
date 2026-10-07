@@ -2,6 +2,37 @@ const DAY = 86400000;
 export const DAYS_PER_YEAR = 365.2425;
 const utcDay = (date) => Date.parse(`${date}T00:00:00Z`) / DAY;
 
+export function versionHistory(releases, highest = true) {
+  const chronological = [...releases].sort(
+    (a, b) =>
+      a.date.localeCompare(b.date) ||
+      b.score - a.score ||
+      a.name.localeCompare(b.name) ||
+      a.id.localeCompare(b.id),
+  );
+  const series = [];
+  let lastDay;
+  for (const release of chronological) {
+    if (release.date === lastDay) continue; // Highest score wins same-day ties.
+    lastDay = release.date;
+    const previous = series.at(-1);
+    if (
+      previous &&
+      (highest
+        ? release.score <= previous.score
+        : release.score === previous.score && release.version === previous.version)
+    )
+      continue;
+    series.push({
+      date: release.date,
+      score: release.score,
+      version: release.version,
+      releaseId: release.id,
+    });
+  }
+  return series;
+}
+
 // Every event on a UTC day takes effect together. Families enter at their first
 // recorded event; their best numeric score persists, including across regressions.
 // Software controls are reference data and never enter the competition.
@@ -67,10 +98,13 @@ export function buildStats(data) {
   );
   const byYear = {};
   const byStatus = {};
+  const byEventType = {};
   const byWeightsStatus = {};
   for (const release of modelReleases) {
     const year = release.date.slice(0, 4);
     byYear[year] = (byYear[year] || 0) + 1;
+    byEventType[release.eventType || 'release'] =
+      (byEventType[release.eventType || 'release'] || 0) + 1;
     byStatus[release.status] = (byStatus[release.status] || 0) + 1;
     byWeightsStatus[release.weightsStatus] = (byWeightsStatus[release.weightsStatus] || 0) + 1;
   }
@@ -108,6 +142,7 @@ export function buildStats(data) {
       },
       firstEventDate: chronological[0].date,
       lastEventDate: lastDate,
+      versionHistory: versionHistory(releases, family.kind !== 'software'),
       ...(history
         ? {
             ...history,
@@ -135,6 +170,7 @@ export function buildStats(data) {
     firstEventDate: dates[0] ?? null,
     lastEventDate: dates.at(-1) ?? null,
     releasesByYear: Object.fromEntries(Object.entries(byYear).sort()),
+    releasesByEventType: Object.fromEntries(Object.entries(byEventType).sort()),
     releasesByStatus: Object.fromEntries(Object.entries(byStatus).sort()),
     families: summaries.filter((family) => family.kind !== 'software'),
     softwareControls: summaries.filter((family) => family.kind === 'software'),

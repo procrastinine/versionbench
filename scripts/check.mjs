@@ -1,8 +1,11 @@
 import { readFile } from 'node:fs/promises';
 import { Script } from 'node:vm';
 import assert from 'node:assert/strict';
+import { numericVersion } from './version.mjs';
+import { artifactExclusion } from './release-policy.mjs';
 import { buildStats, readmeTemplates, renderReadme } from './stats.mjs';
 import { huggingFaceTarget } from './weights-audit.mjs';
+import { renderWatchlist, renderHistoryReview, renderPending } from './watch-docs.mjs';
 const root = new URL('../', import.meta.url);
 const data = JSON.parse(await readFile(new URL('data/releases.json', root), 'utf8'));
 const unique = (rows, label) => {
@@ -30,6 +33,7 @@ assert.equal(
 );
 const families = new Map(data.families.map((f) => [f.id, f]));
 const sources = new Map(data.sources.map((s) => [s.id, s]));
+const firstWeightRepos = new Set();
 for (const f of data.families) {
   assert.ok(f.name && f.provider, `Missing family metadata: ${f.id}`);
   assert.ok(['model', 'software'].includes(f.kind), `Missing family kind: ${f.id}`);
@@ -58,6 +62,13 @@ for (const r of data.releases) {
       `Invalid Artificial Analysis model URL: ${r.id}`,
     );
   assert.ok(r.name && r.status, `Incomplete release: ${r.id}`);
+  assert.ok(!artifactExclusion(r.name), `Packaging variant is not a release: ${r.id}`);
+  assert.ok(
+    ['announcement', 'api', 'weights', 'preview', 'research', 'release', 'checkpoint'].includes(
+      r.eventType,
+    ),
+    `Missing event type: ${r.id}`,
+  );
   assert.ok(
     ['open', 'not-published', 'unverified', 'not-applicable'].includes(r.weightsStatus),
     `Missing weights review: ${r.id}`,
@@ -86,8 +97,19 @@ for (const r of data.releases) {
     typeof r.version === 'string',
     `Version must preserve published display string: ${r.id}`,
   );
+  if (r.eventType === 'checkpoint') {
+    assert.equal(r.dateBasis, 'checkpoint-commit', 'Label checkpoint dates');
+    assert.ok(r.huggingFaceUrl, 'First-weight evidence needs a checkpoint repository');
+    const repository = r.huggingFaceUrl.toLowerCase().replace(/\/$/, '');
+    assert.ok(
+      !firstWeightRepos.has(repository),
+      `Later checkpoint commit is not another release: ${repository}`,
+    );
+    firstWeightRepos.add(repository);
+    assert.equal(r.status, 'First weights commit', 'Identify the first weight-bearing commit');
+  }
   assert.ok(Number.isFinite(r.score) && r.score >= 0, `Invalid score: ${r.id}`);
-  assert.equal(Number(r.version), r.score, `Score/version mismatch: ${r.id}`);
+  assert.equal(numericVersion(r.version), r.score, `Score/version mismatch: ${r.id}`);
   date(r.date, r.id);
   assert.ok(r.date <= data.updated, `Future release: ${r.id}`);
 }
@@ -170,10 +192,102 @@ for (const row of providerSources) {
     assert.ok(['page', 'huggingface'].includes(source.type), 'Unsupported provider source');
     if (source.type === 'huggingface') assert.match(source.author, /^[a-z0-9-]+$/i);
     else assert.equal(new URL(source.url).protocol, 'https:');
-    assert.ok(source.pattern, 'Missing model version pattern');
-    new RegExp(source.pattern, 'gi');
+    assert.ok(
+      source.scopePattern && source.purpose && source.signals?.length,
+      `Incomplete source watch: ${row.family}`,
+    );
+    new RegExp(source.scopePattern, 'i');
+    if (source.pattern) new RegExp(source.pattern, 'gi');
     if (source.excludePattern) new RegExp(source.excludePattern, 'i');
   }
+}
+const historyReview = JSON.parse(await readFile(new URL('data/history-review.json', root), 'utf8'));
+assert.equal(
+  new Set(historyReview.map((r) => r.family)).size,
+  historyReview.length,
+  'Duplicate history review',
+);
+for (const review of historyReview) {
+  assert.ok(
+    families.has(review.family) && review.summary && review.sourceIds.length,
+    'Incomplete historical audit',
+  );
+  date(review.checkedAt, review.family + ' history review');
+  for (const id of review.sourceIds)
+    assert.ok(sources.has(id), 'Missing historical evidence: ' + id);
+}
+for (const family of data.families.filter((f) => f.kind === 'model')) {
+  const first = data.releases
+    .filter((r) => r.family === family.id)
+    .sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id))[0];
+  if (first.score !== 1)
+    assert.ok(
+      historyReview.some((r) => r.family === family.id),
+      `Audit earlier versions for ${family.id}`,
+    );
+}
+assert.equal(
+  await readFile(new URL('docs/source-watchlist.md', root), 'utf8'),
+  renderWatchlist(data, providerSources),
+  'Regenerate source watchlist',
+);
+assert.equal(
+  await readFile(new URL('docs/history-audit.md', root), 'utf8'),
+  renderHistoryReview(data, historyReview),
+  'Regenerate history audit',
+);
+const discoveryDecisions = JSON.parse(
+  await readFile(new URL('data/discovery-decisions.json', root), 'utf8'),
+);
+assert.equal(
+  new Set(discoveryDecisions.map((d) => d.family + '\n' + d.url)).size,
+  discoveryDecisions.length,
+  'Duplicate discovery decision',
+);
+for (const decision of discoveryDecisions) {
+  assert.ok(families.has(decision.family) && decision.reason, 'Incomplete discovery decision');
+  assert.equal(new URL(decision.url).protocol, 'https:');
+  assert.ok(
+    ['covered', 'out-of-scope', 'date-unresolved'].includes(decision.disposition),
+    'Unknown discovery decision',
+  );
+  date(decision.checkedAt, decision.url);
+  for (const id of decision.releaseIds ?? [])
+    assert.ok(
+      data.releases.some((r) => r.id === id && r.family === decision.family),
+      'Missing decision release',
+    );
+}
+const pending = JSON.parse(await readFile(new URL('data/pending-releases.json', root), 'utf8'));
+unique(pending, 'pending release');
+for (const row of pending) {
+  assert.ok(
+    families.has(row.family) && row.name && row.reason && row.sourceUrls.length,
+    'Incomplete pending candidate',
+  );
+  numericVersion(row.version);
+  date(row.checkedAt, row.id);
+  assert.ok(!row.date, 'Pending candidates must not have invented dates');
+  for (const url of row.sourceUrls) assert.equal(new URL(url).protocol, 'https:');
+}
+assert.equal(
+  await readFile(new URL('docs/pending-releases.md', root), 'utf8'),
+  renderPending(data, pending),
+);
+const imports = JSON.parse(await readFile(new URL('data/checkpoint-imports.json', root), 'utf8'));
+assert.equal(
+  new Set(imports.map((r) => r.repository)).size,
+  imports.length,
+  'Duplicate import mapping',
+);
+for (const row of imports) {
+  assert.ok(families.has(row.family) && row.name && row.mapping, 'Incomplete import mapping');
+  assert.ok(
+    !artifactExclusion(row.repository) && !artifactExclusion(row.name),
+    'Exclude conversion imports',
+  );
+  huggingFaceTarget('https://huggingface.co/' + row.repository);
+  numericVersion(row.version);
 }
 const stats = buildStats(data);
 assert.deepEqual(
@@ -196,7 +310,9 @@ assert.ok(
   'Rebuild index.html after editing styles or scripts',
 );
 assert.ok(
-  !['/* DATA */', '/* STATS */', '/* SCRIPT */'].some((slot) => html.includes(slot)),
+  !['/* DATA */', '/* STATS */', '/* WATCHLIST */', '/* PENDING */', '/* SCRIPT */'].some((slot) =>
+    html.includes(slot),
+  ),
   'Unfilled HTML template',
 );
 assert.ok(!/<script[^>]+src\s*=/i.test(html), 'External script dependency');
@@ -205,6 +321,14 @@ const embedded = JSON.parse(
   html.match(/<script id="release-data" type="application\/json">([\s\S]*?)<\/script>/)[1],
 );
 assert.deepEqual(embedded, data, 'Rebuild index.html after editing data');
+const embeddedWatch = JSON.parse(
+  html.match(/<script id="watch-data" type="application\/json">([\s\S]*?)<\/script>/)[1],
+);
+assert.deepEqual(embeddedWatch, providerSources, 'Rebuild embedded watchlists');
+const embeddedPending = JSON.parse(
+  html.match(/<script id="pending-data" type="application\/json">([\s\S]*?)<\/script>/)[1],
+);
+assert.deepEqual(embeddedPending, pending, 'Rebuild pending candidates');
 const embeddedStats = JSON.parse(
   html.match(/<script id="stats-data" type="application\/json">([\s\S]*?)<\/script>/)[1],
 );
@@ -243,5 +367,5 @@ assert.equal(directives.get('style-src'), "'unsafe-inline'");
 assert.equal(directives.get('img-src'), 'data:');
 
 console.log(
-  `PASS: ${data.families.length} families, ${data.releases.length} releases, ${data.sources.length} sources; exact dates, foreign keys, version mapping, generated statistics and READMEs, JavaScript syntax, standalone bundle, offline resource policy.`,
+  `PASS: ${data.families.length} families, ${data.releases.length} releases, ${data.sources.length} sources; calendar dates, foreign keys, version mapping, generated statistics and READMEs, JavaScript syntax, standalone bundle, offline resource policy.`,
 );

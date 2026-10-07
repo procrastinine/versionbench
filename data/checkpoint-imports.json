@@ -1,0 +1,954 @@
+[
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2_2-yi-34b",
+    "name": "dolphin-2_2-yi-34b",
+    "version": "2.2",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2_6-phi-2",
+    "name": "dolphin-2_6-phi-2",
+    "version": "2.6",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.0-mistral-7b",
+    "name": "dolphin-2.0-mistral-7b",
+    "version": "2.0",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.1-70b",
+    "name": "dolphin-2.1-70b",
+    "version": "2.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.1-mistral-7b",
+    "name": "dolphin-2.1-mistral-7b",
+    "version": "2.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.2-70b",
+    "name": "dolphin-2.2-70b",
+    "version": "2.2",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.2-mistral-7b",
+    "name": "dolphin-2.2-mistral-7b",
+    "version": "2.2",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.2-yi-34b-200k",
+    "name": "dolphin-2.2-yi-34b-200k",
+    "version": "2.2",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.2.1-mistral-7b",
+    "name": "dolphin-2.2.1-mistral-7b",
+    "version": "2.2.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.5-mixtral-8x7b",
+    "name": "dolphin-2.5-mixtral-8x7b",
+    "version": "2.5",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.6-mistral-7b",
+    "name": "dolphin-2.6-mistral-7b",
+    "version": "2.6",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.6-mistral-7b-dpo",
+    "name": "dolphin-2.6-mistral-7b-dpo",
+    "version": "2.6",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.6-mistral-7b-dpo-laser",
+    "name": "dolphin-2.6-mistral-7b-dpo-laser",
+    "version": "2.6",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.6-mixtral-8x7b",
+    "name": "dolphin-2.6-mixtral-8x7b",
+    "version": "2.6",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.6.1-mixtral-8x7b",
+    "name": "dolphin-2.6.1-mixtral-8x7b",
+    "version": "2.6.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.7-mixtral-8x7b",
+    "name": "dolphin-2.7-mixtral-8x7b",
+    "version": "2.7",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.7-yayi2-30b",
+    "name": "dolphin-2.7-yayi2-30b",
+    "version": "2.7",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.8-experiment26-7b",
+    "name": "dolphin-2.8-experiment26-7b",
+    "version": "2.8",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.8-experiment26-7b-preview",
+    "name": "dolphin-2.8-experiment26-7b-preview",
+    "version": "2.8",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.8-gemma-2b",
+    "name": "dolphin-2.8-gemma-2b",
+    "version": "2.8",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.8-gemma-7b",
+    "name": "dolphin-2.8-gemma-7b",
+    "version": "2.8",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.8-internlm2-20b",
+    "name": "dolphin-2.8-internlm2-20b",
+    "version": "2.8",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.8-mistral-7b-v02",
+    "name": "dolphin-2.8-mistral-7b-v02",
+    "version": "2.8",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9-llama3-70b",
+    "name": "dolphin-2.9-llama3-70b",
+    "version": "2.9",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9-llama3-8b",
+    "name": "dolphin-2.9-llama3-8b",
+    "version": "2.9",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9-llama3-8b-1m",
+    "name": "dolphin-2.9-llama3-8b-1m",
+    "version": "2.9",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9-llama3-8b-256k",
+    "name": "dolphin-2.9-llama3-8b-256k",
+    "version": "2.9",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9-mixtral-8x22b",
+    "name": "dolphin-2.9-mixtral-8x22b",
+    "version": "2.9",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.1-dbrx",
+    "name": "dolphin-2.9.1-dbrx",
+    "version": "2.9.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.1-llama-3-70b",
+    "name": "dolphin-2.9.1-llama-3-70b",
+    "version": "2.9.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.1-llama-3-8b",
+    "name": "dolphin-2.9.1-llama-3-8b",
+    "version": "2.9.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.1-mixtral-1x22b",
+    "name": "dolphin-2.9.1-mixtral-1x22b",
+    "version": "2.9.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin-2.9.1-Phi-3-Kensho-4.5B",
+    "name": "Dolphin-2.9.1-Phi-3-Kensho-4.5B",
+    "version": "2.9.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin-2.9.1-Phi-3-Kensho-4.5B-abliterated-v3",
+    "name": "Dolphin-2.9.1-Phi-3-Kensho-4.5B-abliterated-v3",
+    "version": "2.9.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.1-qwen-110b",
+    "name": "dolphin-2.9.1-qwen-110b",
+    "version": "2.9.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.1-yi-1.5-34b",
+    "name": "dolphin-2.9.1-yi-1.5-34b",
+    "version": "2.9.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.1-yi-1.5-9b",
+    "name": "dolphin-2.9.1-yi-1.5-9b",
+    "version": "2.9.1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.2-mixtral-8x22b",
+    "name": "dolphin-2.9.2-mixtral-8x22b",
+    "version": "2.9.2",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.2-Phi-3-Medium",
+    "name": "dolphin-2.9.2-Phi-3-Medium",
+    "version": "2.9.2",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.2-Phi-3-Medium-abliterated",
+    "name": "dolphin-2.9.2-Phi-3-Medium-abliterated",
+    "version": "2.9.2",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.2-qwen2-72b",
+    "name": "dolphin-2.9.2-qwen2-72b",
+    "version": "2.9.2",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.2-qwen2-7b",
+    "name": "dolphin-2.9.2-qwen2-7b",
+    "version": "2.9.2",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.3-llama-3-8b",
+    "name": "dolphin-2.9.3-llama-3-8b",
+    "version": "2.9.3",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.3-mistral-7B-32k",
+    "name": "dolphin-2.9.3-mistral-7B-32k",
+    "version": "2.9.3",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.3-mistral-nemo-12b",
+    "name": "dolphin-2.9.3-mistral-nemo-12b",
+    "version": "2.9.3",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.3-qwen2-0.5b",
+    "name": "dolphin-2.9.3-qwen2-0.5b",
+    "version": "2.9.3",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.3-qwen2-1.5b",
+    "name": "dolphin-2.9.3-qwen2-1.5b",
+    "version": "2.9.3",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.3-Yi-1.5-34B-32k",
+    "name": "dolphin-2.9.3-Yi-1.5-34B-32k",
+    "version": "2.9.3",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.4-gemma2-2b",
+    "name": "dolphin-2.9.4-gemma2-2b",
+    "version": "2.9.4",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-2.9.4-llama3.1-8b",
+    "name": "dolphin-2.9.4-llama3.1-8b",
+    "version": "2.9.4",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-laserxtral-4x7B",
+    "name": "dolphin-laserxtral-4x7B",
+    "version": "1",
+    "mapping": "No own numeric Dolphin generation is published for this sub-line; normalized to initial generation 1. Numerals in the backbone name, parameter size, and quantization are not Dolphin versions."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-llama-13b",
+    "name": "dolphin-llama-13b",
+    "version": "1",
+    "mapping": "No own numeric Dolphin generation is published for this sub-line; normalized to initial generation 1. Numerals in the backbone name, parameter size, and quantization are not Dolphin versions."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-llama-3-8b-DPO",
+    "name": "dolphin-llama-3-8b-DPO",
+    "version": "1",
+    "mapping": "No own numeric Dolphin generation is published for this sub-line; normalized to initial generation 1. Numerals in the backbone name, parameter size, and quantization are not Dolphin versions."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-llama2-7b",
+    "name": "dolphin-llama2-7b",
+    "version": "1",
+    "mapping": "No own numeric Dolphin generation is published for this sub-line; normalized to initial generation 1. Numerals in the backbone name, parameter size, and quantization are not Dolphin versions."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin-Mistral-24B-Venice-Edition",
+    "name": "Dolphin-Mistral-24B-Venice-Edition",
+    "version": "1",
+    "mapping": "No own numeric Dolphin generation is published for this sub-line; normalized to initial generation 1. Numerals in the backbone name, parameter size, and quantization are not Dolphin versions."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-phi-2-kensho",
+    "name": "dolphin-phi-2-kensho",
+    "version": "1",
+    "mapping": "No own numeric Dolphin generation is published for this sub-line; normalized to initial generation 1. Numerals in the backbone name, parameter size, and quantization are not Dolphin versions."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-vision-72b",
+    "name": "dolphin-vision-72b",
+    "version": "1",
+    "mapping": "No own numeric Dolphin generation is published for this sub-line; normalized to initial generation 1. Numerals in the backbone name, parameter size, and quantization are not Dolphin versions."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphin-vision-7b",
+    "name": "dolphin-vision-7b",
+    "version": "1",
+    "mapping": "No own numeric Dolphin generation is published for this sub-line; normalized to initial generation 1. Numerals in the backbone name, parameter size, and quantization are not Dolphin versions."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin-X1-8B",
+    "name": "Dolphin-X1-8B",
+    "version": "1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin-X1-Llama-3.1-405B",
+    "name": "Dolphin-X1-Llama-3.1-405B",
+    "version": "1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin-X1-Trinity-Nano",
+    "name": "Dolphin-X1-Trinity-Nano",
+    "version": "1",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin3.0-Llama3.1-8B",
+    "name": "Dolphin3.0-Llama3.1-8B",
+    "version": "3.0",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin3.0-Llama3.2-1B",
+    "name": "Dolphin3.0-Llama3.2-1B",
+    "version": "3.0",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin3.0-Llama3.2-3B",
+    "name": "Dolphin3.0-Llama3.2-3B",
+    "version": "3.0",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin3.0-Mistral-24B",
+    "name": "Dolphin3.0-Mistral-24B",
+    "version": "3.0",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin3.0-Qwen2.5-0.5B",
+    "name": "Dolphin3.0-Qwen2.5-0.5B",
+    "version": "3.0",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin3.0-Qwen2.5-1.5B",
+    "name": "Dolphin3.0-Qwen2.5-1.5B",
+    "version": "3.0",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin3.0-Qwen2.5-3b",
+    "name": "Dolphin3.0-Qwen2.5-3b",
+    "version": "3.0",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/Dolphin3.0-R1-Mistral-24B",
+    "name": "Dolphin3.0-R1-Mistral-24B",
+    "version": "3.0",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphincoder-starcoder2-15b",
+    "name": "dolphincoder-starcoder2-15b",
+    "version": "1",
+    "mapping": "No own numeric Dolphin generation is published for this sub-line; normalized to initial generation 1. Numerals in the backbone name, parameter size, and quantization are not Dolphin versions."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/dolphincoder-starcoder2-7b",
+    "name": "dolphincoder-starcoder2-7b",
+    "version": "1",
+    "mapping": "No own numeric Dolphin generation is published for this sub-line; normalized to initial generation 1. Numerals in the backbone name, parameter size, and quantization are not Dolphin versions."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/DolphinHermes-120b",
+    "name": "DolphinHermes-120b",
+    "version": "1",
+    "mapping": "No own numeric Dolphin generation is published for this sub-line; normalized to initial generation 1. Numerals in the backbone name, parameter size, and quantization are not Dolphin versions."
+  },
+  {
+    "family": "dolphin",
+    "repository": "dphn/fc-dolphin-2.6-mistral-7b-dpo-laser",
+    "name": "fc-dolphin-2.6-mistral-7b-dpo-laser",
+    "version": "2.6",
+    "mapping": "Score uses Dolphin’s own published version, joining patch segments after the first decimal point. Backbone versions, parameter counts, context lengths, and quantization suffixes are excluded."
+  },
+  {
+    "family": "smollm",
+    "repository": "HuggingFaceTB/SmolLM2-1.7B",
+    "name": "SmolLM2-1.7B",
+    "version": "2",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "family": "smollm",
+    "repository": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "name": "SmolLM2-1.7B-Instruct",
+    "version": "2",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "family": "smollm",
+    "repository": "HuggingFaceTB/SmolLM2-135M",
+    "name": "SmolLM2-135M",
+    "version": "2",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "family": "smollm",
+    "repository": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "name": "SmolLM2-135M-Instruct",
+    "version": "2",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "family": "smollm",
+    "repository": "HuggingFaceTB/SmolLM2-360M",
+    "name": "SmolLM2-360M",
+    "version": "2",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "family": "smollm",
+    "repository": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "name": "SmolLM2-360M-Instruct",
+    "version": "2",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "family": "ornith",
+    "repository": "ornith-ai/Ornith-1.0-35B",
+    "name": "Ornith-1.0-35B",
+    "version": "1.0",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "family": "ornith",
+    "repository": "ornith-ai/Ornith-1.0-397B",
+    "name": "Ornith-1.0-397B",
+    "version": "1.0",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "family": "ornith",
+    "repository": "ornith-ai/Ornith-1.0-9B",
+    "name": "Ornith-1.0-9B",
+    "version": "1.0",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "family": "ornith",
+    "repository": "ornith-ai/Ornith-1.5-35B-A3B",
+    "name": "Ornith-1.5-35B-A3B",
+    "version": "1.5",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "family": "ornith",
+    "repository": "ornith-ai/Ornith-1.5-397B",
+    "name": "Ornith-1.5-397B",
+    "version": "1.5",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "family": "ornith",
+    "repository": "ornith-ai/Ornith-1.5-9B",
+    "name": "Ornith-1.5-9B",
+    "version": "1.5",
+    "mapping": "Score uses the published family generation, excluding sizes and packaging suffixes."
+  },
+  {
+    "repository": "janhq/Jan-v1-4B",
+    "family": "jan",
+    "name": "Jan-v1-4B",
+    "version": "1",
+    "mapping": "The Jan v-label supplies the version. Sizes and dated refresh suffixes do not; the unnumbered Jan-code line is normalized to 1."
+  },
+  {
+    "repository": "janhq/Jan-v1-edge",
+    "family": "jan",
+    "name": "Jan-v1-edge",
+    "version": "1",
+    "mapping": "The Jan v-label supplies the version. Sizes and dated refresh suffixes do not; the unnumbered Jan-code line is normalized to 1."
+  },
+  {
+    "repository": "janhq/Jan-v1-2509",
+    "family": "jan",
+    "name": "Jan-v1-2509",
+    "version": "1",
+    "mapping": "The Jan v-label supplies the version. Sizes and dated refresh suffixes do not; the unnumbered Jan-code line is normalized to 1."
+  },
+  {
+    "repository": "janhq/Jan-v2-VL-low",
+    "family": "jan",
+    "name": "Jan-v2-VL-low",
+    "version": "2",
+    "mapping": "The Jan v-label supplies the version. Sizes and dated refresh suffixes do not; the unnumbered Jan-code line is normalized to 1."
+  },
+  {
+    "repository": "janhq/Jan-v2-VL-med",
+    "family": "jan",
+    "name": "Jan-v2-VL-med",
+    "version": "2",
+    "mapping": "The Jan v-label supplies the version. Sizes and dated refresh suffixes do not; the unnumbered Jan-code line is normalized to 1."
+  },
+  {
+    "repository": "janhq/Jan-v2-VL-high",
+    "family": "jan",
+    "name": "Jan-v2-VL-high",
+    "version": "2",
+    "mapping": "The Jan v-label supplies the version. Sizes and dated refresh suffixes do not; the unnumbered Jan-code line is normalized to 1."
+  },
+  {
+    "repository": "janhq/Jan-v3-4B-base-instruct",
+    "family": "jan",
+    "name": "Jan-v3-4B-base-instruct",
+    "version": "3",
+    "mapping": "The Jan v-label supplies the version. Sizes and dated refresh suffixes do not; the unnumbered Jan-code line is normalized to 1."
+  },
+  {
+    "repository": "janhq/Jan-code-4b",
+    "family": "jan",
+    "name": "Jan-code-4b",
+    "version": "1",
+    "mapping": "The Jan v-label supplies the version. Sizes and dated refresh suffixes do not; the unnumbered Jan-code line is normalized to 1."
+  },
+  {
+    "repository": "janhq/Jan-v3.5-4B",
+    "family": "jan",
+    "name": "Jan-v3.5-4B",
+    "version": "3.5",
+    "mapping": "The Jan v-label supplies the version. Sizes and dated refresh suffixes do not; the unnumbered Jan-code line is normalized to 1."
+  },
+  {
+    "repository": "Writer/palmyra-large",
+    "family": "palmyra",
+    "name": "palmyra-large",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/palmyra-base",
+    "family": "palmyra",
+    "name": "palmyra-base",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/palmyra-small",
+    "family": "palmyra",
+    "name": "palmyra-small",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/palmyra-3B",
+    "family": "palmyra",
+    "name": "palmyra-3B",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/InstructPalmyra-20b",
+    "family": "palmyra",
+    "name": "InstructPalmyra-20b",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/palmyra-med-20b",
+    "family": "palmyra",
+    "name": "palmyra-med-20b",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/palmyra-20b-chat",
+    "family": "palmyra",
+    "name": "palmyra-20b-chat",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/Palmyra-Med-70B-32K",
+    "family": "palmyra",
+    "name": "Palmyra-Med-70B-32K",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/Palmyra-Fin-70B-32K",
+    "family": "palmyra",
+    "name": "Palmyra-Fin-70B-32K",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/Palmyra-Creative",
+    "family": "palmyra",
+    "name": "Palmyra-Creative",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/palmyra-vision",
+    "family": "palmyra",
+    "name": "palmyra-vision",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/palmyra-mini",
+    "family": "palmyra",
+    "name": "palmyra-mini",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/palmyra-mini-thinking-a",
+    "family": "palmyra",
+    "name": "palmyra-mini-thinking-a",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "Writer/palmyra-mini-thinking-b",
+    "family": "palmyra",
+    "name": "palmyra-mini-thinking-b",
+    "version": "1",
+    "mapping": "Only an explicit Palmyra X generation supplies a version; unnumbered original and specialist lines are normalized to 1. Parameter counts, 32K context and local 1.7B size do not supply a version."
+  },
+  {
+    "repository": "poolside/Laguna-M.1-base",
+    "family": "laguna",
+    "name": "Laguna-M.1-base",
+    "version": "1",
+    "mapping": "The number after the Laguna size line supplies the version. Base and instruction models remain distinct; format conversions are excluded."
+  },
+  {
+    "repository": "poolside/Laguna-M.1",
+    "family": "laguna",
+    "name": "Laguna-M.1",
+    "version": "1",
+    "mapping": "The number after the Laguna size line supplies the version. Base and instruction models remain distinct; format conversions are excluded."
+  },
+  {
+    "family": "pangu",
+    "repository": "openpangu/openPangu-2.0-Flash",
+    "name": "openPangu-2.0-Flash",
+    "version": "2.0",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "pangu",
+    "repository": "openpangu/openPangu-2.0-Pro",
+    "name": "openPangu-2.0-Pro",
+    "version": "2.0",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "minicpm",
+    "repository": "openbmb/MiniCPM-o-2_6",
+    "name": "MiniCPM-o-2_6",
+    "version": "2.6",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "minicpm",
+    "repository": "openbmb/MiniCPM-o-4_5",
+    "name": "MiniCPM-o-4_5",
+    "version": "4.5",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "minicpm",
+    "repository": "openbmb/MiniCPM-V-2",
+    "name": "MiniCPM-V-2",
+    "version": "2",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "minicpm",
+    "repository": "openbmb/MiniCPM-V-4_5",
+    "name": "MiniCPM-V-4_5",
+    "version": "4.5",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "minicpm",
+    "repository": "openbmb/MiniCPM-V-4.6",
+    "name": "MiniCPM-V-4.6",
+    "version": "4.6",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "minicpm",
+    "repository": "openbmb/MiniCPM-V-4.6-Thinking",
+    "name": "MiniCPM-V-4.6-Thinking",
+    "version": "4.6",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "minicpm",
+    "repository": "openbmb/MiniCPM-V-4.7-35B-A3B",
+    "name": "MiniCPM-V-4.7-35B-A3B",
+    "version": "4.7",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "ling",
+    "repository": "inclusionAI/Ling-2.5-1T",
+    "name": "Ling-2.5-1T",
+    "version": "2.5",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "ling",
+    "repository": "inclusionAI/Ling-3.0-flash",
+    "name": "Ling-3.0-flash",
+    "version": "3.0",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "ling",
+    "repository": "inclusionAI/Ling-3.0-flash-VL",
+    "name": "Ling-3.0-flash-VL",
+    "version": "3.0",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "ling",
+    "repository": "inclusionAI/Ling-3.0-tiny",
+    "name": "Ling-3.0-tiny",
+    "version": "3.0",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "openchat",
+    "repository": "openchat/openchat_v3.1",
+    "name": "openchat_v3.1",
+    "version": "3.1",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "ring",
+    "repository": "inclusionAI/Ring-2.5-1T",
+    "name": "Ring-2.5-1T",
+    "version": "2.5",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "ring",
+    "repository": "inclusionAI/Ring-flash-2.0",
+    "name": "Ring-flash-2.0",
+    "version": "2.0",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "ring",
+    "repository": "inclusionAI/Ring-mini-2.0",
+    "name": "Ring-mini-2.0",
+    "version": "2.0",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "family": "ax",
+    "repository": "skt/A.X-K2",
+    "name": "A.X-K2",
+    "version": "2",
+    "mapping": "Use the explicitly published generation number of this model line. Size, context and checkpoint-date suffixes do not change the score."
+  },
+  {
+    "repository": "upstage/Solar-Open-100B",
+    "family": "solar",
+    "name": "Solar Open 100B",
+    "version": "1",
+    "mapping": "The initial Solar Open generation is normalized to 1. The 100B parameter count is not a version."
+  },
+  {
+    "family": "hermes",
+    "repository": "NousResearch/Nous-Hermes-13b",
+    "name": "Nous Hermes 13B (checkpoint commit)",
+    "version": "1",
+    "mapping": "Unnumbered initial release is normalized to 1; parameter counts and architecture names are not versions."
+  },
+  {
+    "family": "hermes",
+    "repository": "NousResearch/Nous-Hermes-2-Vision-Alpha",
+    "name": "Nous Hermes 2 Vision Alpha (checkpoint commit)",
+    "version": "2",
+    "mapping": "The explicit model generation supplies the version; parameter counts and checkpoint dates do not."
+  },
+  {
+    "family": "hermes",
+    "repository": "NousResearch/Nous-Hermes-2-Yi-34B",
+    "name": "Nous Hermes 2 Yi 34B (checkpoint commit)",
+    "version": "2",
+    "mapping": "The explicit model generation supplies the version; parameter counts and checkpoint dates do not."
+  },
+  {
+    "family": "apriel",
+    "repository": "ServiceNow-AI/Apriel-5B-Instruct",
+    "name": "Apriel 5B (checkpoint commit)",
+    "version": "1",
+    "mapping": "Unnumbered initial release is normalized to 1; parameter counts and architecture names are not versions."
+  },
+  {
+    "family": "motif",
+    "repository": "Motif-Technologies/Motif-2.6B",
+    "name": "Motif 2.6B (checkpoint commit)",
+    "version": "1",
+    "mapping": "Unnumbered initial release is normalized to 1; parameter counts and architecture names are not versions."
+  },
+  {
+    "family": "nanbeige",
+    "repository": "Nanbeige/Nanbeige4-3B-Thinking-2510",
+    "name": "Nanbeige 4 3B Thinking 2510 (checkpoint commit)",
+    "version": "4",
+    "mapping": "The explicit model generation supplies the version; parameter counts and checkpoint dates do not."
+  },
+  {
+    "family": "glm",
+    "repository": "zai-org/GLM-5.3",
+    "name": "GLM-5.3 (checkpoint commit)",
+    "version": "5.3",
+    "mapping": "The explicit model generation supplies the version; parameter counts and checkpoint dates do not."
+  }
+]

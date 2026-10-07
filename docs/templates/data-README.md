@@ -4,28 +4,31 @@
 
 ## Files
 
-`releases.json` is the editable source of truth. From the repository root, run `node scripts/generate.mjs` to generate the CSV tables, `stats.json`, SQLite database, standalone page, and both READMEs.
+`releases.json` is the editable source of truth. From the repository root, run `node scripts/generate.mjs` to generate the CSV tables, `stats.json`, SQLite database, standalone page, both READMEs, and source/audit documentation. The build uses saved files only, with no online fetching, credentials, packages to install, or audit cache. Use Node.js 26.1 or later. Tests rebuild a fresh copy twice with Node network permission denied and compare every generated artifact.
+
+`provider-sources.json` defines each family's watchlist, publisher accounts, model-name scopes, and discovery patterns. `history-review.json` records earlier-generation reviews. `pending-releases.json` preserves candidates with unresolved dates. `discovery-decisions.json` records exact-URL review decisions. `checkpoint-imports.json` is the reviewed repository-to-family/version mapping for the optional checkpoint importer. All are checked in; the generator never refreshes them.
 
 Statistics include counts, coverage dates, releases by year and availability, weight availability and link coverage, and each family's highest version, first recorded release at that version, and historical ranking metrics. `family-stats.csv` contains the family summaries; SQLite includes a `family_stats` table. They are derived entirely from the catalog. Edit the release data to change them, and edit `docs/templates/` to change README prose.
 
 ## Schema
 
-| Table    | Fields                              | Meaning                                                              |
-| -------- | ----------------------------------- | -------------------------------------------------------------------- |
-| families | `id`, `name`, `provider`            | Family identity and originating organization.                        |
-| families | `color`, `core`                     | Chart color and membership in the default comparison group.          |
-| families | `kind`, `scope`                     | Model or software control, with optional coverage limits.            |
-| sources  | `id`, `title`, `url`, `publisher`   | Reusable source record and direct link.                              |
-| sources  | `date`, `checkedAt`                 | Optional publication date and snapshot verification date.            |
-| releases | `id`, `family`, `name`              | Event identity, family reference, and published model name.          |
-| releases | `version`, `score`                  | Version string and its numeric value.                                |
-| releases | `date`, `status`                    | Event date and availability at that time.                            |
-| releases | `sourceId`, `dateSourceId`          | Main source and optional additional date evidence.                   |
-| releases | `artificialAnalysisUrl`             | Optional verified profile for the matching model or checkpoint.      |
-| releases | `weightsStatus`, `weightsCheckedAt` | Weight availability assessment and date checked.                     |
-| releases | `huggingFaceUrl`                    | Optional model repository or release collection containing weights.  |
-| releases | `weightsSourceUrl`, `weightsNote`   | Evidence and checkpoint, conversion, or availability qualifications. |
-| releases | `note`, `mapping`                   | Event qualifications and explanations of version interpretation.     |
+| Table    | Fields                              | Meaning                                                                                                |
+| -------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| families | `id`, `name`, `provider`            | Family identity and originating organization.                                                          |
+| families | `color`, `core`                     | Chart color and membership in the default comparison group.                                            |
+| families | `kind`, `scope`                     | Model or software control, with optional coverage limits.                                              |
+| sources  | `id`, `title`, `url`, `publisher`   | Reusable source record and direct link.                                                                |
+| sources  | `date`, `checkedAt`                 | Optional publication date and snapshot verification date.                                              |
+| releases | `id`, `family`, `name`              | Event identity, family reference, and published model name.                                            |
+| releases | `version`, `score`                  | Version string and its numeric value.                                                                  |
+| releases | `date`, `status`, `eventType`       | Event day, display status, and announcement/API/weights/preview/research/release/checkpoint milestone. |
+| releases | `dateBasis`                         | `publisher` by default, or explicit `checkpoint-commit` evidence.                                      |
+| releases | `sourceId`, `dateSourceId`          | Main source and optional additional date evidence.                                                     |
+| releases | `artificialAnalysisUrl`             | Optional verified profile for the matching model or checkpoint.                                        |
+| releases | `weightsStatus`, `weightsCheckedAt` | Weight availability assessment and date checked.                                                       |
+| releases | `huggingFaceUrl`                    | Optional model repository or release collection containing weights.                                    |
+| releases | `weightsSourceUrl`, `weightsNote`   | Evidence and checkpoint, conversion, or availability qualifications.                                   |
+| releases | `note`, `mapping`                   | Event qualifications and explanations of version interpretation.                                       |
 
 SQLite and browser CSV exports use snake_case fields such as `artificial_analysis_url` and `hugging_face_url`; the generated CSV tables preserve JSON field names. SQLite's `release_sources` view joins releases with their source and date-evidence links.
 
@@ -35,15 +38,21 @@ Every event has a weights assessment, separate from its historical release `stat
 
 Software controls use `not-applicable`. Open-source software is not classified as a model with open weights.
 
-Prefer the publisher's Hugging Face repository or a collection for a multi-model release. Community conversions, quantizations, base checkpoints, and partial coverage of a broader announcement are identified in `weightsNote`. Hosted variants do not inherit another checkpoint's weights merely because they share a version number. Promised future weights are not marked open.
+Prefer the publisher's Hugging Face repository or a collection for a multi-model release. Community conversions used as weight links, base checkpoints, and partial coverage of a broader announcement are identified in `weightsNote`. A converted weights link does not create another release. Hosted variants do not inherit another checkpoint's weights merely because they share a version number. Promised future weights and dummy test checkpoints are not marked open.
 
 Run `node scripts/audit-weights.mjs` to write `output/weights-audit.json`. It checks repository metadata for checkpoint files and collections for at least one such model. It does not download weights, verify their contents, or establish that a checkpoint matches a release; that association requires reviewing the model card and publisher evidence. Failed links remain review items and cause a nonzero exit. Run `node --test scripts/weights-audit.test.mjs` to test invalid links, empty repositories, gated weights, and failed source requests.
 
 ## Dates and versions
 
-Use the calendar date stated by the publisher. Do not infer a release date from a model suffix, repository creation, search crawl date, or website copyright. Announcements, previews, API availability, technical reports, and open-weight releases can be separate labeled events. Keep publication dates distinct from event dates, and preserve source disagreements in the record's notes. Label any secondary date evidence explicitly.
+Use the calendar date stated by the publisher. Do not infer a release date from a model suffix, repository creation, search crawl date, or website copyright. Announcements, previews, API availability, technical reports, and open-weight releases can be separate labeled events. Keep publication dates distinct from event dates, and preserve source disagreements in the record's notes. Label any secondary date evidence explicitly. OpenRouter creation dates describe gateway listings, not original model release days.
 
-Scores are literal numeric versions, not semantic-version tuples or capability measurements. Parameter counts, context sizes, checkpoint dates, and dependency versions do not affect the score. An unnumbered initial model can map to generation 1 when a subsequent numbered lineage supports that interpretation; explain the mapping in its record.
+When Hugging Face is the only release-date evidence, count only the first commit containing model weights for that checkpoint. Repository creation, README/tokenizer/configuration changes, and later weight uploads are not additional model releases. Quantizations and format conversions never get separate entries. The importer traverses all commit pages in date order, inspects checkpoint filenames, and stops at the first weight-bearing commit. Validation rejects multiple first-weights events for the same repository; the importer refuses to append a later commit to an already recorded checkpoint.
+
+These events use `eventType: checkpoint`, `status: First weights commit`, and `dateBasis: checkpoint-commit`, with a direct commit link and UTC date. The first weight-bearing commit may contain only the first shard, and does not establish when a private repository became public. Prefer explicit publisher announcements and release notes when available. Candidates without an established date stay in the [pending list](../docs/pending-releases.md) and do not enter dated counts or rankings.
+
+Scores are numeric versions, not semantic-version tuples or capability measurements. Keep the first decimal point and concatenate later segments: `2.9.3` scores `2.93`. `3.10` scores `3.1` and loses to `3.9`. The complete published version string is retained. Parameter counts, context sizes, checkpoint dates, and dependency versions do not affect the score. An unnumbered initial model can map to generation 1 with an explicit explanation in `mapping`.
+
+Quantizations and format conversions are not releases: GGUF, GGML, GPTQ, AWQ, EXL2, MLX, ONNX, and precision variants are excluded from discovery candidates, imports, and release counts. Native binary/ternary model architectures remain eligible. Named trained variants, sizes, base/instruction models, and separately sourced availability milestones can be recorded. Packaging receives no credit.
 
 Each family uses its highest numeric version, represented by the earliest recorded event at that version. Same-day ties use alphabetical model names. Later releases with lower version numbers remain in the timeline without lowering the family's maximum.
 
@@ -64,16 +73,46 @@ Only model families compete in the historical rankings. On each UTC day, a famil
 
 Family pages also show current rank, the first release at the highest score, the latest recorded event, and coverage dates. Page and timeline filters do not recalculate historical rankings. These statistics describe the catalog's coverage; the first recorded event need not be a family's first-ever release. Run `node --test scripts/stats.test.mjs` to check ties, elapsed time, new entrants, and decimal regressions.
 
-Each model's `rankHistory` records its initial rank and every date on which that rank changes. The family-page graph and accessible table use these generated values; #1 is at the top. The final rank continues through the snapshot date. SQLite's `family_rank_history` table contains the same series. Software controls have no rank history.
+Each model's `rankHistory` records its initial rank and every date on which that rank changes. `versionHistory` records its highest numeric version reached on each change date. The family-page graph overlays rank on the left axis (#1 at the top) and version on the right (higher numbers at the top), with a shared UTC date axis and an accessible table. Both lines continue through the snapshot date. Points include every release, including versions below the historical maximum. Points link to their sources; overlapping releases open a source list. Rank-change points include the model events recorded that day, including other families' releases. SQLite's `family_rank_history` and `family_version_history` tables contain the line series. Software controls have only a version series, following their latest release to show numeric regressions, and never receive a rank.
 
-The catalog covers named language-model generations, major variants, and release milestones. It is not exhaustive across sizes, quantizations, fine-tunes, deployments, or providers. The first recorded event is not necessarily a family's first-ever release. Artificial Analysis links identify matching profiles; their absence does not imply that a model is unavailable. Prices and capability benchmarks are not imported.
+The catalog covers named language-model generations, major variants, and release milestones. It is not exhaustive across sizes, fine-tunes, deployments, or providers; quantizations and packaging conversions are excluded. The first recorded event is not necessarily a family's first-ever release. Artificial Analysis links identify matching profiles; their absence does not imply that a model is unavailable. Prices and capability benchmarks are not imported.
 
 ## Find and review gaps
 
-Run `node scripts/audit-releases.mjs` to compare against [LLM Timeline](https://llm-timeline.com/), [LLM Releases](https://www.llm-releases.com/), [LLM Gateway](https://llmgateway.io/timeline), [LLM Stats](https://llm-stats.com/llm-updates), [Opper](https://opper.ai/model-releases), and [Artificial Analysis](https://artificialanalysis.ai/models).
+Run `node scripts/audit-releases.mjs` to compare against [LLM Timeline](https://llm-timeline.com/), [LLM Releases](https://www.llm-releases.com/), [LLM Gateway](https://llmgateway.io/timeline), [LLM Stats](https://llm-stats.com/llm-updates), [Opper](https://opper.ai/model-releases), [OpenRouter](https://openrouter.ai/models), and [Artificial Analysis](https://artificialanalysis.ai/models).
 
-The audit also checks official model repositories and provider pages for every family, configured in `data/provider-sources.json`. It writes `output/release-audit.json` with the observed versions, evidence, source URLs, higher-version candidates, and catalog name/date differences. Higher versions and unreadable sources make the command exit unsuccessfully so they need review. A successful fetch or a matching catalog entry does not establish completeness.
+The audit checks the [pages to watch](../docs/source-watchlist.md) for every family. Hugging Face scans traverse every page of each configured publisher's inventory before filtering by repository name; this includes older generations and unnumbered relatives. Web-page scans inspect the listed page's visible text and named links; they do not recursively crawl entire sites. Earlier missing versions, higher versions, unreviewed variants, catalog differences, unresolved dates, and failed sources all remain review items and cause exit 1. A matching highest version cannot conceal missing predecessors. A successful fetch does not establish completeness.
 
 The audit does not modify curated data. Review candidates against primary evidence, preserve existing IDs, reuse sources shared by multiple releases, and retain availability distinctions in `status` and `note`. Repository creation and modification times are not release dates. InternVL and InternLM share a dashboard family; each release retains its published name and version.
 
 After edits, run the generator. Checks catch stale artifacts, invalid records, missing provider discovery configuration, and bundle mismatches. They check data consistency, not whether every real-world release is included. Run `node --test scripts/provider-audit.test.mjs` to check discovery parsing and the known missing-version cases.
+
+## Capture once, replay offline
+
+Network access belongs only to explicit refresh commands. Each audit saves HTTPS response bodies, HTTP failures, pagination links, and SHA-256 hashes. Replays fail if required responses are absent or changed. Requests are bounded and stop after a rate limit; blocked pages are never reported as clean.
+
+```sh
+# Refresh: read external metadata, save evidence and reports. No catalog mutation.
+node scripts/audit-releases.mjs
+node scripts/audit-weights.mjs
+
+# Replay the saved inputs, without fetching.
+node scripts/audit-releases.mjs --offline
+node scripts/audit-weights.mjs --offline
+
+# Narrow an audit, or reuse a capture and fetch only missing responses.
+node scripts/audit-releases.mjs --family gemma,dolphin --providers-only
+node scripts/audit-releases.mjs --resume
+```
+
+`--snapshot FILE` and `--report FILE` select paths. `--resume` is not a fresh check; add `--retry-errors` to retry saved failures after fixing access or waiting for the rate limit. Output snapshots can be large and are ignored by Git. The curated release/source records, review decisions and watchlists are checked in, so builds do not need snapshots. The manual [source audit workflow](../.github/workflows/audit.yml) uploads captured evidence for review; deployment only builds saved data.
+
+For a reviewed checkpoint mapping, use the optional importer separately from the build:
+
+```sh
+node scripts/import-checkpoints.mjs --family dolphin
+node scripts/import-checkpoints.mjs --family dolphin --offline --apply
+node scripts/generate.mjs
+```
+
+The importer reads `checkpoint-imports.json`, records commit evidence, and refuses to apply a batch with failed repositories or conversion entries. It does not guess identities, versions or publication dates. `scripts/audit-checkpoint-history.mjs` inspects explicit repository URLs without importing them; `scripts/capture-sources.mjs --input urls.json` captures a JSON array of exact evidence URLs. Both support snapshots and offline replay. Live captures may change; identical saved inputs produce identical reports.

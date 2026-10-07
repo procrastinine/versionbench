@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { buildStats, DAYS_PER_YEAR } from './stats.mjs';
+import { buildStats, DAYS_PER_YEAR, versionHistory } from './stats.mjs';
 
 const event = (family, version, date, name = `${family} ${version}`) => ({
   id: `${family}-${version}-${date}-${name}`,
@@ -132,4 +132,30 @@ test('a model keeps its historical maximum when a newer published version is num
   assert.equal(a.averageRank, 1);
   assert.equal(a.daysAtNumberOne, 10);
   assert.equal(b.averageRank, 2);
+});
+
+test('version overlays use the same daily maximum as ranks; software exposes regressions without ranks', () => {
+  const rows = [
+    event('a', '2', '2026-01-01'),
+    event('a', '3.9', '2026-01-02'),
+    event('a', '3.5', '2026-01-02'),
+    event('a', '3.10', '2026-01-03'),
+  ];
+  assert.deepEqual(
+    versionHistory(rows).map((r) => [r.date, r.score]),
+    [
+      ['2026-01-01', 2],
+      ['2026-01-02', 3.9],
+    ],
+  );
+  assert.deepEqual(versionHistory(rows), versionHistory([...rows].reverse()));
+  const stats = buildStats(
+    catalog([...rows, event('python', '3.9', '2026-01-02'), event('python', '3.10', '2026-01-03')]),
+  );
+  assert.deepEqual(
+    stats.softwareControls[0].versionHistory.map((r) => r.score),
+    [3.9, 3.1],
+  );
+  assert.equal(stats.softwareControls[0].rankHistory, undefined);
+  assert.deepEqual(stats.families[0].versionHistory, versionHistory(rows));
 });

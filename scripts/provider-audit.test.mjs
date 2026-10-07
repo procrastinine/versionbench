@@ -1,12 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { test } from 'node:test';
-import {
-  observedVersions,
-  compareProviderVersions,
-  auditProviders,
-  pageText,
-} from './provider-audit.mjs';
+import { observedVersions, compareProviderVersions, pageText } from './provider-audit.mjs';
 
 const definitions = JSON.parse(
   await readFile(new URL('../data/provider-sources.json', import.meta.url)),
@@ -46,15 +41,10 @@ test('parameter counts, checkpoint dates, and backbone versions are not family v
     );
 });
 
-test('an unconfigured family is an explicit review failure', async () => {
-  const result = await auditProviders({ families: [{ id: 'new-family' }], releases: [] }, []);
-  assert.equal(result[0].comparison, 'review-source');
-});
-
 test('a lower current numbering does not erase the historical maximum', () => {
   const result = compareProviderVersions([{ score: 4 }], [{ score: 3.5, version: '3.5' }]);
   assert.equal(result.highestRecorded, 4);
-  assert.equal(result.comparison, 'no-higher-version-observed');
+  assert.equal(result.comparison, 'review-missing-version');
 });
 
 test('URL slugs and script payloads cannot invent model versions', () => {

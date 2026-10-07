@@ -42,6 +42,36 @@ export async function fetchPage(url) {
 
 export const normalizedName = (name) => name.toLowerCase().replace(/[^a-z0-9]/g, '');
 
+export function openRouterModels(json) {
+  const value = JSON.parse(json);
+  if (
+    !Array.isArray(value.data) ||
+    !value.data.length ||
+    value.data.some(
+      (r) =>
+        typeof r.id !== 'string' ||
+        !/^~?[a-z0-9._-]+\/[a-z0-9._:/-]+$/i.test(r.id) ||
+        typeof r.name !== 'string' ||
+        !Number.isFinite(r.created),
+    )
+  )
+    throw new Error('Unsupported OpenRouter model inventory');
+  return value.data.map((r) => ({
+    name: r.name,
+    provider: r.id.split('/')[0].replace(/^~/, ''),
+    url: `https://openrouter.ai/${r.id}`,
+    date: new Date(r.created * 1000).toISOString().slice(0, 10),
+    dateBasis: 'gateway-listing',
+    ...(r.id.startsWith('~')
+      ? { excluded: 'Rolling gateway alias; not a distinct model release.' }
+      : {}),
+    ...(typeof r.hugging_face_id === 'string' &&
+    /^[a-z0-9._-]+\/[a-z0-9._-]+$/i.test(r.hugging_face_id)
+      ? { huggingFaceUrl: `https://huggingface.co/${r.hugging_face_id}` }
+      : {}),
+  }));
+}
+
 // This catalog publishes JavaScript object literals. Extract only quoted metadata;
 // do not evaluate the script, including any unrelated code it may contain.
 export function timelineModels(script) {
@@ -61,6 +91,12 @@ export function timelineModels(script) {
 }
 
 export const releaseTrackers = [
+  {
+    id: 'openrouter',
+    url: 'https://openrouter.ai/api/v1/models',
+    load: async (json) => openRouterModels(json),
+    row: (r) => r,
+  },
   {
     id: 'artificial-analysis',
     url: 'https://artificialanalysis.ai/models',
@@ -86,14 +122,14 @@ export const releaseTrackers = [
   {
     id: 'llm-timeline',
     url: 'https://llm-timeline.com/',
-    load: async (html, url) => {
+    load: async (html, url, loadPage = fetchPage) => {
       const path = html.match(
         /<script\b[^>]*\bsrc=["']([^"']*\bmodels\.js(?:\?[^"']*)?)["']/i,
       )?.[1];
       if (!path) throw new Error('LLM Timeline catalog script not found');
       const asset = new URL(path, url);
       if (asset.origin !== new URL(url).origin) throw new Error('Unexpected catalog origin');
-      return timelineModels(await fetchPage(asset.href));
+      return timelineModels(await loadPage(asset.href));
     },
     row: (r) => ({ ...r, url: 'https://llm-timeline.com/' }),
   },

@@ -1,20 +1,29 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { buildStats, readmeTemplates, renderReadme } from './stats.mjs';
+import { renderWatchlist, renderHistoryReview, renderPending } from './watch-docs.mjs';
 const root = new URL('../', import.meta.url);
 const read = (p) => readFile(new URL(p, root), 'utf8');
 const [template, css, js, raw] = await Promise.all(
   ['src/index.html', 'src/styles.css', 'src/app.js', 'data/releases.json'].map(read),
 );
 const data = JSON.parse(raw);
+const watchlist = JSON.parse(await read('data/provider-sources.json'));
+const historyReview = JSON.parse(await read('data/history-review.json'));
+const pending = JSON.parse(await read('data/pending-releases.json'));
 const stats = buildStats(data);
 const documentation = [];
 for (const [source, target] of readmeTemplates)
   documentation.push([target, renderReadme(await read(source), stats, source)]);
+documentation.push(['docs/pending-releases.md', renderPending(data, pending)]);
+documentation.push(['docs/source-watchlist.md', renderWatchlist(data, watchlist)]);
+documentation.push(['docs/history-audit.md', renderHistoryReview(data, historyReview)]);
 const html = template
   .replace('/* STYLES */', () => css)
   .replace('/* DATA */', () => JSON.stringify(data).replaceAll('<', '\\u003c'))
   .replace('/* STATS */', () => JSON.stringify(stats).replaceAll('<', '\\u003c'))
+  .replace('/* WATCHLIST */', () => JSON.stringify(watchlist).replaceAll('<', '\\u003c'))
+  .replace('/* PENDING */', () => JSON.stringify(pending).replaceAll('<', '\\u003c'))
   .replace('/* SCRIPT */', () => js);
 await writeFile(new URL('index.html', root), html);
 const tables = [
@@ -51,6 +60,8 @@ const tables = [
       'score',
       'date',
       'status',
+      'eventType',
+      'dateBasis',
       'sourceId',
       'dateSourceId',
       'artificialAnalysisUrl',

@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { SourceSnapshot } from './source-snapshot.mjs';
 import assert from 'node:assert/strict';
 import { auditWeights, huggingFaceTarget, inspectCheckpoint } from './weights-audit.mjs';
 
@@ -32,15 +33,18 @@ test('collections must contain actual model weights; failed requests remain fail
       { huggingFaceUrl: 'https://huggingface.co/owner/missing' },
     ],
   };
-  const fetcher = async (url) => ({
-    ok: !url.endsWith('/missing'),
-    status: 404,
-    json: async () =>
-      url.includes('/collections/')
-        ? { title: 'models', items: [{ type: 'model', id: 'owner/tokenizer' }] }
-        : { siblings: [{ rfilename: 'tokenizer.json' }] },
+  const client = new SourceSnapshot(undefined, {
+    fetcher: async (url) =>
+      new Response(
+        JSON.stringify(
+          url.includes('/collections/')
+            ? { title: 'models', items: [{ type: 'model', id: 'owner/tokenizer' }] }
+            : { siblings: [{ rfilename: 'tokenizer.json' }] },
+        ),
+        { status: url.endsWith('/missing') ? 404 : 200 },
+      ),
   });
-  const report = await auditWeights(data, fetcher);
+  const report = await auditWeights(data, client);
   assert.ok(report.checks.every((check) => check.status === 'review'));
 });
 
@@ -51,15 +55,16 @@ test('stops issuing new requests after a rate limit and marks unchecked links as
     })),
   };
   let requests = 0;
-  const report = await auditWeights(data, async () => {
-    requests++;
-    return { ok: false, status: 429, headers: new Headers({ ratelimit: '"api";r=0;t=23' }) };
-  });
+  const report = await auditWeights(
+    data,
+    new SourceSnapshot(undefined, {
+      fetcher: async () => {
+        requests++;
+        return new Response('rate limited', { status: 429, headers: { 'retry-after': '23' } });
+      },
+    }),
+  );
   assert.ok(requests <= 6, 'Only the initial concurrent requests should be sent');
   assert.equal(report.checks.length, 100);
-  assert.ok(
-    report.checks.every(
-      (check) => check.status === 'deferred' && check.error.includes('23 seconds'),
-    ),
-  );
+  assert.ok(report.checks.every((check) => check.status === 'deferred'));
 });

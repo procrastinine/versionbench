@@ -6,7 +6,7 @@ VersionBench is a leaderboard that ranks language models by the numeric version 
 
 VersionBench obeys mathematics, not semantic versioning. Thus 3.9 > 3.10. Vendors are advised to number responsibly. Python, PyTorch, and GTA provide [software controls](https://procrastinine.github.io/versionbench/#timeline?families=python,pytorch,gta&mode=latest) in the expanded dataset.
 
-[Live demo](https://procrastinine.github.io/versionbench/) · [Data documentation](data/README.md) · [Generated statistics](data/stats.json)
+[Live demo](https://procrastinine.github.io/versionbench/) · [Data documentation](data/README.md) · [Generated statistics](data/stats.json) · [Pages to watch](docs/source-watchlist.md)
 
 {{STATS_SUMMARY}}
 
@@ -16,7 +16,7 @@ VersionBench obeys mathematics, not semantic versioning. Thus 3.9 > 3.10. Vendor
 
 Open **index.html** in a browser. Everything is embedded in one file and works offline, with no installation or background network requests.
 
-Click a family for its releases, rank-history graph, time at #1, lifetime average rank, and release rate. Filter the timeline by family, weight availability, release status, or model/software type. “Latest release” lines reveal numeric regressions; “Highest to date” lines preserve past achievements. The release index defaults to models; software controls are an optional category. Views support shareable URLs and tables export as CSV.
+Click a family for its releases, version/rank graph, historical statistics, and source watchlist. Filter the timeline by family, weights, release status, or model/software type. “Latest release” reveals numeric regressions; “Highest to date” preserves past achievements. Views support shareable URLs and CSV export.
 
 ## Generate
 
@@ -26,17 +26,16 @@ Edit `data/releases.json`, the dashboard in `src/`, or the README templates in `
 node scripts/generate.mjs
 ```
 
-This generates the final READMEs, catalog statistics, standalone HTML, CSV tables, and SQLite database, then validates them. It requires a Node.js version with `node:sqlite`. All numbers come from the release data.
+This generates both READMEs, all statistics, the standalone HTML, CSV tables, SQLite database, and source/audit documentation from saved repository data only. It never fetches online data. Use Node.js 26.1 or later. `node --test scripts/*.test.mjs` includes a fresh build with network access denied and checks that repeated builds are identical.
 
-To check official provider sources and external catalogs for missing versions and date differences:
+To refresh the separate source audit explicitly:
 
 ```sh
 node scripts/audit-releases.mjs
+node scripts/audit-weights.mjs
 ```
 
-Review `output/release-audit.json` against primary sources before updating the catalog. See the [data documentation](data/README.md) for source and version conventions.
-
-Run `node scripts/audit-weights.mjs` to recheck linked Hugging Face repositories and collections for checkpoint files. Both audits read external metadata without importing it into the catalog.
+These commands save source responses and review reports under `output/`; they never run during a build or automatically add releases. Both support `--offline` to replay their saved snapshots. See the [data documentation](data/README.md), [earlier-version audit](docs/history-audit.md), and [unresolved candidates](docs/pending-releases.md). Quantizations do not get another vote.
 
 ## Hosting
 

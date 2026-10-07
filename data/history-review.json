@@ -1,0 +1,258 @@
+[
+  {
+    "family": "mistral",
+    "previousFirstVersion": "0.1",
+    "checkedAt": "2026-10-06",
+    "summary": "The September 2023 Mistral 7B v0.1 announcement is a legitimate fractional start. No earlier named Mistral release was found.",
+    "sourceIds": [
+      "mistral-7b-original"
+    ],
+    "unresolved": []
+  },
+  {
+    "family": "granite",
+    "previousFirstVersion": "3.0",
+    "checkedAt": "2026-10-06",
+    "summary": "Added the September 2023 Granite announcement. The original 13B size is not version 13.",
+    "sourceIds": [
+      "history-granite-initial",
+      "granite-3"
+    ],
+    "unresolved": [
+      "Exact dates and naming of legacy v2 hosted checkpoints still need primary evidence."
+    ]
+  },
+  {
+    "family": "nemotron",
+    "previousFirstVersion": "4",
+    "checkedAt": "2026-10-06",
+    "summary": "Added Nemotron-3 8B in November 2023, before Nemotron-4. The first documented public series reviewed here starts at 3.",
+    "sourceIds": [
+      "history-nemotron-3"
+    ],
+    "unresolved": [
+      "No dated evidence for pre-2023 models named Nemotron-1 or Nemotron-2 was found; later v2 variants must not be backdated."
+    ]
+  },
+  {
+    "family": "seed",
+    "previousFirstVersion": "1.6",
+    "checkedAt": "2026-10-06",
+    "summary": "Added Seed/Doubao 1.5 Pro and Seed 1.5 VL from the publisher model portfolio.",
+    "sourceIds": [
+      "history-seed-portfolio"
+    ],
+    "unresolved": [
+      "No standalone Seed 1.0 release was established. Earlier Doubao branding should not be silently renumbered."
+    ]
+  },
+  {
+    "family": "exaone",
+    "previousFirstVersion": "3.0",
+    "checkedAt": "2026-10-06",
+    "summary": "Added EXAONE 1.0 and 2.0 announcements, and separated EXAONE 3.0 announcement from its weights release.",
+    "sourceIds": [
+      "history-exaone-1",
+      "history-exaone-2",
+      "history-exaone-3"
+    ],
+    "unresolved": []
+  },
+  {
+    "family": "step",
+    "previousFirstVersion": "3",
+    "checkedAt": "2026-10-06",
+    "summary": "Earlier Step-1, Step-1V, and Step-2 exist. Their original day-level public availability has not been recovered from accessible publisher pages.",
+    "sourceIds": [
+      "step-3-paper"
+    ],
+    "unresolved": [
+      "Earlier releases remain in the pending list; a source-access failure is not evidence that Step began at 3."
+    ]
+  },
+  {
+    "family": "inflection",
+    "previousFirstVersion": "3",
+    "checkedAt": "2026-10-06",
+    "summary": "Recovered Inflection 1, 2, and 2.5 from archived copies of the original publisher announcements.",
+    "sourceIds": [
+      "history-inflection-1",
+      "history-inflection-2",
+      "history-inflection-2-5"
+    ],
+    "unresolved": []
+  },
+  {
+    "family": "lfm",
+    "previousFirstVersion": "2",
+    "checkedAt": "2026-10-06",
+    "summary": "Added the first Liquid Foundation Models series from September 2024. 1.3B, 3.1B, and 40.3B are sizes.",
+    "sourceIds": [
+      "history-lfm-1"
+    ],
+    "unresolved": []
+  },
+  {
+    "family": "hermes",
+    "previousFirstVersion": "3",
+    "checkedAt": "2026-10-06",
+    "summary": "Added first-generation Hermes checkpoint history, Hermes 2 Vision and Yi variants, and the original August 2024 Hermes 3 release.",
+    "sourceIds": [
+      "history-hermes-b716d7b4",
+      "history-hermes-9086b7a2",
+      "history-hermes-76b2ee9a",
+      "history-hermes-3"
+    ],
+    "unresolved": [
+      "Early checkpoint commit dates do not prove the exact date each repository became public."
+    ]
+  },
+  {
+    "family": "hunyuan",
+    "previousFirstVersion": "3",
+    "checkedAt": "2026-10-06",
+    "summary": "Added the September 2023 Hunyuan API announcement. Video and 3D model numbers are not language-model versions.",
+    "sourceIds": [
+      "history-hunyuan-1"
+    ],
+    "unresolved": [
+      "Additional hosted Turbo/T1/VL variants remain subject to dated primary-source review."
+    ]
+  },
+  {
+    "family": "longcat",
+    "previousFirstVersion": "2",
+    "checkedAt": "2026-10-06",
+    "summary": "Added the August 2025 LongCat Flash Chat API launch from the official change log.",
+    "sourceIds": [
+      "history-longcat-ledger"
+    ],
+    "unresolved": []
+  },
+  {
+    "family": "solar",
+    "previousFirstVersion": "3",
+    "checkedAt": "2026-10-06",
+    "summary": "Added Solar 10.7B v1.0 and Solar Pro 2. The 10.7 in the original name is a size, not a version.",
+    "sourceIds": [
+      "history-solar-news",
+      "history-solar-pro2"
+    ],
+    "unresolved": [
+      "Solar Pro preview and general availability have additional milestones to recover."
+    ]
+  },
+  {
+    "family": "mercury",
+    "previousFirstVersion": "2.5",
+    "checkedAt": "2026-10-06",
+    "summary": "Added Mercury 2 from the publisher’s dated release archive. The original Mercury series predates it.",
+    "sourceIds": [
+      "inception-blog-index",
+      "history-mercury-2"
+    ],
+    "unresolved": [
+      "Original Mercury Coder launched in February 2025, but the first day is not established by the accessible publisher announcement."
+    ]
+  },
+  {
+    "family": "motif",
+    "previousFirstVersion": "3",
+    "checkedAt": "2026-10-06",
+    "summary": "Added the initial Motif 2.6B checkpoint history and the Motif 2 technical report. 2.6B is a size; Motif 2 is a version.",
+    "sourceIds": [
+      "history-motif-1d731fb9",
+      "history-motif-2-12-7b-technical-report"
+    ],
+    "unresolved": [
+      "The initial checkpoint commit is not proof of when public access began."
+    ]
+  },
+  {
+    "family": "intellect",
+    "previousFirstVersion": "3",
+    "checkedAt": "2026-10-06",
+    "summary": "Added INTELLECT-1 and INTELLECT-2 from their official release posts, including the INTELLECT-1 instruct variant.",
+    "sourceIds": [
+      "history-intellect-1",
+      "history-intellect-2"
+    ],
+    "unresolved": []
+  },
+  {
+    "family": "cogito",
+    "previousFirstVersion": "2.1",
+    "checkedAt": "2026-10-06",
+    "summary": "Added v1 and v2 previews from the dated publisher research index.",
+    "sourceIds": [
+      "history-cogito-index"
+    ],
+    "unresolved": []
+  },
+  {
+    "family": "reka",
+    "previousFirstVersion": "3",
+    "checkedAt": "2026-10-06",
+    "summary": "Added the February 2024 Flash and Edge beta and April 2024 Core release. Unnumbered initial sub-lines are normalized to 1.",
+    "sourceIds": [
+      "history-reka-flash",
+      "history-reka-core"
+    ],
+    "unresolved": [
+      "No separately numbered Reka 2 release was established; a jump to 3 is not permission to invent one."
+    ]
+  },
+  {
+    "family": "apriel",
+    "previousFirstVersion": "1.6",
+    "checkedAt": "2026-10-06",
+    "summary": "Added Apriel 5B checkpoint history and announcement, plus the Apriel 1.5 technical report.",
+    "sourceIds": [
+      "history-apriel-a9a48317",
+      "history-apriel-1",
+      "history-apriel-1-5-15b-thinker-technical-report"
+    ],
+    "unresolved": [
+      "The initial checkpoint commit is not proof of public availability."
+    ]
+  },
+  {
+    "family": "nanbeige",
+    "previousFirstVersion": "4.1",
+    "checkedAt": "2026-10-06",
+    "summary": "Recovered Nanbeige 4 checkpoint history and an archived publisher repository confirming the original Nanbeige 16B series.",
+    "sourceIds": [
+      "history-nanbeige-dec46638",
+      "history-nanbeige-archive"
+    ],
+    "unresolved": [
+      "The old Nanbeige 16B, 1.5, and 2 repositories are unavailable. Their exact original public dates remain pending."
+    ]
+  },
+  {
+    "family": "ring",
+    "previousFirstVersion": "2.6",
+    "checkedAt": "2026-10-06",
+    "summary": "Added Ring Lite Distill Preview and Ring Lite 2507 from the publisher archive and dated blog. 2507 is a checkpoint suffix, not version 2507; 1T is a size.",
+    "sourceIds": [
+      "history-ring-index",
+      "history-ring-lite2507"
+    ],
+    "unresolved": [
+      "Ring 2.0 and 2.5 inventories require separate dated publication evidence."
+    ]
+  },
+  {
+    "family": "ax",
+    "previousFirstVersion": "4.0",
+    "checkedAt": "2026-10-06",
+    "summary": "Added the A.X brand announcement and A.X 3.1. The latter was released after A.X 4.0, according to its model card.",
+    "sourceIds": [
+      "history-ax-brand",
+      "history-ax-31"
+    ],
+    "unresolved": [
+      "A.X K-series models use another numbered sub-line; exact release dates require review."
+    ]
+  }
+]
