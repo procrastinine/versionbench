@@ -1,22 +1,22 @@
 {
-  "snapshot": "2026-10-06",
+  "snapshot": "2026-10-07",
   "scope": "Model families only. Software controls are reported separately and excluded from all model statistics and ranks.",
   "familyCount": 58,
   "softwareControlCount": 3,
-  "releaseCount": 834,
+  "releaseCount": 835,
   "softwareReleaseCount": 382,
-  "sourceCount": 563,
+  "sourceCount": 564,
   "artificialAnalysisReleaseCount": 299,
   "artificialAnalysisProfileCount": 281,
   "huggingFaceReleaseCount": 505,
   "huggingFaceLinkCount": 485,
   "releasesByWeightsStatus": {
-    "not-published": 326,
+    "not-published": 327,
     "open": 505,
     "unverified": 3
   },
   "firstEventDate": "2018-06-11",
-  "lastEventDate": "2026-10-06",
+  "lastEventDate": "2026-10-07",
   "releasesByYear": {
     "2018": 1,
     "2019": 3,
@@ -26,14 +26,14 @@
     "2023": 107,
     "2024": 224,
     "2025": 253,
-    "2026": 238
+    "2026": 239
   },
   "releasesByEventType": {
     "announcement": 48,
     "api": 50,
     "checkpoint": 141,
     "preview": 94,
-    "release": 255,
+    "release": 256,
     "research": 22,
     "weights": 224
   },
@@ -52,7 +52,7 @@
     "Open weights": 225,
     "Preview": 66,
     "Public preview": 2,
-    "Released": 254,
+    "Released": 255,
     "Repository created (fallback)": 5,
     "Research access by request": 1,
     "Research announcement": 7,
@@ -173,8 +173,8 @@
           "releaseId": "gpt-gpt-6-1-sol-2026-09-29"
         }
       ],
-      "trackedDays": 3040,
-      "daysAtNumberOne": 2341,
+      "trackedDays": 3041,
+      "daysAtNumberOne": 2342,
       "rankHistory": [
         {
           "date": "2018-06-11",
@@ -214,8 +214,8 @@
         }
       ],
       "currentRank": 1,
-      "averageRank": 1.3,
-      "releaseRatePerYear": 6.968442434210526,
+      "averageRank": 1.2999013482407102,
+      "releaseRatePerYear": 6.966150937191713,
       "artificialAnalysisReleaseCount": 33,
       "huggingFaceReleaseCount": 2
     },
@@ -223,7 +223,7 @@
       "id": "claude",
       "name": "Claude",
       "kind": "model",
-      "releaseCount": 33,
+      "releaseCount": 34,
       "versionCount": 17,
       "highestVersion": "5.5",
       "highestScore": 5.5,
@@ -233,14 +233,14 @@
         "date": "2026-09-22"
       },
       "latestRelease": {
-        "id": "claude-claude-sonnet-5-5-2026-09-28",
-        "name": "Claude Sonnet 5.5",
+        "id": "claude-claude-haiku-5-5-2026-10-07",
+        "name": "Claude Haiku 5.5",
         "version": "5.5",
         "score": 5.5,
-        "date": "2026-09-28"
+        "date": "2026-10-07"
       },
       "firstEventDate": "2023-03-14",
-      "lastEventDate": "2026-09-28",
+      "lastEventDate": "2026-10-07",
       "versionHistory": [
         {
           "date": "2023-03-14",
@@ -339,7 +339,7 @@
           "releaseId": "claude-claude-opus-5-5-2026-09-22"
         }
       ],
-      "trackedDays": 1303,
+      "trackedDays": 1304,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -468,8 +468,8 @@
         }
       ],
       "currentRank": 3,
-      "averageRank": 6.429009976976209,
-      "releaseRatePerYear": 9.250193783576362,
+      "averageRank": 6.42638036809816,
+      "releaseRatePerYear": 9.523194018404908,
       "artificialAnalysisReleaseCount": 28,
       "huggingFaceReleaseCount": 0
     },
@@ -563,7 +563,7 @@
           "releaseId": "gemini-gemini-4-argon-2026-09-30"
         }
       ],
-      "trackedDays": 1036,
+      "trackedDays": 1037,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -744,8 +744,8 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 24.18146718146718,
-      "releaseRatePerYear": 18.332635135135135,
+      "averageRank": 24.17261330761813,
+      "releaseRatePerYear": 18.314956605593057,
       "artificialAnalysisReleaseCount": 36,
       "huggingFaceReleaseCount": 0
     },
@@ -839,7 +839,7 @@
           "releaseId": "grok-grok-4-7-2026-09-21"
         }
       ],
-      "trackedDays": 1069,
+      "trackedDays": 1070,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -996,8 +996,8 @@
         }
       ],
       "currentRank": 9,
-      "averageRank": 14.472404115996259,
-      "releaseRatePerYear": 8.200018709073902,
+      "averageRank": 14.467289719626168,
+      "releaseRatePerYear": 8.192355140186917,
       "artificialAnalysisReleaseCount": 14,
       "huggingFaceReleaseCount": 2
     },
@@ -1067,7 +1067,7 @@
           "releaseId": "llama-llama-4-maverick-2025-04-05"
         }
       ],
-      "trackedDays": 1321,
+      "trackedDays": 1322,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -1196,8 +1196,8 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 8.690386071158214,
-      "releaseRatePerYear": 6.08276684330053,
+      "averageRank": 8.695158850226928,
+      "releaseRatePerYear": 6.0781656580937975,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 22
     },
@@ -1279,7 +1279,7 @@
           "releaseId": "mistral-mistral-small-4-2026-03-16"
         }
       ],
-      "trackedDays": 1106,
+      "trackedDays": 1107,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -1456,8 +1456,8 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 19.362567811934902,
-      "releaseRatePerYear": 6.604746835443038,
+      "averageRank": 19.35862691960253,
+      "releaseRatePerYear": 6.598780487804878,
       "artificialAnalysisReleaseCount": 16,
       "huggingFaceReleaseCount": 16
     },
@@ -1539,7 +1539,7 @@
           "releaseId": "qwen-qwen3-8-max-initial-api-2026-08-02"
         }
       ],
-      "trackedDays": 1161,
+      "trackedDays": 1162,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -1748,8 +1748,8 @@
         }
       ],
       "currentRank": 25,
-      "averageRank": 18.95090439276486,
-      "releaseRatePerYear": 21.70691860465116,
+      "averageRank": 18.956110154905335,
+      "releaseRatePerYear": 21.688237951807228,
       "artificialAnalysisReleaseCount": 25,
       "huggingFaceReleaseCount": 39
     },
@@ -1825,7 +1825,7 @@
           "releaseId": "deepseek-deepseek-v4-1-flash-2026-09-10"
         }
       ],
-      "trackedDays": 1070,
+      "trackedDays": 1071,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -2002,8 +2002,8 @@
         }
       ],
       "currentRank": 14,
-      "averageRank": 16.825233644859814,
-      "releaseRatePerYear": 9.899095794392524,
+      "averageRank": 16.822595704948647,
+      "releaseRatePerYear": 9.88985294117647,
       "artificialAnalysisReleaseCount": 21,
       "huggingFaceReleaseCount": 27
     },
@@ -2073,7 +2073,7 @@
           "releaseId": "kimi-kimi-k3-2026-07-16"
         }
       ],
-      "trackedDays": 1094,
+      "trackedDays": 1095,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -2286,8 +2286,8 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 29.857404021937842,
-      "releaseRatePerYear": 6.67719378427788,
+      "averageRank": 29.862100456621004,
+      "releaseRatePerYear": 6.6710958904109585,
       "artificialAnalysisReleaseCount": 7,
       "huggingFaceReleaseCount": 7
     },
@@ -2387,7 +2387,7 @@
           "releaseId": "glm-glm-5-3-2026-08-14"
         }
       ],
-      "trackedDays": 2029,
+      "trackedDays": 2030,
       "daysAtNumberOne": 157,
       "rankHistory": [
         {
@@ -2472,8 +2472,8 @@
         }
       ],
       "currentRank": 5,
-      "averageRank": 3.341547560374569,
-      "releaseRatePerYear": 5.220321586988664,
+      "averageRank": 3.3423645320197046,
+      "releaseRatePerYear": 5.2177500000000006,
       "artificialAnalysisReleaseCount": 15,
       "huggingFaceReleaseCount": 26
     },
@@ -2525,7 +2525,7 @@
           "releaseId": "muse-muse-spark-1-3-2026-09-02"
         }
       ],
-      "trackedDays": 182,
+      "trackedDays": 183,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -2554,8 +2554,8 @@
         }
       ],
       "currentRank": 58,
-      "averageRank": 56.12637362637363,
-      "releaseRatePerYear": 8.027307692307692,
+      "averageRank": 56.13661202185792,
+      "releaseRatePerYear": 7.983442622950819,
       "artificialAnalysisReleaseCount": 4,
       "huggingFaceReleaseCount": 0
     },
@@ -2613,7 +2613,7 @@
           "releaseId": "gemma-gemma-4-2026-04-02"
         }
       ],
-      "trackedDays": 959,
+      "trackedDays": 960,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -2782,8 +2782,8 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 18.636079249217936,
-      "releaseRatePerYear": 13.71087591240876,
+      "averageRank": 18.632291666666667,
+      "releaseRatePerYear": 13.69659375,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 36
     },
@@ -2847,7 +2847,7 @@
           "releaseId": "phi-phi-4-2024-12-12"
         }
       ],
-      "trackedDays": 1205,
+      "trackedDays": 1206,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -2984,8 +2984,8 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 8.869709543568465,
-      "releaseRatePerYear": 3.6372697095435687,
+      "averageRank": 8.874792703150913,
+      "releaseRatePerYear": 3.634253731343284,
       "artificialAnalysisReleaseCount": 4,
       "huggingFaceReleaseCount": 12
     },
@@ -3037,7 +3037,7 @@
           "releaseId": "olmo-olmo-3-1-instruct-2025-12-12"
         }
       ],
-      "trackedDays": 979,
+      "trackedDays": 980,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -3182,8 +3182,8 @@
         }
       ],
       "currentRank": 30,
-      "averageRank": 26.46782431052094,
-      "releaseRatePerYear": 1.865385597548519,
+      "averageRank": 26.47142857142857,
+      "releaseRatePerYear": 1.8634821428571429,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 5
     },
@@ -3253,7 +3253,7 @@
           "releaseId": "minimax-minimax-m3-1-flash-preview-code-2026-09-28"
         }
       ],
-      "trackedDays": 478,
+      "trackedDays": 479,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -3354,8 +3354,8 @@
         }
       ],
       "currentRank": 30,
-      "averageRank": 36.16527196652719,
-      "releaseRatePerYear": 5.348739539748954,
+      "averageRank": 36.15240083507307,
+      "releaseRatePerYear": 5.337573068893528,
       "artificialAnalysisReleaseCount": 5,
       "huggingFaceReleaseCount": 6
     },
@@ -3395,7 +3395,7 @@
           "releaseId": "nova-amazon-nova-2-lite-2025-12-02"
         }
       ],
-      "trackedDays": 673,
+      "trackedDays": 674,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -3536,8 +3536,8 @@
         }
       ],
       "currentRank": 51,
-      "averageRank": 41.539375928677565,
-      "releaseRatePerYear": 4.8843722139673105,
+      "averageRank": 41.553412462908014,
+      "releaseRatePerYear": 4.877125370919881,
       "artificialAnalysisReleaseCount": 7,
       "huggingFaceReleaseCount": 0
     },
@@ -3607,7 +3607,7 @@
           "releaseId": "ernie-ernie-5-1-preview-arena-milestone-2026-04-30"
         }
       ],
-      "trackedDays": 2728,
+      "trackedDays": 2729,
       "daysAtNumberOne": 1065,
       "rankHistory": [
         {
@@ -3692,8 +3692,8 @@
         }
       ],
       "currentRank": 6,
-      "averageRank": 2.0153958944281527,
-      "releaseRatePerYear": 1.3388654692082111,
+      "averageRank": 2.0168559912055697,
+      "releaseRatePerYear": 1.3383748625870282,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 4
     },
@@ -3739,7 +3739,7 @@
           "releaseId": "openai-o-o4-mini-2025-04-16"
         }
       ],
-      "trackedDays": 755,
+      "trackedDays": 756,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -3812,8 +3812,8 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 13.116556291390728,
-      "releaseRatePerYear": 6.288943708609271,
+      "averageRank": 13.119047619047619,
+      "releaseRatePerYear": 6.280625,
       "artificialAnalysisReleaseCount": 10,
       "huggingFaceReleaseCount": 0
     },
@@ -3865,7 +3865,7 @@
           "releaseId": "pangu-pangu-5-5-2025-06-20"
         }
       ],
-      "trackedDays": 1991,
+      "trackedDays": 1992,
       "daysAtNumberOne": 735,
       "rankHistory": [
         {
@@ -3926,8 +3926,8 @@
         }
       ],
       "currentRank": 3,
-      "averageRank": 2.6202913108990455,
-      "releaseRatePerYear": 1.1006805625313913,
+      "averageRank": 2.6204819277108435,
+      "releaseRatePerYear": 1.1001280120481929,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 3
     },
@@ -3979,7 +3979,7 @@
           "releaseId": "mimo-mimo-v2-6-flash-studio-release-2026-09-21"
         }
       ],
-      "trackedDays": 525,
+      "trackedDays": 526,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -4100,8 +4100,8 @@
         }
       ],
       "currentRank": 43,
-      "averageRank": 41.99809523809524,
-      "releaseRatePerYear": 9.7398,
+      "averageRank": 42,
+      "releaseRatePerYear": 9.721283269961978,
       "artificialAnalysisReleaseCount": 9,
       "huggingFaceReleaseCount": 9
     },
@@ -4177,7 +4177,7 @@
           "releaseId": "granite-granite-4-2-30b-2026-08-25"
         }
       ],
-      "trackedDays": 1126,
+      "trackedDays": 1127,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -4318,8 +4318,8 @@
         }
       ],
       "currentRank": 12,
-      "averageRank": 14.397868561278862,
-      "releaseRatePerYear": 4.541203374777975,
+      "averageRank": 14.395740905057675,
+      "releaseRatePerYear": 4.537173913043478,
       "artificialAnalysisReleaseCount": 9,
       "huggingFaceReleaseCount": 13
     },
@@ -4359,7 +4359,7 @@
           "releaseId": "nemotron-nemotron-4-15b-technical-report-2024-02-26"
         }
       ],
-      "trackedDays": 1057,
+      "trackedDays": 1058,
       "daysAtNumberOne": 116,
       "rankHistory": [
         {
@@ -4432,8 +4432,8 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 6.294228949858089,
-      "releaseRatePerYear": 2.7643708609271522,
+      "averageRank": 6.302457466918715,
+      "releaseRatePerYear": 2.761758034026465,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 7
     },
@@ -4491,7 +4491,7 @@
           "releaseId": "seed-seed-2-1-preview-2026-06-19"
         }
       ],
-      "trackedDays": 623,
+      "trackedDays": 624,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -4616,8 +4616,8 @@
         }
       ],
       "currentRank": 48,
-      "averageRank": 40.56340288924559,
-      "releaseRatePerYear": 5.862640449438203,
+      "averageRank": 40.57532051282051,
+      "releaseRatePerYear": 5.853245192307693,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0
     },
@@ -4657,7 +4657,7 @@
           "releaseId": "palm-palm-2-2023-05-10"
         }
       ],
-      "trackedDays": 1647,
+      "trackedDays": 1648,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -4862,8 +4862,8 @@
         }
       ],
       "currentRank": 51,
-      "averageRank": 18.564055859137827,
-      "releaseRatePerYear": 0.4435245901639344,
+      "averageRank": 18.58373786407767,
+      "releaseRatePerYear": 0.44325546116504855,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 0
     },
@@ -4903,7 +4903,7 @@
           "releaseId": "yi-yi-1-5-2024-05-13"
         }
       ],
-      "trackedDays": 1070,
+      "trackedDays": 1071,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -5104,8 +5104,8 @@
         }
       ],
       "currentRank": 56,
-      "averageRank": 35.93271028037383,
-      "releaseRatePerYear": 1.3653925233644861,
+      "averageRank": 35.95144724556489,
+      "releaseRatePerYear": 1.3641176470588234,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 4
     },
@@ -5163,7 +5163,7 @@
           "releaseId": "internlm-internvl3-5-technical-report-2025-08-25"
         }
       ],
-      "trackedDays": 1113,
+      "trackedDays": 1114,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -5320,8 +5320,8 @@
         }
       ],
       "currentRank": 27,
-      "averageRank": 17.02066486972147,
-      "releaseRatePerYear": 3.937924528301887,
+      "averageRank": 17.029622980251347,
+      "releaseRatePerYear": 3.9343895870736083,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 12
     },
@@ -5385,7 +5385,7 @@
           "releaseId": "exaone-exaone-4-5-33b-2026-04-09"
         }
       ],
-      "trackedDays": 1758,
+      "trackedDays": 1759,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -5550,8 +5550,8 @@
         }
       ],
       "currentRank": 10,
-      "averageRank": 7.59613196814562,
-      "releaseRatePerYear": 1.6620819112627987,
+      "averageRank": 7.59749857873792,
+      "releaseRatePerYear": 1.6611370096645823,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 6
     },
@@ -5627,7 +5627,7 @@
           "releaseId": "minicpm-minicpm5-1b-2026-05-19"
         }
       ],
-      "trackedDays": 979,
+      "trackedDays": 980,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -5752,8 +5752,8 @@
         }
       ],
       "currentRank": 7,
-      "averageRank": 9.896833503575076,
-      "releaseRatePerYear": 5.223079673135853,
+      "averageRank": 9.893877551020408,
+      "releaseRatePerYear": 5.2177500000000006,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 14
     },
@@ -5811,7 +5811,7 @@
           "releaseId": "step-step-5-preview-hosted-release-2026-09-20"
         }
       ],
-      "trackedDays": 928,
+      "trackedDays": 929,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -5956,8 +5956,8 @@
         }
       ],
       "currentRank": 7,
-      "averageRank": 20.782327586206897,
-      "releaseRatePerYear": 2.7550619612068967,
+      "averageRank": 20.767491926803014,
+      "releaseRatePerYear": 2.7520963401507,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 3
     },
@@ -6021,7 +6021,7 @@
           "releaseId": "ling-ling-3-1-flash-vercel-ai-gateway-release-2026-09-30"
         }
       ],
-      "trackedDays": 540,
+      "trackedDays": 541,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -6150,8 +6150,8 @@
         }
       ],
       "currentRank": 30,
-      "averageRank": 39.42407407407408,
-      "releaseRatePerYear": 5.411,
+      "averageRank": 39.406654343807766,
+      "releaseRatePerYear": 5.400998151571165,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 7
     },
@@ -6197,7 +6197,7 @@
           "releaseId": "falcon-falcon-3-2024-12-17"
         }
       ],
-      "trackedDays": 1231,
+      "trackedDays": 1232,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -6414,8 +6414,8 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 19.402924451665314,
-      "releaseRatePerYear": 1.1868155970755483,
+      "averageRank": 19.415584415584416,
+      "releaseRatePerYear": 1.1858522727272727,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 4
     },
@@ -6473,7 +6473,7 @@
           "releaseId": "jamba-jamba2-3b-2026-01-08"
         }
       ],
-      "trackedDays": 923,
+      "trackedDays": 924,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -6650,8 +6650,8 @@
         }
       ],
       "currentRank": 51,
-      "averageRank": 36.0465872156013,
-      "releaseRatePerYear": 3.5614111592632716,
+      "averageRank": 36.06277056277056,
+      "releaseRatePerYear": 3.5575568181818182,
       "artificialAnalysisReleaseCount": 6,
       "huggingFaceReleaseCount": 9
     },
@@ -6703,7 +6703,7 @@
           "releaseId": "inflection-inflection-3-0-2024-10-07"
         }
       ],
-      "trackedDays": 1203,
+      "trackedDays": 1204,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -6872,8 +6872,8 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 17.527847049044055,
-      "releaseRatePerYear": 1.2144389027431421,
+      "averageRank": 17.542358803986712,
+      "releaseRatePerYear": 1.2134302325581394,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0
     },
@@ -6919,7 +6919,7 @@
           "releaseId": "lfm-lfm2-5-1-2b-instruct-2026-01-05"
         }
       ],
-      "trackedDays": 737,
+      "trackedDays": 738,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -7052,8 +7052,8 @@
         }
       ],
       "currentRank": 45,
-      "averageRank": 35.86024423337856,
-      "releaseRatePerYear": 3.469060379918589,
+      "averageRank": 35.87262872628726,
+      "releaseRatePerYear": 3.4643597560975614,
       "artificialAnalysisReleaseCount": 6,
       "huggingFaceReleaseCount": 6
     },
@@ -7111,7 +7111,7 @@
           "releaseId": "hermes-hermes-4-3-seed-36b-2025-12-03"
         }
       ],
-      "trackedDays": 1222,
+      "trackedDays": 1223,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -7260,8 +7260,8 @@
         }
       ],
       "currentRank": 11,
-      "averageRank": 11.188216039279869,
-      "releaseRatePerYear": 2.9888911620294603,
+      "averageRank": 11.188062142273099,
+      "releaseRatePerYear": 2.9864472608340145,
       "artificialAnalysisReleaseCount": 3,
       "huggingFaceReleaseCount": 10
     },
@@ -7325,7 +7325,7 @@
           "releaseId": "openchat-openchat-3-6-20240522-2024-05-22"
         }
       ],
-      "trackedDays": 1194,
+      "trackedDays": 1195,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -7438,8 +7438,8 @@
         }
       ],
       "currentRank": 26,
-      "averageRank": 11.32747068676717,
-      "releaseRatePerYear": 3.0589824120603017,
+      "averageRank": 11.339748953974896,
+      "releaseRatePerYear": 3.05642259414226,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 10
     },
@@ -7485,7 +7485,7 @@
           "releaseId": "hunyuan-hy4-preview-2026-08-28"
         }
       ],
-      "trackedDays": 1126,
+      "trackedDays": 1127,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -7682,8 +7682,8 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 32.815275310834814,
-      "releaseRatePerYear": 1.2974866785079928,
+      "averageRank": 32.79946761313221,
+      "releaseRatePerYear": 1.296335403726708,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 3
     },
@@ -7729,7 +7729,7 @@
           "releaseId": "longcat-longcat-2-5-preview-2026-09-25"
         }
       ],
-      "trackedDays": 404,
+      "trackedDays": 405,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -7814,8 +7814,8 @@
         }
       ],
       "currentRank": 45,
-      "averageRank": 48.301980198019805,
-      "releaseRatePerYear": 3.616262376237624,
+      "averageRank": 48.29382716049383,
+      "releaseRatePerYear": 3.607333333333333,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 2
     },
@@ -7867,7 +7867,7 @@
           "releaseId": "solar-solar-pro-4-announcement-2026-08-11"
         }
       ],
-      "trackedDays": 1028,
+      "trackedDays": 1029,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -8044,8 +8044,8 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 28.575875486381324,
-      "releaseRatePerYear": 4.263531128404669,
+      "averageRank": 28.56268221574344,
+      "releaseRatePerYear": 4.259387755102041,
       "artificialAnalysisReleaseCount": 7,
       "huggingFaceReleaseCount": 4
     },
@@ -8091,7 +8091,7 @@
           "releaseId": "mercury-mercury-2-5-2026-09-08"
         }
       ],
-      "trackedDays": 588,
+      "trackedDays": 589,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -8204,8 +8204,8 @@
         }
       ],
       "currentRank": 45,
-      "averageRank": 44.37244897959184,
-      "releaseRatePerYear": 1.863482142857143,
+      "averageRank": 44.373514431239386,
+      "releaseRatePerYear": 1.8603183361629883,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 0
     },
@@ -8251,7 +8251,7 @@
           "releaseId": "motif-motif-3-beta-2026-07-14"
         }
       ],
-      "trackedDays": 488,
+      "trackedDays": 489,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -8380,8 +8380,8 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 39.71516393442623,
-      "releaseRatePerYear": 2.9937909836065577,
+      "averageRank": 39.70552147239264,
+      "releaseRatePerYear": 2.9876687116564415,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 2
     },
@@ -8433,7 +8433,7 @@
           "releaseId": "intellect-intellect-3-1-weights-publication-2026-02-18"
         }
       ],
-      "trackedDays": 677,
+      "trackedDays": 678,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -8534,8 +8534,8 @@
         }
       ],
       "currentRank": 30,
-      "averageRank": 29.302806499261447,
-      "releaseRatePerYear": 2.6975073855243723,
+      "averageRank": 29.303834808259587,
+      "releaseRatePerYear": 2.693528761061947,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 5
     },
@@ -8581,7 +8581,7 @@
           "releaseId": "cogito-cogito-v2-1-671b-2025-11-19"
         }
       ],
-      "trackedDays": 547,
+      "trackedDays": 548,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -8686,8 +8686,8 @@
         }
       ],
       "currentRank": 48,
-      "averageRank": 38.44241316270567,
-      "releaseRatePerYear": 2.003158135283364,
+      "averageRank": 38.45985401459854,
+      "releaseRatePerYear": 1.9995027372262775,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 3
     },
@@ -8733,7 +8733,7 @@
           "releaseId": "reka-reka-flash-3-1-2025-07-10"
         }
       ],
-      "trackedDays": 968,
+      "trackedDays": 969,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -8878,8 +8878,8 @@
         }
       ],
       "currentRank": 30,
-      "averageRank": 24.90599173553719,
-      "releaseRatePerYear": 2.26389979338843,
+      "averageRank": 24.91124871001032,
+      "releaseRatePerYear": 2.2615634674922602,
       "artificialAnalysisReleaseCount": 2,
       "huggingFaceReleaseCount": 3
     },
@@ -8925,7 +8925,7 @@
           "releaseId": "apriel-apriel-1-6-15b-thinker-announcement-2025-12-09"
         }
       ],
-      "trackedDays": 544,
+      "trackedDays": 545,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -9030,8 +9030,8 @@
         }
       ],
       "currentRank": 55,
-      "averageRank": 47.4797794117647,
-      "releaseRatePerYear": 2.6856066176470588,
+      "averageRank": 47.49357798165138,
+      "releaseRatePerYear": 2.680678899082569,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 4
     },
@@ -9089,7 +9089,7 @@
           "releaseId": "nanbeige-nanbeige4-2-3b-technical-report-2026-07-24"
         }
       ],
-      "trackedDays": 1064,
+      "trackedDays": 1065,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -9234,8 +9234,8 @@
         }
       ],
       "currentRank": 12,
-      "averageRank": 17.48872180451128,
-      "releaseRatePerYear": 1.7163651315789474,
+      "averageRank": 17.483568075117372,
+      "releaseRatePerYear": 1.7147535211267606,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 5
     },
@@ -9287,7 +9287,7 @@
           "releaseId": "ring-ring-2-6-1t-technical-report-2026-06-13"
         }
       ],
-      "trackedDays": 554,
+      "trackedDays": 555,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -9400,8 +9400,8 @@
         }
       ],
       "currentRank": 43,
-      "averageRank": 37.92057761732852,
-      "releaseRatePerYear": 3.9556949458483754,
+      "averageRank": 37.92972972972973,
+      "releaseRatePerYear": 3.9485675675675673,
       "artificialAnalysisReleaseCount": 1,
       "huggingFaceReleaseCount": 6
     },
@@ -9441,7 +9441,7 @@
           "releaseId": "ax-a-x-4-0-2025-07-03"
         }
       ],
-      "trackedDays": 1107,
+      "trackedDays": 1108,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -9602,8 +9602,8 @@
         }
       ],
       "currentRank": 15,
-      "averageRank": 20.679313459801264,
-      "releaseRatePerYear": 1.6496951219512195,
+      "averageRank": 20.674187725631768,
+      "releaseRatePerYear": 1.6482062274368232,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 4
     },
@@ -9643,7 +9643,7 @@
           "releaseId": "ornith-ornith-ai-ornith-1-5-35b-a3b-checkpoint-2026-08-18"
         }
       ],
-      "trackedDays": 104,
+      "trackedDays": 105,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -9664,8 +9664,8 @@
         }
       ],
       "currentRank": 56,
-      "averageRank": 56.09615384615385,
-      "releaseRatePerYear": 21.071682692307693,
+      "averageRank": 56.095238095238095,
+      "releaseRatePerYear": 20.871000000000002,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 6
     },
@@ -9711,7 +9711,7 @@
           "releaseId": "smollm-smollm3-3b-2025-07-08"
         }
       ],
-      "trackedDays": 813,
+      "trackedDays": 814,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -9840,8 +9840,8 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 26.17589175891759,
-      "releaseRatePerYear": 9.434308118081182,
+      "averageRank": 26.186732186732186,
+      "releaseRatePerYear": 9.422718058968059,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 21
     },
@@ -9881,7 +9881,7 @@
           "releaseId": "bonsai-ternary-bonsai-2-27b-2026-09-17"
         }
       ],
-      "trackedDays": 190,
+      "trackedDays": 191,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -9922,8 +9922,8 @@
         }
       ],
       "currentRank": 51,
-      "averageRank": 55.526315789473685,
-      "releaseRatePerYear": 17.30096052631579,
+      "averageRank": 55.50261780104712,
+      "releaseRatePerYear": 17.210379581151834,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 9
     },
@@ -10047,7 +10047,7 @@
           "releaseId": "dolphin-dphn-dolphin3-0-llama3-1-8b-checkpoint-2024-12-29"
         }
       ],
-      "trackedDays": 1172,
+      "trackedDays": 1173,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -10212,8 +10212,8 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 17.399317406143346,
-      "releaseRatePerYear": 22.749746160409558,
+      "averageRank": 17.414322250639387,
+      "releaseRatePerYear": 22.730351662404093,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 73
     },
@@ -10259,7 +10259,7 @@
           "releaseId": "character-ai-pipsqueak-3-2026-09-28"
         }
       ],
-      "trackedDays": 1294,
+      "trackedDays": 1295,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -10500,8 +10500,8 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 31.048686244204017,
-      "releaseRatePerYear": 1.6935510046367852,
+      "averageRank": 31.051737451737452,
+      "releaseRatePerYear": 1.6922432432432433,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0
     },
@@ -10547,7 +10547,7 @@
           "releaseId": "apple-afm-3-cloud-2026-06-08"
         }
       ],
-      "trackedDays": 849,
+      "trackedDays": 850,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -10696,8 +10696,8 @@
         }
       ],
       "currentRank": 35,
-      "averageRank": 33.63368669022379,
-      "releaseRatePerYear": 3.4416254416961127,
+      "averageRank": 33.63529411764706,
+      "releaseRatePerYear": 3.4375764705882355,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0
     },
@@ -10749,7 +10749,7 @@
           "releaseId": "jan-janhq-jan-v3-5-4b-checkpoint-2026-03-24"
         }
       ],
-      "trackedDays": 425,
+      "trackedDays": 426,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -10846,8 +10846,8 @@
         }
       ],
       "currentRank": 27,
-      "averageRank": 30.72,
-      "releaseRatePerYear": 8.593941176470588,
+      "averageRank": 30.711267605633804,
+      "releaseRatePerYear": 8.573767605633803,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 10
     },
@@ -10911,7 +10911,7 @@
           "releaseId": "palmyra-x6-availability-2026-08-06"
         }
       ],
-      "trackedDays": 1342,
+      "trackedDays": 1343,
       "daysAtNumberOne": 107,
       "rankHistory": [
         {
@@ -11036,8 +11036,8 @@
         }
       ],
       "currentRank": 2,
-      "averageRank": 4.853204172876304,
-      "releaseRatePerYear": 6.531907600596125,
+      "averageRank": 4.851079672375279,
+      "releaseRatePerYear": 6.5270439314966495,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 18
     },
@@ -11077,7 +11077,7 @@
           "releaseId": "laguna-laguna-xs-2-1-weights-2026-07-02"
         }
       ],
-      "trackedDays": 162,
+      "trackedDays": 163,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -11118,8 +11118,8 @@
         }
       ],
       "currentRank": 48,
-      "averageRank": 45.01851851851852,
-      "releaseRatePerYear": 15.782083333333334,
+      "averageRank": 45.03680981595092,
+      "releaseRatePerYear": 15.68526073619632,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 6
     },
@@ -11171,7 +11171,7 @@
           "releaseId": "aion-aion-3-5-api-2026-09-23"
         }
       ],
-      "trackedDays": 676,
+      "trackedDays": 677,
       "daysAtNumberOne": 0,
       "rankHistory": [
         {
@@ -11304,8 +11304,8 @@
         }
       ],
       "currentRank": 27,
-      "averageRank": 38.103550295857985,
-      "releaseRatePerYear": 3.2417973372781064,
+      "averageRank": 38.08714918759232,
+      "releaseRatePerYear": 3.2370088626292466,
       "artificialAnalysisReleaseCount": 0,
       "huggingFaceReleaseCount": 0
     }

@@ -2,7 +2,7 @@
 
 # VersionBench release data
 
-Snapshot **2026-10-06** · **58** model families · **834** model release events · **563** model sources · **299** releases linked to Artificial Analysis · **505** releases linked to Hugging Face weights
+Snapshot **2026-10-07** · **58** model families · **835** model release events · **564** model sources · **299** releases linked to Artificial Analysis · **505** releases linked to Hugging Face weights
 
 Separately: **3** software controls, **382** release events. Controls are excluded from model statistics and rankings.
 

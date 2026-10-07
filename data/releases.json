@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "families": [
     {
       "id": "gpt",
@@ -1838,7 +1838,7 @@
       "title": "Claude Platform release notes",
       "url": "https://platform.claude.com/docs/en/release-notes/overview",
       "publisher": "Anthropic",
-      "checkedAt": "2026-10-06"
+      "checkedAt": "2026-10-07"
     },
     {
       "id": "claude-fable5-mythos5",
@@ -1855,6 +1855,14 @@
       "publisher": "Anthropic",
       "date": "2025-10-15",
       "checkedAt": "2026-10-06"
+    },
+    {
+      "id": "claude-haiku55",
+      "title": "Introducing Claude Haiku 5.5",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "publisher": "Anthropic",
+      "date": "2026-10-07",
+      "checkedAt": "2026-10-07"
     },
     {
       "id": "claude-intro",
@@ -28363,6 +28371,22 @@
       "weightsSourceUrl": "https://mistral.ai/news/mistral-large-4/",
       "weightsNote": "The October 6 preview announcement promises weights later in October; they are not published as of this snapshot.",
       "eventType": "preview"
+    },
+    {
+      "id": "claude-claude-haiku-5-5-2026-10-07",
+      "family": "claude",
+      "name": "Claude Haiku 5.5",
+      "version": "5.5",
+      "score": 5.5,
+      "date": "2026-10-07",
+      "status": "Released",
+      "sourceId": "claude-haiku55",
+      "dateSourceId": "claude-api-changelog",
+      "weightsStatus": "not-published",
+      "weightsCheckedAt": "2026-10-07",
+      "weightsSourceUrl": "https://www.anthropic.com/claude-haiku-5-5",
+      "weightsNote": "Provider documentation offers hosted access; no public weights found for this release.",
+      "eventType": "release"
     }
   ]
 }
