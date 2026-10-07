@@ -11,7 +11,7 @@ test('a fresh copy builds reproducibly with no network permission or audit cache
   const root = fileURLToPath(new URL('../', import.meta.url));
   const dir = await realpath(await mkdtemp(join(tmpdir(), 'versionbench-offline-')));
   try {
-    for (const name of ['data', 'src', 'scripts', 'docs'])
+    for (const name of ['data', 'src', 'scripts', 'docs', 'package.json', 'LICENSE'])
       await cp(join(root, name), join(dir, name), { recursive: true });
     // Prove permission denial, rather than hoping this machine lacks a connection.
     const flags = ['--permission', `--allow-fs-read=${dir}`, `--allow-fs-write=${dir}`];

@@ -7,6 +7,7 @@ import { buildStats, readmeTemplates, renderReadme } from './stats.mjs';
 import { huggingFaceTarget } from './weights-audit.mjs';
 import { renderWatchlist, renderHistoryReview, renderPending } from './watch-docs.mjs';
 import { validateCandidateReview } from './candidate-review.mjs';
+import { buildBrowserScript } from './browser-bundle.mjs';
 const root = new URL('../', import.meta.url);
 const data = JSON.parse(await readFile(new URL('data/releases.json', root), 'utf8'));
 const imports = JSON.parse(await readFile(new URL('data/checkpoint-imports.json', root), 'utf8'));
@@ -328,9 +329,11 @@ for (const [template, target] of readmeTemplates)
     renderReadme(await readFile(new URL(template, root), 'utf8'), stats, template),
     `Regenerate ${target} after editing data or its template`,
   );
-const js = await readFile(new URL('src/app.js', root), 'utf8');
+const js = buildBrowserScript();
 new Script(js);
 const html = await readFile(new URL('index.html', root), 'utf8');
+const license = await readFile(new URL('LICENSE', root), 'utf8');
+assert.ok(html.includes(license), 'Standalone page must include its MIT license');
 const css = await readFile(new URL('src/styles.css', root), 'utf8');
 assert.ok(
   html.includes(css) && html.includes(js),

@@ -44,3 +44,5 @@ These commands save source responses and review reports under `output/`; they ne
 ## Hosting
 
 Host `index.html` on any static web server. The included [GitHub Pages workflow](.github/workflows/pages.yml) generates, checks, and deploys the page when enabled for the repository.
+
+Licensed under [MIT](LICENSE).

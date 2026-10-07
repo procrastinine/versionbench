@@ -1,0 +1,6 @@
+{
+  "name": "versionbench",
+  "private": true,
+  "type": "module",
+  "license": "MIT"
+}
