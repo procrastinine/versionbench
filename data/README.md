@@ -2,9 +2,9 @@
 
 # VersionBench release data
 
-Snapshot **2026-10-07** · **58** model families · **835** model release events · **564** model sources · **299** releases linked to Artificial Analysis · **505** releases linked to Hugging Face weights
+Snapshot **2026-10-09** · **58** model families · **837** model release events · **565** model sources · **300** releases linked to Artificial Analysis · **507** releases linked to Hugging Face weights
 
-Separately: **3** software controls, **382** release events. Controls are excluded from model statistics and rankings.
+Separately: **3** software controls, **383** release events. Controls are excluded from model statistics and rankings.
 
 ## Files
 
@@ -90,7 +90,11 @@ The catalog covers named language-model generations, major variants, and release
 
 ## Find and review gaps
 
-Run `node scripts/audit-releases.mjs` to compare against [LLM Timeline](https://llm-timeline.com/), [LLM Releases](https://www.llm-releases.com/), [LLM Gateway](https://llmgateway.io/timeline), [LLM Stats](https://llm-stats.com/llm-updates), [Opper](https://opper.ai/model-releases), [OpenRouter](https://openrouter.ai/models), and [Artificial Analysis](https://artificialanalysis.ai/models).
+Run `node scripts/refresh.mjs` to pull every configured watch page, publisher model inventory, linked weight metadata, Python/PyTorch catalog, and GTA history through one shared response recorder. It advances the proposal's cutoff to today's UTC date without changing curated data. Review `output/refresh/review.json` for additions, substantive corrections, refreshed checks, failed sources, and model candidates; `proposal.json` contains the proposed catalog. Each later fresh capture also identifies newly observed provider candidates against the preceding capture.
+
+After review, `node scripts/refresh.mjs --apply` verifies the saved inputs and response checksums, replays the control importers offline, applies their evidence and verified check dates, and regenerates every artifact. It refuses stale proposals after curated inputs change and refuses incomplete control captures. Failed watch pages and weight links remain explicit review items; they are never treated as successful checks. Model identities, dates, variants, version mappings, and profile links still require curated review. Apply the control proposal before making model edits, or replay with `--offline` to regenerate a proposal against those edits.
+
+The shared release audit compares against [LLM Timeline](https://llm-timeline.com/), [LLM Releases](https://www.llm-releases.com/), [LLM Gateway](https://llmgateway.io/timeline), [LLM Stats](https://llm-stats.com/llm-updates), [Opper](https://opper.ai/model-releases), [OpenRouter](https://openrouter.ai/models), and [Artificial Analysis](https://artificialanalysis.ai/models).
 
 The audit checks the [pages to watch](../docs/source-watchlist.md) for every family. Hugging Face scans traverse every page of each configured publisher's inventory before filtering by repository name; this includes older generations and unnumbered relatives. Web-page scans inspect the listed page's visible text and named links; they do not recursively crawl entire sites. Earlier missing versions, higher versions, unreviewed variants, catalog differences, unresolved dates, and failed sources all remain review items and cause exit 1. A matching highest version cannot conceal missing predecessors. A successful fetch does not establish completeness.
 
@@ -103,22 +107,26 @@ After edits, run the generator. Checks catch stale artifacts, invalid records, m
 Network access belongs only to explicit refresh commands. Each audit saves HTTPS response bodies, HTTP failures, pagination links, and SHA-256 hashes. Replays fail if required responses are absent or changed. Requests are bounded and stop after a rate limit; blocked pages are never reported as clean.
 
 ```sh
-# Refresh: read external metadata, save evidence and reports. No catalog mutation.
-node scripts/audit-releases.mjs
-node scripts/audit-weights.mjs
+# Pull all sources and prepare a reviewable proposal. No catalog mutation.
+node scripts/refresh.mjs
 
 # Replay the saved inputs, without fetching.
-node scripts/audit-releases.mjs --offline
-node scripts/audit-weights.mjs --offline
+node scripts/refresh.mjs --offline
+
+# Apply reviewed controls and check dates, then regenerate all artifacts offline.
+node scripts/refresh.mjs --apply
+
+# Retry saved failures without fetching successful responses again.
+node scripts/refresh.mjs --resume --retry-errors
 
 # Narrow an audit, or reuse a capture and fetch only missing responses.
 node scripts/audit-releases.mjs --family gemma,dolphin --providers-only
 node scripts/audit-releases.mjs --resume
 ```
 
-`--snapshot FILE` and `--report FILE` select paths. `--resume` is not a fresh check; add `--retry-errors` to retry saved failures after fixing access or waiting for the rate limit. Output snapshots can be large and are ignored by Git. The curated release/source records, review decisions and watchlists are checked in, so builds do not need snapshots. The manual [source audit workflow](../.github/workflows/audit.yml) uploads captured evidence for review; deployment only builds saved data.
+The unified command accepts `--directory DIR` and `--as-of YYYY-MM-DD`. It saves all raw responses, per-section reports, extracted control catalogs, a complete proposal, and a checksum manifest together under `output/refresh/`. Exit 1 means the capture awaits review, including any source failures. `--resume` is not a fresh check; add `--retry-errors` to retry saved failures after fixing access or waiting for the rate limit. Output snapshots can be large and are ignored by Git. The curated release/source records, review decisions and watchlists are checked in, so builds do not need snapshots. The manual [source audit workflow](../.github/workflows/audit.yml) uploads captured evidence for review; deployment only builds saved data.
 
-Python and PyTorch have a separate deterministic importer. The complete extracted catalogs, excluded entries, source URLs, and response hashes are saved in `evidence/software-releases.json`. Generation checks every software record against this evidence, including patch versions that score below an earlier release. Fetching happens only with `--refresh`:
+The unified command uses the same deterministic Python/PyTorch importer as the focused commands below. The complete extracted catalogs, excluded entries, source URLs, and response hashes are saved in `evidence/software-releases.json`. Generation checks every software record against this evidence, including patch versions that score below an earlier release. In the focused importer, fetching happens only with `--refresh`:
 
 ```sh
 # Fetch all catalog pages and save a proposal; do not change the dataset.

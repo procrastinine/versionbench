@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-06",
+  "checkedAt": "2026-10-09",
   "observations": [
     {
       "id": "character-c12",
@@ -294,6 +294,174 @@
       "sourceUrls": [
         "https://huggingface.co/inclusionAI/Ring-2.5-1T/commit/284fcb88eb98c2e92bbc5c31d42d70498fcac655"
       ]
+    },
+    {
+      "id": "watch-lfm2-longevity-announcement",
+      "url": "https://www.liquid.ai/blog/longevitybench",
+      "type": "publisher-announcement",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "500492925e9b3d4580b905f4c523516b5173ca59746624dc1fc6f0a539196edb",
+      "facts": {
+        "published": "2026-09-17",
+        "models": [
+          "LFM2-1.2B-Longevity",
+          "LFM2-2.6B-Longevity"
+        ],
+        "milestone": "Dated publisher announcement of two domain-adapted LFM2 checkpoints.",
+        "limitation": "The post date is not claimed as the first weights-publication date. Repository creation timestamps are not release dates."
+      }
+    },
+    {
+      "id": "watch-lfm2-1-2b-longevity-weights",
+      "url": "https://huggingface.co/api/models/LiquidAI/LFM2-1.2B-Longevity",
+      "type": "publisher-checkpoint-metadata",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "c44347301cce94200b2bd7c023c7bfc3349f1b823b6c00b82b1ab7a47da2959d",
+      "facts": {
+        "repository": "LiquidAI/LFM2-1.2B-Longevity",
+        "weightFile": "model.safetensors",
+        "parameters": 1170340608,
+        "limitation": "Current checkpoint availability only; repository creation and modification times do not establish a release date."
+      }
+    },
+    {
+      "id": "watch-lfm2-1-2b-longevity-card",
+      "url": "https://huggingface.co/LiquidAI/LFM2-1.2B-Longevity/raw/main/README.md",
+      "type": "publisher-model-card",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "e87229c51bb918c12da28871e3cc86f89c8372e9397d0fa9f6679b916db08eef",
+      "facts": {
+        "model": "LFM2-1.2B-Longevity",
+        "baseModel": "LiquidAI/LFM2-1.2B",
+        "version": "2",
+        "sizeIsParameterCount": true
+      }
+    },
+    {
+      "id": "watch-lfm2-2-6b-longevity-weights",
+      "url": "https://huggingface.co/api/models/LiquidAI/LFM2-2.6B-Longevity",
+      "type": "publisher-checkpoint-metadata",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "64c86141cbfd50020f5badca61dbae22116478438300371698c40cfc9273bbec",
+      "facts": {
+        "repository": "LiquidAI/LFM2-2.6B-Longevity",
+        "weightFile": "model.safetensors",
+        "parameters": 2569272320,
+        "limitation": "Current checkpoint availability only; repository creation and modification times do not establish a release date."
+      }
+    },
+    {
+      "id": "watch-lfm2-2-6b-longevity-card",
+      "url": "https://huggingface.co/LiquidAI/LFM2-2.6B-Longevity/raw/main/README.md",
+      "type": "publisher-model-card",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "9034cffb521a0cfbfdb89bebdf9814bb9402824b17ce5a435a15463c0fa89f33",
+      "facts": {
+        "model": "LFM2-2.6B-Longevity",
+        "baseModel": "LiquidAI/LFM2-2.6B",
+        "version": "2",
+        "sizeIsParameterCount": true
+      }
+    },
+    {
+      "id": "watch-haiku-5-5-profile",
+      "url": "https://artificialanalysis.ai/models/claude-haiku-5-5",
+      "type": "benchmark-model-profile",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "de1b813aa37f1e50ced50741c5e045f723704e84b1d5c332945d0e6293fbe12e",
+      "facts": {
+        "model": "Claude Haiku 5.5",
+        "purpose": "Matching profile link only; no benchmark scores or prices imported."
+      }
+    },
+    {
+      "id": "watch-glm-5-3-fast-deployment",
+      "url": "https://llmgateway.io/models/glm-5.3-fast",
+      "type": "gateway-model-listing",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "937ed12b4ad5b874cb10e9f683ee2c2a4cdf6c87b82f621734bd1a8fd79c1e92",
+      "facts": {
+        "model": "GLM 5.3 Fast",
+        "alias": "GLM-5.3-Prime",
+        "provider": "SCX.ai",
+        "description": "The listing attributes faster generation to inference acceleration and says the original model capabilities are retained.",
+        "limitation": "October 7 is a gateway listing date, not independent evidence of a new publisher model release."
+      }
+    },
+    {
+      "id": "watch-mercury-decide-documentation",
+      "url": "https://docs.inceptionlabs.ai/capabilities/decisions",
+      "type": "publisher-model-documentation",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "59dfda1e865ab8c086babe3ac8249d64e79c0c03a86c3d735ba355d129fe1d93",
+      "facts": {
+        "model": "mercury-decide",
+        "endpoint": "/v1/decisions",
+        "purpose": "Typed classification, routing, and scoring.",
+        "limitation": "The publisher page supplies no numerical model generation or exact original launch date."
+      }
+    },
+    {
+      "id": "watch-mercury-decide-inventory",
+      "url": "https://api.inceptionlabs.ai/v1/models",
+      "type": "publisher-model-inventory",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "d63c442320c8b07aeef1efd1a5e67b08b80c41fc62434cb22ca8497132e0ab9e",
+      "facts": {
+        "model": "mercury-decide",
+        "description": "Typed-decision preview. Decisions endpoint only.",
+        "limitation": "The created value is shared with older Mercury models and is not accepted as release-date evidence."
+      }
+    },
+    {
+      "id": "watch-mercury-voice-announcement",
+      "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-voice",
+      "type": "publisher-announcement",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "30267f5559be21d3c3e11c182eb9bae45e5490573253e6618902777530863eae",
+      "facts": {
+        "model": "Mercury Voice",
+        "availability": "Generally available for enterprise customers.",
+        "published": "2026-09-29",
+        "limitation": "The dated publisher index establishes the post date. The post does not publish a numeric generation for this sublineage; a concurrent Mercury 2.5 preview is not its version number."
+      }
+    },
+    {
+      "id": "watch-mercury-blog-index",
+      "url": "https://www.inceptionlabs.ai/blog",
+      "type": "publisher-post-index",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "9491d22c01499175850fb629bb14db11651463934ac8de673008d7a1b0479e82",
+      "facts": {
+        "post": "Introducing Mercury Voice",
+        "published": "2026-09-29"
+      }
+    },
+    {
+      "id": "watch-falcon-emirati-documentation",
+      "url": "https://falconllm.tii.ae/falcon-emirati.html",
+      "type": "publisher-model-documentation",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "4a36ee2d4f6dcda8d7fef737c2b53d45346c4608006fada89bd8fa6a808f2670",
+      "facts": {
+        "model": "Falcon-Emirati-7B",
+        "baseModel": "Falcon-H1-Arabic",
+        "availability": "Falcon Chat",
+        "limitation": "The publisher page gives neither an exact release date nor a numeric generation. 7B is parameter count; H1 is an architecture label."
+      }
+    },
+    {
+      "id": "watch-minicpm-v-4-7-access",
+      "url": "https://huggingface.co/api/models/openbmb/MiniCPM-V-4.7-35B-A3B",
+      "type": "publisher-checkpoint-access-failure",
+      "checkedAt": "2026-10-09",
+      "responseSha256": "65842e3d84e6b7f62a470c85204e80b953bb8f944e9b69813130a9d7f3eaa1d8",
+      "facts": {
+        "httpStatus": 401,
+        "repository": "openbmb/MiniCPM-V-4.7-35B-A3B",
+        "currentPublisherInventoryContainsRepository": false,
+        "limitation": "Current availability could not be verified. Retain the historical first-weight event; the error does not distinguish removal from private access."
+      }
     }
   ],
   "candidateIds": [
@@ -317,6 +485,13 @@
     "poolside-laguna-s-2-1-base",
     "openbmb-minicpm-v-2-6",
     "palmyra-x-002",
-    "palmyra-x-003"
+    "palmyra-x-003",
+    "lfm-lfm2-longevity-variants",
+    "claude-haiku-5-5-profile",
+    "glm-glm-5-3-fast-deployment",
+    "mercury-decide-unnumbered",
+    "mercury-voice-unnumbered",
+    "falcon-emirati-unnumbered",
+    "minicpm-v-4-7-availability-review"
   ]
 }

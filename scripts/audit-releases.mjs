@@ -2,10 +2,12 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
-import { SourceSnapshot, stableJSON, sha256 } from './source-snapshot.mjs';
-import { auditInventory } from './source-inventory.mjs';
-import { pageArray, normalizedName, releaseTrackers, gatewayTracker } from './source-data.mjs';
-import { artifactExclusion } from './release-policy.mjs';
+import { SourceSnapshot, stableJSON } from './source-snapshot.mjs';
+import {
+  buildReleaseAudit,
+  needsReleaseReview,
+  releaseAuditNeedsReview,
+} from './release-audit.mjs';
 
 const { values } = parseArgs({
   options: {
@@ -60,94 +62,21 @@ const client =
         retryErrors: !!values['retry-errors'],
       })
     : new SourceSnapshot();
-const providerReview = auditInventory(client, data, definitions, decisions);
-const trackers = values['providers-only'] ? [] : [...releaseTrackers];
-if (!values['providers-only'])
-  for (let year = 2022; year <= Number(data.updated.slice(0, 4)); year++)
-    trackers.push(gatewayTracker(year));
-const sources = await Promise.all(
-  trackers.map(async (tracker) => {
-    try {
-      const html = await client.text(tracker.url);
-      const rows = tracker.load
-        ? await tracker.load(html, tracker.url, (url) => client.text(url))
-        : pageArray(html, tracker.array);
-      if (!rows.length) throw new Error('Empty catalog; check source format');
-      const records = rows
-        .map((row) => {
-          const item = tracker.row(row);
-          if (typeof item.name !== 'string' || !item.name || typeof item.url !== 'string')
-            throw new Error('Invalid release row; check source format');
-          const names = [item.name, item.name.replace(/^[^:]+:\s*/, '')].map(normalizedName);
-          const matches = data.releases.filter(
-            (r) =>
-              names.includes(normalizedName(r.name)) ||
-              item.modelURLs?.includes(r.artificialAnalysisUrl) ||
-              (item.huggingFaceUrl && item.huggingFaceUrl === r.huggingFaceUrl),
-          );
-          return {
-            ...item,
-            date: /^\d{4}-\d{2}-\d{2}$/.test(item.date || '') ? item.date : null,
-            comparison: item.excluded
-              ? 'excluded-alias'
-              : artifactExclusion(item.name)
-                ? 'excluded-artifact'
-                : !matches.length
-                  ? 'review-name'
-                  : item.dateBasis === 'gateway-listing'
-                    ? 'model-linked-listing-date-separate'
-                    : matches.some((r) => r.date === item.date)
-                      ? 'name-or-profile-and-date-match'
-                      : 'review-date',
-            ...(item.excluded || artifactExclusion(item.name)
-              ? { reason: item.excluded || artifactExclusion(item.name) }
-              : {}),
-            releaseIds: matches.map((r) => r.id),
-          };
-        })
-        .sort((a, b) => a.name.localeCompare(b.name) || a.url.localeCompare(b.url));
-      return { id: tracker.id, url: tracker.url, records };
-    } catch (error) {
-      return { id: tracker.id, url: tracker.url, error: error.message };
-    }
-  }),
-);
-const { families, collectionErrors } = await providerReview;
+const report = await buildReleaseAudit(client, data, definitions, decisions, pending, {
+  providersOnly: values['providers-only'],
+});
+const { families, sources } = report;
 if (!values.offline) await client.save(snapshotPath);
-const report = {
-  schemaVersion: 1,
-  capturedAt: client.snapshot.capturedAt,
-  datasetDate: data.updated,
-  inputs: {
-    releases: sha256(stableJSON(data)),
-    sources: sha256(stableJSON(definitions)),
-    decisions: sha256(stableJSON(decisions)),
-    pending: sha256(stableJSON(pending)),
-  },
-  scope: { families: data.families.map((f) => f.id), secondaryCatalogs: !values['providers-only'] },
-  note: 'Exhaustive traversal of configured inventories, not a claim that the web or catalog is complete. Review missing earlier versions, repository variants, dates, and milestone types. A source failure is not a clean audit. Repository timestamps are not release dates. Prices and capability scores are not imported.',
-  families,
-  collectionErrors,
-  sources,
-  pending,
-};
 await mkdir(dirname(reportPath), { recursive: true });
 await writeFile(reportPath, stableJSON(report));
 for (const family of families)
   console.log(
     `${family.family}: ${family.comparison}; ${family.unrecordedVersions.length} missing version observations, ${family.unreviewedRecordCount} repositories/pages to review, ${family.sources.filter((s) => s.error).length} source failures`,
   );
-const needsReview = (r) => r.comparison.startsWith('review-');
 for (const source of sources)
   console.log(
-    `${source.id}: ${source.error || `${source.records.filter(needsReview).length} candidates to review`}`,
+    `${source.id}: ${source.error || `${source.records.filter(needsReleaseReview).length} candidates to review`}`,
   );
 console.log(`${pending.length} known candidates await primary evidence.`);
 console.log(`Saved ${values.report}. Source responses: ${values.snapshot}. Catalog unchanged.`);
-if (
-  pending.length ||
-  collectionErrors.length ||
-  families.some((f) => f.comparison !== 'configured-inventory-matches') ||
-  sources.some((s) => s.error || s.records.some(needsReview))
-)
-  process.exitCode = 1;
+if (releaseAuditNeedsReview(report)) process.exitCode = 1;

@@ -4,7 +4,7 @@ Generated offline from `data/provider-sources.json` by `node scripts/generate.mj
 
 The audit traverses every page of each configured Hugging Face model inventory. Webpages are watched at the listed URLs; this is not a recursive crawl of an entire company website. It records named links, earlier versions, unnumbered repositories, and source failures. GitHub pages provide model cards, dated news, and links; SDK tags are not model versions.
 
-Run `node scripts/audit-releases.mjs` to capture sources and build the review report. Run `node scripts/audit-releases.mjs --offline` to replay it without network access. `--family gemma,intellect --providers-only` narrows either run; `--snapshot FILE` preserves separate captures. Live captures can change; offline replay is deterministic.
+Run `node scripts/refresh.mjs` to pull every watch page, discovery catalog, weight link, and software history into one capture and reviewable proposal. Review `output/refresh/review.json`, then use `node scripts/refresh.mjs --apply` to apply supported control evidence and regenerate offline. Model candidates require curated review. `--offline` replays the capture; `--resume --retry-errors` retries failures. For a focused release audit, `node scripts/audit-releases.mjs --family gemma,intellect --providers-only` remains available. Live captures can change; offline replay is deterministic.
 
 Announcement, API availability, and weights publication require separate dated evidence. A Hugging Face link shows where weights are now, not when a hosted endpoint or announcement launched. Prefer the first commit containing weights for Hugging Face-only dates. A reviewed repository-creation fallback is allowed when that history is inaccessible and weight metadata is verified; label it explicitly. Modified timestamps never establish releases.
 
@@ -495,6 +495,7 @@ Liquid AI
 | [www.liquid.ai/models](https://www.liquid.ai/models) | Publisher announcements and release history | announcement, api |
 | [www.liquid.ai/blog](https://www.liquid.ai/blog) | Publisher announcements and release history | announcement, api |
 | [github.com/Liquid4All](https://github.com/Liquid4All) | Official code, model cards, and release links | announcement, weights |
+| [www.liquid.ai/blog/longevitybench](https://www.liquid.ai/blog/longevitybench) | Named LFM2 Longevity variants and dated publisher announcement | announcement, weights |
 
 The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.
 
@@ -577,10 +578,13 @@ Inception
 | [www.inceptionlabs.ai/blog](https://www.inceptionlabs.ai/blog) | Model documentation and release history | announcement, api |
 | [docs.inceptionlabs.ai/](https://docs.inceptionlabs.ai/) | Publisher announcements and release history | announcement, api |
 | [www.inceptionlabs.ai/blog/introducing-mercury-2](https://www.inceptionlabs.ai/blog/introducing-mercury-2) | Publisher announcements and release history | announcement, api |
+| [docs.inceptionlabs.ai/get-started/models](https://docs.inceptionlabs.ai/get-started/models) | Current model inventory, including named Mercury variants | api |
 
 The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.
 
 No verified publisher Hugging Face inventory is configured for this family; watch the official release pages for any weights announcement.
+
+Mercury Voice and Mercury Decide are watched as named variants. Their publisher pages do not establish numerical generations; Decide also lacks an exact launch date. They remain reviewed candidates without invented scores.
 
 <a id="motif"></a>
 ## Motif

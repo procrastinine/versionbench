@@ -10,9 +10,9 @@ VersionBench obeys mathematics, not semantic versioning. Thus 3.9 > 3.10. Vendor
 
 [Live demo](https://procrastinine.github.io/versionbench/) · [Data documentation](data/README.md) · [Generated statistics](data/stats.json) · [Pages to watch](docs/source-watchlist.md)
 
-Snapshot **2026-10-07** · **58** model families · **835** model release events · **564** model sources · **299** releases linked to Artificial Analysis · **505** releases linked to Hugging Face weights
+Snapshot **2026-10-09** · **58** model families · **837** model release events · **565** model sources · **300** releases linked to Artificial Analysis · **507** releases linked to Hugging Face weights
 
-Separately: **3** software controls, **382** release events. Controls are excluded from model statistics and rankings.
+Separately: **3** software controls, **383** release events. Controls are excluded from model statistics and rankings.
 
 [![VersionBench leaderboard with model-family rankings, release links, and a version-number comparison chart.](docs/leaderboard.png)](https://procrastinine.github.io/versionbench/)
 
@@ -32,14 +32,13 @@ node scripts/generate.mjs
 
 This generates both READMEs, all statistics, the standalone HTML, CSV tables, SQLite database, and source/audit documentation from saved repository data only. It never fetches online data. Use Node.js 26.1 or later. `node --test scripts/*.test.mjs` includes a fresh build with network access denied and checks that repeated builds are identical.
 
-To refresh the separate source audit explicitly:
+To pull all watched sources, model inventories, weight metadata, and software histories in one command:
 
 ```sh
-node scripts/audit-releases.mjs
-node scripts/audit-weights.mjs
+node scripts/refresh.mjs
 ```
 
-These commands save source responses and review reports under `output/`; they never run during a build or automatically add releases. Both support `--offline` to replay their saved snapshots. See the [data documentation](data/README.md), [earlier-version audit](docs/history-audit.md), and [candidate decisions](docs/pending-releases.md). Quantizations do not get another vote.
+Review `output/refresh/review.json` and `proposal.json`, then run `node scripts/refresh.mjs --apply` to apply supported software histories and verified check dates and regenerate everything offline. Model candidates still require source review and curated edits. `--offline` replays the entire capture; `--resume --retry-errors` retries failed sources. Fetching never runs during a build. See the [data documentation](data/README.md), [earlier-version audit](docs/history-audit.md), and [candidate decisions](docs/pending-releases.md). Quantizations do not get another vote.
 
 ## Hosting
 

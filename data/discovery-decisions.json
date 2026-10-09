@@ -1521,5 +1521,71 @@
     "releaseIds": [
       "ring-inclusionai-ring-2-5-1t-checkpoint-2026-02-10"
     ]
+  },
+  {
+    "family": "lfm",
+    "url": "https://huggingface.co/LiquidAI/LFM2-1.2B-Longevity",
+    "disposition": "covered",
+    "reason": "Named Longevity variant added using the dated publisher announcement and verified current checkpoint.",
+    "checkedAt": "2026-10-09",
+    "releaseIds": [
+      "lfm-lfm2-1-2b-longevity-announcement-2026-09-17"
+    ]
+  },
+  {
+    "family": "lfm",
+    "url": "https://huggingface.co/LiquidAI/LFM2-2.6B-Longevity",
+    "disposition": "covered",
+    "reason": "Named Longevity variant added using the dated publisher announcement and verified current checkpoint.",
+    "checkedAt": "2026-10-09",
+    "releaseIds": [
+      "lfm-lfm2-2-6b-longevity-announcement-2026-09-17"
+    ]
+  },
+  {
+    "family": "lfm",
+    "url": "https://www.liquid.ai/blog/longevitybench",
+    "disposition": "covered",
+    "reason": "Added both named LFM2 Longevity variants. September 17 dates the publisher announcement, not the initial weight upload.",
+    "checkedAt": "2026-10-09",
+    "releaseIds": [
+      "lfm-lfm2-1-2b-longevity-announcement-2026-09-17",
+      "lfm-lfm2-2-6b-longevity-announcement-2026-09-17"
+    ]
+  },
+  {
+    "family": "glm",
+    "url": "https://llmgateway.io/models/glm-5.3-fast",
+    "disposition": "out-of-scope",
+    "reason": "Accelerated third-party deployment of GLM-5.3; the gateway listing date is not a new publisher release.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "family": "mercury",
+    "url": "https://docs.inceptionlabs.ai/capabilities/decisions",
+    "disposition": "date-unresolved",
+    "reason": "Publisher confirms mercury-decide; the original launch day and numeric generation remain unestablished.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "family": "mercury",
+    "url": "https://openrouter.ai/inception/mercury-decide:free",
+    "disposition": "date-unresolved",
+    "reason": "Publisher confirms the unnumbered decision preview, but neither its numerical generation nor original launch date is established.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "family": "mercury",
+    "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-voice",
+    "disposition": "out-of-scope",
+    "reason": "A dated unnumbered Mercury Voice variant is documented, but no numerical generation is published for scoring.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "family": "falcon",
+    "url": "https://falconllm.tii.ae/falcon-emirati.html",
+    "disposition": "date-unresolved",
+    "reason": "Current publisher page confirms the model but does not establish its launch date or a numerical generation.",
+    "checkedAt": "2026-10-09"
   }
 ]

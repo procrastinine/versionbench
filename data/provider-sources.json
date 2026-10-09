@@ -1612,6 +1612,16 @@
           "announcement",
           "weights"
         ]
+      },
+      {
+        "type": "page",
+        "url": "https://www.liquid.ai/blog/longevitybench",
+        "scopePattern": "LFM|Liquid",
+        "purpose": "Named LFM2 Longevity variants and dated publisher announcement",
+        "signals": [
+          "announcement",
+          "weights"
+        ]
       }
     ],
     "coverageNotes": [
@@ -1870,11 +1880,21 @@
           "announcement",
           "api"
         ]
+      },
+      {
+        "type": "page",
+        "url": "https://docs.inceptionlabs.ai/get-started/models",
+        "scopePattern": "Mercury",
+        "purpose": "Current model inventory, including named Mercury variants",
+        "signals": [
+          "api"
+        ]
       }
     ],
     "coverageNotes": [
       "The inventory includes unnumbered variants and older generations. Each candidate still needs identity, date, and availability evidence.",
-      "No verified publisher Hugging Face inventory is configured for this family; watch the official release pages for any weights announcement."
+      "No verified publisher Hugging Face inventory is configured for this family; watch the official release pages for any weights announcement.",
+      "Mercury Voice and Mercury Decide are watched as named variants. Their publisher pages do not establish numerical generations; Decide also lacks an exact launch date. They remain reviewed candidates without invented scores."
     ]
   },
   {

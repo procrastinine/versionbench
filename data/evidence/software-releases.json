@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-10-06",
-  "capturedAt": "2026-10-07T01:44:07.834Z",
+  "asOf": "2026-10-09",
+  "capturedAt": "2026-10-09T15:34:24.190Z",
   "catalogs": [
     {
       "family": "python",
@@ -9,7 +9,7 @@
       "pages": [
         {
           "url": "https://www.python.org/doc/versions/",
-          "sha256": "ec19b3b8e66a6d81e35a27660597e1726493b3651b19e13fc4c7054c4dd452dc"
+          "sha256": "f6d1e02c3d71c2738db575f3f97753c401087882d5b1b8addacf1394e0d88422"
         }
       ],
       "releases": [
@@ -1057,6 +1057,11 @@
           "version": "3.11.17",
           "date": "2026-10-01",
           "url": "https://docs.python.org/release/3.11.17/"
+        },
+        {
+          "version": "3.15.0",
+          "date": "2026-10-09",
+          "url": "https://docs.python.org/release/3.15.0/"
         }
       ],
       "excluded": []
@@ -1067,7 +1072,7 @@
       "pages": [
         {
           "url": "https://api.github.com/repos/pytorch/pytorch/releases?per_page=100",
-          "sha256": "a176160b1d053be6b78178208391f9cf43bb9b1231f735037a97150d81cb1df1"
+          "sha256": "345182860945f88116a6f59714df079735f9e9f21762729bfba4961330dd05bc"
         }
       ],
       "releases": [

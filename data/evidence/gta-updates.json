@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-10-06",
-  "capturedAt": "2026-10-07T01:51:17.264Z",
+  "asOf": "2026-10-09",
+  "capturedAt": "2026-10-09T15:34:24.190Z",
   "source": {
     "url": "https://gta.fandom.com/wiki/Grand_Theft_Auto_V/Title_Update_Notes#Version_History",
     "apiUrl": "https://gta.fandom.com/api.php?action=parse&page=Grand_Theft_Auto_V%2FTitle_Update_Notes&prop=wikitext&format=json&formatversion=2",
@@ -1664,7 +1664,7 @@
             "url": "https://support.rockstargames.com/articles/5IxfVX33w3X8fKooGKswfj/gtav-title-update-1-71-notes-ps5-ps4-xbox-series-x-or-s-xbox-one-pc-enhanced",
             "title": "Rockstar Games: GTA V title update 1.71 notes",
             "publisher": "Rockstar Games",
-            "sha256": "5305f4cce122d204fd16ffbdd312d7874faebac7921222cb42260779b0003002",
+            "sha256": "8cc0f677c7b5927b59a7ae333c2158f4ff3e3072177a3542145285009eda8d36",
             "proof": "July 8, 2025] - PC (Legacy and Enhanced)"
           }
         ]
@@ -1691,7 +1691,7 @@
             "url": "https://support.rockstargames.com/articles/5IxfVX33w3X8fKooGKswfj/gtav-title-update-1-71-notes-ps5-ps4-xbox-series-x-or-s-xbox-one-pc-enhanced",
             "title": "Rockstar Games: GTA V title update 1.71 notes",
             "publisher": "Rockstar Games",
-            "sha256": "5305f4cce122d204fd16ffbdd312d7874faebac7921222cb42260779b0003002",
+            "sha256": "8cc0f677c7b5927b59a7ae333c2158f4ff3e3072177a3542145285009eda8d36",
             "proof": "August 12, 2025] - PC (Enhanced)"
           }
         ]

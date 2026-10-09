@@ -16,23 +16,19 @@ jobs:
         with:
           node-version: '26.1.0'
           package-manager-cache: false
-      - name: Capture release sources and report gaps
-        id: releases
+      - name: Pull all sources and prepare the catalog review
+        id: refresh
         continue-on-error: true
-        run: node scripts/audit-releases.mjs
-      - name: Check saved weight associations
-        id: weights
-        continue-on-error: true
-        run: node scripts/audit-weights.mjs
+        run: node scripts/refresh.mjs
       - name: Save evidence and reports for review
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: source-audit
-          path: output/*.json
+          path: output/refresh/*.json
           retention-days: 14
       - name: Flag unresolved review items
-        if: steps.releases.outcome == 'failure' || steps.weights.outcome == 'failure'
+        if: steps.refresh.outcome == 'failure'
         run: |
           echo 'Review the captured source-audit artifact. The curated catalog was not modified.'
           exit 1

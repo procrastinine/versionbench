@@ -317,5 +317,109 @@
     ],
     "reason": "Added the December 1, 2023 limited-access release date explicitly recorded by HELM; archived Writer documentation confirms the generation and API identity. Retirement dates were not used.",
     "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "lfm-lfm2-longevity-variants",
+    "family": "lfm",
+    "name": "LFM2 Longevity (1.2B and 2.6B)",
+    "version": "2",
+    "outcome": "added",
+    "releaseIds": [
+      "lfm-lfm2-1-2b-longevity-announcement-2026-09-17",
+      "lfm-lfm2-2-6b-longevity-announcement-2026-09-17"
+    ],
+    "evidenceIds": [
+      "watch-lfm2-longevity-announcement",
+      "watch-lfm2-1-2b-longevity-weights",
+      "watch-lfm2-1-2b-longevity-card",
+      "watch-lfm2-2-6b-longevity-weights",
+      "watch-lfm2-2-6b-longevity-card"
+    ],
+    "reason": "Added both named variants at the publisher’s September 17, 2026 announcement. Verified current checkpoint files and model cards. Parameter counts are excluded; earlier weight-publication dates are not inferred.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "claude-haiku-5-5-profile",
+    "family": "claude",
+    "name": "Claude Haiku 5.5 benchmark profile",
+    "version": "5.5",
+    "outcome": "updated",
+    "releaseIds": [
+      "claude-claude-haiku-5-5-2026-10-07"
+    ],
+    "evidenceIds": [
+      "watch-haiku-5-5-profile"
+    ],
+    "reason": "Linked the now-available matching Artificial Analysis profile to the existing October 7 release.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "glm-glm-5-3-fast-deployment",
+    "family": "glm",
+    "name": "GLM 5.3 Fast",
+    "version": "5.3",
+    "outcome": "excluded",
+    "releaseIds": [],
+    "evidenceIds": [
+      "watch-glm-5-3-fast-deployment"
+    ],
+    "reason": "The gateway describes an accelerated deployment of GLM-5.3, retaining the original model’s capabilities. Its October 7 listing is not a separately verified publisher model release.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "mercury-decide-unnumbered",
+    "family": "mercury",
+    "name": "Mercury Decide",
+    "version": "Unnumbered",
+    "outcome": "excluded",
+    "releaseIds": [],
+    "evidenceIds": [
+      "watch-mercury-decide-documentation",
+      "watch-mercury-decide-inventory"
+    ],
+    "reason": "Publisher documentation confirms a typed-decision preview, but supplies no numeric generation or exact launch day. Retained for review without inventing a version score or release date.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "mercury-voice-unnumbered",
+    "family": "mercury",
+    "name": "Mercury Voice",
+    "version": "Unnumbered",
+    "outcome": "excluded",
+    "releaseIds": [],
+    "evidenceIds": [
+      "watch-mercury-voice-announcement",
+      "watch-mercury-blog-index"
+    ],
+    "reason": "The September 29 publisher post confirms enterprise availability, but Mercury Voice has no published numeric generation. The nearby Mercury 2.5 launch does not establish a version score for Voice.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "falcon-emirati-unnumbered",
+    "family": "falcon",
+    "name": "Falcon-Emirati",
+    "version": "Unnumbered",
+    "outcome": "excluded",
+    "releaseIds": [],
+    "evidenceIds": [
+      "watch-falcon-emirati-documentation"
+    ],
+    "reason": "Confirmed the publisher’s Emirati Arabic model and current Falcon Chat access. The page does not establish its launch date or numerical generation; parameter counts and architecture labels do not supply a score.",
+    "checkedAt": "2026-10-09"
+  },
+  {
+    "id": "minicpm-v-4-7-availability-review",
+    "family": "minicpm",
+    "name": "MiniCPM-V-4.7 checkpoint availability",
+    "version": "4.7",
+    "outcome": "updated",
+    "releaseIds": [
+      "minicpm-openbmb-minicpm-v-4-7-35b-a3b-checkpoint-2026-10-06"
+    ],
+    "evidenceIds": [
+      "watch-minicpm-v-4-7-access"
+    ],
+    "reason": "Recorded the October 9 access failure in the weights note while preserving the historical first-weight event and last successful October 6 assessment. Current availability remains unverified; deletion or private access is not inferred.",
+    "checkedAt": "2026-10-09"
   }
 ]
